@@ -20,15 +20,57 @@ div.splash
     //position
     position: relative
 
-    div.big-button, div.main-nav, div.arrow
+    div.big-button, div.main-nav, div.arrow, div.hero
         //position
         position: absolute
         transform: translateX(-50%)
         left: 50%
+        
+    div.hero
+        //position
+        text-align: center
+        top: 50%
+        transform: translateY(-70%) translateX(-50%)
+        
+        //font
+        color: #444
+        font-family: 'Quicksand', sans-serif
+        font-weight: 500
+        
+        div.logo
+            //size
+            padding-left: 60px
+            
+            //appearance
+            background: url('/images/logo.svg')
+            background-repeat: no-repeat
+            background-size:  60px auto
+            background-repeat: center
+            
+            @media screen and (min-width: tablet)
+                padding-left: 80px
+                background-size:  80px auto
+
+            h1
+                //position
+                margin: 0
+                
+                //font
+                font-size: 60px
+
+                @media screen and (min-width: tablet)
+                    font-size: 80px
+            
+                font-weight: 300
+                text-transform: uppercase
+                
+        span
+            color: #999
+        
     
     div.main-nav
         //position
-        top: 70px
+        top: 36px
         
         @media screen and (min-width: tablet)
             top: 100px

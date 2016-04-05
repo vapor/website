@@ -1,5 +1,15 @@
 div.splash
 	main-nav
-	big-button(href="/install") Install
+
+	div.hero
+		div.logo
+			h1 Vapor
+		span A Web Framework for Swift
+
+	big-button(
+		href="/install", 
+		icon="/images/swift.png",
+		@click="install()"
+	) Install
 
 	div.arrow &darr;

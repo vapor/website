@@ -1,6 +1,7 @@
 export default {
 	props: [
-		'href'
+		'href',
+		'icon'
 	],
 	methods: {
 		log(message) {

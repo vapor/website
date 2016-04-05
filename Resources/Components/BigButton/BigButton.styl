@@ -3,10 +3,11 @@ light-accent = #F6CFCF
 dark-shadow = #7D93BE
 light-shadow = #D5B7BD
 
-div.big-button
+div.big-button div.stage
     //size
     height: 48px
     padding: 0 24px
+    padding-left: 60px
 
     //position
     display: inline-block
@@ -16,10 +17,16 @@ div.big-button
     border-radius: 10px
     box-shadow: 0 3px 0 0px dark-shadow
     cursor: pointer
+    user-select: none
 
     &:hover
         background: light-accent
         box-shadow: 0 3px 0 0px light-shadow
+
+    &:active
+        position: relative
+        top: 3px
+        box-shadow: 0 0px 0 0px
         
     
     //font
@@ -29,3 +36,11 @@ div.big-button
     letter-spacing: 1px
     line-height: 48px
     text-transform: uppercase
+
+    img.icon
+        opacity: 0.15
+        position: absolute
+        left: 10px
+        top: 50%
+        transform: translateY(-50%)
+        height: 30px

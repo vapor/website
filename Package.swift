@@ -11,6 +11,7 @@ let package = Package(
         "Public",
         "Resources",
 		"Tests",
-		"Database"
+		"Database",
+		"node_modules"
     ]
 )

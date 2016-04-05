@@ -1,23 +1,32 @@
 dark-accent = #94A9D1
 light-accent = #F6CFCF
 
+tablet = 768px
+laptop = 1280px
+desktop = 1920px
+
 div.main-nav
     //size
     max-width: 400px
-    width: 100%
+    width: 90%
     
     //position
     display: flex
+    justify-content: space-around
     
     a
-        //size
-        width: 25%
         
         //font
         color: dark-accent
         font-family: 'Quicksand', sans-serif
+        font-size: 14px
         text-align: center
         text-decoration: none
+
+        border-bottom: 1px dotted
+
+        @media screen and (min-width: tablet)
+            font-size: 16px
         
         &:hover
             color: light-accent

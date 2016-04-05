@@ -1,0 +1,17 @@
+div.style-section
+    section-header(
+        title="Beautifully Simple",
+        text="Web development has never been this elegant."
+    )
+
+    div.editor
+        pre.
+            import <span title="You only need one import."><span class="module">Vapor</span></span>
+
+            let app = Application()
+
+            app.<span title="Matches all GET requests">get</span>(<span title="Matches requests to the root domain.">"/"</span>) {
+                return <span title="Any data structure that conforms to ResponseRepresentable can be returned in a route closure.">"Hello, world."</span>
+            }
+
+            app.start()
