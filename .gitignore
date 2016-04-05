@@ -1,0 +1,5 @@
+Packages
+.build
+xcuserdata
+node_modules
+*.xcodeproj

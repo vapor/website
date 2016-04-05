@@ -1,0 +1,31 @@
+dark-accent = #94A9D1
+light-accent = #F6CFCF
+dark-shadow = #7D93BE
+light-shadow = #D5B7BD
+
+div.big-button
+    //size
+    height: 48px
+    padding: 0 24px
+
+    //position
+    display: inline-block
+    
+    //appearance
+    background: dark-accent
+    border-radius: 10px
+    box-shadow: 0 3px 0 0px dark-shadow
+    cursor: pointer
+
+    &:hover
+        background: light-accent
+        box-shadow: 0 3px 0 0px light-shadow
+        
+    
+    //font
+    color: white
+    font-family: 'Quicksand', sans-serif
+    font-weight: 700
+    letter-spacing: 1px
+    line-height: 48px
+    text-transform: uppercase

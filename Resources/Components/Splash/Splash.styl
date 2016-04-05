@@ -1,0 +1,54 @@
+dark-accent = #94A9D1
+light-accent = #F6CFCF
+
+tablet = 768px
+laptop = 1280px
+desktop = 1920px
+
+@keyframes bounce
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(-10px)
+    100%
+        transform: translateY(0)
+
+div.splash
+    //size
+    height: 100%
+    
+    //position
+    position: relative
+
+    div.big-button, div.main-nav, div.arrow
+        //position
+        position: absolute
+        transform: translateX(-50%)
+        left: 50%
+    
+    div.main-nav
+        //position
+        top: 70px
+        
+        @media screen and (min-width: tablet)
+            top: 100px
+        
+    div.big-button
+        //position
+        bottom: 70px
+        
+        @media screen and (min-width: tablet)
+            bottom: 100px
+        
+    div.arrow
+        //position
+        bottom: 10px
+        
+        //font
+        color: dark-accent        
+        font-size: 20px
+        
+        //animation
+        animation: bounce 2s infinite
+        
+    
