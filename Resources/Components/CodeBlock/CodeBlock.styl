@@ -1,0 +1,64 @@
+dark-accent = #94A9D1
+light-accent = #F6CFCF
+
+tablet = 768px
+laptop = 1280px
+desktop = 1920px
+
+div.code-block
+    pre
+        //font
+        color: #92A0B9
+        font-family: 'Source Code Pro', monospace
+        font-size: 10px
+        
+        .module
+            color: #EEB979
+
+        .hljs-type
+            color: #41B6BD
+
+        .hljs-string
+            color: #9CC074
+        .hljs-keyword
+            color: #9F69C4
+            
+        .code-hint
+            position: relative
+            display: inline-block
+            cursor: help
+            border-bottom: 1px dotted #8BD1CB
+
+            .tooltip
+                backdrop-filter: blur(10px) saturate(200%)
+                background: rgba(235, 237, 240, 0.2)
+                
+                font-family: -webkit-system-font
+                line-height: 16px
+        
+                transition: all 0.5s ease
+
+                z-index: 999
+                border-radius: 10px
+                padding: 12px
+                font-size: 12px
+                color: #333
+                position: absolute
+                display: block
+                top: 24px
+                left: 50%
+                opacity: 0
+                transform: translateX(-50%) scale(0.5)
+                width: 150px
+                white-space: normal
+                break-word: normal
+                text-align: center
+                box-shadow: 0 3px 0px 0px rgba(0, 0, 0, 0.1)
+                
+                &.show
+                    opacity: 1
+                    transform: translateX(-50%) scale(1)
+                    
+            
+            span
+                pointer-events: none

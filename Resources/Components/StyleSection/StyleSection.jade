@@ -5,13 +5,13 @@ div.style-section
     )
 
     div.editor
-        pre.
-            import <span title="You only need one import."><span class="module">Vapor</span></span>
+        code-block.
+            import <div class="code-hint" data-title="You only need one import."><span class="module">Vapor</span></div>
 
             let app = Application()
 
-            app.<span title="Matches all GET requests">get</span>(<span title="Matches requests to the root domain.">"/"</span>) {
-                return <span title="Any data structure that conforms to ResponseRepresentable can be returned in a route closure.">"Hello, world."</span>
+            app.<div class="code-hint" data-title="Matches all GET requests">get</div>(<div class="code-hint" data-title="Matches requests to the root domain.">"/"</div>) {
+                return "<div class="code-hint" data-title="Any data structure that conforms to Response Representable can be returned in a route closure.">Hello, world.</div>"
             }
 
             app.start()
