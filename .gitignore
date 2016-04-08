@@ -3,3 +3,5 @@ Packages
 xcuserdata
 node_modules
 *.xcodeproj
+scripts/app.js
+
