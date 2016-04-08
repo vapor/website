@@ -11,45 +11,44 @@ div.style-section
     div.editor
         margin: 0 auto
         margin-top: 24px
-        position: relative
         
         width: 320px
+        height: 290px
         max-width: 760px
         background: url('/images/sublime.png')
         background-size: 100%
         background-repeat: no-repeat
-        height: 120%
 
         @media screen and (min-width: tablet)
             width: 760px
+            height: 650px
+
         
         pre
-            //font
-            color: #92A0B9
-            font-family: 'Source Code Pro', monospace
-            font-size: 10px
-            
             //position
-            position: absolute
-            top: 45px
-            left: 51px
+            margin-top: 52px
+            margin-left: 51px
             
             @media screen and (min-width: tablet)
-                font-size: 14px
-                top: 110px
-                left: 124px
+                margin-top: 120px
+                margin-left: 124px
+                
 
-            span[title]
-                border-bottom: 1px dotted #8BD1CB
-                cursor: help
-
-            .module
-                color: #EEB979
-
-            .hljs-type
-                color: #41B6BD
-    
-            .hljs-string
-                color: #9CC074
-            .hljs-keyword
-                color: #9F69C4
+    span.code-block-tutorial
+        //font
+        font-family: -webkit-system-font, sans-serif
+        text-align: center
+        font-size: 12px
+        font-weight: 300
+        font-style: italic
+        color: #999
+        
+        //position
+        position: relative
+        display: block
+        top: -30px
+        width: 80%
+        margin: 0 auto
+        
+        @media screen and (min-width: tablet)
+            top: -50px

@@ -6,11 +6,20 @@ laptop = 1280px
 desktop = 1920px
 
 div.code-block
+    overflow-x: scroll
+    overflow-y: visible
+    -webkit-overflow-scrolling: touch
+    
     pre
         //font
         color: #92A0B9
         font-family: 'Source Code Pro', monospace
         font-size: 10px
+        margin: 0
+
+
+        @media screen and (min-width: tablet)
+            font-size: 14px
         
         .module
             color: #EEB979
@@ -28,37 +37,47 @@ div.code-block
             display: inline-block
             cursor: help
             border-bottom: 1px dotted #8BD1CB
-
-            .tooltip
-                backdrop-filter: blur(10px) saturate(200%)
-                background: rgba(235, 237, 240, 0.2)
-                
-                font-family: -webkit-system-font
-                line-height: 16px
-        
-                transition: all 0.5s ease
-
-                z-index: 999
-                border-radius: 10px
-                padding: 12px
-                font-size: 12px
-                color: #333
-                position: absolute
-                display: block
-                top: 24px
-                left: 50%
-                opacity: 0
-                transform: translateX(-50%) scale(0.5)
-                width: 150px
-                white-space: normal
-                break-word: normal
-                text-align: center
-                box-shadow: 0 3px 0px 0px rgba(0, 0, 0, 0.1)
-                
-                &.show
-                    opacity: 1
-                    transform: translateX(-50%) scale(1)
-                    
             
             span
                 pointer-events: none
+div.tooltip
+    pointer-events: none
+    
+    //background
+    backdrop-filter: blur(10px) saturate(200%)
+    background: rgba(235, 237, 240, 0.2)
+    
+    //font
+    font-family: -webkit-system-font
+    line-height: 16px
+    color: #333
+    font-size: 12px
+    white-space: normal
+    break-word: normal
+    text-align: center
+
+    //animation
+    transition: top 0.5s ease, left 0.5s ease, opacity 0.5s ease, transform 0.5s ease
+
+    //size
+    padding: 12px
+    max-width: 200px
+
+    //position
+    z-index: 999
+    top: 50%
+    left: 50%
+    position: absolute
+    display: block
+    transform: translateX(-50%) scale(0.5)
+    
+    //appearance
+    border-radius: 10px
+    opacity: 0
+    box-shadow: 0 3px 0px 0px rgba(0, 0, 0, 0.1)
+    
+    &.show
+        opacity: 1
+        transform: translateX(-50%) scale(1)
+                
+        

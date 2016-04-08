@@ -8,10 +8,12 @@ div.style-section
         code-block.
             import <div class="code-hint" data-title="You only need one import."><span class="module">Vapor</span></div>
 
-            let app = Application()
+            let app = <div class="code-hint" data-title="Application has everything you need (SHA2 Hashing, Session, Config, etc) and you can easily extend it.">Application</div>()
 
             app.<div class="code-hint" data-title="Matches all GET requests">get</div>(<div class="code-hint" data-title="Matches requests to the root domain.">"/"</div>) {
-                return "<div class="code-hint" data-title="Any data structure that conforms to Response Representable can be returned in a route closure.">Hello, world.</div>"
+                return "<div class="code-hint" data-title="Any data structure that is Response Representable can be returned.">Hello, world.</div>"
             }
 
-            app.start()
+            app.<div class="code-hint" data-title="Boots your server and starts accepting request.">start</div>()
+
+    span.code-block-tutorial Hint: Hover over the underlined code to learn more.

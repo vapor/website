@@ -1,0 +1,29 @@
+div.safety-section
+    section-header(
+        title="Type Safe",
+        text="Swift's state of the art type checking system is your new best friend."
+    )
+
+    div.code-blocks
+        h3 Vapor's pattern matching makes routing a breeze.
+        code-block.
+            app.get("hello", <div class="code-hint" data-title="Strings are the most general type, and will match all requests.">String</div>) { request, <div class="code-hint" data-title="name is the matched String.">name</div> in 
+                return "Nice to meet you, \(name)."
+            }
+        span.comment Responds to all get request to welcome/:someString.
+
+        h3 Your code is more expressive than ever.
+        code-block.
+            app.get("random", <div class="code-hint" data-title="Only matches Ints.">Int</div>) { request, <div class="code-hint" data-title="max is the matched Int.">max</div> in 
+                return Int.random(max: max)
+            }
+        span.comment Returns a random number less than the supplied maximum for requests to random/:someInteger.
+
+        h3 Controllers like you've never seen them.
+        code-block.
+            class UserController: Controller {
+                func show(request: Request, user: User) -&gt; Response {
+                    return "You've request \(user.name)"
+                }
+            }
+        span.comment By type hinting a User type, Vapor will automatically lookup the user for the supplied identifier. Your handler will only be called if a user was found.
