@@ -21,9 +21,9 @@ div.safety-section
 
         h3 Controllers like you've never seen them.
         code-block.
-            class UserController: Controller {
-                func show(request: Request, user: User) -&gt; Response {
+            class UserController: <div class="code-hint" data-title="Controllers group standard create, update, destroy methods.">Controller</div> {
+                func show(request: Request, user: <div class="code-hint" data-title="Type hint any class.">User</div>) -&gt; Response {
                     return "You've request \(user.name)"
                 }
             }
-        span.comment By type hinting a User type, Vapor will automatically lookup the user for the supplied identifier. Your handler will only be called if a user was found.
+        span.comment By type hinting a User type, the URL parameter will be converted to an ID and used for lookup. Your handler will only be called if a User was found.

@@ -1,0 +1,56 @@
+dark-accent = #94A9D1
+light-accent = #F6CFCF
+
+tablet = 768px
+laptop = 1280px
+desktop = 1920px
+
+div.speed-section
+    text-align: center
+
+    div.section-header
+        margin: 0 auto
+        margin-bottom: 48px
+        max-width: 400px
+
+    div.big-button
+        display: inline-block
+        position: relative
+        text-align: center
+        margin-bottom: 48px
+    
+    div.benchmark
+        //appearance
+        background: url('/images/benchmark.png')
+        background-size: cover
+        border-radius: 10px
+        box-shadow: 0 3px 0px 0px rgba(0, 0, 0, 0.1)
+        
+
+        position: relative
+        margin: 0 auto
+        
+        width: 250px
+        height: 150px
+        margin-bottom: 48px
+
+        @media screen and (min-width: tablet)
+            width: 500px
+            height: 300px
+        
+        span
+            font-family: 'Quicksand', sans-serif
+            color: #777
+            font-size: 14px
+            font-weight: 700
+            
+
+            @media screen and (min-width: tablet)
+                font-size: 20px
+            
+            text-align: center
+            width: 100%
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)

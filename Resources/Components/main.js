@@ -5,7 +5,8 @@ new Vue({
 	components: {
 		'splash': require('./Splash/Splash.vue'),
 		'style-section': require('./StyleSection/StyleSection.vue'),
-		'safety-section': require('./SafetySection/SafetySection.vue')
+		'safety-section': require('./SafetySection/SafetySection.vue'),
+		'speed-section': require('./SpeedSection/SpeedSection.vue')
 	},
 	methods: {
 		log: function(message) {

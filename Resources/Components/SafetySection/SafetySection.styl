@@ -9,7 +9,7 @@ div.safety-section
     padding: 24px 0
     
     div.section-header
-        margin-bottom: 36px
+        margin-bottom: 48px
 
     div.code-block
         background: #FBFBFB
@@ -26,6 +26,11 @@ div.safety-section
         margin: 0 auto
         margin-bottom: 12px
 
+        @media screen and (min-width: tablet)
+            padding: 24px
+            width: 80%
+            max-width: 400px
+
     h3
         margin: 0
         margin-bottom: 12px
@@ -33,16 +38,22 @@ div.safety-section
         
         text-align: center
         font-size: 12px
-        font-weight: 300
-        color: #333
+        font-weight: 500
+        color: #777
 
     span.comment
         display: block
-        margin-bottom: 36px
         padding: 0 24px
+        width: 250px
+        margin: 0 auto
+        margin-bottom: 36px
+        
+        @media screen and (min-width: tablet)
+            width: 80%
+            max-width: 400px
         
         //font
         text-align: center
         font-size: 12px
         font-weight: 300
-        color: #999
+        color: #aaa
