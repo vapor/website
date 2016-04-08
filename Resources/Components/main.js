@@ -1,4 +1,5 @@
 var Vue = require('vue')
+var $ = require('jquery')
 
 new Vue({
 	el: 'body',
@@ -12,4 +13,11 @@ new Vue({
 		log: function(message) {
 			console.log('[Vapor Website] ' + message);
 		}
-	}})
+	},
+	ready() {
+		var userAgent = navigator.userAgent.toLowerCase(); 
+		if (userAgent.indexOf('safari') != -1 && userAgent.indexOf('chrome') == -1) {
+			$('body').addClass('safari')
+		}
+	}
+})
