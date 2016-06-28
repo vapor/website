@@ -21,7 +21,8 @@ div.speed-section
     
     div.benchmark
         //appearance
-        background: url('/images/benchmark.png')
+        background: #fbfbfb
+        background-image: url('/images/benchmark.png')
         background-size: cover
         border-radius: 10px
         box-shadow: 0 3px 0px 0px rgba(0, 0, 0, 0.1)
@@ -31,26 +32,37 @@ div.speed-section
         margin: 0 auto
         
         width: 250px
-        height: 150px
-        margin-bottom: 48px
+        height: 186px
+        margin-bottom: 24px
 
         @media screen and (min-width: tablet)
             width: 500px
-            height: 300px
+            height: 373px
+    
+    span.comment
+        display: block
+        padding: 0 24px
+        width: 250px
+        margin: 0 auto
+        line-height: 18px
+        margin-bottom: 48px
         
-        span
-            font-family: 'Quicksand', sans-serif
-            color: #777
-            font-size: 14px
-            font-weight: 700
-            
+        @media screen and (min-width: tablet)
+            width: 80%
+            max-width: 400px
+        
+        //font
+        text-align: center
+        font-size: 12px
+        font-weight: 300
+        color: #aaa
 
-            @media screen and (min-width: tablet)
-                font-size: 20px
-            
-            text-align: center
-            width: 100%
-            position: absolute
-            top: 50%
-            left: 0
-            transform: translateY(-50%)
+    a
+        color: dark-accent
+        text-align: center
+        text-decoration: none
+
+        border-bottom: 1px dotted
+        
+        &:hover
+            color: light-accent
