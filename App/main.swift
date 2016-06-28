@@ -1,15 +1,17 @@
 import Vapor
-import VaporZewoMustache
+import VaporMustache
 
-let app = Application()
+
+let mustache = VaporMustache.Provider(withIncludes:[
+    "header": "Includes/header.mustache",
+    "footer": "Includes/footer.mustache"
+])
+
+
+let app = Application(providers: [mustache])
 
 app.get("/") { request in
 	return try app.view("home.mustache")
 }
 
-app.providers.append(VaporZewoMustache.Provider(withIncludes:[
-	"header": "Includes/header.mustache",
-    "footer": "Includes/footer.mustache"
-]))
-
-app.start(port: 8080)
+app.start()

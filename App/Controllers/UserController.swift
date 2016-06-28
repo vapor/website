@@ -2,17 +2,17 @@ import Vapor
 
 class UserController: Controller {
     required init(application: Application) {
-        Log.info("User controller created")
+        application.log.info("User controller created")
     }
     
     func index(request: Request) throws -> ResponseRepresentable {
-        return Json([
+        return JSON([
             "controller": "UserController.index"
         ])
     }
     
     func store(request: Request) throws -> ResponseRepresentable {
-        return Json([
+        return JSON([
             "controller": "UserController.store"
         ])
     }
@@ -23,7 +23,7 @@ class UserController: Controller {
     */
     func show(request: Request, item user: User) throws -> ResponseRepresentable {
         //User can be used like JSON with JsonRepresentable
-        return Json([
+        return JSON([
             "controller": "UserController.show",
             "user": user
         ])
