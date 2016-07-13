@@ -8,10 +8,10 @@ let mustache = VaporMustache.Provider(withIncludes:[
 ])
 
 
-let app = Application(providers: [mustache])
+let drop = Droplet(providers: [mustache])
 
-app.get("/") { request in
-	return try app.view("home.mustache")
+drop.get("/") { request in
+	return try drop.view("home.mustache")
 }
 
-app.start()
+drop.serve()
