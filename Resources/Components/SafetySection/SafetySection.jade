@@ -7,14 +7,14 @@ div.safety-section
     div.code-blocks
         h3 Vapor's pattern matching makes routing a breeze.
         code-block.
-            app.get("hello", <div class="code-hint" data-title="Strings are the most general type, and will match all requests.">String</div>) { request, <div class="code-hint" data-title="name is the matched String.">name</div> in 
+            drop.get("hello", <div class="code-hint" data-title="Strings are the most general type, and will match all requests.">String</div>) { request, <div class="code-hint" data-title="name is the matched String.">name</div> in 
                 return "Nice to meet you, \(name)."
             }
         span.comment Responds to all get request to <code>hello/:someString</code>.
 
         h3 Your code is more expressive than ever.
         code-block.
-            app.get("random", <div class="code-hint" data-title="Only matches Ints.">Int</div>) { request, <div class="code-hint" data-title="max is the matched Int.">max</div> in 
+            drop.get("random", <div class="code-hint" data-title="Only matches Ints.">Int</div>) { request, <div class="code-hint" data-title="max is the matched Int.">max</div> in 
                 return Int.random(max: max)
             }
         span.comment Returns a random number less than the supplied maximum for requests to <code>random/:someInteger</code>.
