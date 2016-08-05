@@ -8,7 +8,7 @@ export default {
 			this.$root.log('[Big Button] ' + message)
 		},
 		click() {
-			window.location.href = 'http://docs.qutheory.io';
+			window.location.href = 'http://docs.vapor.codes';
 		}
 	},
 	ready() {
