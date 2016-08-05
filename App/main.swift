@@ -8,7 +8,7 @@ let mustache = VaporMustache.Provider(withIncludes:[
 ])
 
 
-let drop = Droplet(providers: [mustache])
+let drop = Droplet(initializedProviders: [mustache])
 
 drop.get("/") { request in
 	return try drop.view("home.mustache")
