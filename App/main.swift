@@ -1,6 +1,6 @@
 import Vapor
 import VaporMustache
-
+import Fluent
 
 let mustache = VaporMustache.Provider(withIncludes:[
     "header": "Includes/header.mustache",

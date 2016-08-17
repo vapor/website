@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "watchify": "watchify -vd -p browserify-hmr -e Resources/Components/main.js -o Public/scripts/app.js",
-    "serve": "swift build; .build/debug/App --config:app.port=8080 --workDir=./",
+    "serve": "swift build; .build/debug/App",
     "dev": "npm-run-all --parallel watchify serve",
     "build": "cross-env browserify -e Resources/Components/main.js | uglifyjs -c warnings=false -m > Public/scripts/app.js",
     "lint": "eslint --ext .js,.vue src test/unit",
