@@ -85,7 +85,7 @@ header.main
                 opacity: 1
 
             @media screen and (min-width: $tablet)
-                display: none
+                display: none!important
 
         a.logo
             display: inline-block
@@ -120,6 +120,11 @@ header.main
             &.open
                 display: flex
                 background: white
+                
+                .safari &
+                    background: rgba(255, 255, 255, 0.75)
+                    -webkit-backdrop-filter: blur(10px)
+
                 flex-wrap: wrap
                 border-radius: 6px
                 padding: 6px

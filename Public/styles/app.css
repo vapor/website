@@ -71,7 +71,7 @@ header.main {
         opacity: 1; }
       @media screen and (min-width: 768px) {
         header.main nav a.toggle {
-          display: none; } }
+          display: none !important; } }
     header.main nav a.logo {
       display: inline-block;
       background-image: url("/images/droplet-white.svg");
@@ -103,6 +103,9 @@ header.main {
         border-radius: 6px;
         padding: 6px;
         justify-content: center; }
+        .safari header.main nav ul.open {
+          background: rgba(255, 255, 255, 0.75);
+          -webkit-backdrop-filter: blur(10px); }
         header.main nav ul.open a {
           color: #92A8D1; }
           header.main nav ul.open a:hover {
