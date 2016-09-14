@@ -25,11 +25,11 @@
         <meta name="theme-color" content="#ffffff">
         }
 
-        <meta name="twitter:card" content="summary">
+        <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Vapor">
         <meta name="twitter:description" content="A web framework and server for Swift that works on macOS and Ubuntu.">
         <meta name="twitter:url" content="https://vapor.codes">
-        <meta name="twitter:image" content="http://new.vapor.codes/apple-icon-180x180.png">
+        <meta name="twitter:image" content="/apple-icon-180x180.png">
         <meta name="twitter:site" content="@codevapor">
         
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
