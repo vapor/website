@@ -257,11 +257,14 @@ div.content {
   z-index: 10;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15); }
   div.content section.features {
-    padding: 36px;
     width: 100%;
+    padding: 0 36px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; }
+    @media screen and (min-width: 768px) {
+      div.content section.features {
+        padding: 36px; } }
     div.content section.features article {
       width: 100%;
       padding: 36px 0; }
@@ -334,11 +337,12 @@ div.content {
     flex-wrap: wrap; }
     div.content section.contact article {
       width: 100%;
-      padding: 36px;
+      padding: 12px;
       text-align: center; }
       @media screen and (min-width: 768px) {
         div.content section.contact article {
-          flex: 1; } }
+          flex: 1;
+          padding: 36px; } }
       div.content section.contact article a {
         display: block;
         text-decoration: none;

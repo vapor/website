@@ -301,8 +301,11 @@ div.content
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .15)
 
     section.features
-        padding: 36px
         width: 100%
+        
+        padding: 0 36px
+        @media screen and (min-width: $tablet)
+            padding: 36px
 
         display: flex
         justify-content: space-between
@@ -395,10 +398,10 @@ div.content
 
         article
             width: 100%
+            padding: 12px
             @media screen and (min-width: $tablet)
                 flex: 1
-
-            padding: 36px
+                padding: 36px
             text-align: center
 
             a
