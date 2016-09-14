@@ -182,7 +182,7 @@ drop.run()
             });
 
             var swift = new Image()
-            swift.src = "/images/swift-pink.png"
+            swift.src = "/images/swift-bird-pink.png"
             var gradCap = new Image()
             gradCap.src = "/images/grad-cap-pink.png"
 
