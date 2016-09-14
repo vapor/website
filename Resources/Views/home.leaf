@@ -111,7 +111,7 @@ drop.run()
             <div class="dark">
                 <div class="wrapper">
                     <section class="partners services">
-                        <h2>Works With Things Like...</h2>
+                        <h2>Works With...</h2>
                         <article>
                             <img src="/images/macos.png" alt="macOS">
                             <h3>macOS</h3>
@@ -158,6 +158,10 @@ drop.run()
                         <article>
                             <img src="/images/redis.png" alt="Redis">
                             <h3>Redis</h3>
+                        </article>
+                        <article>
+                            <img src="/images/more.png" alt="Redis">
+                            <h3>And More...</h3>
                         </article>
                     </section>
                 </div>
