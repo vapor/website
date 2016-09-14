@@ -8,6 +8,23 @@ $tablet: 768px
 $laptop: 1280px
 $desktop: 1920px
 
+
+@keyframes popIn
+    from
+        transform: translate(0px, 24px)
+        opacity: 0
+    to
+        transform: translate(0, 0)
+        opacity: 1
+
+@keyframes popDown
+    from
+        transform: translate(0px, -24px)
+        opacity: 0
+    to
+        transform: translate(0, 0)
+        opacity: 1
+
 body
     padding: 0
     margin: 0
@@ -48,6 +65,8 @@ header.main
         top: 0
         left: 0
         right: 0
+
+        animation: popDown 0.5s ease forwards
 
         width: 100%
         padding: 24px
@@ -164,6 +183,10 @@ header.main
         font-family: 'Quicksand'
         font-weight: 500
 
+        opacity: 0
+        animation: popIn 0.5s ease forwards
+        animation-delay: 0s
+
         font-size: 20px
         padding: 0 12px
         bottom: 248px
@@ -175,6 +198,10 @@ header.main
         position: absolute
         width: 100%
         text-align: center
+
+        opacity: 0
+        animation: popIn 0.5s ease forwards
+        animation-delay: 0.25s
 
         bottom: 204px
         @media screen and (min-width: $tablet)
@@ -268,6 +295,10 @@ header.main
         margin-left: -150px
         background-size: 300px auto
         bottom: -6px
+
+        opacity: 0
+        animation: popIn 0.5s ease forwards
+        animation-delay: 0.5s
 
         @media screen and (min-width: $tablet)
             top: 360px

@@ -95,7 +95,7 @@ function loadSmoke() {
 		smokeGeo = new THREE.PlaneGeometry(300, 300);
 		smokeParticles = [];
 				
-		for (var p = 0; p < 50; p++) {
+		for (var p = 0; p < 40; p++) {
 			var particle = new THREE.Mesh(smokeGeo, smokeMaterial);
 			particle.position.set(Math.random() * 1000 - 500, Math.random() * 500 - 250, Math.random() * 1000 - 5);
 			particle.rotation.z = Math.random() * 360;
@@ -105,7 +105,7 @@ function loadSmoke() {
 		
 		document.getElementById("smoke").appendChild(renderer.domElement)
 		$("#smoke").css({opacity: 0});
-		$("#smoke").animate({opacity: 1});
+		$("#smoke").delay(600).animate({opacity: 1}, 1000);
 	}
 	
 	function animate() {
