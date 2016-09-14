@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box; }
 
@@ -12,11 +13,14 @@ div.wrapper {
   position: relative; }
 
 header.main {
-  height: 648px;
   background: linear-gradient(#92A8D1, #F7CAC9);
   position: relative;
   overflow: hidden;
-  z-index: 9; }
+  z-index: 9;
+  height: 420px; }
+  @media screen and (min-width: 768px) {
+    header.main {
+      height: 648px; } }
   header.main #smoke {
     position: relative; }
     header.main #smoke canvas {
@@ -28,7 +32,8 @@ header.main {
       z-index: 1; }
   header.main div.wrapper {
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    height: 100%; }
   header.main nav {
     position: absolute;
     top: 0;
@@ -36,7 +41,37 @@ header.main {
     right: 0;
     width: 100%;
     padding: 24px;
-    font-family: "Quicksand"; }
+    font-family: "Quicksand";
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      header.main nav {
+        text-align: left; } }
+    header.main nav a.toggle {
+      position: absolute;
+      top: 28px;
+      right: 26px;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      color: white;
+      text-decoration: none;
+      opacity: 0.75; }
+      header.main nav a.toggle.hide {
+        display: none;
+        font-weight: 700;
+        font-size: 19px; }
+      header.main nav a.toggle.show {
+        font-size: 14px;
+        display: block; }
+      header.main nav a.toggle.open.hide {
+        display: block; }
+      header.main nav a.toggle.open.show {
+        display: none; }
+      header.main nav a.toggle:hover {
+        opacity: 1; }
+      @media screen and (min-width: 768px) {
+        header.main nav a.toggle {
+          display: none; } }
     header.main nav a.logo {
       display: inline-block;
       background-image: url("/images/droplet-white.svg");
@@ -57,9 +92,28 @@ header.main {
       margin: 0;
       padding: 0;
       position: absolute;
-      height: 36px;
       right: 32px;
-      top: 28px; }
+      left: 32px;
+      top: 72px;
+      display: none; }
+      header.main nav ul.open {
+        display: flex;
+        background: white;
+        flex-wrap: wrap;
+        border-radius: 6px;
+        padding: 6px;
+        justify-content: center; }
+        header.main nav ul.open a {
+          color: #92A8D1; }
+          header.main nav ul.open a:hover {
+            color: #F7CAC9; }
+      @media screen and (min-width: 768px) {
+        header.main nav ul {
+          display: block;
+          top: 28px;
+          left: auto;
+          background: none;
+          height: 36px; } }
       header.main nav ul a {
         font-size: 16px;
         display: block;
@@ -75,25 +129,34 @@ header.main {
         line-height: 36px; }
   header.main h2 {
     position: absolute;
-    top: 156px;
     width: 100%;
     text-align: center;
     color: white;
     font-family: "Quicksand";
     font-weight: 500;
-    font-size: 36px; }
+    font-size: 20px;
+    padding: 0 12px;
+    bottom: 248px; }
+    @media screen and (min-width: 768px) {
+      header.main h2 {
+        top: 156px;
+        font-size: 36px; } }
   header.main div.action {
     position: absolute;
-    top: 264px;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    bottom: 204px; }
+    @media screen and (min-width: 768px) {
+      header.main div.action {
+        top: 264px; } }
     header.main div.action a.button {
       position: relative;
       display: inline-block;
-      height: 48px;
-      line-height: 48px;
-      width: 180px;
-      margin: 0 24px;
+      height: 36px;
+      width: 120px;
+      margin: 0 12px;
+      font-size: 14px;
+      line-height: 36px;
       text-decoration: none;
       border: none;
       outline: none;
@@ -103,27 +166,47 @@ header.main {
       background: white;
       color: #888;
       font-family: "Quicksand";
-      font-size: 20px;
       text-align: left; }
+      @media screen and (min-width: 768px) {
+        header.main div.action a.button {
+          width: 180px;
+          height: 48px;
+          margin: 0 24px;
+          font-size: 20px;
+          line-height: 48px; } }
       header.main div.action a.button.swift {
-        padding-left: 78px; }
+        padding-left: 56px; }
+        @media screen and (min-width: 768px) {
+          header.main div.action a.button.swift {
+            padding-left: 78px; } }
         header.main div.action a.button.swift::after {
           top: 8px;
           background-image: url("/images/swift-bird.png"); }
       header.main div.action a.button.tutorial {
-        padding-left: 70px; }
+        padding-left: 48px; }
+        @media screen and (min-width: 768px) {
+          header.main div.action a.button.tutorial {
+            padding-left: 70px; } }
         header.main div.action a.button.tutorial::after {
-          top: 12px;
+          top: 10px;
           background-image: url("/images/grad-cap.png"); }
+          @media screen and (min-width: 768px) {
+            header.main div.action a.button.tutorial::after {
+              top: 12px; } }
       header.main div.action a.button::after {
         position: absolute;
-        left: 16px;
         content: "";
         background-size: 100%;
         background-repeat: no-repeat;
-        height: 36px;
-        width: 36px;
+        height: 24px;
+        width: 24px;
+        left: 10px;
         opacity: 0.15; }
+        @media screen and (min-width: 768px) {
+          header.main div.action a.button::after {
+            left: 16px;
+            height: 36px;
+            width: 36px; } }
       header.main div.action a.button:hover {
         color: #F7CAC9;
         box-shadow: 0px 4px 0px 0px #F7CAC9; }
@@ -138,23 +221,36 @@ header.main {
         box-shadow: none; }
   header.main div.window {
     position: absolute;
-    top: 360px;
     left: 50%;
-    margin-left: -360px;
+    width: 300px;
+    margin-left: -150px;
+    background-size: 300px auto;
+    bottom: -6px;
     background-image: url("/images/window.png");
     background-repeat: no-repeat;
-    background-size: 720px auto;
-    width: 720px;
-    height: 500px;
-    padding: 0 24px;
-    padding-top: 48px; }
+    padding: 0 12px;
+    padding-top: 12px; }
+    @media screen and (min-width: 768px) {
+      header.main div.window {
+        top: 360px;
+        margin-left: -360px;
+        width: 720px;
+        height: 500px;
+        background-size: 720px auto; } }
+    @media screen and (min-width: 768px) {
+      header.main div.window {
+        padding: 0 24px;
+        padding-top: 48px; } }
     header.main div.window pre {
       margin: 0; }
       header.main div.window pre code {
         padding: 0;
         margin: 0;
         font-family: "Source Code Pro";
-        font-size: 16px; }
+        font-size: 12px; }
+        @media screen and (min-width: 768px) {
+          header.main div.window pre code {
+            font-size: 16px; } }
 
 div.content {
   position: relative;
@@ -167,14 +263,21 @@ div.content {
     justify-content: space-between;
     flex-wrap: wrap; }
     div.content section.features article {
-      width: 32%;
-      padding: 36px; }
+      width: 100%;
+      padding: 36px 0; }
+      @media screen and (min-width: 768px) {
+        div.content section.features article {
+          width: 32%;
+          padding: 36px; } }
       div.content section.features article h3 {
         font-weight: 500;
         font-family: "Quicksand";
-        font-size: 36px;
+        font-size: 24px;
         text-align: center;
         margin: 0; }
+        @media screen and (min-width: 768px) {
+          div.content section.features article h3 {
+            font-size: 36px; } }
       div.content section.features article p {
         text-align: center;
         margin: 0;
@@ -188,36 +291,123 @@ div.content {
   div.content section.partners {
     display: flex;
     position: relative;
-    padding-top: 112px; }
+    flex-wrap: wrap; }
     div.content section.partners h2 {
       margin: 0;
       text-align: center;
-      position: absolute;
-      top: 36px;
       width: 100%;
       font-weight: 500;
       color: #333;
       font-family: "Quicksand";
-      font-size: 36px; }
+      padding: 0 24px;
+      padding-top: 48px;
+      padding-bottom: 12px;
+      font-size: 30px; }
     div.content section.partners article {
-      flex: 1;
+      width: 50%;
+      cursor: pointer;
+      transition: opacity 0.1s ease;
+      opacity: 0.75;
       padding: 24px;
       text-align: center; }
+      @media screen and (min-width: 768px) {
+        div.content section.partners article {
+          flex: 1; } }
+      div.content section.partners article:hover {
+        opacity: 1; }
       div.content section.partners article img {
-        width: 75%; }
+        width: 60%; }
       div.content section.partners article h3 {
+        font-weight: 500;
+        color: #333;
+        font-family: "Quicksand";
+        font-size: 18px; }
+    div.content section.partners.tools {
+      padding-bottom: 36px;
+      padding-top: 12px; }
+      div.content section.partners.tools article img {
+        width: 50%; }
+  div.content section.contact {
+    display: flex;
+    position: relative;
+    padding-top: 36px;
+    flex-wrap: wrap; }
+    div.content section.contact article {
+      width: 100%;
+      padding: 36px;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        div.content section.contact article {
+          flex: 1; } }
+      div.content section.contact article a {
+        display: block;
+        text-decoration: none;
+        transform: scale(0.9, 0.9);
+        opacity: 0.9;
+        transition: transform 0.1s, opacity 0.1s; }
+        div.content section.contact article a:hover {
+          transform: scale(1);
+          opacity: 1; }
+      div.content section.contact article .img {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        background: #92A8D1;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat; }
+        div.content section.contact article .img.docs {
+          background-image: url("/images/docs.png"); }
+        div.content section.contact article .img.slack {
+          background-image: url("/images/slack.png"); }
+        div.content section.contact article .img.so {
+          background-image: url("/images/so.png"); }
+      div.content section.contact article h3 {
         font-weight: 500;
         color: #333;
         font-family: "Quicksand";
         font-size: 18px; }
 
 footer {
-  height: 60px;
   background: #333;
   color: #ccc;
   text-align: center;
-  font-family: "Quicksand"; }
-  footer p {
-    line-height: 60px; }
+  font-family: "Quicksand";
+  padding: 36px 0; }
+  footer ul {
+    margin: 0;
+    padding: 0; }
+    footer ul li {
+      display: block;
+      padding-bottom: 18px; }
+      footer ul li:last-child {
+        padding-bottom: 0; }
+      @media screen and (min-width: 768px) {
+        footer ul li {
+          padding-bottom: 0;
+          position: relative;
+          display: inline-block; }
+          footer ul li::after {
+            content: "•";
+            position: absolute;
+            right: -9px;
+            top: 0;
+            width: 10px;
+            height: 10px; }
+          footer ul li:last-child::after {
+            display: none; } }
+      footer ul li a {
+        text-decoration: none;
+        color: #ccc;
+        padding: 0 18px;
+        transition: color 0.1s; }
+        footer ul li a:hover {
+          color: white; }
+  footer span {
+    display: block;
+    padding-top: 36px;
+    font-size: 12px;
+    color: #888; }
 
 /*# sourceMappingURL=app.css.map */

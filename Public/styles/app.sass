@@ -4,6 +4,10 @@
 $pink: #F7CAC9
 $blue: #92A8D1
 
+$tablet: 768px
+$laptop: 1280px
+$desktop: 1920px
+
 body
     padding: 0
     margin: 0
@@ -15,11 +19,14 @@ div.wrapper
     position: relative
 
 header.main
-    height: 648px
     background: linear-gradient($blue, $pink)
     position: relative
     overflow: hidden
     z-index: 9
+
+    height: 420px
+    @media screen and (min-width: $tablet)
+        height: 648px
 
     #smoke
         position: relative
@@ -34,6 +41,7 @@ header.main
     div.wrapper
         position: relative
         z-index: 2
+        height: 100%
 
     nav
         position: absolute
@@ -45,6 +53,39 @@ header.main
         padding: 24px
 
         font-family: 'Quicksand'
+        text-align: center
+        @media screen and (min-width: $tablet)
+            text-align: left
+
+        a.toggle
+            position: absolute
+            top: 28px
+            right: 26px
+            width: 36px
+            height: 36px
+            line-height: 36px
+            color: white
+            text-decoration: none
+            opacity: 0.75
+
+            &.hide
+                display: none
+                font-weight: 700
+                font-size: 19px
+            &.show
+                font-size: 14px
+                display: block
+            &.open
+                &.hide
+                    display: block
+                &.show
+                    display: none
+
+            &:hover
+                opacity: 1
+
+            @media screen and (min-width: $tablet)
+                display: none
 
         a.logo
             display: inline-block
@@ -69,9 +110,33 @@ header.main
             padding: 0
 
             position: absolute
-            height: 36px
             right: 32px
-            top: 28px
+            left: 32px
+            top: 72px
+
+
+            display: none
+
+            &.open
+                display: flex
+                background: white
+                flex-wrap: wrap
+                border-radius: 6px
+                padding: 6px
+                justify-content: center
+                a
+                    color: $blue
+                    &:hover
+                        color: $pink
+
+            @media screen and (min-width: $tablet)
+                display: block
+                top: 28px
+                left: auto
+                background: none
+                height: 36px
+
+
 
             a
                 font-size: 16px
@@ -91,28 +156,45 @@ header.main
 
     h2 
         position: absolute
-        top: 156px
         width: 100%
         text-align: center
 
         color: white
         font-family: 'Quicksand'
         font-weight: 500
-        font-size: 36px
+
+        font-size: 20px
+        padding: 0 12px
+        bottom: 248px
+        @media screen and (min-width: $tablet)
+            top: 156px
+            font-size: 36px
 
     div.action
         position: absolute
-        top: 264px
         width: 100%
         text-align: center
+
+        bottom: 204px
+        @media screen and (min-width: $tablet)
+            top: 264px
 
         a.button
             position: relative
             display: inline-block
-            height: 48px
-            line-height: 48px
-            width: 180px
-            margin: 0 24px
+
+            height: 36px
+            width: 120px
+            margin: 0 12px
+            font-size: 14px
+            line-height: 36px
+
+            @media screen and (min-width: $tablet)
+                width: 180px
+                height: 48px
+                margin: 0 24px
+                font-size: 20px
+                line-height: 48px
 
             text-decoration: none
             border: none
@@ -124,30 +206,41 @@ header.main
             background: white
             color: #888
             font-family: 'Quicksand'
-            font-size: 20px
 
             text-align: left
 
             &.swift
-                padding-left: 78px
+                padding-left: 56px
+                @media screen and (min-width: $tablet)
+                    padding-left: 78px
                 &::after
                     top: 8px
                     background-image: url("/images/swift-bird.png")
 
             &.tutorial
-                padding-left: 70px
+                padding-left: 48px
+                @media screen and (min-width: $tablet)
+                    padding-left: 70px
                 &::after
-                    top: 12px
+                    top: 10px
+                    @media screen and (min-width: $tablet)
+                        top: 12px
                     background-image: url("/images/grad-cap.png")
 
             &::after
                 position: absolute
-                left: 16px
                 content: ''
                 background-size: 100%
                 background-repeat: no-repeat
-                height: 36px
-                width: 36px
+
+                height: 24px
+                width: 24px
+                left: 10px
+                @media screen and (min-width: $tablet)
+                    left: 16px
+                    height: 36px
+                    width: 36px
+
                 opacity: 0.15
 
             &:hover
@@ -168,19 +261,28 @@ header.main
 
     div.window
         position: absolute
-        top: 360px
         left: 50%
-        margin-left: -360px
+
+        width: 300px
+        margin-left: -150px
+        background-size: 300px auto
+        bottom: -6px
+
+        @media screen and (min-width: $tablet)
+            top: 360px
+            margin-left: -360px
+            width: 720px
+            height: 500px
+            background-size: 720px auto
 
         background-image: url("/images/window.png")
         background-repeat: no-repeat
-        background-size: 720px auto
 
-        width: 720px
-        height: 500px
-
-        padding: 0 24px
-        padding-top: 48px
+        padding: 0 12px
+        padding-top: 12px
+        @media screen and (min-width: $tablet)
+            padding: 0 24px
+            padding-top: 48px
 
         pre
             margin: 0
@@ -188,7 +290,10 @@ header.main
                 padding: 0
                 margin: 0
                 font-family: 'Source Code Pro'
-                font-size: 16px
+                
+                font-size: 12px
+                @media screen and (min-width: $tablet)
+                    font-size: 16px
 
 div.content
     position: relative
@@ -204,13 +309,19 @@ div.content
         flex-wrap: wrap
 
         article
-            width: 32%
-            padding: 36px
+            width: 100%
+            padding: 36px 0
+
+            @media screen and (min-width: $tablet)
+                width: 32%
+                padding: 36px
 
             h3
                 font-weight: 500
                 font-family: 'Quicksand'
-                font-size: 36px
+                font-size: 24px
+                @media screen and (min-width: $tablet)
+                    font-size: 36px
                 text-align: center
                 margin: 0
             p
@@ -228,28 +339,96 @@ div.content
     section.partners
         display: flex
         position: relative
-
-        padding-top: 112px
+        flex-wrap: wrap
 
         h2
             margin: 0
             text-align: center
-            position: absolute
-            top: 36px
             width: 100%
 
             font-weight: 500
             color: #333
             font-family: 'Quicksand'
-            font-size: 36px
+
+            padding: 0 24px
+            padding-top: 48px
+            padding-bottom: 12px
+            font-size: 30px
+            
 
         article
-            flex: 1
+            width: 50%
+            @media screen and (min-width: $tablet)
+                flex: 1
+
+            cursor: pointer
+
+            transition: opacity 0.1s ease
+
+            opacity: 0.75
+            &:hover
+                opacity: 1
+            
             padding: 24px
             text-align: center
 
             img
-                width: 75%
+                width: 60%
+
+            h3
+                font-weight: 500
+                color: #333
+                font-family: 'Quicksand'
+                font-size: 18px
+
+        &.tools
+            padding-bottom: 36px
+            padding-top: 12px
+            article img
+                width: 50%
+
+    section.contact
+        display: flex
+        position: relative
+        padding-top: 36px
+        flex-wrap: wrap
+
+        article
+            width: 100%
+            @media screen and (min-width: $tablet)
+                flex: 1
+
+            padding: 36px
+            text-align: center
+
+            a
+                display: block
+                text-decoration: none
+                transform: scale(0.9, 0.9)
+                opacity: 0.9
+                transition: transform 0.1s, opacity 0.1s
+
+                &:hover
+                    transform: scale(1)
+                    opacity: 1
+
+
+            .img
+                display: inline-block
+                width: 150px
+                height: 150px
+                border-radius: 100px
+                background: $blue
+                background-size: 60%
+                background-position: center
+                background-repeat: no-repeat
+
+                &.docs
+                    background-image: url("/images/docs.png")
+                &.slack
+                    background-image: url("/images/slack.png")
+                &.so
+                    background-image: url("/images/so.png")
 
             h3
                 font-weight: 500
@@ -258,13 +437,56 @@ div.content
                 font-size: 18px
 
 footer
-    height: 60px
     background: #333
     color: #ccc
     text-align: center
     font-family: 'Quicksand'
+    padding: 36px 0
 
-    p
-        line-height: 60px
+    ul
+        margin: 0
+        padding: 0
+
+        li 
+            display: block
+            padding-bottom: 18px
+
+            &:last-child
+                padding-bottom: 0
+
+            @media screen and (min-width: $tablet)
+                padding-bottom: 0
+                position: relative
+                display: inline-block
+
+                &::after
+                    content: "•"
+                    position: absolute
+                    right: -9px
+                    top: 0
+                    width: 10px
+                    height: 10px
+
+                &:last-child
+                    &::after
+                        display: none
+
+
+
+            a 
+                text-decoration: none
+                color: #ccc
+                padding: 0 18px
+
+                transition: color 0.1s
+
+                &:hover
+                    color: white
+
+    span
+        display: block
+        padding-top: 36px
+        font-size: 12px
+        color: #888
 
 
