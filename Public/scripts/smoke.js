@@ -55,7 +55,8 @@ function loadSmoke() {
 	
 	function init() {
 		if(renderer && renderer.domElement) {
-			document.body.removeChild(renderer.domElement);
+			$("#smoke").css({opacity: 0});
+			document.getElementById("smoke").removeChild(renderer.domElement);
 		}
 		clock = new THREE.Clock();
 		
