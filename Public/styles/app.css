@@ -52,7 +52,7 @@ header.main {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    z-index: 11;
     animation: popDown 0.5s ease forwards;
     width: 100%;
     padding: 24px;
@@ -148,6 +148,7 @@ header.main {
     position: absolute;
     width: 100%;
     text-align: center;
+    z-index: 9;
     color: white;
     font-family: "Quicksand";
     font-weight: 500;
