@@ -120,7 +120,7 @@ drop.run()
                         <h2>Works With...</h2>
                         <article>
                             <img src="/images/macos.png" alt="macOS">
-                            <h3>macO/h3>
+                            <h3>macOS</h3>
                         </article>
                         <article>
                             <img src="/images/ubuntu.png" alt="Ubuntu">
