@@ -82,27 +82,33 @@ drop.run()
             <div class="wrapper">
                 <section class="features">
                     <article>
-                        <h3>🔒 Secure</h3>
+                        <img src="/images/lock.png" alt="Lock">
+                        <h3>Secure</h3>
                         <p>Over 100 cryptographic ciphers, digests, and LibreSSL's new TLS are provided out of the box.</p>
                     </article>
                     <article>
-                        <h3>🚀 Fast</h3>
+                        <img src="/images/rocket.png" alt="Rocket">
+                        <h3>Fast</h3>
                         <p>Nearly 100x faster than popular frameworks using Ruby and PHP. Swift is fast by every meaning of the word.</p>
                     </article>
                     <article>
-                        <h3>🌱 Extensible</h3>
+                        <img src="/images/graph.png" alt="Graph">
+                        <h3>Extensible</h3>
                         <p>With middleware and Swift extensions, you can easily add custom functionality that feels native.</p>
                     </article>
                     <article>
-                        <h3>🛰 Modern</h3>
+                        <img src="/images/cloud.png" alt="Cloud">
+                        <h3>Modern</h3>
                         <p>Swift's runtime allows you to take advantage of modern web protocols like real time WebSockets.</p>
                     </article>
                     <article>
-                        <h3>💥 Expressive</h3>
+                        <img src="/images/terminal.png" alt="Terminal">
+                        <h3>Expressive</h3>
                         <p>The static type system allows you to write less and do more. Vapor apps are very concise and even more powerful.</p>
                     </article>
                     <article>
-                        <h3>🎨 Fun</h3>
+                        <img src="/images/pacman.png" alt="Pacman">
+                        <h3>Fun</h3>
                         <p>With autocomplete, debugging, and breakpoints you'll spend more time creating and less time fixing.</p>
                     </article>
                 </section>
@@ -114,7 +120,7 @@ drop.run()
                         <h2>Works With...</h2>
                         <article>
                             <img src="/images/macos.png" alt="macOS">
-                            <h3>macOS</h3>
+                            <h3>macO/h3>
                         </article>
                         <article>
                             <img src="/images/ubuntu.png" alt="Ubuntu">

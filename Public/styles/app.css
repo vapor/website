@@ -293,11 +293,15 @@ div.content {
         padding: 36px; } }
     div.content section.features article {
       width: 100%;
-      padding: 36px 0; }
+      padding: 36px 0;
+      text-align: center; }
       @media screen and (min-width: 768px) {
         div.content section.features article {
           width: 32%;
           padding: 36px; } }
+      div.content section.features article img {
+        width: 80px;
+        margin-bottom: 24px; }
       div.content section.features article h3 {
         font-weight: 500;
         font-family: "Quicksand";
@@ -383,15 +387,17 @@ div.content {
         width: 150px;
         height: 150px;
         border-radius: 100px;
-        background: #92A8D1;
-        background-size: 60%;
+        background-size: 50%;
         background-position: center;
         background-repeat: no-repeat; }
         div.content section.contact article .img.docs {
+          background-color: #A8B0D0;
           background-image: url("/images/docs.png"); }
         div.content section.contact article .img.slack {
+          background-color: #C5BACE;
           background-image: url("/images/slack.png"); }
         div.content section.contact article .img.so {
+          background-color: #E9C7CB;
           background-image: url("/images/so.png"); }
       div.content section.contact article h3 {
         font-weight: 500;

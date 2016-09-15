@@ -348,10 +348,15 @@ div.content
         article
             width: 100%
             padding: 36px 0
+            text-align: center
 
             @media screen and (min-width: $tablet)
                 width: 32%
                 padding: 36px
+
+            img
+                width: 80px
+                margin-bottom: 24px
 
             h3
                 font-weight: 500
@@ -455,16 +460,18 @@ div.content
                 width: 150px
                 height: 150px
                 border-radius: 100px
-                background: $blue
-                background-size: 60%
+                background-size: 50%
                 background-position: center
                 background-repeat: no-repeat
 
                 &.docs
+                    background-color: #A8B0D0
                     background-image: url("/images/docs.png")
                 &.slack
+                    background-color: #C5BACE
                     background-image: url("/images/slack.png")
                 &.so
+                    background-color: #E9C7CB
                     background-image: url("/images/so.png")
 
             h3
