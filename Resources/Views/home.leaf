@@ -82,24 +82,24 @@ drop.run()
             <div class="wrapper">
                 <section class="features">
                     <article>
-                        <img src="/images/lock.png" alt="Lock">
-                        <h3>Secure</h3>
-                        <p>Over 100 cryptographic ciphers, digests, and LibreSSL's new TLS are provided out of the box.</p>
+                        <img src="/images/cloud.png" alt="Cloud">
+                        <h3>Server Side Swift</h3>
+                        <p>Create modern web apps, sites, and APIs using HTTP or real-time apps using WebSockets.</p>
                     </article>
                     <article>
                         <img src="/images/rocket.png" alt="Rocket">
                         <h3>Fast</h3>
-                        <p>Nearly 100x faster than popular frameworks using Ruby and PHP. Swift is fast by every meaning of the word.</p>
+                        <p>Nearly 100x faster than popular web frameworks using Ruby and PHP. Swift is fast by every meaning of the word.</p>
+                    </article>
+                    <article>
+                        <img src="/images/lock.png" alt="Lock">
+                        <h3>Secure</h3>
+                        <p>Over 100 cryptographic ciphers, digests, and LibreSSL's new TLS (SSL) make security easy.</p>
                     </article>
                     <article>
                         <img src="/images/graph.png" alt="Graph">
                         <h3>Extensible</h3>
-                        <p>With middleware and Swift extensions, you can easily add custom functionality that feels native.</p>
-                    </article>
-                    <article>
-                        <img src="/images/cloud.png" alt="Cloud">
-                        <h3>Modern</h3>
-                        <p>Swift's runtime allows you to take advantage of modern web protocols like real time WebSockets.</p>
+                        <p>With middleware and Swift extensions, you can add custom functionality to Vapor that feels native.</p>
                     </article>
                     <article>
                         <img src="/images/terminal.png" alt="Terminal">
