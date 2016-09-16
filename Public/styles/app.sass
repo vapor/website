@@ -25,6 +25,17 @@ $desktop: 1920px
         transform: translate(0, 0)
         opacity: 1
 
+@keyframes grab
+    0%
+        transform: scale(0.5, 0.5)
+        opacity: 0
+    50%
+        transform: scale(1.1, 1.1)
+        opacity: 1
+    100%
+        transform: scale(1.0, 1.0)
+        opacity: 1
+
 body
     padding: 0
     margin: 0
@@ -537,5 +548,64 @@ footer
         padding-top: 36px
         font-size: 12px
         color: #888
+
+
+a.sticker
+    position: fixed
+    width: 400px
+    height: 130px
+    background: white
+    border-radius: 12px
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .15)
+    bottom: 12px
+    z-index: 15
+    
+    width: 300px
+    height: 98px
+    left: 50%
+    margin-left: -150px
+    @media screen and (min-width: $tablet)
+        width: 400px
+        height: 130px
+        margin: 0
+        left: auto
+        right: 12px
+    background-image: url("/images/sticker.png")
+    background-size: auto 85% 
+    background-position: center
+    background-repeat: no-repeat
+    transition: transform 0.5s ease
+    animation: grab 0.5s ease forwards
+    opacity: 0
+    animation-delay: 2s
+
+    button.close
+        background: none
+        color: white
+        border: none
+        outline: none
+        position: absolute
+        display: block
+        padding: 0
+        margin: 0
+        top: 6px
+        right: 12px
+        width: 36px
+        height: 36px
+        font-size: 24px
+        line-height: 24px
+        text-align: center
+        cursor: pointer
+        opacity: 0.5
+        z-index: 16
+        &:hover
+            opacity: 1
+
+    &:hover
+        transform: translate(0, -2px)
+
+    &:active
+        margin-top: 1px
+
 
 
