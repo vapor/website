@@ -94,7 +94,7 @@ drop.run()
                     <article>
                         <img src="/images/lock.png" alt="Lock">
                         <h3>Secure</h3>
-                        <p>Over 100 cryptographic ciphers, digests, and LibreSSL's new TLS (SSL) make security easy.</p>
+                        <p>The latest cryptographic ciphers, digests, and LibreSSL's new TLS (SSL) make security easy.</p>
                     </article>
                     <article>
                         <img src="/images/graph.png" alt="Graph">
