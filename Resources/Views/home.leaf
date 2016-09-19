@@ -208,6 +208,7 @@ drop.run()
                 <li><a href="mailto:jobs@qutheory.io">Jobs</a></li>
                 <li><a href="http://tanner.xyz">Tanner Nelson</a></li>
                 <li><a href="http://twitter.com/logmaestro">Logan Wright</a></li>
+                <li><a href="http://nodesagency.com">Nodes</a></li>
             </ul>
             <span>&copy; Qutheory, LLC 2016 • Running on Vapor 1.0</span>
         </footer>
