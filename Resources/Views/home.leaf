@@ -197,10 +197,6 @@ drop.run()
             </div>
         </div>
 
-        <a href="http://star.vapor.codes" class="sticker">
-            <button class="close">&times;</button>
-        </a>
-
         <footer>
             <ul>
                 <li><a href="mailto:website@qutheory.io">Contact</a></li>
@@ -233,16 +229,6 @@ drop.run()
             if (navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Chrome") == -1) {
                 $("body").addClass("safari");
             }
-
-            if (localStorage.getItem("hide-sticker") == "true") {
-                $(".sticker").remove()
-            }
-
-            $(".sticker .close").on("click", function(e) {
-                e.preventDefault()
-                $(".sticker").remove()
-                localStorage.setItem("hide-sticker", "true");
-            })
         </script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
