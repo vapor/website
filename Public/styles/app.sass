@@ -496,6 +496,77 @@ div.content
                 font-family: 'Quicksand'
                 font-size: 18px
 
+    section.sponsors
+        display: flex
+        position: relative
+        flex-wrap: wrap
+
+        h2
+            margin: 0
+            text-align: center
+            width: 100%
+
+            font-weight: 500
+            color: #333
+            font-family: 'Quicksand'
+
+            padding: 0 24px
+            padding-top: 12px
+            padding-bottom: 36px
+            font-size: 30px
+            
+
+        article
+            a
+                text-decoration: none
+
+            width: 50%
+            @media screen and (min-width: $tablet)
+                flex: 1
+
+            opacity: 0.75
+            &:hover
+                opacity: 1
+            
+            padding: 24px
+            text-align: center
+            cursor: pointer
+            padding-bottom: 36px
+
+            img
+                width: 60%
+
+            h3
+                font-weight: 500
+                color: #333
+                font-family: 'Quicksand'
+                font-size: 20px
+
+            div.metal
+                .icon
+                    &.bedrock
+                        background: #4A4A4A
+                    &.gold
+                        background: #DCB657
+                    &.silver
+                        background: #CEC8C8
+                    &.bronze
+                        background: #DF7A58
+                    &.individual
+                        background: #7ED321
+                    width: 29px
+                    height: 29px
+                    border-radius: 14.5px
+                    margin: 0 auto
+                    margin-bottom: 16px
+                    margin-top: 32px
+                .label
+                    font-size: 14px
+                    text-align: center
+                    color: #333
+                    font-family: 'Quicksand'
+
+
 footer
     background: #333
     color: #ccc
@@ -548,64 +619,4 @@ footer
         padding-top: 36px
         font-size: 12px
         color: #888
-
-
-a.sticker
-    position: fixed
-    width: 400px
-    height: 130px
-    background: white
-    border-radius: 12px
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .15)
-    bottom: 12px
-    z-index: 15
-    
-    width: 300px
-    height: 98px
-    left: 50%
-    margin-left: -150px
-    @media screen and (min-width: $tablet)
-        width: 400px
-        height: 130px
-        margin: 0
-        left: auto
-        right: 12px
-    background-image: url("/images/sticker.png")
-    background-size: auto 85% 
-    background-position: center
-    background-repeat: no-repeat
-    transition: transform 0.5s ease
-    animation: grab 0.5s ease forwards
-    opacity: 0
-    animation-delay: 2s
-
-    button.close
-        background: none
-        color: white
-        border: none
-        outline: none
-        position: absolute
-        display: block
-        padding: 0
-        margin: 0
-        top: 6px
-        right: 12px
-        width: 36px
-        height: 36px
-        font-size: 24px
-        line-height: 24px
-        text-align: center
-        cursor: pointer
-        opacity: 0.5
-        z-index: 16
-        &:hover
-            opacity: 1
-
-    &:hover
-        transform: translate(0, -2px)
-
-    &:active
-        margin-top: 1px
-
-
 

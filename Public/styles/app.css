@@ -420,6 +420,64 @@ div.content {
         color: #333;
         font-family: "Quicksand";
         font-size: 18px; }
+  div.content section.sponsors {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap; }
+    div.content section.sponsors h2 {
+      margin: 0;
+      text-align: center;
+      width: 100%;
+      font-weight: 500;
+      color: #333;
+      font-family: "Quicksand";
+      padding: 0 24px;
+      padding-top: 12px;
+      padding-bottom: 36px;
+      font-size: 30px; }
+    div.content section.sponsors article {
+      width: 50%;
+      opacity: 0.75;
+      padding: 24px;
+      text-align: center;
+      cursor: pointer;
+      padding-bottom: 36px; }
+      div.content section.sponsors article a {
+        text-decoration: none; }
+      @media screen and (min-width: 768px) {
+        div.content section.sponsors article {
+          flex: 1; } }
+      div.content section.sponsors article:hover {
+        opacity: 1; }
+      div.content section.sponsors article img {
+        width: 60%; }
+      div.content section.sponsors article h3 {
+        font-weight: 500;
+        color: #333;
+        font-family: "Quicksand";
+        font-size: 20px; }
+      div.content section.sponsors article div.metal .icon {
+        width: 29px;
+        height: 29px;
+        border-radius: 14.5px;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        margin-top: 32px; }
+        div.content section.sponsors article div.metal .icon.bedrock {
+          background: #4A4A4A; }
+        div.content section.sponsors article div.metal .icon.gold {
+          background: #DCB657; }
+        div.content section.sponsors article div.metal .icon.silver {
+          background: #CEC8C8; }
+        div.content section.sponsors article div.metal .icon.bronze {
+          background: #DF7A58; }
+        div.content section.sponsors article div.metal .icon.individual {
+          background: #7ED321; }
+      div.content section.sponsors article div.metal .label {
+        font-size: 14px;
+        text-align: center;
+        color: #333;
+        font-family: "Quicksand"; }
 
 footer {
   background: #333;
@@ -461,59 +519,5 @@ footer {
     padding-top: 36px;
     font-size: 12px;
     color: #888; }
-
-a.sticker {
-  position: fixed;
-  width: 400px;
-  height: 130px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
-  bottom: 12px;
-  z-index: 15;
-  width: 300px;
-  height: 98px;
-  left: 50%;
-  margin-left: -150px;
-  background-image: url("/images/sticker.png");
-  background-size: auto 85%;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: transform 0.5s ease;
-  animation: grab 0.5s ease forwards;
-  opacity: 0;
-  animation-delay: 2s; }
-  @media screen and (min-width: 768px) {
-    a.sticker {
-      width: 400px;
-      height: 130px;
-      margin: 0;
-      left: auto;
-      right: 12px; } }
-  a.sticker button.close {
-    background: none;
-    color: white;
-    border: none;
-    outline: none;
-    position: absolute;
-    display: block;
-    padding: 0;
-    margin: 0;
-    top: 6px;
-    right: 12px;
-    width: 36px;
-    height: 36px;
-    font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-    cursor: pointer;
-    opacity: 0.5;
-    z-index: 16; }
-    a.sticker button.close:hover {
-      opacity: 1; }
-  a.sticker:hover {
-    transform: translate(0, -2px); }
-  a.sticker:active {
-    margin-top: 1px; }
 
 /*# sourceMappingURL=app.css.map */

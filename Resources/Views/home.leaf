@@ -194,6 +194,54 @@ drop.run()
                         </a>
                     </article>
                 </section>
+
+                <section class="sponsors">
+                    <h2>Sponsors</h2>
+                    <article>
+                        <a href="https://nodesagency.com/">
+                            <img src="/images/nodes.png" alt="macOS">
+                            <h3>Nodes</h3>
+                            <div class="metal">
+                                <div class="icon bedrock"></div>
+                                <span class="label">Bedrock</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article>
+                        <img src="/images/empty-sponsor.png" alt="Ubuntu">
+                        <h3>&nbsp;</h3>
+                        <div class="metal">
+                            <div class="icon gold"></div>
+                            <span class="label">Gold</span>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/images/empty-sponsor.png" alt="Heroku">
+                        <h3>&nbsp;</h3>
+                        <div class="metal">
+                            <div class="icon silver"></div>
+                            <span class="label">Silver</span>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/images/empty-sponsor.png" alt="Digital Ocean">
+                        <h3>&nbsp;</h3>
+                        <div class="metal">
+                            <div class="icon bronze"></div>
+                            <span class="label">Bronze</span>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="https://opencollective.com/vapor">
+                            <img src="/images/open-collective.png" alt="AWS">
+                            <h3>Open Collective</h3>
+                        <div class="metal">
+                            <div class="icon individual"></div>
+                            <span class="label">Individual</span>
+                        </div>
+                        </a>
+                    </article>
+                </section>
             </div>
         </div>
 
