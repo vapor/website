@@ -2,7 +2,7 @@
     <head>
         <title>Vapor (Server-side Swift)</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-        <meta name="description" content="A web framework and server for Swift that works on macOS and Ubuntu.">
+        <meta name="description" content="Vapor is the most used web framework for Swift. It provides a beautifully expressive and easy to use foundation for your next website, API, or cloud project.">
         <meta name="keywords" conent="server side swift, vaporswift, swiftlang">
 
         #raw() {
