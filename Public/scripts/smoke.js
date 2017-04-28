@@ -30,7 +30,7 @@ function loadSmoke() {
 	
 	window.onresize = debounce(function() {
 		init();
-		animate();
+		// animate();
 	}, 250);
 	
 	function debounce(func, threshold, execAsap) {
