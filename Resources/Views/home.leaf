@@ -27,7 +27,7 @@
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="Vapor">
-        <meta name="twitter:description" content="A web framework and server for Swift that works on macOS and Ubuntu.">
+        <meta name="twitter:description" content="A server-side Swift web framework.">
         <meta name="twitter:url" content="https://vapor.codes">
         <meta name="twitter:image" content="https://cloud.githubusercontent.com/assets/1342803/18532560/d5a6f6ca-7aaa-11e6-8045-da2fc4108ee0.png">
         <meta name="twitter:site" content="@codevapor">
@@ -94,7 +94,7 @@ drop.run()
                     <article>
                         <img src="/images/lock.png" alt="Lock">
                         <h3>Secure</h3>
-                        <p>The latest cryptographic ciphers, digests, and LibreSSL's new TLS (SSL) make security easy.</p>
+                        <p>Trusted encryption and TLS from OpenSSL and BCrypt hashing is included by default to make security easy.</p>
                     </article>
                     <article>
                         <img src="/images/graph.png" alt="Graph">
@@ -253,14 +253,15 @@ drop.run()
 
         <footer>
             <ul>
-                <li><a href="mailto:website@qutheory.io">Contact</a></li>
+                <li><a href="mailto:website@vapor.codes">Contact</a></li>
                 <li><a href="http://stickers.vapor.codes">Stickers</a></li>
-                <li><a href="mailto:jobs@qutheory.io">Jobs</a></li>
+                <li><a href="http://shop.vapor.codes">Shop</a></li>
+                <li><a href="mailto:jobs@vapor.codes">Jobs</a></li>
                 <li><a href="http://tanner.xyz">Tanner Nelson</a></li>
                 <li><a href="http://twitter.com/logmaestro">Logan Wright</a></li>
                 <li><a href="/vapor-presskit.zip">PressKit</a></li>
             </ul>
-            <span>&copy; Qutheory, LLC 2016 • Running on Vapor 1.0</span>
+            <span>&copy; Qutheory, LLC 2016 • Running on Vapor 2.0</span>
         </footer>
 
         <script src="/scripts/highlight.pack.js"></script>

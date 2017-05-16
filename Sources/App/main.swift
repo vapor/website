@@ -6,4 +6,4 @@ drop.get { req in
     return try drop.view.make("home")
 }
 
-drop.serve()
+drop.run()

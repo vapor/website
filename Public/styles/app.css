@@ -99,14 +99,16 @@ header.main {
           display: none !important; } }
     header.main nav a.logo {
       display: inline-block;
-      background-image: url("/images/droplet-white.svg");
+      background-image: url("/images/logo.png");
       background-repeat: no-repeat;
       height: 48px;
+      width: 154px;
       padding-left: 36px;
       text-decoration: none;
       color: white;
-      background-size: 32px;
-      background-position: 0px 1px; }
+      background-size: 154px;
+      background-position: 0px;
+      text-indent: -9999px; }
       header.main nav a.logo h1 {
         text-transform: uppercase;
         font-weight: 500;
