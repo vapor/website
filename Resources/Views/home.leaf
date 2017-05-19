@@ -55,13 +55,13 @@
                     <pre><code class="swift">
 import Vapor
 
-let drop = Droplet()
+let drop = try Droplet()
 
 drop.get("hello") { req in
     return "Hello, world."
 }
 
-drop.run()
+try drop.run()
                     </code></pre>
                 </div>
             </div>
