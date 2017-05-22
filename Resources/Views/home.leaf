@@ -48,7 +48,7 @@
 
                 <div class="action">
                     <a href="https://vapor.github.io/documentation/getting-started/install-swift-3-macos.html" class="button swift">Install</a>
-                    <a href="https://vapor.github.io/documentation/getting-started/hello-world.html" class="button tutorial">Tutorial</a>
+                    <a href="https://docs.vapor.codes/2.0/getting-started/hello-world/" class="button tutorial">Tutorial</a>
                 </div>
 
                 <div class="window">
