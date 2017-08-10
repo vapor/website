@@ -8,6 +8,8 @@ $tablet: 768px
 $laptop: 1280px
 $desktop: 1920px
 
+$quicksand: 'Quicksand', Helvetica, sans-serif
+$source-code-pro: 'Source Code Pro', Helvetica, sans-serif
 
 @keyframes popIn
     from
@@ -82,7 +84,7 @@ header.main
         width: 100%
         padding: 24px
 
-        font-family: 'Quicksand'
+        font-family: $quicksand
         text-align: center
         @media screen and (min-width: $tablet)
             text-align: left
@@ -196,7 +198,7 @@ header.main
         z-index: 9
 
         color: white
-        font-family: 'Quicksand'
+        font-family: $quicksand
         font-weight: 500
 
         opacity: 0
@@ -253,7 +255,7 @@ header.main
 
             background: white
             color: #888
-            font-family: 'Quicksand'
+            font-family: $quicksand
 
             text-align: left
 
@@ -341,8 +343,8 @@ header.main
             code
                 padding: 0
                 margin: 0
-                font-family: 'Source Code Pro'
-                
+                font-family: $source-code-pro
+
                 font-size: 12px
                 @media screen and (min-width: $tablet)
                     font-size: 16px
@@ -378,7 +380,7 @@ div.content
 
             h3
                 font-weight: 500
-                font-family: 'Quicksand'
+                font-family: $quicksand
                 font-size: 24px
                 @media screen and (min-width: $tablet)
                     font-size: 36px
@@ -408,7 +410,7 @@ div.content
 
             font-weight: 500
             color: #333
-            font-family: 'Quicksand'
+            font-family: $quicksand
 
             padding: 0 24px
             padding-top: 48px
@@ -438,7 +440,7 @@ div.content
             h3
                 font-weight: 500
                 color: #333
-                font-family: 'Quicksand'
+                font-family: $quicksand
                 font-size: 18px
 
         &.tools
@@ -495,7 +497,7 @@ div.content
             h3
                 font-weight: 500
                 color: #333
-                font-family: 'Quicksand'
+                font-family: $quicksand
                 font-size: 18px
 
     section.sponsors
@@ -510,7 +512,7 @@ div.content
 
             font-weight: 500
             color: #333
-            font-family: 'Quicksand'
+            font-family: $quicksand
 
             padding: 0 24px
             padding-top: 12px
@@ -541,7 +543,7 @@ div.content
             h3
                 font-weight: 500
                 color: #333
-                font-family: 'Quicksand'
+                font-family: $quicksand
                 font-size: 20px
 
             div.metal
@@ -566,14 +568,14 @@ div.content
                     font-size: 14px
                     text-align: center
                     color: #333
-                    font-family: 'Quicksand'
+                    font-family: $quicksand
 
 
 footer
     background: #333
     color: #ccc
     text-align: center
-    font-family: 'Quicksand'
+    font-family: $quicksand
     padding: 36px 0
 
     ul
