@@ -4,4 +4,5 @@ xcuserdata
 node_modules
 *.xcodeproj
 Public/scripts/app.js
+Package.resolved
 
