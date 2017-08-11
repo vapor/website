@@ -66,7 +66,7 @@ header.main {
     animation: popDown 0.5s ease forwards;
     width: 100%;
     padding: 24px;
-    font-family: "Quicksand";
+    font-family: "Quicksand", Helvetica, sans-serif;
     text-align: center; }
     @media screen and (min-width: 768px) {
       header.main nav {
@@ -162,7 +162,7 @@ header.main {
     text-align: center;
     z-index: 9;
     color: white;
-    font-family: "Quicksand";
+    font-family: "Quicksand", Helvetica, sans-serif;
     font-weight: 500;
     opacity: 0;
     animation: popIn 0.5s ease forwards;
@@ -206,7 +206,7 @@ header.main {
       cursor: pointer;
       background: white;
       color: #888;
-      font-family: "Quicksand";
+      font-family: "Quicksand", Helvetica, sans-serif;
       text-align: left; }
       @media screen and (min-width: 768px) {
         header.main div.action a.button {
@@ -290,7 +290,7 @@ header.main {
       header.main div.window pre code {
         padding: 0;
         margin: 0;
-        font-family: "Source Code Pro";
+        font-family: "Source Code Pro", Helvetica, sans-serif;
         font-size: 12px; }
         @media screen and (min-width: 768px) {
           header.main div.window pre code {
@@ -322,7 +322,7 @@ div.content {
         margin-bottom: 24px; }
       div.content section.features article h3 {
         font-weight: 500;
-        font-family: "Quicksand";
+        font-family: "Quicksand", Helvetica, sans-serif;
         font-size: 24px;
         text-align: center;
         margin: 0; }
@@ -349,7 +349,7 @@ div.content {
       width: 100%;
       font-weight: 500;
       color: #333;
-      font-family: "Quicksand";
+      font-family: "Quicksand", Helvetica, sans-serif;
       padding: 0 24px;
       padding-top: 48px;
       padding-bottom: 12px;
@@ -371,7 +371,7 @@ div.content {
       div.content section.partners article h3 {
         font-weight: 500;
         color: #333;
-        font-family: "Quicksand";
+        font-family: "Quicksand", Helvetica, sans-serif;
         font-size: 18px; }
     div.content section.partners.tools {
       padding-bottom: 36px;
@@ -420,7 +420,7 @@ div.content {
       div.content section.contact article h3 {
         font-weight: 500;
         color: #333;
-        font-family: "Quicksand";
+        font-family: "Quicksand", Helvetica, sans-serif;
         font-size: 18px; }
   div.content section.sponsors {
     display: flex;
@@ -432,7 +432,7 @@ div.content {
       width: 100%;
       font-weight: 500;
       color: #333;
-      font-family: "Quicksand";
+      font-family: "Quicksand", Helvetica, sans-serif;
       padding: 0 24px;
       padding-top: 12px;
       padding-bottom: 36px;
@@ -456,7 +456,7 @@ div.content {
       div.content section.sponsors article h3 {
         font-weight: 500;
         color: #333;
-        font-family: "Quicksand";
+        font-family: "Quicksand", Helvetica, sans-serif;
         font-size: 20px; }
       div.content section.sponsors article div.metal .icon {
         width: 29px;
@@ -479,13 +479,13 @@ div.content {
         font-size: 14px;
         text-align: center;
         color: #333;
-        font-family: "Quicksand"; }
+        font-family: "Quicksand", Helvetica, sans-serif; }
 
 footer {
   background: #333;
   color: #ccc;
   text-align: center;
-  font-family: "Quicksand";
+  font-family: "Quicksand", Helvetica, sans-serif;
   padding: 36px 0; }
   footer ul {
     margin: 0;
