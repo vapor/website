@@ -188,7 +188,7 @@ try drop.run()
                     <h2>Sponsors</h2>
                     <article>
                         <a href="https://nodesagency.com/">
-                            <img src="/images/nodes.png" alt="macOS">
+                            <img src="/images/nodes.png" alt="Nodes">
                             <h3>Nodes</h3>
                             <div class="metal">
                                 <div class="icon bedrock"></div>
@@ -198,7 +198,7 @@ try drop.run()
                     </article>
                     <article>
                         <a href="mailto:sponsor@qutheory.io">
-                            <img src="/images/empty-sponsor.png" alt="Ubuntu">
+                            <img src="/images/empty-sponsor.png" alt="Become a sponsor!">
                             <h3>&nbsp;</h3>
                             <div class="metal">
                                 <div class="icon gold"></div>
@@ -208,7 +208,7 @@ try drop.run()
                     </article>
                     <article>
                         <a href="mailto:sponsor@qutheory.io">
-                            <img src="/images/empty-sponsor.png" alt="Heroku">
+                            <img src="/images/empty-sponsor.png" alt="Become a sponsor!">
                             <h3>&nbsp;</h3>
                             <div class="metal">
                                 <div class="icon silver"></div>
@@ -217,9 +217,9 @@ try drop.run()
                         </a>
                     </article>
                     <article>
-                        <a href="mailto:sponsor@qutheory.io">
-                            <img src="/images/empty-sponsor.png" alt="Digital Ocean">
-                            <h3>&nbsp;</h3>
+                        <a href="https://www.skelpo.com">
+                            <img src="/images/skelpo.png" alt="Skelpo">
+                            <h3>Skelpo</h3>
                             <div class="metal">
                                 <div class="icon bronze"></div>
                                 <span class="label">Bronze</span>
@@ -228,7 +228,7 @@ try drop.run()
                     </article>
                     <article>
                         <a href="https://opencollective.com/vapor">
-                            <img src="/images/open-collective.png" alt="AWS">
+                            <img src="/images/open-collective.png" alt="Open Collective">
                             <h3>Open Collective</h3>
                             <div class="metal">
                                 <div class="icon individual"></div>
