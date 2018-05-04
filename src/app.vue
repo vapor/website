@@ -140,6 +140,8 @@
                 border-bottom: 1px dotted rgba(255, 255, 255, 0.75)
     .bios
         display: flex
+        .bio
+            width: 33%
 
 
     .mid-title
