@@ -111,6 +111,8 @@
 <style lang="sass" scoped>
     .application
         background: white!important
+        max-width: 1500px
+        min-width: 800px
     .btn
         color: white
         margin: 0 18px
@@ -132,6 +134,7 @@
         padding-top: 64px
         background: black
         padding-bottom: 64px
+        min-width: 100%
         a
             text-decoration: none
             color: white
@@ -184,6 +187,7 @@
             font-size: 18px
 
     .sponsor-list
+        overflow: hidden
         display: flex
         padding-bottom: 64px
         div

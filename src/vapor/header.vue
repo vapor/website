@@ -67,7 +67,8 @@
             width: 210px
             height: 58px
             overflow: hidden
-            background-image: url(assets/vapor-3.svg)
+            background-image: url(assets/vapor-3.png)
+            background-size: 100%
             position: relative
             h1
                 position: relative
