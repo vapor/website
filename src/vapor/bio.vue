@@ -18,7 +18,6 @@
             border-radius: 30px
             margin-bottom: 24px
         .text
-            color: white
             font-size: 18px
 </style>
 

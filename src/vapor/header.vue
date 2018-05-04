@@ -85,6 +85,12 @@
             margin-top: 12px
             text-align: center
             margin-bottom: 30px
+            .btn
+                margin: 0 18px
+                width: 160px
+                font-size: 18px
+                height: 42px
+                background-color: #00B0FF!important
 </style>
 
 <script>
