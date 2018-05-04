@@ -1,7 +1,7 @@
 <template>
     <div class="bio">
         <div class="image">
-            
+            <img :src="imageURL">
         </div>
         <p class="text">
             <slot></slot>
@@ -12,23 +12,23 @@
 <style lang="sass" scoped>
     .bio
         padding: 0 30px
+        text-align: center
         .image
-            margin: 0 auto
-            background: white
-            width: 60px
             height: 60px
             border-radius: 30px
             margin-bottom: 24px
         .text
             color: white
-            text-align: center
             font-size: 18px
 </style>
 
 <script>
     export default {
-        data () {
-            return { }
+        props: ['image'],
+        data () { 
+            return {
+                imageURL: require(`./assets/${this.image}.svg`)
+            }
         }
     }
 </script>
