@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="vapor.codes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-194.000000, -1093.000000)">
+        <g id="black-section" transform="translate(0.000000, 695.000000)" fill="#B8E986" fill-rule="nonzero">
+            <g id="features" transform="translate(194.000000, 296.000000)">
+                <g id="Group-20" transform="translate(0.000000, 102.000000)">
+                    <g id="Group-17">
+                        <path d="M15,30 C6.7125,30 0,23.2875 0,15 C0,6.7125 6.7125,0 15,0 C23.2875,0 30,6.7125 30,15 C30,23.2875 23.2875,30 15,30 Z M22.5463674,10.4085811 C21.9415239,9.86380629 20.996456,9.86380629 20.3916125,10.4085811 L12.8310691,17.5684791 L9.50443001,14.1441801 C8.93738925,13.5604928 7.99232132,13.5604928 7.42528057,14.1441801 C6.85823981,14.7278674 6.85823981,15.7006797 7.42528057,16.284367 L11.5835794,20.5647408 C11.9238039,20.9149532 12.3396338,21.0316907 12.7932664,20.9927782 C13.246899,21.0316907 13.7005316,20.9149532 14.0407561,20.6036533 L22.5463674,12.4709431 C23.1512109,11.8872557 23.1512109,10.9922685 22.5463674,10.4085811 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
