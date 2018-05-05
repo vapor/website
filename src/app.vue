@@ -6,15 +6,10 @@
         <div class="dark">
             <div class="wrapper">
                 <div class="bios">
-<<<<<<< HEAD
-                    <vapor-bio image="rocket">Non-blocking, event-driven architecture built on top of Apple's <a href="https://github.com/apple/swift-nio">SwiftNIO</a> delivers <a href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">high performance</a>.</vapor-bio>
-                    <vapor-bio image="swift">Written in <a href="https://swift.org">Swift</a>, the powerful programming language that is also easy to learn.</vapor-bio>
-                    <vapor-bio image="pacman">Expressive, <a href="https://developer.apple.com/videos/play/wwdc2015/408/">protocol-oriented design</a> with a focus on type-safety and maintainability.</vapor-bio>
-=======
-                    <vapor-bio image="rocket">Non-blocking, event-driven architecture built on top of Apple's <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> delivers <a href="#">high performance</a>.</vapor-bio>
+                    <vapor-bio image="pacman">Expressive, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">protocol-oriented design</a> with a focus on type-safety and maintainability.</vapor-bio>
+                    <vapor-bio image="rocket">Non-blocking, event-driven architecture built on top of Apple's <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> delivers <a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">high performance</a>.</vapor-bio>
                     <vapor-bio image="swift">Written in <a target="_blank" href="https://swift.org">Swift</a>, the powerful programming language that is also easy to learn.</vapor-bio>
                     <vapor-bio image="pacman">Expressive, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">protocol-oriented design</a> with a focus on type-safety and maintainability.</vapor-bio>
->>>>>>> dae2495cd66cf9ec001a3a70943a118d5514683b
                 </div>
                 <div class="packages">
                     <h3 class="mid-title">Packages</h3>
@@ -48,17 +43,17 @@
                     <div>
                         <img :src="ghImageURL">
                         <p>Submit feature ideas, report bugs, and merge code on GitHub!</p>
-                        <v-btn href="https://github.com/vapor/vapor" class="info">GitHub</v-btn>
+                        <v-btn target="_blank" href="https://github.com/vapor/vapor" class="info">GitHub</v-btn>
                     </div>
                     <div>
                         <img :src="chatImageURL">
                         <p>Help newcomers learn the ropes and get started with Vapor.</p>
-                        <v-btn href="https://discord.gg/BnXmVGA" class="info">Join Chat</v-btn>
+                        <v-btn target="_blank" href="https://discord.gg/BnXmVGA" class="info">Join Chat</v-btn>
                     </div>
                     <div>
                         <img :src="ocImageURL">
                         <p>Make a one time or recurring donation to support development.</p>
-                        <v-btn href="https://opencollective.com/vapor#sponsor" class="info">Become Backer</v-btn>
+                        <v-btn target="_blank" href="https://opencollective.com/vapor#sponsor" class="info">Become Backer</v-btn>
                     </div>
                 </div>
             </div>
@@ -66,13 +61,13 @@
                 <h3 class="mid-title">Our Sponsors</h3>
                 <div class="sponsor-list">
                     <div>
-                        <a href="https://www.nodesagency.com">
+                        <a target="_blank" href="https://www.nodesagency.com">
                             <img :src="nodesImageURL">
                             <p>Nodes</p>
                         </a>
                     </div>
                     <div>
-                        <a href="https://www.skelpo.com">
+                        <a target="_blank" href="https://www.skelpo.com">
                             <img :src="skelpoImageURL">
                             <p>Skelpo</p>
                         </a>
@@ -101,8 +96,8 @@
         <div class="vapor-footer">
             <div class="footer-nav">
                 <a href="mailto:hello@vapor.codes">Contact Us</a>
-                <a href="https://twitter.com/codevapor">Twitter</a>
-                <a href="https://medium.com/@codevapor">Medium</a>
+                <a target="_blank" href="https://twitter.com/codevapor">Twitter</a>
+                <a target="_blank" href="https://medium.com/@codevapor">Medium</a>
                 <a href="/vapor-presskit-2018-05-04.zip">Press Kit</a>
                 <a href="mailto:jobs@vapor.codes">Jobs</a>
             </div>

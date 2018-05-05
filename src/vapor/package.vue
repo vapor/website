@@ -1,6 +1,6 @@
 <template>
     <div class="package">
-        <a :href="`https://github.com/vapor/${repo}`">
+        <a target="_blank" :href="`https://github.com/vapor/${repo}`">
             <div class="wrap">
                 <img :src="imageURL"><h4><slot></slot></h4>
             </div>
