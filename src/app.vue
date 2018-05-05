@@ -7,13 +7,10 @@
 
             <vapor-terminal class="vapor-app__terminal"/>
 
-            <div class="dark">
+            <vapor-bio class="vapor-app__bio"/>
+
+            <div class="dark-old">
                 <div class="wrapper">
-                    <div class="bios">
-                        <vapor-bio image="rocket">Non-blocking, event-driven architecture built on top of Apple's <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> delivers <a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">high performance</a>.</vapor-bio>
-                        <vapor-bio image="swift">Written in <a target="_blank" href="https://swift.org">Swift</a>, the powerful programming language that is also easy to learn.</vapor-bio>
-                        <vapor-bio image="pacman">Expressive, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">protocol-oriented design</a> with a focus on type-safety and maintainability.</vapor-bio>
-                    </div>
                     <div class="packages">
                         <h3 class="mid-title">Packages</h3>
                         <div class="package-list">
@@ -119,6 +116,7 @@
 
     .vapor-app__content
         display: flex
+        width: 100%;
         flex-direction: column
         align-items: center
 
@@ -134,7 +132,7 @@
         min-width: 800px
         margin: 0 auto
         width: 100%
-    .dark
+    .dark-old
         color: white
         padding-top: 64px
         background: black
