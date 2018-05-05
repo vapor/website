@@ -111,7 +111,6 @@
 <style lang="sass" scoped>
     .application
         background: white!important
-        max-width: 1500px
         min-width: 800px
     .btn
         color: white
