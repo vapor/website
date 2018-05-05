@@ -10,14 +10,6 @@
             </li>
         </ul>
     </nav>
-
-    <!--<div class="header">
-        <div class="hero">
-            <h2 class="slogan">The future of web development.</h2>
-            <div class="buttons">
-                <v-btn href="https://docs.vapor.codes/3.0/install/macos/" color="info">Get Started</v-btn>
-                <v-btn href="https://discord.gg/vapor" color="info">Join Chat</v-btn>
-            </div><!---->
 </template>
 
 <style lang="scss">
@@ -65,33 +57,6 @@
             }
         }
     }
-
-    /*.header
-        width: 100%
-
-    .menu
-        padding-top: 36px
-        width: 100%
-
-
-    .hero
-        margin-top: 48px
-        margin-bottom: 64px
-
-        .slogan
-            text-align: center
-            font-size: 36px
-
-        .buttons
-            margin-top: 12px
-            text-align: center
-            margin-bottom: 30px
-            .btn
-                margin: 0 18px
-                width: 160px
-                font-size: 18px
-                height: 42px
-                background-color: #00B0FF!important*/
 </style>
 
 <script>

@@ -3,6 +3,8 @@
         <vapor-nav class="vapor-app__nav"/>
 
         <main class="vapor-app__content">
+            <vapor-header class="vapor-app__header"/>
+
             <vapor-terminal class="vapor-app__terminal"/>
 
             <div class="dark">
@@ -120,18 +122,11 @@
         flex-direction: column
         align-items: center
 
+        > *:not(:first-child)
+            margin-top: 1em
 
     .application
         background: white!important
-    .btn
-        color: white
-        margin: 0 18px
-        font-size: 18px
-        height: 42px
-        background-color: #00B0FF!important
-
-    .buttons .btn
-        width: 160px
 
     .wrapper
         padding: 0 66px
@@ -249,6 +244,7 @@
 
 <script>
     import VaporNav from 'components/nav'
+    import VaporHeader from 'components/header';
     import VaporTerminal from 'components/terminal'
     import VaporBio from 'components/bio.vue'
     import VaporPackage from 'components/package.vue'
@@ -266,6 +262,7 @@
         },
         components: {
             [VaporNav.name]: VaporNav,
+            [VaporHeader.name]: VaporHeader,
             [VaporTerminal.name]: VaporTerminal,
             'vapor-bio': VaporBio,
             'vapor-package': VaporPackage,

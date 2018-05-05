@@ -1,0 +1,18 @@
+@import 'src/variables';
+
+@mixin button {
+  display: inline-block;
+  color: white;
+  background-color: $color-blue;
+  padding: .5em 1em;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;
+  user-select: none;
+  transition: background-color 1ms cubic-bezier(.25, .8, .5, 1);
+
+  &:hover {
+    background-color: lighten($color-blue, 5%);
+  }
+}
