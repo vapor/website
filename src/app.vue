@@ -1,8 +1,9 @@
 <template>
-    <v-app>
-        <div class="wrapper">
-            <vapor-header></vapor-header>
-        </div>
+    <v-app class="vapor-app">
+        <vapor-nav class="vapor-app__nav"/>
+
+        <vapor-terminal class="vapor-app__terminal"/>
+
         <div class="dark">
             <div class="wrapper">
                 <div class="bios">
@@ -237,25 +238,27 @@
 </style>
 
 <script>
-    import VaporHeader from './vapor/header.vue'
-    import VaporBio from './vapor/bio.vue'
-    import VaporPackage from './vapor/package.vue'
+    import VaporNav from 'components/nav'
+    import VaporTerminal from 'components/terminal'
+    import VaporBio from 'components/bio.vue'
+    import VaporPackage from 'components/package.vue'
 
     export default {
         data () {
             return { 
-                ghImageURL: require('./vapor/assets/github.png'),
-                chatImageURL: require('./vapor/assets/discord.png'),
-                ocImageURL: require('./vapor/assets/open-collective.png'),
-                nodesImageURL: require('./vapor/assets/nodes.png'),
-                skelpoImageURL: require('./vapor/assets/skelpo.png'),
-                sponsorImageURL: require('./vapor/assets/sponsor.png'),
+                ghImageURL: require('components/assets/github.png'),
+                chatImageURL: require('components/assets/discord.png'),
+                ocImageURL: require('components/assets/open-collective.png'),
+                nodesImageURL: require('components/assets/nodes.png'),
+                skelpoImageURL: require('components/assets/skelpo.png'),
+                sponsorImageURL: require('components/assets/sponsor.png'),
             }
         },
         components: {
-            'vapor-header': VaporHeader,
+            [VaporNav.name]: VaporNav,
             'vapor-bio': VaporBio,
             'vapor-package': VaporPackage,
+            'vapor-terminal': VaporTerminal,
         }
     }
 </script>
