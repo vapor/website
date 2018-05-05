@@ -17,7 +17,7 @@
             <h2 class="slogan">The future of web development.</h2>
             <div class="buttons">
                 <v-btn href="https://docs.vapor.codes/3.0/install/macos/" color="info">Get Started</v-btn>
-                <v-btn href="https://discord.gg/BnXmVGA" color="info">Join Chat</v-btn>
+                <v-btn href="https://discord.gg/vapor" color="info">Join Chat</v-btn>
             </div>
             <vapor-terminal>
 <span class="keyword">import</span> Vapor  
