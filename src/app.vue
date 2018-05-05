@@ -6,9 +6,15 @@
         <div class="dark">
             <div class="wrapper">
                 <div class="bios">
+<<<<<<< HEAD
                     <vapor-bio image="rocket">Non-blocking, event-driven architecture built on top of Apple's <a href="https://github.com/apple/swift-nio">SwiftNIO</a> delivers <a href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">high performance</a>.</vapor-bio>
                     <vapor-bio image="swift">Written in <a href="https://swift.org">Swift</a>, the powerful programming language that is also easy to learn.</vapor-bio>
                     <vapor-bio image="pacman">Expressive, <a href="https://developer.apple.com/videos/play/wwdc2015/408/">protocol-oriented design</a> with a focus on type-safety and maintainability.</vapor-bio>
+=======
+                    <vapor-bio image="rocket">Non-blocking, event-driven architecture built on top of Apple's <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> delivers <a href="#">high performance</a>.</vapor-bio>
+                    <vapor-bio image="swift">Written in <a target="_blank" href="https://swift.org">Swift</a>, the powerful programming language that is also easy to learn.</vapor-bio>
+                    <vapor-bio image="pacman">Expressive, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">protocol-oriented design</a> with a focus on type-safety and maintainability.</vapor-bio>
+>>>>>>> dae2495cd66cf9ec001a3a70943a118d5514683b
                 </div>
                 <div class="packages">
                     <h3 class="mid-title">Packages</h3>
