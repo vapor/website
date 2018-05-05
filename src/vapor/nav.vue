@@ -17,21 +17,7 @@
             <div class="buttons">
                 <v-btn href="https://docs.vapor.codes/3.0/install/macos/" color="info">Get Started</v-btn>
                 <v-btn href="https://discord.gg/vapor" color="info">Join Chat</v-btn>
-            </div>
-            <vapor-terminal>
-<span class="keyword">import</span> Vapor  
-
-<span class="keyword">let</span> app = <span class="keyword">try</span> <span class="type">Application</span>() 
-<span class="keyword">let</span> router = <span class="keyword">try</span> app.<span class="method">make</span>(<span class="type">Router</span>.<span class="keyword">self</span>)
-
-  router.<span class="method">get</span>(<span class="string">"hello"</span>) { req <span class="keyword">in </span>&nbsp;    
-    <span class="keyword">return</span> <span class="string">"Hello, world."</span>&nbsp;
- }
-
-  <span class="keyword">try</span> app.<span class="method">run</span>()
-            </vapor-terminal>
-        </div>
-    </div>-->
+            </div><!---->
 </template>
 
 <style lang="scss">

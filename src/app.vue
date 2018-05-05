@@ -1,118 +1,128 @@
 <template>
-    <v-app class="vapor-app">
+    <div class="vapor-app">
         <vapor-nav class="vapor-app__nav"/>
 
-        <vapor-terminal class="vapor-app__terminal"/>
+        <main class="vapor-app__content">
+            <vapor-terminal class="vapor-app__terminal"/>
 
-        <div class="dark">
+            <div class="dark">
+                <div class="wrapper">
+                    <div class="bios">
+                        <vapor-bio image="rocket">Non-blocking, event-driven architecture built on top of Apple's <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> delivers <a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">high performance</a>.</vapor-bio>
+                        <vapor-bio image="swift">Written in <a target="_blank" href="https://swift.org">Swift</a>, the powerful programming language that is also easy to learn.</vapor-bio>
+                        <vapor-bio image="pacman">Expressive, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">protocol-oriented design</a> with a focus on type-safety and maintainability.</vapor-bio>
+                    </div>
+                    <div class="packages">
+                        <h3 class="mid-title">Packages</h3>
+                        <div class="package-list">
+                            <vapor-package repo="http">HTTP</vapor-package>
+                            <vapor-package repo="websocket">WebSockets</vapor-package>
+                            <vapor-package repo="crypto">Crypto</vapor-package>
+                            <vapor-package repo="redis">Redis</vapor-package>
+
+                            <vapor-package repo="mysql">MySQL</vapor-package>
+                            <vapor-package repo="postgresql">PostgreSQL</vapor-package>
+                            <vapor-package repo="sqlite">SQLite</vapor-package>
+                            <vapor-package repo="fluent">Fluent</vapor-package>
+
+                            <vapor-package repo="jwt">JWT</vapor-package>
+                            <vapor-package repo="leaf">Leaf</vapor-package>
+                            <vapor-package repo="service">Services</vapor-package>
+                            <vapor-package repo="auth">Auth</vapor-package>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <v-btn href="https://docs.vapor.codes/3.0/install/macos/" class="info">Get Started</v-btn>
+                        <v-btn href="https://discord.gg/BnXmVGA" class="info">Join Chat</v-btn>
+                    </div>
+                </div>
+            </div>
             <div class="wrapper">
-                <div class="bios">
-                    <vapor-bio image="rocket">Non-blocking, event-driven architecture built on top of Apple's <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> delivers <a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">high performance</a>.</vapor-bio>
-                    <vapor-bio image="swift">Written in <a target="_blank" href="https://swift.org">Swift</a>, the powerful programming language that is also easy to learn.</vapor-bio>
-                    <vapor-bio image="pacman">Expressive, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">protocol-oriented design</a> with a focus on type-safety and maintainability.</vapor-bio>
-                </div>
-                <div class="packages">
-                    <h3 class="mid-title">Packages</h3>
-                    <div class="package-list">
-                        <vapor-package repo="http">HTTP</vapor-package>
-                        <vapor-package repo="websocket">WebSockets</vapor-package>
-                        <vapor-package repo="crypto">Crypto</vapor-package>
-                        <vapor-package repo="redis">Redis</vapor-package>
-
-                        <vapor-package repo="mysql">MySQL</vapor-package>
-                        <vapor-package repo="postgresql">PostgreSQL</vapor-package>
-                        <vapor-package repo="sqlite">SQLite</vapor-package>
-                        <vapor-package repo="fluent">Fluent</vapor-package>
-
-                        <vapor-package repo="jwt">JWT</vapor-package>
-                        <vapor-package repo="leaf">Leaf</vapor-package>
-                        <vapor-package repo="service">Services</vapor-package>
-                        <vapor-package repo="auth">Auth</vapor-package>
+                <div class="contribute">
+                    <h3 class="mid-title">Contribute!</h3>
+                    <div class="contribution-methods">
+                        <div>
+                            <img :src="ghImageURL">
+                            <p>Submit feature ideas, report bugs, and merge code on GitHub!</p>
+                            <v-btn target="_blank" href="https://github.com/vapor/vapor" class="info">GitHub</v-btn>
+                        </div>
+                        <div>
+                            <img :src="chatImageURL">
+                            <p>Help newcomers learn the ropes and get started with Vapor.</p>
+                            <v-btn target="_blank" href="https://discord.gg/BnXmVGA" class="info">Join Chat</v-btn>
+                        </div>
+                        <div>
+                            <img :src="ocImageURL">
+                            <p>Make a one time or recurring donation to support development.</p>
+                            <v-btn target="_blank" href="https://opencollective.com/vapor#sponsor" class="info">Become Backer</v-btn>
+                        </div>
                     </div>
                 </div>
-                <div class="buttons">
-                    <v-btn href="https://docs.vapor.codes/3.0/install/macos/" class="info">Get Started</v-btn>
-                    <v-btn href="https://discord.gg/BnXmVGA" class="info">Join Chat</v-btn>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="contribute">
-                <h3 class="mid-title">Contribute!</h3>
-                <div class="contribution-methods">
-                    <div>
-                        <img :src="ghImageURL">
-                        <p>Submit feature ideas, report bugs, and merge code on GitHub!</p>
-                        <v-btn target="_blank" href="https://github.com/vapor/vapor" class="info">GitHub</v-btn>
-                    </div>
-                    <div>
-                        <img :src="chatImageURL">
-                        <p>Help newcomers learn the ropes and get started with Vapor.</p>
-                        <v-btn target="_blank" href="https://discord.gg/BnXmVGA" class="info">Join Chat</v-btn>
-                    </div>
-                    <div>
-                        <img :src="ocImageURL">
-                        <p>Make a one time or recurring donation to support development.</p>
-                        <v-btn target="_blank" href="https://opencollective.com/vapor#sponsor" class="info">Become Backer</v-btn>
-                    </div>
-                </div>
-            </div>
-            <div class="sponsors">
-                <h3 class="mid-title">Our Sponsors</h3>
-                <div class="sponsor-list">
-                    <div>
-                        <a target="_blank" href="https://www.nodesagency.com">
-                            <img :src="nodesImageURL">
-                            <p>Nodes</p>
-                        </a>
-                    </div>
-                    <div>
-                        <a target="_blank" href="https://www.skelpo.com">
-                            <img :src="skelpoImageURL">
-                            <p>Skelpo</p>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="mailto:sponsor@vapor.codes">
-                            <img :src="sponsorImageURL">
-                            <p></p>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="mailto:sponsor@vapor.codes">
-                            <img :src="sponsorImageURL">
-                            <p></p>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="mailto:sponsor@vapor.codes">
-                            <img :src="sponsorImageURL">
-                            <p></p>
-                        </a>
+                <div class="sponsors">
+                    <h3 class="mid-title">Our Sponsors</h3>
+                    <div class="sponsor-list">
+                        <div>
+                            <a target="_blank" href="https://www.nodesagency.com">
+                                <img :src="nodesImageURL">
+                                <p>Nodes</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a target="_blank" href="https://www.skelpo.com">
+                                <img :src="skelpoImageURL">
+                                <p>Skelpo</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="mailto:sponsor@vapor.codes">
+                                <img :src="sponsorImageURL">
+                                <p></p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="mailto:sponsor@vapor.codes">
+                                <img :src="sponsorImageURL">
+                                <p></p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="mailto:sponsor@vapor.codes">
+                                <img :src="sponsorImageURL">
+                                <p></p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="vapor-footer">
-            <div class="footer-nav">
-                <a href="mailto:hello@vapor.codes">Contact Us</a>
-                <a target="_blank" href="https://twitter.com/codevapor">Twitter</a>
-                <a target="_blank" href="https://medium.com/@codevapor">Medium</a>
-                <a href="/vapor-presskit-2018-05-04.zip">Press Kit</a>
-                <a href="mailto:jobs@vapor.codes">Jobs</a>
+            <div class="vapor-footer">
+                <div class="footer-nav">
+                    <a href="mailto:hello@vapor.codes">Contact Us</a>
+                    <a target="_blank" href="https://twitter.com/codevapor">Twitter</a>
+                    <a target="_blank" href="https://medium.com/@codevapor">Medium</a>
+                    <a href="/vapor-presskit-2018-05-04.zip">Press Kit</a>
+                    <a href="mailto:jobs@vapor.codes">Jobs</a>
+                </div>
+                <p>&copy; Qutheory, LLC 2018</p>
             </div>
-            <p>&copy; Qutheory, LLC 2018</p>
-        </div>
-<!--             <v-footer app>
-                <span>&copy; Qutheory, LLC 2018</span>
-            </v-footer> -->
-    </v-app>
+            <!--             <v-footer app>
+                            <span>&copy; Qutheory, LLC 2018</span>
+                        </v-footer> -->
+        </main>
+    </div>
 </template>
 
-<style lang="sass" scoped>
+<style lang="sass">
+    .vapor-app
+        font-family: 'Roboto', sans-serif
+
+    .vapor-app__content
+        display: flex
+        flex-direction: column
+        align-items: center
+
+
     .application
         background: white!important
-        min-width: 800px
     .btn
         color: white
         margin: 0 18px
@@ -256,9 +266,9 @@
         },
         components: {
             [VaporNav.name]: VaporNav,
+            [VaporTerminal.name]: VaporTerminal,
             'vapor-bio': VaporBio,
             'vapor-package': VaporPackage,
-            'vapor-terminal': VaporTerminal,
         }
     }
 </script>
