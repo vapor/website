@@ -12,13 +12,16 @@
 <style lang="scss">
     .vapor-bio {
         font-size: large;
-        width: 100%;
-        padding: 0 20%;
+        padding-top: 2em;
         background-color: black;
 
         .vapor-bio__blurb {
             display: inline-block;
             width: 33%;
+        }
+
+        .vapor-bio__blurb + .vapor-bio__blurb {
+            margin-left: 2em;
         }
     }
 </style>

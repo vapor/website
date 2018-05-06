@@ -16,7 +16,6 @@
 
 <style lang="scss">
     .vapor-sponsor {
-        width: 100%;
         text-align: center;
 
         .vapor-sponsor__title {
@@ -29,7 +28,7 @@
         }
 
         .vapor-sponsor__link + .vapor-sponsor__link {
-            margin-left: 5%;
+            margin-left: 7em;
         }
 
         .vapor-sponsor__sponsor {

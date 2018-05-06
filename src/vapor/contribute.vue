@@ -16,7 +16,6 @@
 
 <style lang="scss">
     .vapor-contribute {
-        padding: 0 20%;
         text-align: center;
 
         .vapor-contribute__title {
@@ -34,6 +33,10 @@
             .vapor-card__blurb-text {
                 flex: 1;
             }
+        }
+
+        .vapor-contribute__opportunity + .vapor-contribute__opportunity {
+            margin-left: 1.75em;
         }
     }
 </style>

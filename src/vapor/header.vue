@@ -8,6 +8,7 @@
 
 <style lang="scss">
     .vapor-header {
+        text-align: center;
     }
 </style>
 

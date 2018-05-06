@@ -2,9 +2,9 @@
     <div class="vapor-app">
         <vapor-nav class="vapor-app__nav"/>
 
-        <main class="vapor-app__content">
-            <vapor-header class="vapor-app__header"/>
+        <vapor-header class="vapor-app__header"/>
 
+        <main class="vapor-app__content">
             <vapor-terminal class="vapor-app__terminal"/>
 
             <vapor-bio class="vapor-app__bio"/>
@@ -26,24 +26,45 @@
     .vapor-app {
         font-family: 'Roboto', sans-serif;
 
+        .vapor-app__nav {
+            margin: .5em 10%;
+        }
+
+        .vapor-app__header {
+            width: 100%;
+        }
+
         .vapor-app__content {
             display: flex;
             width: 100%;
             flex-direction: column;
             align-items: center;
 
-            > *:not(:first-child) {
-                margin-top: 1em;
+            > * {
+                margin-top: 2em;
+
+                &:not(:first-child) {
+                    width: 100%;
+                    padding-left: 15%;
+                    padding-right: 15%;
+                }
             }
 
-            .vapor-app__packages, .vapor-app__call-to-action {
+            .vapor-app__bio {
+                display: flex;
+            }
+
+            // these share the same background as their neighbor, so we don't want a break
+            // in the background color
+            .vapor-app__packages,
+            .vapor-app__call-to-action {
                 margin-top: 0;
             }
 
             .vapor-app__call-to-action {
                 background-color: black;
                 width: 100%;
-                padding: 3em 0;
+                padding: 4em 0 3em;
             }
         }
     }

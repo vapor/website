@@ -2,14 +2,14 @@
     <section class="vapor-packages">
         <h3 class="vapor-packages__title">Packages</h3>
 
-        <ul class="vapor-packages__list">
-            <li class="vapor-packages__list-item"
-                v-for="repo in packageRepos">
+        <div class="vapor-packages__container">
+            <div class="vapor-packages__column-container"
+                 v-for="repo in packageRepos">
                 <a class="vapor-packages__repo-link"
                    :href="`https://github.com/vapor/${repo.toLowerCase()}`"
                    target="_blank">{{ repo }}</a>
-            </li>
-        </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -18,30 +18,28 @@
         font-weight: 700;
         color: white;
         background-color: black;
-        width: 100%;
-        padding: 0 20%;
         text-align: center;
 
         .vapor-packages__title {
             font-size: 2.25em;
         }
 
-        .vapor-packages__list {
-            margin: 0 auto;
-            padding: 0;
+        .vapor-packages__container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
 
-        .vapor-packages__list-item {
-            display: inline-block;
+        .vapor-packages__column-container {
             width: 33%;
-            margin-top: 2em;
-            text-align: left;
         }
 
         .vapor-packages__repo-link {
             display: inline-flex;
             font-size: larger;
             color: inherit;
+            width: 9em;
+            margin-top: 2em;
             line-height: 1.75em;
             text-decoration: none;
 

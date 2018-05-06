@@ -35,7 +35,7 @@
             &::before {
                 color: $color-gray !important;
                 content: '\2022';
-                margin: 0 .25em;
+                margin: 0 .4em;
             }
         }
 
