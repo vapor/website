@@ -27,6 +27,7 @@
 
     .vapor-app {
         font-family: 'Roboto', sans-serif;
+        background-color: white;
 
         .vapor-app__nav {
             margin: .5em 10%;
