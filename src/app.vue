@@ -91,10 +91,6 @@
 
     @include respond-to(laptop) {
         .vapor-app {
-            .vapor-app__bio {
-                padding-left: 10% !important;
-                padding-right: 10% !important;
-            }
         }
     }
 </style>
