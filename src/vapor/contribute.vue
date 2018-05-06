@@ -15,6 +15,8 @@
 </template>
 
 <style lang="scss">
+    @import 'src/mixins';
+
     .vapor-contribute {
         text-align: center;
 
@@ -37,6 +39,61 @@
 
         .vapor-contribute__opportunity + .vapor-contribute__opportunity {
             margin-left: 1.75em;
+        }
+    }
+
+    @include respond-to(phone) {
+        .vapor-contribute {
+            .vapor-contribute__title {
+                font-size: x-large;
+                margin: .25em 0 .5em;
+            }
+
+            .vapor-contribute__opportunity-container {
+                flex-direction: column;
+            }
+
+            .vapor-contribute__opportunity {
+                font-size: large;
+                width: unset;
+            }
+        }
+    }
+
+    @include respond-to(tablet) {
+        .vapor-contribute {
+            .vapor-contribute__opportunity {
+                .vapor-card__image {
+                    height: 3em;
+                    width: 3em;
+                }
+
+                .vapor-card__blurb-text {
+                    font-size: medium;
+                }
+
+                .vapor-card__button {
+                    font-size: small !important;
+                }
+            }
+
+            .vapor-contribute__opportunity + .vapor-contribute__opportunity {
+                margin-left: 0 !important;
+            }
+        }
+    }
+
+    @include respond-to(laptop) {
+        .vapor-contribute {
+            .vapor-contribute__opportunity {
+                .vapor-card__button {
+                    font-size: medium;
+                }
+            }
+
+            .vapor-contribute__opportunity + .vapor-contribute__opportunity {
+                margin-left: .5em;
+            }
         }
     }
 </style>

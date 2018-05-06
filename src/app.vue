@@ -77,6 +77,12 @@
                 padding-left: $content-side-size;
                 padding-right: $content-side-size;
             }
+
+            .vapor-app__content {
+                > * {
+                    margin-top: 1em;
+                }
+            }
         }
     }
 
@@ -91,6 +97,10 @@
 
     @include respond-to(laptop) {
         .vapor-app {
+            .vapor-app__contribute {
+                padding-left: 5% !important;
+                padding-right: 5% !important;
+            }
         }
     }
 </style>
