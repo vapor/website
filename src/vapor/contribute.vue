@@ -33,7 +33,7 @@
             width: 33%;
 
             .vapor-card__blurb-text {
-                flex: 1;
+                flex: 1 auto;
             }
         }
 
