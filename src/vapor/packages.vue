@@ -14,6 +14,8 @@
 </template>
 
 <style lang="scss">
+    @import 'src/mixins';
+
     .vapor-packages {
         font-weight: 700;
         color: white;
@@ -48,6 +50,31 @@
                 margin-right: 1em;
                 height: 1em;
                 user-select: none;
+            }
+        }
+    }
+
+    @include respond-to(phone) {
+        .vapor-packages {
+            .vapor-packages__title {
+                font-size: x-large;
+            }
+
+            .vapor-packages__repo-link {
+                font-size: medium;
+                line-height: 2em;
+
+                &::before {
+                    margin-right: .5em;
+                }
+            }
+        }
+    }
+
+    @include respond-to(tablet) {
+        .vapor-packages {
+            .vapor-packages__column-container {
+                width: 40%;
             }
         }
     }
