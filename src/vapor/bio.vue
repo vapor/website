@@ -38,7 +38,7 @@
             }
 
             .vapor-bio__blurb + .vapor-bio__blurb {
-                margin-left: 0;
+                margin-left: 0 !important;
             }
         }
     }
