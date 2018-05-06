@@ -13,6 +13,7 @@
 
 <style lang="scss">
     @import 'src/variables';
+    @import 'src/mixins';
 
     .vapor-footer {
         color: $color-gray;
@@ -43,6 +44,23 @@
             display: block;
             color: $color-dark-gray;
             margin-top: 1em;
+        }
+    }
+
+    @include respond-to(phone) {
+        .vapor-footer {
+            .vapor-footer__link {
+                display: block;
+            }
+
+            .vapor-footer__link + .vapor-footer__link {
+                margin-top: .25em;
+                
+                &::before {
+                    content: '';
+                    margin: 0;
+                }
+            }
         }
     }
 </style>
