@@ -9,10 +9,13 @@ module.exports = {
     filename: 'build.js'
   },
   resolve: {
-    extensions: ['.js', '.vue'],
+    extensions: ['.js', '.vue', 'scss'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      'public': path.resolve(__dirname, './public')
+      'public': path.resolve(__dirname, './public'),
+      'src': path.resolve(__dirname, 'src'),
+      'assets': path.resolve(__dirname, 'src/vapor/assets'),
+      'components': path.resolve(__dirname, 'src/vapor')
     }
   },
   module: {
