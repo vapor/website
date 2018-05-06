@@ -12,6 +12,7 @@
 
 <style lang="scss">
     @import 'src/variables';
+    @import 'src/mixins';
 
     .vapor-terminal {
         background: black;
@@ -64,6 +65,39 @@
 
             & .string {
                 color: $color-code-string;
+            }
+        }
+    }
+
+    @include respond-to(phone) {
+        .vapor-terminal {
+            max-width: 90%;
+
+            .vapor-terminal__stoplight {
+                width: 1em !important;
+                height: 1em !important;
+            }
+
+            .vapor-terminal__stoplight + .vapor-terminal__stoplight {
+                margin-left: .5em !important;
+            }
+
+            .vapor-terminal__sample-code {
+                font-size: x-small;
+                padding: 0;
+            }
+        }
+    }
+
+    @include respond-to(tablet) {
+        .vapor-terminal {
+            .vapor-terminal__stoplight {
+                width: 1.25em !important;
+                height: 1.25em !important;
+            }
+
+            .vapor-terminal__stoplight + .vapor-terminal__stoplight {
+                margin-left: .6em !important;
             }
         }
     }
