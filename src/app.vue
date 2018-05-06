@@ -101,6 +101,11 @@
                 padding-left: 5% !important;
                 padding-right: 5% !important;
             }
+
+            .vapor-app__sponsor {
+                padding-left: 10% !important;
+                padding-right: 10% !important;
+            }
         }
     }
 </style>
