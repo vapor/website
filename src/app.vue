@@ -9,27 +9,10 @@
 
             <vapor-bio class="vapor-app__bio"/>
 
+            <vapor-packages class="vapor-app__packages"/>
+
             <div class="dark-old">
                 <div class="wrapper">
-                    <div class="packages">
-                        <h3 class="mid-title">Packages</h3>
-                        <div class="package-list">
-                            <vapor-package repo="http">HTTP</vapor-package>
-                            <vapor-package repo="websocket">WebSockets</vapor-package>
-                            <vapor-package repo="crypto">Crypto</vapor-package>
-                            <vapor-package repo="redis">Redis</vapor-package>
-
-                            <vapor-package repo="mysql">MySQL</vapor-package>
-                            <vapor-package repo="postgresql">PostgreSQL</vapor-package>
-                            <vapor-package repo="sqlite">SQLite</vapor-package>
-                            <vapor-package repo="fluent">Fluent</vapor-package>
-
-                            <vapor-package repo="jwt">JWT</vapor-package>
-                            <vapor-package repo="leaf">Leaf</vapor-package>
-                            <vapor-package repo="service">Services</vapor-package>
-                            <vapor-package repo="auth">Auth</vapor-package>
-                        </div>
-                    </div>
                     <div class="buttons">
                         <v-btn href="https://docs.vapor.codes/3.0/install/macos/" class="info">Get Started</v-btn>
                         <v-btn href="https://discord.gg/BnXmVGA" class="info">Join Chat</v-btn>
@@ -121,7 +104,10 @@
         align-items: center
 
         > *:not(:first-child)
-            margin-top: 1em
+                margin-top: 1em
+
+        .vapor-app__packages
+                margin-top: 0
 
     .application
         background: white!important
@@ -244,8 +230,8 @@
     import VaporNav from 'components/nav'
     import VaporHeader from 'components/header';
     import VaporTerminal from 'components/terminal'
-    import VaporBio from 'components/bio.vue'
-    import VaporPackage from 'components/package.vue'
+    import VaporBio from 'components/bio'
+    import VaporPackages from 'components/packages'
 
     export default {
         data () {
@@ -262,8 +248,8 @@
             [VaporNav.name]: VaporNav,
             [VaporHeader.name]: VaporHeader,
             [VaporTerminal.name]: VaporTerminal,
-            'vapor-bio': VaporBio,
-            'vapor-package': VaporPackage,
+            [VaporBio.name]: VaporBio,
+            [VaporPackages.name]: VaporPackages,
         }
     }
 </script>
