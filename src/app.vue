@@ -13,27 +13,9 @@
 
             <vapor-call-to-action class="vapor-app__call-to-action"/>
 
+            <vapor-contribute class="vapor-app__contribute"/>
+
             <div class="wrapper">
-                <div class="contribute">
-                    <h3 class="mid-title">Contribute!</h3>
-                    <div class="contribution-methods">
-                        <div>
-                            <img :src="ghImageURL">
-                            <p>Submit feature ideas, report bugs, and merge code on GitHub!</p>
-                            <v-btn target="_blank" href="https://github.com/vapor/vapor" class="info">GitHub</v-btn>
-                        </div>
-                        <div>
-                            <img :src="chatImageURL">
-                            <p>Help newcomers learn the ropes and get started with Vapor.</p>
-                            <v-btn target="_blank" href="https://discord.gg/BnXmVGA" class="info">Join Chat</v-btn>
-                        </div>
-                        <div>
-                            <img :src="ocImageURL">
-                            <p>Make a one time or recurring donation to support development.</p>
-                            <v-btn target="_blank" href="https://opencollective.com/vapor#sponsor" class="info">Become Backer</v-btn>
-                        </div>
-                    </div>
-                </div>
                 <div class="sponsors">
                     <h3 class="mid-title">Our Sponsors</h3>
                     <div class="sponsor-list">
@@ -232,13 +214,11 @@
     import VaporBio from 'components/bio'
     import VaporPackages from 'components/packages'
     import VaporCallToAction from 'components/common/callToAction';
+    import VaporContribute from 'components/contribute';
 
     export default {
         data () {
-            return { 
-                ghImageURL: require('components/assets/github.png'),
-                chatImageURL: require('components/assets/discord.png'),
-                ocImageURL: require('components/assets/open-collective.png'),
+            return {
                 nodesImageURL: require('components/assets/nodes.png'),
                 skelpoImageURL: require('components/assets/skelpo.png'),
                 sponsorImageURL: require('components/assets/sponsor.png'),
@@ -250,7 +230,8 @@
             [VaporTerminal.name]: VaporTerminal,
             [VaporBio.name]: VaporBio,
             [VaporPackages.name]: VaporPackages,
-            [VaporCallToAction.name]: VaporCallToAction
+            [VaporCallToAction.name]: VaporCallToAction,
+            [VaporContribute.name]: VaporContribute
         }
     }
 </script>

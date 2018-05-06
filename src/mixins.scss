@@ -4,11 +4,13 @@
   display: inline-block;
   color: white;
   background-color: $color-blue;
-  padding: .5em 1em;
-  line-height: 1em;
+  padding: 0 1em;
+  line-height: 2.5em;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   border-radius: 2px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
   user-select: none;
   transition: background-color 1ms cubic-bezier(.25, .8, .5, 1);
 

@@ -19,7 +19,12 @@
     @import 'src/mixins';
 
     .vapor-card {
+        display: inline-flex;
+        font-weight: 500;
         padding: 1em;
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
 
         &.dark {
             color: black;
@@ -48,6 +53,8 @@
 
         .vapor-card__image {
             display: block;
+            height: 3.5em;
+            width: 3.5em;
             margin: 0 auto;
             padding: 0;
             border-style: none;
@@ -55,9 +62,6 @@
         }
 
         .vapor-card__blurb-text {
-            display: inline-block;
-            text-align: center;
-
             a {
                 text-decoration: none;
             }
@@ -65,7 +69,8 @@
 
         .vapor-card__button {
             @include button();
-            // TODO: Action styling
+
+            align-self: center;
         }
     }
 </style>
