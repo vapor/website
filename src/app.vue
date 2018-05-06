@@ -23,6 +23,8 @@
 </template>
 
 <style lang="scss">
+    @import 'src/mixins';
+
     .vapor-app {
         font-family: 'Roboto', sans-serif;
 
@@ -65,6 +67,15 @@
                 background-color: black;
                 width: 100%;
                 padding: 4em 0 3em;
+            }
+        }
+    }
+
+    @include respond-to(phone) {
+        .vapor-app {
+            .vapor-app__nav {
+                margin-left: 2.5%;
+                margin-right: 2.5%;
             }
         }
     }

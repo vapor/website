@@ -18,3 +18,29 @@
     background-color: lighten($color-blue, 5%);
   }
 }
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'desktop' {
+    @media (min-width: 1051px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 'laptop' {
+    @media (max-width: 1050px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 'tablet' {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 'phone' {
+    @media (max-width: 420px) {
+      @content;
+    }
+  }
+}

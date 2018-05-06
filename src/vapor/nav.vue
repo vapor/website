@@ -14,6 +14,7 @@
 
 <style lang="scss">
     @import 'src/variables';
+    @import 'src/mixins';
 
     .vapor-nav {
         display: flex;
@@ -55,6 +56,23 @@
             &:hover {
                 color: $color-blue;
             }
+        }
+    }
+
+    @include respond-to(phone) {
+        .vapor-nav {
+            flex-direction: column;
+
+            .vapor-nav__list {
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
+
+    @include respond-to(tablet) {
+        .vapor-nav {
+            font-size: small;
         }
     }
 </style>
