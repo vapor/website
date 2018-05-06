@@ -32,10 +32,6 @@
             margin: .5em 10%;
         }
 
-        .vapor-app__header {
-            width: 100%;
-        }
-
         .vapor-app__content {
             display: flex;
             width: 100%;
@@ -46,14 +42,10 @@
                 margin-top: 2em;
 
                 &:not(:first-child) {
-                    width: 100%;
+                    width: 100%; // these elements have a black background, so we want the full screen width
                     padding-left: 15%;
                     padding-right: 15%;
                 }
-            }
-
-            .vapor-app__bio {
-                display: flex;
             }
 
             // these share the same background as their neighbor, so we don't want a break
@@ -72,10 +64,32 @@
     }
 
     @include respond-to(phone) {
+        $content-side-padding: 2.5%;
+
         .vapor-app {
-            .vapor-app__nav {
-                margin-left: 2.5%;
-                margin-right: 2.5%;
+            .vapor-app__nav,
+            .vapor-app__header,
+            .vapor-app__content > *:not(:first-child) {
+                margin-left: $content-side-padding;
+                margin-right: $content-side-padding;
+            }
+        }
+    }
+
+    @include respond-to(tablet) {
+        .vapor-app {
+            .vapor-app__bio {
+                padding-left: 5% !important;
+                padding-right: 5% !important;
+            }
+        }
+    }
+
+    @include respond-to(laptop) {
+        .vapor-app {
+            .vapor-app__bio {
+                padding-left: 10% !important;
+                padding-right: 10% !important;
             }
         }
     }

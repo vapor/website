@@ -15,9 +15,6 @@
 
     @include respond-to(phone) {
         .vapor-header {
-            padding-left: 2.5%;
-            padding-right: 2.5%;
-
             .vapor-header__slogan {
                 font-size: larger;
             }

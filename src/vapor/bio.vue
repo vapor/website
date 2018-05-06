@@ -10,7 +10,10 @@
 </template>
 
 <style lang="scss">
+    @import 'src/mixins';
+
     .vapor-bio {
+        display: flex;
         font-size: large;
         padding-top: 2em;
         background-color: black;
@@ -22,6 +25,44 @@
 
         .vapor-bio__blurb + .vapor-bio__blurb {
             margin-left: 2em;
+        }
+    }
+
+    @include respond-to(phone) {
+        .vapor-bio {
+            flex-direction: column;
+
+            .vapor-bio__blurb {
+                width: 100%;
+                padding: .5em;
+            }
+
+            .vapor-bio__blurb + .vapor-bio__blurb {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @include respond-to(tablet) {
+        .vapor-bio {
+            font-size: medium;
+
+            .vapor-bio__blurb + .vapor-bio__blurb {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @include respond-to(laptop) {
+        .vapor-bio {
+            .vapor-bio__blurb {
+                width: 100%;
+                padding: .5em;
+            }
+
+            .vapor-bio__blurb + .vapor-bio__blurb {
+                margin-left: 1em;
+            }
         }
     }
 </style>
