@@ -11,14 +11,8 @@
 
             <vapor-packages class="vapor-app__packages"/>
 
-            <div class="dark-old">
-                <div class="wrapper">
-                    <div class="buttons">
-                        <v-btn href="https://docs.vapor.codes/3.0/install/macos/" class="info">Get Started</v-btn>
-                        <v-btn href="https://discord.gg/BnXmVGA" class="info">Join Chat</v-btn>
-                    </div>
-                </div>
-            </div>
+            <vapor-call-to-action class="vapor-app__call-to-action"/>
+
             <div class="wrapper">
                 <div class="contribute">
                     <h3 class="mid-title">Contribute!</h3>
@@ -106,8 +100,13 @@
         > *:not(:first-child)
                 margin-top: 1em
 
-        .vapor-app__packages
+        .vapor-app__packages, .vapor-app__call-to-action
                 margin-top: 0
+
+        .vapor-app__call-to-action
+                background-color: black
+                width: 100%
+                padding: 3em 0
 
     .application
         background: white!important
@@ -232,6 +231,7 @@
     import VaporTerminal from 'components/terminal'
     import VaporBio from 'components/bio'
     import VaporPackages from 'components/packages'
+    import VaporCallToAction from 'components/common/callToAction';
 
     export default {
         data () {
@@ -250,6 +250,7 @@
             [VaporTerminal.name]: VaporTerminal,
             [VaporBio.name]: VaporBio,
             [VaporPackages.name]: VaporPackages,
+            [VaporCallToAction.name]: VaporCallToAction
         }
     }
 </script>
