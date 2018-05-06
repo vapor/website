@@ -15,43 +15,9 @@
 
             <vapor-contribute class="vapor-app__contribute"/>
 
-            <div class="wrapper">
-                <div class="sponsors">
-                    <h3 class="mid-title">Our Sponsors</h3>
-                    <div class="sponsor-list">
-                        <div>
-                            <a target="_blank" href="https://www.nodesagency.com">
-                                <img :src="nodesImageURL">
-                                <p>Nodes</p>
-                            </a>
-                        </div>
-                        <div>
-                            <a target="_blank" href="https://www.skelpo.com">
-                                <img :src="skelpoImageURL">
-                                <p>Skelpo</p>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="mailto:sponsor@vapor.codes">
-                                <img :src="sponsorImageURL">
-                                <p></p>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="mailto:sponsor@vapor.codes">
-                                <img :src="sponsorImageURL">
-                                <p></p>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="mailto:sponsor@vapor.codes">
-                                <img :src="sponsorImageURL">
-                                <p></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <vapor-sponsor class="vapor-app__sponsor"/>
+
+
             <div class="vapor-footer">
                 <div class="footer-nav">
                     <a href="mailto:hello@vapor.codes">Contact Us</a>
@@ -215,15 +181,10 @@
     import VaporPackages from 'components/packages'
     import VaporCallToAction from 'components/common/callToAction';
     import VaporContribute from 'components/contribute';
+    import VaporSponsor from 'components/sponsor';
 
     export default {
-        data () {
-            return {
-                nodesImageURL: require('components/assets/nodes.png'),
-                skelpoImageURL: require('components/assets/skelpo.png'),
-                sponsorImageURL: require('components/assets/sponsor.png'),
-            }
-        },
+        name: 'vaporApp',
         components: {
             [VaporNav.name]: VaporNav,
             [VaporHeader.name]: VaporHeader,
@@ -231,7 +192,8 @@
             [VaporBio.name]: VaporBio,
             [VaporPackages.name]: VaporPackages,
             [VaporCallToAction.name]: VaporCallToAction,
-            [VaporContribute.name]: VaporContribute
+            [VaporContribute.name]: VaporContribute,
+            [VaporSponsor.name]: VaporSponsor
         }
     }
 </script>
