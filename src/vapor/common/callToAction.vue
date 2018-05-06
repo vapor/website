@@ -26,6 +26,14 @@
             margin-left: 1.5em;
         }
     }
+
+    @include respond-to(phone) {
+        .vapor-call-to-action {
+            .vapor-call-to-action__button {
+                font-size: small;
+            }
+        }
+    }
 </style>
 
 <script>

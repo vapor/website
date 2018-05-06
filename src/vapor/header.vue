@@ -18,10 +18,6 @@
             .vapor-header__slogan {
                 font-size: larger;
             }
-
-            .vapor-header__call-to-action {
-                font-size: small;
-            }
         }
     }
 </style>
