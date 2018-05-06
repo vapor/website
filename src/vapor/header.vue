@@ -7,8 +7,25 @@
 </template>
 
 <style lang="scss">
+    @import 'src/mixins';
+
     .vapor-header {
         text-align: center;
+    }
+
+    @include respond-to(phone) {
+        .vapor-header {
+            padding-left: 2.5%;
+            padding-right: 2.5%;
+
+            .vapor-header__slogan {
+                font-size: larger;
+            }
+
+            .vapor-header__call-to-action {
+                font-size: small;
+            }
+        }
     }
 </style>
 
