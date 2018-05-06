@@ -38,6 +38,12 @@
     }
   }
 
+  @if $breakpoint == 'phablet' {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
   @if $breakpoint == 'phone' {
     @media (max-width: 420px) {
       @content;

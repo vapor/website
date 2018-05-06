@@ -59,7 +59,7 @@
         }
     }
 
-    @include respond-to(phone) {
+    @include respond-to(phablet) {
         .vapor-nav {
             flex-direction: column;
 

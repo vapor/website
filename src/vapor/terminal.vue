@@ -83,8 +83,16 @@
             }
 
             .vapor-terminal__sample-code {
-                font-size: x-small;
+                font-size: x-small !important;
                 padding: 0;
+            }
+        }
+    }
+
+    @include respond-to(phablet) {
+        .vapor-terminal {
+            .vapor-terminal__sample-code {
+                font-size: small;
             }
         }
     }
