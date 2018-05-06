@@ -64,14 +64,18 @@
     }
 
     @include respond-to(phone) {
-        $content-side-padding: 2.5%;
+        $content-side-size: 2.5%;
 
         .vapor-app {
-            .vapor-app__nav,
+            .vapor-app__nav {
+                margin-left: $content-side-size;
+                margin-right: $content-side-size;
+            }
+            
             .vapor-app__header,
             .vapor-app__content > *:not(:first-child) {
-                margin-left: $content-side-padding;
-                margin-right: $content-side-padding;
+                padding-left: $content-side-size;
+                padding-right: $content-side-size;
             }
         }
     }
