@@ -107,6 +107,10 @@
             .vapor-terminal__stoplight + .vapor-terminal__stoplight {
                 margin-left: .6em !important;
             }
+
+            .vapor-terminal__sample-code {
+                margin: 0;
+            }
         }
     }
 </style>
