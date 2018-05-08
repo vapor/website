@@ -117,7 +117,7 @@
                         text: 'Submit feature ideas, report bugs, and merge code on GitHub!',
                         action: {
                             text: 'GitHub',
-                            url: 'https://github.com/vapor/vapo'
+                            url: 'https://github.com/vapor/vapor'
                         }
                     },
                     {
