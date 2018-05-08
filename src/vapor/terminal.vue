@@ -117,6 +117,10 @@
 
 <script>
     class KEYWORDS {
+        static get IMPORT() {
+            return this._generateHTML('import');
+        }
+
         static get LET() {
             return this._generateHTML('let');
         }
@@ -152,7 +156,7 @@
         computed: {
             sampleCode() {
                 return `
-${KEYWORDS.LET} Vapor
+${KEYWORDS.IMPORT} Vapor
 
 ${KEYWORDS.LET} app = ${KEYWORDS.TRY} ${this.type('Application')}()
 ${KEYWORDS.LET} router = ${KEYWORDS.TRY} app.${this.method('make')}(${this.type('Router')}.${KEYWORDS.SELF})
