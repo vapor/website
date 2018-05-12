@@ -10,13 +10,14 @@
 </template>
 
 <style lang="scss">
+    @import 'src/variables';
     @import 'src/mixins';
 
     .vapor-bio {
         display: flex;
         font-size: large;
         padding-top: 2em;
-        background-color: black;
+        background-color: $color-apple-dark-gray;
 
         .vapor-bio__blurb {
             display: inline-block;

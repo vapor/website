@@ -14,12 +14,13 @@
 </template>
 
 <style lang="scss">
+    @import 'src/variables';
     @import 'src/mixins';
 
     .vapor-packages {
         font-weight: 700;
         color: white;
-        background-color: black;
+        background-color: $color-apple-dark-gray;
         text-align: center;
 
         .vapor-packages__title {

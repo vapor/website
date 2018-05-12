@@ -23,11 +23,12 @@
 </template>
 
 <style lang="scss">
+    @import 'src/variables';
     @import 'src/mixins';
 
     .vapor-app {
         font-family: 'Roboto', sans-serif;
-        background-color: white;
+        background-color: $color-apple-gray;
 
         .vapor-app__nav {
             margin: .5em 10%;
@@ -57,7 +58,7 @@
             }
 
             .vapor-app__call-to-action {
-                background-color: black;
+                background-color: $color-apple-dark-gray;
                 width: 100%;
                 padding: 4em 0 3em;
             }

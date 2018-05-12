@@ -16,8 +16,8 @@
     @import 'src/mixins';
 
     .vapor-footer {
-        color: $color-gray;
-        background-color: black;
+        color: $color-light-gray;
+        background-color: $color-apple-dark-gray;
         width: 100%;
         padding: 2em 0;
         text-align: center;
@@ -34,7 +34,7 @@
 
         .vapor-footer__link + .vapor-footer__link {
             &::before {
-                color: $color-gray !important;
+                color: $color-light-gray !important;
                 content: '\2022';
                 margin: 0 .4em;
             }
@@ -42,7 +42,7 @@
 
         .vapor-footer__copyright {
             display: block;
-            color: $color-dark-gray;
+            color: $color-gray;
             margin-top: 1em;
         }
     }
