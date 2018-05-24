@@ -3,7 +3,8 @@
         <h3 class="vapor-sponsor__title">Our Sponsors</h3>
 
         <a class="vapor-sponsor__link"
-           href="mailto:sponsor@vapor.codes"
+           :href="sponsor.url ? sponsor.url : 'mailto:sponsor@vapor.codes'"
+           target="_blank"
            v-for="sponsor in sponsors">
             <vapor-card class="vapor-sponsor__sponsor"
                         :class="sponsor.icon ? '' : 'empty'"
