@@ -42,7 +42,7 @@
         data() {
             return {
                 buttons: [
-                    { id: 'start', text: 'Get Started', url: 'https://docs.vapor.codes/3.0/install/macros' },
+                    { id: 'start', text: 'Get Started', url: 'https://docs.vapor.codes/3.0/install/macos/' },
                     { id: 'community', text: 'Join Chat', url: 'https://discord.gg/vapor' }
                 ]
             }
