@@ -1,6 +1,6 @@
 <template>
     <section class="vapor-contribute">
-        <h3 class="vapor-contribute__title">Contribute!</h3>
+        <h3 class="vapor-contribute__title">{{ $t('contribute.title') }}</h3>
 
         <div class="vapor-contribute__opportunity-container">
             <vapor-card class="vapor-contribute__opportunity"
@@ -23,7 +23,7 @@
         .vapor-contribute__title {
             font-size: 2.25em;
         }
-        
+
         .vapor-contribute__opportunity-container {
             display: flex;
         }
@@ -114,25 +114,25 @@
                 opportunities: [
                     {
                         icon: this.getImageFor('github'),
-                        text: 'Submit feature ideas, report bugs, and merge code on GitHub!',
+                        text: this.$t('contribute.options.code.description'),
                         action: {
-                            text: 'GitHub',
+                            text: 'Github',
                             url: 'https://github.com/vapor/vapor'
                         }
                     },
                     {
                         icon: this.getImageFor('discord'),
-                        text: 'Help newcomers learn the ropes and get started with Vapor.',
+                        text: this.$t('contribute.options.chat.description'),
                         action: {
-                            text: 'Join Chat',
+                            text: this.$t('contribute.options.chat.title'),
                             url: 'https://discord.gg/BnXmVGA'
                         }
                     },
                     {
                         icon: this.getImageFor('open-collective'),
-                        text: 'Make a one time or recurring donation to support development.',
+                        text: this.$t('contribute.options.donate.description'),
                         action: {
-                            text: 'Become Backer',
+                            text: this.$t('contribute.options.donate.title'),
                             url: 'https://opencollective.com/vapor#sponsor'
                         }
                     }

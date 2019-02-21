@@ -1,6 +1,6 @@
 <template>
     <header class="vapor-header">
-        <h1 class="vapor-header__slogan">The future of web development.</h1>
+        <h1 class="vapor-header__slogan">{{ $t('header.slogan') }}</h1>
 
         <vapor-call-to-action class="vapor-header__call-to-action"/>
     </header>

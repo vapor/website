@@ -55,7 +55,7 @@
 
             .vapor-footer__link + .vapor-footer__link {
                 margin-top: .25em;
-                
+
                 &::before {
                     content: '';
                     margin: 0;
@@ -71,11 +71,11 @@
         data() {
             return {
                 links: [
-                    { text: 'Contact Us', url: 'mailto:hello@vapor.codes' },
+                    { text: this.$t('footer.contact'), url: 'mailto:hello@vapor.codes' },
                     { text: 'Twitter', url: 'https://twitter.com/codevapor', target: '_blank' },
                     { text: 'Medium', url: 'https://medium.com/@codevapor', target: '_blank' },
-                    { text: 'Press Kit', url: '/vapor-presskit-2018-05-04.zip' },
-                    { text: 'Jobs', url: 'mailto:jobs@vapor.codes' }
+                    { text: this.$t('footer.press'), url: '/vapor-presskit-2018-05-04.zip' },
+                    { text: this.$t('footer.jobs'), url: 'mailto:jobs@vapor.codes' }
                 ]
             }
         }
