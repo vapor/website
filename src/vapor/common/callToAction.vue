@@ -42,8 +42,8 @@
         data() {
             return {
                 buttons: [
-                    { id: 'start', text: 'Get Started', url: 'https://docs.vapor.codes/3.0/install/macos/' },
-                    { id: 'community', text: 'Join Chat', url: 'https://discord.gg/vapor' }
+                    { id: 'start', text: this.$t('callToAction.start'), url: 'https://docs.vapor.codes/3.0/install/macos/' },
+                    { id: 'community', text: this.$t('callToAction.join'), url: 'https://discord.gg/vapor' }
                 ]
             }
         }

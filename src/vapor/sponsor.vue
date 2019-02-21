@@ -1,6 +1,6 @@
 <template>
     <section class="vapor-sponsor">
-        <h3 class="vapor-sponsor__title">Our Sponsors</h3>
+        <h3 class="vapor-sponsor__title">{{ $t('sponsors.title') }}</h3>
 
         <a class="vapor-sponsor__link"
            :href="sponsor.url ? sponsor.url : 'mailto:sponsor@vapor.codes'"
@@ -31,7 +31,7 @@
 
         .vapor-sponsor__sponsor {
             width: 20%;
-            
+
             .vapor-card__image {
                 height: 6.25em;
                 width: 6.25em;
