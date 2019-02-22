@@ -5,9 +5,11 @@ import VueI18n from 'vue-i18n';
 // then import the file and add it to the 'translations' const as seen below
 
 import en from './en';
+import es from './es';
 
 const translations = {
-    en
+    en,
+    es
 };
 
 Vue.use(VueI18n);
