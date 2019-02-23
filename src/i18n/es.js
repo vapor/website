@@ -1,10 +1,10 @@
 export default {
     header: {
-        slogan: 'El futuro del desarollo web.'
+        slogan: 'El futuro del desarrollo web.'
     },
     callToAction: {
         start: 'Comenzar',
-        join: 'Juntarse al Chat'
+        join: 'Unirse al Chat'
     },
     nav: {
         code: 'Code',
@@ -12,23 +12,23 @@ export default {
         docs: 'Docs'
     },
     bio: {
-        first: 'Arquitectura no-bloqueante, impulsado por eventos, y construido encima de <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> por Apple conduciendo su<a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">alto rendimiento</a>.',
-        second: 'Escrito en <a target="_blank" href="https://swift.org">Swift</a>, un lenguaje de programación potente que es fácil a aprender.',
-        third: 'Expresivo, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/"> con una estructura orientada al protocolo</a> y una concentración en la seguridad de tipos y la sostenibilidad.'
+        first: 'Arquitectura no-bloqueante dirigida por eventos construida encima de <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> por Apple, la cual brinda un <a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">alto rendimiento</a>.',
+        second: 'Escrito en <a target="_blank" href="https://swift.org">Swift</a>, un lenguaje de programación potente que es fácil de aprender.',
+        third: 'Expresivo, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/"> con un diseño orientada al protocolo</a> y un enfoque en la seguridad de tipos y la sostenibilidad.'
     },
     contribute: {
-        title: 'Contribuir!',
+        title: 'Contribuya!',
         options: {
             code: {
-                description: 'Se puede presentar ideas, informar sobre fallos, y fusionar el codigo en GitHub!'
+                description: '¡Presente ideas acerca de funcionalidad, informe sobre errores, y fusione el código en GitHub!'
             },
             chat: {
-                title: 'Juntarse al Chat',
-                description: 'Ayudar a los recién llegados mientras que empiezan con Vapor y aprenden cómo funciona todo.'
+                title: 'Únase al Chat',
+                description: 'Ayude a los recién llegados mientras empiezan con Vapor y aprenden cómo funciona todo.'
             },
             donate: {
-                title: 'Ser patrocinador',
-                description: 'Hacer una donación una vez o recurrente para apoyar el desarollo.'
+                title: 'Sea patrocinador',
+                description: 'Haga una donación por única vez o de forma recurrente para apoyar el desarrollo.'
             }
         }
     },
@@ -37,7 +37,7 @@ export default {
     },
     footer: {
         contact: 'Contáctenos',
-        press: 'Carpeta de prensa',
+        press: 'Dosier de prensa',
         jobs: 'Empleos'
     }
 };
