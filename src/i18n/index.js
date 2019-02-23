@@ -18,5 +18,6 @@ const language = window.navigator.language.split('-')[0];
 
 export default new VueI18n({
     locale: language,
+    fallbackLocale: 'en',
     messages: translations
 });
