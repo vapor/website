@@ -10,7 +10,7 @@ import es from './es';
 import fr from './fr';
 
 const translations = {
-	de,
+    de,
     en,
     es,
     fr,
