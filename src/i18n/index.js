@@ -9,6 +9,7 @@ import en from './en';
 import es from './es';
 
 const translations = {
+	de,
     en,
     es
 };
