@@ -24,11 +24,11 @@ export default {
           },
           chat: {
               title: 'Discuter',
-              description: 'Rejoignez la communauté et faites vos premiers pas avec Vapor'
+              description: 'Rejoignez la communauté et faites vos premiers pas avec Vapor.'
           },
           donate: {
               title: 'Soyez donateur',
-              description: 'Faites une donation unique ou récurrente pour aider le développement de Vapor'
+              description: 'Faites une donation unique ou récurrente pour aider le développement.'
           }
       }
   },
