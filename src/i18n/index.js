@@ -7,11 +7,13 @@ import VueI18n from 'vue-i18n';
 import de from './de';
 import en from './en';
 import es from './es';
+import fr from './fr';
 
 const translations = {
 	de,
     en,
-    es
+    es,
+    fr,
 };
 
 Vue.use(VueI18n);

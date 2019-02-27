@@ -18,6 +18,7 @@
         .vapor-call-to-action__button {
             @include button();
 
+            white-space: nowrap;
             font-size: larger;
         }
 

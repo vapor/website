@@ -69,7 +69,7 @@
 
         .vapor-card__button {
             @include button();
-
+            white-space: nowrap;
             align-self: center;
         }
     }
