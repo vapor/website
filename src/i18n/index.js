@@ -11,7 +11,7 @@ import uk from './uk';
 import fr from './fr'
 
 const translations = {
-	de,
+    de,
     en,
     es,
     uk,
@@ -24,6 +24,6 @@ const language = window.navigator.language.split('-')[0];
 
 export default new VueI18n({
     locale: language,
-    fallbackLocale: 'fr',
+    fallbackLocale: 'en',
     messages: translations
 });
