@@ -7,13 +7,15 @@ import VueI18n from 'vue-i18n';
 import de from './de';
 import en from './en';
 import es from './es';
-import uk from './uk'
+import uk from './uk';
+import fr from './fr'
 
 const translations = {
 	de,
     en,
     es,
-    uk
+    uk,
+    fr
 };
 
 Vue.use(VueI18n);
@@ -22,6 +24,6 @@ const language = window.navigator.language.split('-')[0];
 
 export default new VueI18n({
     locale: language,
-    fallbackLocale: 'en',
+    fallbackLocale: 'fr',
     messages: translations
 });
