@@ -19,7 +19,6 @@
             @include button();
 
             font-size: larger;
-            width: 10em;
         }
 
         .vapor-call-to-action__button + .vapor-call-to-action__button {
