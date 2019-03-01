@@ -8,13 +8,15 @@ import de from './de';
 import en from './en';
 import es from './es';
 import uk from './uk';
-import fr from './fr'
+import ru from './ru';
+import fr from './fr';
 
 const translations = {
     de,
     en,
     es,
     uk,
+    ru,
     fr
 };
 
