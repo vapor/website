@@ -20,7 +20,7 @@ export default {
       title: 'Contribuer !',
       options: {
           code: {
-              description: 'Contribuez le développement sur Github !'
+              description: 'Contribuez au développement sur Github !'
           },
           chat: {
               title: 'Discuter',
@@ -28,7 +28,7 @@ export default {
           },
           donate: {
               title: 'Soyez donateur',
-              description: 'Faites une donation unique ou récurrente pour aider au développement.'
+              description: 'Faites une donation unique ou récurrente pour aider le développement.'
           }
       }
   },
