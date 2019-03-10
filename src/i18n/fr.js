@@ -20,7 +20,7 @@ export default {
       title: 'Contribuer !',
       options: {
           code: {
-              description: 'Contribuez au développement sur Github !'
+              description: 'Contribuez le développement sur Github !'
           },
           chat: {
               title: 'Discuter',
