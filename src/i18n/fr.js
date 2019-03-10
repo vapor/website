@@ -3,7 +3,7 @@ export default {
       slogan: 'Le futur du développement web'
   },
   callToAction: {
-      start: 'Premiers pas',
+      start: 'Premier pas',
       join: 'Discuter'
   },
   nav: {
