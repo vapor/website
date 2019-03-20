@@ -9,7 +9,7 @@ export default {
     nav: {
         code: 'Kode',
         cloud: 'Cloud',
-        docs: 'Dokumenter'
+        docs: 'Dokumentation'
     },
     bio: {
         first: 'Ikke-blokerende, event-dreven arkitektur bygget oven på Apple\'s <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> leverer Vapor <a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">høj ydeevne</a>.',
@@ -20,7 +20,7 @@ export default {
         title: 'Bidrag!',
         options: {
             code: {
-                description: 'Indsend forslag til nye funktioner, reporter fejl, og merge kode på Github!'
+                description: 'Deltag i udviklingen, foreslå nye features eller reporter fejl på Github!'
             },
             chat: {
                 title: 'Join Chat',
