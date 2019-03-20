@@ -10,6 +10,7 @@ import es from './es';
 import uk from './uk';
 import ru from './ru';
 import fr from './fr';
+import zh from './zh';
 
 const translations = {
     de,
@@ -17,7 +18,8 @@ const translations = {
     es,
     uk,
     ru,
-    fr
+    fr,
+    zh
 };
 
 Vue.use(VueI18n);
