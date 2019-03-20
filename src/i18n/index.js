@@ -4,6 +4,7 @@ import VueI18n from 'vue-i18n';
 // to add new translations, just copy a translation file and fill in the new language's translations
 // then import the file and add it to the 'translations' const as seen below
 
+import da from './da';
 import de from './de';
 import en from './en';
 import es from './es';
@@ -13,6 +14,7 @@ import fr from './fr';
 import zh from './zh';
 
 const translations = {
+    da,
     de,
     en,
     es,
