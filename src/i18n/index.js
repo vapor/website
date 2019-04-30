@@ -12,6 +12,7 @@ import uk from './uk';
 import ru from './ru';
 import fr from './fr';
 import zh from './zh';
+import it from './it';
 
 const translations = {
     da,
@@ -21,7 +22,8 @@ const translations = {
     uk,
     ru,
     fr,
-    zh
+    zh,
+    it
 };
 
 Vue.use(VueI18n);
