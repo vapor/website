@@ -33,7 +33,7 @@ export default {
         }
     },
     sponsors: {
-        title: 'Our Sponsors'
+        title: 'Our Partners'
     },
     footer: {
         contact: 'Contact Us',
