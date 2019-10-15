@@ -27,7 +27,7 @@ export default {
                 description: 'Aiuta i nuovi arrivati ad iniziare ad usare Vapor.'
             },
             donate: {
-                title: 'Diventa uno sponsor',
+                title: 'Diventa uno Sponsor',
                 description: 'Fai una donazione singola o ricorrente per aiutare lo sviluppo.'
             }
         }
