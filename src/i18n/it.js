@@ -13,7 +13,7 @@ export default {
     },
     bio: {
         first: Architettura non bloccante, basata sugli eventi grazie alla libreria <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> di Apple che garantisce <a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">alte prestazioni</a>.',
-        second: 'Scritto in <a target="_blank" href="https://swift.org">Swift</a>, il linguaggio di programmazione che è potente e facile da imparare.',
+        second: 'Scritto in <a target="_blank" href="https://swift.org">Swift</a>, il linguaggio di programmazione potente e facile da imparare.',
         third: 'Espressivo, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">orientato ai protocolli</a> con un occhio di riguardo alla type-safety e alla mantenibilità.'
     },
     contribute: {
@@ -33,7 +33,7 @@ export default {
         }
     },
     sponsors: {
-        title: 'I nostri sponsor'
+        title: 'I nostri partner'
     },
     footer: {
         contact: 'Contattaci',
