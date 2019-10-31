@@ -12,9 +12,9 @@ export default {
         docs: 'Документация'
     },
     bio: {
-        first: 'Неблокирующая, основанная на событиях архитектура, построенная на <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> от Apple с <a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">высокой производительностью</a>.',
-        second: 'Написано на <a target="_blank" href="https://swift.org">Swift</a> -  мощном языке программирования, который к тому же легко изучить.',
-        third: 'Выразительный, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">протоколо-ориентированный дизайн</a> с фокусом на безопасность типов и поддерживаемость.'
+        first: 'Неблокирующая, основанная на событиях архитектура, построенная на <a target="_blank" rel="noopener" href="https://github.com/apple/swift-nio">SwiftNIO</a> от Apple с <a target="_blank" rel="noopener" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">высокой производительностью</a>.',
+        second: 'Написано на <a target="_blank" rel="noopener" href="https://swift.org">Swift</a> -  мощном языке программирования, который к тому же легко изучить.',
+        third: 'Выразительный, <a target="_blank" rel="noopener" href="https://developer.apple.com/videos/play/wwdc2015/408/">протоколо-ориентированный дизайн</a> с фокусом на безопасность типов и поддерживаемость.'
     },
     contribute: {
         title: 'Вносите свой вклад!',

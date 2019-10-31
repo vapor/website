@@ -12,9 +12,9 @@ export default {
         docs: 'Dokumentation'
     },
     bio: {
-        first: 'Ikke-blokerende, event-dreven arkitektur bygget oven på Apple\'s <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> leverer Vapor <a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">høj ydeevne</a>.',
-        second: 'Skrevet i <a target="_blank" href="https://swift.org">Swift</a>, det kraftfulde programmeringssprog, der samtidig er nemt at lære.',
-        third: 'Ekspressivt, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">protokol-orienteret design,</a> med fokus på typesikkerhed og vedligeholdelse.'
+        first: 'Ikke-blokerende, event-dreven arkitektur bygget oven på Apple\'s <a target="_blank" rel="noopener" href="https://github.com/apple/swift-nio">SwiftNIO</a> leverer Vapor <a target="_blank" rel="noopener" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">høj ydeevne</a>.',
+        second: 'Skrevet i <a target="_blank" rel="noopener" href="https://swift.org">Swift</a>, det kraftfulde programmeringssprog, der samtidig er nemt at lære.',
+        third: 'Ekspressivt, <a target="_blank" rel="noopener" href="https://developer.apple.com/videos/play/wwdc2015/408/">protokol-orienteret design,</a> med fokus på typesikkerhed og vedligeholdelse.'
     },
     contribute: {
         title: 'Bidrag!',

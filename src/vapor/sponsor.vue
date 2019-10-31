@@ -3,9 +3,11 @@
         <h3 class="vapor-sponsor__title">{{ $t('sponsors.title') }}</h3>
 
         <a class="vapor-sponsor__link"
-           :href="sponsor.url ? sponsor.url : 'mailto:sponsor@vapor.codes'"
-           target="_blank"
-           v-for="sponsor in sponsors">
+            :href="sponsor.url ? sponsor.url : 'mailto:sponsor@vapor.codes'"
+            target="_blank"
+            rel="noopener"
+            v-for="sponsor in sponsors"
+            :aria-label="sponsor.text ? sponsor.text : 'Email us to become a sponsor.'">
             <vapor-card class="vapor-sponsor__sponsor"
                         :class="sponsor.icon ? '' : 'empty'"
                         :iconSource="sponsor.icon || getImageFor('sponsor')"

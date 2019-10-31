@@ -1,17 +1,19 @@
 <template>
     <article class="vapor-card"
-             :class="theme">
+            :class="theme">
         <img class="vapor-card__image"
-             :src="iconSource"/>
+            alt=""
+            :src="iconSource"/>
 
         <p class="vapor-card__blurb-text"
-           v-html="text"></p>
+        v-html="text"></p>
 
         <a class="vapor-card__button"
-           v-if="action"
-           :href="action.url || ''"
-           :target="action.target || '_blank'"
-           @click="onActionButtonClicked()">{{ action.text }}</a>
+        v-if="action"
+        :href="action.url || ''"
+        :target="action.target || '_blank'"
+        rel="noopener"
+        @click="onActionButtonClicked()">{{ action.text }}</a>
     </article>
 </template>
 

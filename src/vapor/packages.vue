@@ -4,10 +4,11 @@
 
         <div class="vapor-packages__container">
             <div class="vapor-packages__column-container"
-                 v-for="repo in packageRepos">
+                v-for="repo in packageRepos">
                 <a class="vapor-packages__repo-link"
-                   :href="`https://github.com/vapor/${repo.toLowerCase()}`"
-                   target="_blank">{{ repo }}</a>
+                    :href="`https://github.com/vapor/${repo.toLowerCase()}`"
+                    target="_blank"
+                    rel="noopener">{{ repo }}</a>
             </div>
         </div>
     </section>

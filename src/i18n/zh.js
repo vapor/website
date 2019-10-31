@@ -12,9 +12,9 @@ export default {
         docs: '文档'
     },
     bio: {
-        first: '基于 Apple <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> 构建的非阻塞、事件驱动架构，实现<a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">高性能</a>',
-        second: '使用 <a target="_blank" href="https://swift.org">Swift</a> 编程语言实现, 这门强大的语言简单易学',
-        third: '<a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">面向协议的设计</a>极富表现力，同时专注于类型安全与可维护性'
+        first: '基于 Apple <a target="_blank" rel="noopener" href="https://github.com/apple/swift-nio">SwiftNIO</a> 构建的非阻塞、事件驱动架构，实现<a target="_blank" rel="noopener" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">高性能</a>',
+        second: '使用 <a target="_blank" rel="noopener" href="https://swift.org">Swift</a> 编程语言实现, 这门强大的语言简单易学',
+        third: '<a target="_blank" rel="noopener" href="https://developer.apple.com/videos/play/wwdc2015/408/">面向协议的设计</a>极富表现力，同时专注于类型安全与可维护性'
     },
     contribute: {
         title: '贡献您的力量!',

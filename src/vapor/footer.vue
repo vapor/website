@@ -2,9 +2,10 @@
     <footer class="vapor-footer">
         <div class="vapor-footer__link-container">
             <a class="vapor-footer__link"
-               v-for="link in links"
-               :target="link.target"
-               :href="link.url">{{ link.text }}</a>
+                v-for="link in links"
+                :target="link.target"
+                rel="noopener"
+                :href="link.url">{{ link.text }}</a>
         </div>
 
         <small class="vapor-footer__copyright">&copy; Qutheory, LLC 2018</small>

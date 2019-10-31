@@ -1,10 +1,11 @@
 <template>
     <div class="vapor-call-to-action">
         <a class="vapor-call-to-action__button"
-           v-for="button in buttons"
-           :class="button.id"
-           :href="button.url"
-           target="_blank">{{ button.text }}</a>
+            v-for="button in buttons"
+            :class="button.id"
+            :href="button.url"
+            rel="noopener"
+            target="_blank">{{ button.text }}</a>
     </div>
 </template>
 
@@ -41,7 +42,7 @@
         data() {
             return {
                 buttons: [
-                    { id: 'start', text: this.$t('callToAction.start'), url: 'https://docs.vapor.codes/3.0/install/macos/' },
+                    { id: 'start', text: this.$t('callToAction.start'), url: 'https://docs.vapor.codes/3.0/ /' },
                     { id: 'community', text: this.$t('callToAction.join'), url: 'https://discord.gg/vapor' }
                 ]
             }

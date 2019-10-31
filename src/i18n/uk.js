@@ -12,9 +12,9 @@ export default {
         docs: 'Документація'
     },
     bio: {
-        first: 'Неблокуюча, подіє-орієнтована архітектура, побудована на основі фреймворка <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> від Apple, забезпечує <a target="_blank" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">високу продуктивність</a>.',
-        second: 'Написаний за допомогою <a target="_blank" href="https://swift.org">Swift</a>, потужній та сучасній мові програмування, яку легко освоїти.',
-        third: 'Виразний, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">протокол-орієнтований дизайн</a> з акцентом на безпеку типів і якість підтримки коду.'
+        first: 'Неблокуюча, подіє-орієнтована архітектура, побудована на основі фреймворка <a target="_blank" rel="noopener" href="https://github.com/apple/swift-nio">SwiftNIO</a> від Apple, забезпечує <a target="_blank" rel="noopener" href="https://medium.com/@codevapor/vapor-3-0-0-released-8356fa619a5d">високу продуктивність</a>.',
+        second: 'Написаний за допомогою <a target="_blank" rel="noopener" href="https://swift.org">Swift</a>, потужній та сучасній мові програмування, яку легко освоїти.',
+        third: 'Виразний, <a target="_blank" rel="noopener" href="https://developer.apple.com/videos/play/wwdc2015/408/">протокол-орієнтований дизайн</a> з акцентом на безпеку типів і якість підтримки коду.'
     },
     contribute: {
         title: 'Зроби свій внесок!',
