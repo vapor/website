@@ -84,7 +84,6 @@
             return {
                 navLinks: [
                     { title: this.$t('nav.code'), url: '/' },
-                    { title: this.$t('nav.cloud'), url: 'https://vapor.cloud' },
                     { title: this.$t('nav.docs'), url: 'https://docs.vapor.codes' },
                     { title: 'Github', url: 'https://github.com/vapor/vapor' }
                 ]
