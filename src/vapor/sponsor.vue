@@ -102,7 +102,11 @@
                         text: 'Skelpo',
                         url: 'https://www.skelpo.com'
                     },
-                    { }, { }, { } // to be filled as sponsors are added
+                    {
+                        icon: this.getImageFor('transeo'),
+                        text: 'Transeo',
+                        url: 'https://gotranseo.com'
+                    }, { }, { } // to be filled as sponsors are added
                 ]
             }
         },
