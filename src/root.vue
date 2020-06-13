@@ -1,49 +1,44 @@
 <template lang="pug">
-  div(class="root")
-    vapor-loading-bar(class="loading-bar" :loading="loading")
+div(class="root")
+  vapor-loading-bar(class="loading-bar" :loading="loading")
 
-    div(v-if="notification" class="notification" :class="notification.type")
-      strong {{ notification.title }}
-      p {{ notification.message }}
+  div(v-if="notification" class="notification" :class="notification.type")
+    strong {{ notification.title }}
+    p {{ notification.message }}
 
-    div(class="content" :class="{ loading: loading }")
-      vapor-menu(
-        class="menu" 
-        :user="user" 
-        @login="showLogin = true"
-        @logout="logout"
-      )
+  div(class="content" :class="{ loading: loading }")
+    vapor-menu(
+      class="menu" 
+      :user="user" 
+      @login="showLogin = true"
+      @logout="logout"
+    )
 
-      div(class="view")
-        div(class="debug")
-          p Token: {{ token }}
-          p User: {{ user }}
-          p Loading: {{ loading }}
+    div(class="view")
+      router-view(@login="login")
 
-        router-view(@login="login")
+    transition(name="fade-in")
+      div(class="backdrop" v-if="showLogin" @click="showLogin = false")
 
-      transition(name="fade-in")
-        div(class="backdrop" v-if="showLogin" @click="showLogin = false")
-
-      transition(name="appear-up")
-        div(class="login floating" v-if="showLogin")
-          h2 Login
-          vapor-form(ref="form" @action="submitLogin")
-            vapor-input(
-              title="Email" 
-              type="email" 
-              required 
-              v-model="email"
-            )
-            vapor-input(
-              title="Password" 
-              type="password"  
-              required 
-              v-model="password"
-            )
-            div(class="buttons")
-              div(class="spacer")
-              vapor-button(@action="$refs.form.submit()") Login
+    transition(name="appear-up")
+      div(class="login floating" v-if="showLogin")
+        h2 Login
+        vapor-form(ref="form" @action="submitLogin")
+          vapor-input(
+            title="Email" 
+            type="email" 
+            required 
+            v-model="email"
+          )
+          vapor-input(
+            title="Password" 
+            type="password"  
+            required 
+            v-model="password"
+          )
+          div(class="buttons")
+            div(class="spacer")
+            vapor-button(@action="$refs.form.submit()") Login
 </template>
 
 <script>
@@ -136,7 +131,7 @@ export default {
 @import "@/assets/base.sass"
 
 body
-  background: $color-background-1
+  background: #000
   color: white
 
 .appear-up-enter-active, .appear-up-leave-active
@@ -177,10 +172,24 @@ body
 
 body, html
   height: 100%
-.root
   font-family: 'Roboto', sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+
+p 
+  a
+    color: #00b0ff
+    text-decoration: none
+    position: relative
+    &:hover
+      color: lighten(#00b0ff, 10)
+    &:active
+      top: 1px
+</style>
+
+<style scoped lang="sass">
+@import "@/assets/base.sass"
+.root
   position: relative
   height: 100%
 
@@ -202,7 +211,7 @@ body, html
     height: 80px
 
 .view
-  padding: 0 32px
+  // padding: 0 32px
   overflow: hidden
 
 .backdrop

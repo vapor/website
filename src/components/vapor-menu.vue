@@ -17,7 +17,7 @@
           div(v-if="user")
             a(href="#" @click="logout") Logout
           div(v-else)
-            a(href="#" @click="signup") Signup
+            //- a(href="#" @click="signup") Signup
             a(href="#" @click="login") Login
 </template>
 

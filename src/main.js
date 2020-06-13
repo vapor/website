@@ -8,12 +8,16 @@ import vaporForm from '@/components/vapor-form'
 import vaporInput from '@/components/vapor-input'
 import vaporLoadingBar from '@/components/vapor-loading-bar'
 import vaporMenu from '@/components/vapor-menu'
+import vaporSmoke from '@/components/vapor-smoke'
+import vaporWindow from '@/components/vapor-window'
 
 vue.component('vapor-button', vaporButton)
 vue.component('vapor-form', vaporForm)
 vue.component('vapor-input', vaporInput)
 vue.component('vapor-loading-bar', vaporLoadingBar)
 vue.component('vapor-menu', vaporMenu)
+vue.component('vapor-smoke', vaporSmoke)
+vue.component('vapor-window', vaporWindow)
 
 vue.config.productionTip = false
 vue.prototype.$api = {

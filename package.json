@@ -8,13 +8,14 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "highlightjs": "^9.16.2",
     "vue": "^2.6.10",
     "vue-router": "^3.1.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-router": "^4.3.1",
     "@vue/cli-service": "^4.3.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.2",
