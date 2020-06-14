@@ -141,6 +141,9 @@ export default {
     align-items: center
     h2
       margin-bottom: 0
+      font-size: 26px
+      @media only screen and (min-width: 700px)
+        font-size: 36px
     .button
       margin-top: 18px
   .window
