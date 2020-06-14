@@ -120,7 +120,8 @@ export default {
     @media only screen and (min-width: 700px)
       font-size: 36px
 .smoke
-  position: absolute
+  position: fixed
+  // background: linear-gradient(to bottom right, #40C4FF, #E040FB)
   top: 0
   left: 0
   right: 0
@@ -129,7 +130,6 @@ export default {
 .header
   width: 100%
   position: relative
-  overflow: hidden
   display: flex
   flex-direction: column
   align-items: center

@@ -195,7 +195,6 @@ p
 
   .content
     height: 100%
-    overflow-y: auto
     padding-top: 120px
     @media only screen and (min-width: 700px)
       padding-top: 80px
@@ -206,7 +205,7 @@ p
       cursor: wait
 
   .menu
-    position: absolute
+    position: fixed
     z-index: 900
     box-shadow: 0 0 24px 0 rgba(black, 0.5)
     top: 0
