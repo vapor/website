@@ -164,7 +164,7 @@ body
   opacity: 0
 
 .floating
-  background: $color-background-2
+  background: black
   @supports (backdrop-filter: blur(10px))
     background: rgba(255, 255, 255, 0.1)
     backdrop-filter: blur(10px)
@@ -227,6 +227,7 @@ p
   right: 0
   bottom: 0
   background: rgba(0, 0, 0, 0.25)
+  z-index: 800
 
 .login
   position: fixed
@@ -236,6 +237,7 @@ p
   margin-left: -160px
   border-radius: 8px
   padding: 16px 24px
+  z-index: 900
   h2
     margin: 0
     margin-top: 8px

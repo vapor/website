@@ -60,7 +60,7 @@ export default {
     line-height: 16px
     font-size: 14px
     font-family: 'Roboto', sans-serif
-    background: $color-background-2
+    background: black
     color: $color-light-gray
     padding: 0 8px
     border-radius: 4px
