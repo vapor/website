@@ -63,22 +63,22 @@
             div(class="container")
               div(class="info")
                 h2 Sponsor!
-                p 100% of contributions made through GitHub sponsors go toward supporting the framework. You also get #[a(href="https://github.com/sponsors/tanner0101" target="_blank") rewards]!
+                p 100% of contributions made through GitHub sponsors go toward supporting the framework. You also get rewards!
                 a(class="button" href="https://github.com/sponsors/tanner0101" target="_blank") Support Vapor &rarr;
               div(class="graphic")
                 img(src="@/assets/github-sponsors.png")
           div(class="partners")
             h2 Partners.
             div(class="container")
-              div(class="partner")
+              a(class="partner" href="https://www.nodesagency.com/" target="_blank")
                 img(src="@/assets/nodes.png")
                 h4 Nodes
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor, lorem at.
-              div(class="partner")
+                p Work with one of Europe’s leading digital product development agencies. We believe great solutions are made out of stunning design and cutting-edge technology.
+              a(class="partner" href="https://skelpo.com/" target="_blank")
                 img(src="@/assets/skelpo.png")
                 h4 Skelpo
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor, lorem at.
-              div(class="partner")
+                p Hot software.
+              a(class="partner" href="https://gotranseo.com/" target="_blank")
                 img(src="@/assets/transeo.png")
                 h4 Transeo
                 p Transeo is an educational technology company that builds tracking tools for student planning and data analysis.
@@ -176,6 +176,8 @@ export default {
     padding-bottom: 12px
     .wrapper
       padding: 32px
+      @media only screen and (min-width: 700px)
+        padding: 48px
       margin: 0 auto
       max-width: 1280px
   .footer
@@ -185,21 +187,19 @@ export default {
 .features
   display: flex
   flex-wrap: wrap
+  margin-bottom: -24px
   @media only screen and (min-width: 700px)
     flex-wrap: none
+    margin-bottom: 0
+    margin-left: -24px
   .feature
     margin-left: 0
     margin-bottom: 24px
     flex-grow: 1
-    flex-basis: 1
-    &:last-child
-      margin-bottom: 0
     @media only screen and (min-width: 700px)
       flex-basis: 0
-      margin-left: 24px
       margin-bottom: 0
-      &:first-child
-        margin-left: 0
+      margin-left: 24px
     img
       height: 32px
     p
@@ -266,21 +266,21 @@ export default {
   .container
     display: flex
     flex-wrap: wrap
+    margin-bottom: -24px
     @media only screen and (min-width: 700px)
       flex-wrap: none
+      margin-bottom: 0
+      margin-left: -24px
     p 
       margin-top: 0
     .item
-      margin-left: 0
       flex-grow: 1
       flex-basis: 1
-      &:last-child
-        margin-bottom: 0
+      margin-bottom: 24px
       @media only screen and (min-width: 700px)
         flex-basis: 0
+        margin-bottom: 0
         margin-left: 24px
-        &:first-child
-          margin-left: 0
 .ecosystem
   margin-top: 48px
 .sponsor
@@ -317,6 +317,8 @@ export default {
     margin-bottom: 24px
     flex-grow: 1
     flex-basis: 1
+    text-decoration: none
+    color: white
     @media only screen and (min-width: 700px)
       flex-basis: 0
       margin-left: 24px
