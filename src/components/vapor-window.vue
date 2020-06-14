@@ -29,9 +29,12 @@ export default {
   position: relative
 
   .content
-    padding: 0 24px
-    padding-top: 36px
-    padding-bottom: 6px
+    padding: 0 18px
+    padding-top: 24px
+    @media only screen and (min-width: 700px)
+      padding: 0 24px
+      padding-top: 36px
+      padding-bottom: 6px
 
   .stoplight
     position: absolute

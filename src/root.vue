@@ -194,9 +194,11 @@ p
   height: 100%
 
   .content
-    padding-top: 80px
     height: 100%
     overflow-y: auto
+    padding-top: 120px
+    @media only screen and (min-width: 700px)
+      padding-top: 80px
 
     &.loading
       filter: saturate(25%)
@@ -206,11 +208,13 @@ p
   .menu
     position: absolute
     z-index: 900
-    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.5)
+    box-shadow: 0 0 24px 0 rgba(black, 0.5)
     top: 0
     left: 0
     right: 0
-    height: 80px
+    height: 120px
+    @media only screen and (min-width: 700px)
+      height: 80px
 
 .view
   // padding: 0 32px

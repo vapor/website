@@ -61,14 +61,15 @@ export default {
 .vapor-menu
   user-select: none
   display: flex
-  align-items: center
+  flex-direction: column
+  @media only screen and (min-width: 700px)
+    flex-direction: row
+    align-items: center
   padding: 0 32px
-
   background: black
   color: white
-
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
-
+  position: relative
   .logo
     color: white
     text-decoration: none
@@ -78,23 +79,33 @@ export default {
       margin-left: 16px
     img
       height: 48px
-
   .spacer
-    flex-grow: 1
-
+    flex-grow: 0
+    @media only screen and (min-width: 700px)
+      flex-grow: 1
   .nav
+    width: 100%
+    @media only screen and (min-width: 700px)
+      width: auto
     a
       margin-left: 32px
+      &:first-child
+        margin-left: 0
       font-size: 18px
       color: white
       text-decoration: none
       &:hover, &.router-link-active
         font-weight: 500
-
   .user
-    margin-left: 32px
     cursor: pointer
-    position: relative
+    position: absolute
+    top: 18px
+    right: 24px
+    @media only screen and (min-width: 700px)
+      top: inherit
+      right: inherit
+      margin-left: 32px
+      position: relative
     .img
       height: 48px
       width: 48px
