@@ -184,9 +184,10 @@ export default {
       margin: 0 auto
       max-width: 1280px
   .footer
-    padding: 12px 32px
-    color: #ccc
-    text-align: center
+    opacity: 0.25
+    padding: 12px 48px
+    color: #fff
+    text-align: right
 .features
   display: flex
   flex-wrap: wrap
