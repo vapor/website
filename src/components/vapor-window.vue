@@ -29,8 +29,8 @@ export default {
   position: relative
 
   .content
-    margin-top: 42px
     padding: 0 24px
+    padding-top: 36px
     padding-bottom: 6px
 
   .stoplight

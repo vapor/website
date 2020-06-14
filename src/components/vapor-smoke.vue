@@ -63,7 +63,11 @@ export default {
     this.$refs.canvas.appendChild(renderer.domElement)
 
     var delta;
+    var _this = this;
     function animate() {
+      if (!_this.active) {
+        return;
+      }
       delta = clock.getDelta()
       requestAnimationFrame(animate)
       evolveSmoke()
@@ -87,8 +91,11 @@ export default {
 
     animate()
   },
+  beforeDestroy() {
+    this.active = false
+  },
   data() {
-    return { }
+    return { active: true }
   }
 }
 </script>

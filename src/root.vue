@@ -205,6 +205,8 @@ p
 
   .menu
     position: absolute
+    z-index: 900
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.5)
     top: 0
     left: 0
     right: 0
