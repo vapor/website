@@ -73,7 +73,7 @@
               a(class="partner" href="https://www.nodesagency.com/" target="_blank")
                 img(src="@/assets/nodes.png")
                 h4 Nodes
-                p Work with one of Europe’s leading digital product development agencies. We believe great solutions are made out of stunning design and cutting-edge technology.
+                p With hundreds of successful digital projects for our clients, and offices across EMEA filled with passionate in-house developers, designers and digital strategists, we are one of Europe’s leading digital agencies.
               a(class="partner" href="https://skelpo.com/" target="_blank")
                 img(src="@/assets/skelpo.png")
                 h4 Skelpo
