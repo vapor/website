@@ -33,7 +33,7 @@
                 p Expressive, #[a(href="https://developer.apple.com/videos/play/wwdc2015/408/" target="_blank") protocol-oriented] design with a focus on type-safety.
           div(class="ecosystem")
             h2 Ecosystem.
-            p Vapor is more than just a web framework. The project includes hundreds of #[a(href="https://github.com/vapor" target="_blank") official] and #[a(href="https://github.com/vapor-community" target="_blank") community] maintained server-first Swift packages. 
+            p Vapor is more than just a web framework. The project includes over a hundred #[a(href="https://github.com/vapor" target="_blank") official] and #[a(href="https://github.com/vapor-community" target="_blank") community] maintained server-first Swift packages. 
             div(class="packages")
               a(class="package" href="https://github.com/vapor/vapor" target="_blank") Vapor
               a(class="package" href="https://github.com/vapor/fluent" target="_blank") Fluent
