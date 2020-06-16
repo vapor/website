@@ -77,7 +77,7 @@
               a(class="partner" href="https://skelpo.com/" target="_blank")
                 img(src="@/assets/skelpo.png")
                 h4 Skelpo
-                p Hot software.
+                p Skelpo uses Vapor to build awesome backends and APIs for various projects and clients. We employ some of the core community contributors and love seeing Server-Side Swift grow!
               a(class="partner" href="https://gotranseo.com/" target="_blank")
                 img(src="@/assets/transeo.png")
                 h4 Transeo
