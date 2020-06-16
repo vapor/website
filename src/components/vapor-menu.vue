@@ -67,6 +67,9 @@ export default {
     align-items: center
   padding: 0 32px
   background: black
+  
+  background: lighten(black, 5)
+  // background: darken(#40C4FF, 60)
   color: white
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
   position: relative
@@ -97,6 +100,7 @@ export default {
       &:hover, &.router-link-active
         font-weight: 500
   .user
+    display: none
     cursor: pointer
     position: absolute
     top: 18px

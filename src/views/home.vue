@@ -39,14 +39,14 @@
               a(class="package" href="https://github.com/vapor/fluent" target="_blank") Fluent
               a(class="package" href="https://github.com/vapor/jwt" target="_blank") JWT
               a(class="package" href="https://github.com/vapor/leaf" target="_blank") Leaf
-              a(class="package" href="https://github.com/vapor/postgres-nio" target="_blank") PostgreSQL
+              a(class="package" href="https://github.com/vapor/postgres-nio" target="_blank") Postgres
               a(class="package" href="https://github.com/vapor/mysql-nio" target="_blank") MySQL
               a(class="package" href="https://github.com/vapor/sqlite-nio" target="_blank") SQLite
               a(class="package" href="https://github.com/vapor/fluent-mongo-driver" target="_blank") MongoDB
               a(class="package" href="https://github.com/vapor/queues" target="_blank") Queues
               a(class="package" href="https://github.com/vapor/apns" target="_blank") APNS
               a(class="package" href="https://github.com/vapor/apns" target="_blank") Redis
-              a(class="package" href="https://github.com/vapor" target="_blank") More
+              a(class="package more" href="https://github.com/vapor" target="_blank") More
           div(class="learn")
             h2 Learn.
             div(class="container")
@@ -82,6 +82,7 @@
                 img(src="@/assets/transeo.png")
                 h4 Transeo
                 p Transeo is an educational technology company that builds tracking tools for student planning and data analysis.
+            p Interested in becoming a partner?
             div(class="buttons")
               a(class="button" href="mailto:sponsor@vapor.codes") Become a Partner &rarr;
       div(class="footer")
@@ -154,7 +155,7 @@ export default {
     @media only screen and (min-width: 700px)
       width: 600px
     padding-bottom: 50px
-    background: darken(#111, 3)
+    background: lighten(black, 1)
   .code
     font-family: 'Roboto Mono', monospace
     font-size: 14px
@@ -175,6 +176,8 @@ export default {
     position: relative
     z-index: 500
     background: black
+    background: darken(#40C4FF, 60)
+    background: lighten(black, 3)
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.5)
     padding-bottom: 12px
     .wrapper
@@ -188,47 +191,6 @@ export default {
     padding: 12px 48px
     color: #fff
     text-align: right
-.features
-  display: flex
-  flex-wrap: wrap
-  margin-bottom: -24px
-  @media only screen and (min-width: 700px)
-    flex-wrap: none
-    margin-bottom: 0
-    margin-left: -24px
-  .feature
-    margin-left: 0
-    margin-bottom: 24px
-    flex-grow: 1
-    @media only screen and (min-width: 700px)
-      flex-basis: 0
-      margin-bottom: 0
-      margin-left: 24px
-    img
-      height: 32px
-    p
-      margin-bottom: 0
-.packages
-  display: flex
-  flex-wrap: wrap
-  margin-top: 24px
-  .package
-    width: 50%
-    @media only screen and (min-width: 700px)
-      width: 200px
-    display: inline-block
-    text-decoration: none
-    color: white
-    padding: 12px 0
-    font-size: 24px
-    &:before
-      content: '✔'
-      padding-right: 12px
-      color: #2fc950
-.get-started
-  margin-top: 24px
-  display: flex
-  justify-content: center
 .button
   display: inline-block
   padding: 8px
@@ -265,8 +227,49 @@ export default {
     left: 4px
     &:after, &:before
       background: none
+.features
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: -24px
+  @media only screen and (min-width: 700px)
+    flex-wrap: none
+    margin-bottom: 0
+    margin-left: -36px
+  .feature
+    margin-left: 0
+    margin-bottom: 24px
+    flex-grow: 1
+    @media only screen and (min-width: 700px)
+      flex-basis: 0
+      margin-bottom: 0
+      margin-left: 36px
+    img
+      height: 32px
+    p
+      margin-bottom: 0
+.ecosystem
+  margin-top: 60px
+  .packages
+    display: flex
+    flex-wrap: wrap
+    margin-top: -12px
+    .package
+      width: 50%
+      @media only screen and (min-width: 700px)
+        width: 196px
+      display: inline-block
+      text-decoration: none
+      color: white
+      margin-top: 24px
+      font-size: 24px
+      &:before
+        content: '📦'
+        padding-right: 12px
+      &.more 
+        &:before
+          content: '➡️'
 .learn
-  margin-top: 48px
+  margin-top: 60px
   .container
     display: flex
     flex-wrap: wrap
@@ -274,7 +277,7 @@ export default {
     @media only screen and (min-width: 700px)
       flex-wrap: none
       margin-bottom: 0
-      margin-left: -24px
+      margin-left: -36px
     p 
       margin-top: 0
     .item
@@ -284,11 +287,9 @@ export default {
       @media only screen and (min-width: 700px)
         flex-basis: 0
         margin-bottom: 0
-        margin-left: 24px
-.ecosystem
-  margin-top: 48px
+        margin-left: 36px
 .sponsor
-  margin-top: 48px
+  margin-top: 60px
   .container
     display: flex
     align-items: top
@@ -310,25 +311,27 @@ export default {
         margin-top: 24px
         height: 160px
 .partners
-  margin-top: 48px
+  margin-top: 60px
   .container
     display: flex
     flex-wrap: wrap
+    margin-top: -24px
     @media only screen and (min-width: 700px)
+      margin-top: 0
+      margin-left: -36px
       flex-wrap: none
   .partner
     margin-left: 0
-    margin-bottom: 24px
+    
     flex-grow: 1
     flex-basis: 1
     text-decoration: none
     color: white
+    margin-top: 24px
     @media only screen and (min-width: 700px)
       flex-basis: 0
-      margin-left: 24px
-      margin-bottom: 0
-      &:first-child
-        margin-left: 0
+      margin-left: 36px
+      margin-top: 0
     img
       height: 64px
     h4
