@@ -18,26 +18,26 @@ export default {
   },
   mounted() {
     var clock = new THREE.Clock();
-    var renderer = new THREE.WebGLRenderer({ alpha: true })
+    var renderer = new THREE.WebGLRenderer({ alpha: false })
     renderer.setSize(window.innerWidth, window.innerHeight)
     window.addEventListener('resize', () => {
       renderer.setSize(window.innerWidth, window.innerHeight)
-    });
-    var scene = new THREE.Scene();
+    })
+    var scene = new THREE.Scene()
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000)
     camera.position.z = 1000
     scene.add(camera)
-    var geometry = new THREE.CubeGeometry(200, 200, 200);
+    var geometry = new THREE.CubeGeometry(200, 200, 200)
     var material = new THREE.MeshLambertMaterial({
       color: 0xffffff, 
       wireframe: false
     });
     var mesh = new THREE.Mesh(geometry, material);
-    var cubeSineDriver = 0;
-    THREE.ImageUtils.crossOrigin = '';
-    var light = new THREE.DirectionalLight(0xffffff, 0.5);
-    light.position.set(-1,0,1);
-    scene.add(light);
+    var cubeSineDriver = 0
+    THREE.ImageUtils.crossOrigin = ''
+    var light = new THREE.DirectionalLight(0xffffff, 0.5)
+    light.position.set(-1, 0, 1)
+    scene.add(light)
     var smokeTexture = THREE.ImageUtils
       .loadTexture('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png')
     var smokeMaterial = new THREE.MeshLambertMaterial({
@@ -50,11 +50,11 @@ export default {
       map: smokeTexture, 
       transparent: true
     })
-    var smokeGeo = new THREE.PlaneGeometry(300, 300);
-    var smokeParticles = [];
-    for (var p = 0; p < 150; p++) {
-        var material = (p % 2 == 0) ? smokeMaterial : smokeMaterial2;
-        var particle = new THREE.Mesh(smokeGeo,material);
+    var smokeGeo = new THREE.PlaneGeometry(300, 300)
+    var smokeParticles = []
+    for (var p = 0; p < 100; p++) {
+        var material = (p % 2 == 0) ? smokeMaterial : smokeMaterial2
+        var particle = new THREE.Mesh(smokeGeo, material)
         particle.position.set(Math.random() * 500 - 250, Math.random() * 500 - 250, Math.random() * 1000 - 100)
         particle.rotation.z = Math.random() * 360
         scene.add(particle)
@@ -77,7 +77,7 @@ export default {
     function evolveSmoke() {
       var sp = smokeParticles.length
       while(sp--) {
-        smokeParticles[sp].rotation.z += (delta * 0.2)
+        smokeParticles[sp].rotation.z += (delta * 0.1)
       }
     }
 
