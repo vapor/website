@@ -1,34 +1,28 @@
 {
-  "name": "vapor.codes",
-  "description": "Website for the Vapor web framework.",
-  "version": "1.0.0",
-  "author": "tanner0101 <me@tanner.xyz>",
+  "name": "vapor-website",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
   },
   "dependencies": {
-    "vue": "^2.5.3",
-    "vue-i18n": "^8.8.2"
+    "axios": "^0.19.2",
+    "highlightjs": "^9.16.2",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.6"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
-    "file-loader": "^1.1.4",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.13.1",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
-    "vue-loader": "^13.0.5",
-    "vue-template-compiler": "^2.5.3",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
-  }
+    "@vue/cli-plugin-router": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
+    "node-sass": "^4.14.1",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
