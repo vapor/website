@@ -45,7 +45,7 @@
               a(class="package" href="https://github.com/vapor/fluent-mongo-driver" target="_blank") MongoDB
               a(class="package" href="https://github.com/vapor/queues" target="_blank") Queues
               a(class="package" href="https://github.com/vapor/apns" target="_blank") APNS
-              a(class="package" href="https://github.com/vapor/apns" target="_blank") Redis
+              a(class="package" href="https://github.com/vapor/redis" target="_blank") Redis
               a(class="package more" href="https://github.com/vapor" target="_blank") More
           div(class="learn")
             h2 Learn.
