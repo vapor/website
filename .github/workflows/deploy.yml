@@ -8,7 +8,7 @@ jobs:
    name: vapor.codes
    runs-on: ubuntu-latest
    steps:
-     - name: Deploy docs
+     - name: Deploy website
        uses: appleboy/ssh-action@master
        with:
          host: vapor.codes
