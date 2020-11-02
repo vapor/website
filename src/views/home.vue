@@ -64,7 +64,7 @@
               div(class="info")
                 h2 Sponsor!
                 p 100% of contributions made through GitHub sponsors go toward supporting the framework. You also get rewards!
-                a(class="button" href="https://github.com/sponsors/tanner0101" target="_blank") Support Vapor &rarr;
+                a(class="button" href="https://github.com/sponsors/vapor" target="_blank") Support Vapor &rarr;
               div(class="graphic")
                 img(src="@/assets/github-sponsors.png")
           div(class="partners")
