@@ -7,7 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "highlightjs": "^9.16.2",
     "vue": "^2.6.10",
     "vue-router": "^3.3.4"
