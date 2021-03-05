@@ -70,10 +70,10 @@
           div(class="partners")
             h2 Partners.
             div(class="container")
-              a(class="partner" href="https://www.nodesagency.com/" target="_blank")
-                img(src="@/assets/nodes.png")
-                h4 Nodes
-                p With hundreds of successful digital projects for our clients, and offices across EMEA filled with passionate in-house developers, designers and digital strategists, we are one of Europe’s leading digital agencies.
+              a(class="partner" href="https://monstar-lab.com/" target="_blank")
+                img(src="@/assets/monstarlab.png")
+                h4 Monstarlab
+                p We shape technology that inspires users and grows businesses. We were formerly known as Nodes. Now we’re Monstarlab.
               a(class="partner" href="https://skelpo.com/" target="_blank")
                 img(src="@/assets/skelpo.png")
                 h4 Skelpo
