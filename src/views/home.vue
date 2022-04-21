@@ -28,6 +28,7 @@
               div(class="feature")
                 img(src="@/assets/swift.svg")
                 p Written in #[a(href="https://swift.org" target="_blank") Swift], the powerful programming language that is also easy to learn.
+                p Build amazing websites, APIs, HTTP servers and backends in Swift.
               div(class="feature")
                 img(src="@/assets/pacman.svg")
                 p Expressive, #[a(href="https://developer.apple.com/videos/play/wwdc2015/408/" target="_blank") protocol-oriented] design with a focus on type-safety.
