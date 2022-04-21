@@ -28,6 +28,7 @@
               div(class="feature")
                 img(src="@/assets/swift.svg")
                 p Written in #[a(href="https://swift.org" target="_blank") Swift], the powerful programming language that is also easy to learn.
+                p Build amazing websites, APIs, HTTP servers and backends in Swift.
               div(class="feature")
                 img(src="@/assets/pacman.svg")
                 p Expressive, #[a(href="https://developer.apple.com/videos/play/wwdc2015/408/" target="_blank") protocol-oriented] design with a focus on type-safety.
@@ -70,14 +71,10 @@
           div(class="partners")
             h2 Partners.
             div(class="container")
-              a(class="partner" href="https://monstar-lab.com/" target="_blank")
-                img(src="@/assets/monstarlab.png")
-                h4 Monstarlab
-                p We shape technology that inspires users and grows businesses. We were formerly known as Nodes. Now we’re Monstarlab.
-              a(class="partner" href="https://skelpo.com/" target="_blank")
-                img(src="@/assets/skelpo.png")
-                h4 Skelpo
-                p Skelpo uses Vapor to build awesome backends and APIs for various projects and clients. We employ some of the core community contributors and love seeing Server-Side Swift grow!
+              a(class="partner" href="https://www.brokenhands.io/" target="_blank")
+                img(src="@/assets/brokenhands.png")
+                h4 Broken Hands
+                p Providing Vapor training and consulting for clients around the world.
               a(class="partner" href="https://gotranseo.com/" target="_blank")
                 img(src="@/assets/transeo.png")
                 h4 Transeo

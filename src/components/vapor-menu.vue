@@ -6,6 +6,7 @@
     div(class="spacer")
     div(class="nav")
       router-link(:to="{ name: 'home' }") Home
+      a(href="https://blog.vapor.codes" target="_blank") Blog
       a(href="https://docs.vapor.codes" target="_blank") Docs
       a(href="https://discord.gg/vapor" target="_blank") Chat
     div(ref="user" class="user")
