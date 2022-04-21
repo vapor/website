@@ -70,14 +70,10 @@
           div(class="partners")
             h2 Partners.
             div(class="container")
-              a(class="partner" href="https://monstar-lab.com/" target="_blank")
-                img(src="@/assets/monstarlab.png")
-                h4 Monstarlab
-                p We shape technology that inspires users and grows businesses. We were formerly known as Nodes. Now we’re Monstarlab.
-              a(class="partner" href="https://skelpo.com/" target="_blank")
-                img(src="@/assets/skelpo.png")
-                h4 Skelpo
-                p Skelpo uses Vapor to build awesome backends and APIs for various projects and clients. We employ some of the core community contributors and love seeing Server-Side Swift grow!
+              a(class="partner" href="https://www.brokenhands.io/" target="_blank")
+                img(src="@/assets/brokenhands.png")
+                h4 Broken Hands
+                p Providing Vapor training and consulting for clients around the world.
               a(class="partner" href="https://gotranseo.com/" target="_blank")
                 img(src="@/assets/transeo.png")
                 h4 Transeo
