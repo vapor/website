@@ -62,14 +62,17 @@ Resources:
           Items:
             - Header: Permissions-Policy
               Value: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()
-              Override: false
+              Override: true
             - Header: server
               Value: 'Vapor Blog'
               Override: true
+            - Header: Content-Security-Policy-Report-Only
+              Value: default-src 'none'; script-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; connect-src 'self'
+              Override: true
         SecurityHeadersConfig:
-          ContentSecurityPolicy:
-              ContentSecurityPolicy: default-src 'none'; script-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'
-              Override: false
+          #ContentSecurityPolicy:
+          #    ContentSecurityPolicy: default-src 'none'; script-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'
+          #    Override: false
           ContentTypeOptions:
             Override: false
           FrameOptions:
