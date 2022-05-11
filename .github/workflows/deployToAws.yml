@@ -18,8 +18,6 @@ jobs:
         cache: npm
     - name: NPM Install
       run: npm install
-    - name: Run tests
-      run: npm test -- --watchAll=false
     - name: Build site
       run: npm run build
     - name: Configure AWS credentials
