@@ -39,7 +39,7 @@ export default {
     light.position.set(-1, 0, 1)
     scene.add(light)
     var smokeTexture = THREE.ImageUtils
-      .loadTexture('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png')
+      .loadTexture("@/assets/Smoke-Element.svg")
     var smokeMaterial = new THREE.MeshLambertMaterial({
       color: 0x3DC3FF, 
       map: smokeTexture, 
