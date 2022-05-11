@@ -34,7 +34,7 @@ jobs:
       uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
       with:
         name: vapor-main-site-stack
-        template: stack.yaml
+        template: stack.yml
         no-fail-on-empty-changeset: "1"
         parameter-overrides: >-
           DomainName=vapor.codes,
