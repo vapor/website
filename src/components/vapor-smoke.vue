@@ -27,7 +27,7 @@ export default {
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000)
     camera.position.z = 1000
     scene.add(camera)
-    var geometry = new THREE.CubeGeometry(200, 200, 200)
+    var geometry = new THREE.BoxGeometry(200, 200, 200)
     var material = new THREE.MeshLambertMaterial({
       color: 0xffffff, 
       wireframe: false
@@ -38,8 +38,9 @@ export default {
     var light = new THREE.DirectionalLight(0xffffff, 0.5)
     light.position.set(-1, 0, 1)
     scene.add(light)
+    var smokeTextureAsset = require('@/assets/Smoke-Element.png')
     var smokeTexture = THREE.ImageUtils
-      .loadTexture("@/assets/Smoke-Element.svg")
+      .loadTexture(smokeTextureAsset)
     var smokeMaterial = new THREE.MeshLambertMaterial({
       color: 0x3DC3FF, 
       map: smokeTexture, 
