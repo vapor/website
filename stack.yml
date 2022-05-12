@@ -35,6 +35,7 @@ Resources:
         DefaultRootObject: index.html
         Aliases:
         - !Ref 'DomainName'
+        - !Sub 'www.${DomainName}'
         DefaultCacheBehavior:
           AllowedMethods:
           - GET
