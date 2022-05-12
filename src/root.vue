@@ -268,3 +268,77 @@ p
   &.error
     color: red
 </style>
+
+<style>
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url(./fonts/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url(./fonts/Roboto-Light.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url(./fonts/Roboto-LightItalic.ttf) format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url(./fonts/Roboto-Italic.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url(./fonts/Roboto-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url(./fonts/Roboto-BoldItalic.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* ----- Roboto Mono ----- */
+@font-face {
+    font-family: "Roboto Mono";
+    src: local("Roboto Mono"), url(./fonts/RobotoMono-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: local("Roboto Mono"), url(./fonts/RobotoMono-Italic.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: local("Roboto Mono"), url(./fonts/RobotoMono-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto Mono"), url(./fonts/RobotoMono-BoldItalic.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+:root{
+    --md-text-font: "Roboto";
+    --md-code-font: "Roboto Mono";
+}
+</style>
