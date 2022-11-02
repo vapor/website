@@ -56,7 +56,7 @@
                 a(class="button" href="https://docs.vapor.codes/4.0/" target="_blank") Read Docs &rarr;
               div(class="item")
                 p The definitive book on building web apps and web APIs with Vapor, written by the creators of the framework.
-                a(class="button" href="https://store.raywenderlich.com/products/server-side-swift-with-vapor" target="_blank") Get Book &rarr;
+                a(class="button" href="https://store.kodeco.com/products/server-side-swift-with-vapor" target="_blank") Get Book &rarr;
               div(class="item")
                 p Join thousands of Vapor developers in Vapor's team chat. Ask questions, share information, or just hang out.
                 a(class="button" href="http://vapor.team" target="_blank") Join Chat &rarr;
