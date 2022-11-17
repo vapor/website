@@ -15,7 +15,7 @@
   "devDependencies": {
     "@vue/cli-plugin-router": "^5.0.4",
     "@vue/cli-service": "^5.0.4",
-    "node-sass": "^7.0.1",
+    "node-sass": "^7.0.3",
     "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^12.6.0",
