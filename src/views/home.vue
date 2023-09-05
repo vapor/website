@@ -83,6 +83,10 @@
                 img(src="@/assets/omrd.png")
                 h4 omrd
                 p omrd provides consultation services for dental related scans.
+              a(class="partner" href="https://www.emergetools.com" target="_blank")
+                img(src="@/assets/emerge-tools-black.svg")
+                h4 Emerge Tools
+                p Emerge Tools is a suite of revolutionary products designed to supercharge mobile apps and the teams that build them
             p Interested in becoming a partner?
             div(class="buttons")
               a(class="button" href="mailto:sponsor@vapor.codes") Become a Partner &rarr;
