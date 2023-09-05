@@ -84,7 +84,7 @@
                 h4 omrd
                 p omrd provides consultation services for dental related scans.
               a(class="partner" href="https://www.emergetools.com" target="_blank")
-                img(src="@/assets/emerge-tools-black.svg")
+                img(src="@/assets/emergetoolsstandard.png")
                 h4 Emerge Tools
                 p Emerge Tools is a suite of revolutionary products designed to supercharge mobile apps and the teams that build them
             p Interested in becoming a partner?
