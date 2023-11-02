@@ -75,10 +75,6 @@
                 img(src="@/assets/brokenhands.png")
                 h4 Broken Hands
                 p Providing Vapor training and consulting for clients around the world.
-              a(class="partner" href="https://gotranseo.com/" target="_blank")
-                img(src="@/assets/transeo.png")
-                h4 Transeo
-                p Transeo is an educational technology company that builds tracking tools for student planning and data analysis.
               a(class="partner" href="https://omrd.com/" target="_blank")
                 img(src="@/assets/omrd.png")
                 h4 omrd
