@@ -4,7 +4,7 @@
     div(class="header")
       div(class="text")
         h2 {{ tagline }}
-        a(class="button" href="https://docs.vapor.codes/4.0/" target="_blank") Get Started &rarr;
+        a(class="button" href="https://docs.vapor.codes/4.0/") Get Started &rarr;
       vapor-window(class="window")
         pre
           code(class="code")
@@ -24,62 +24,62 @@
           div(class="features")
               div(class="feature")
                 img(src="@/assets/rocket.svg")
-                p Non-blocking, event-driven architecture built on top of Apple's #[a(href="https://github.com/apple/swift-nio" target="_blank") SwiftNIO].
+                p Non-blocking, event-driven architecture built on top of Apple's #[a(href="https://github.com/apple/swift-nio") SwiftNIO].
               div(class="feature")
                 img(src="@/assets/swift.svg")
-                p Written in #[a(href="https://swift.org" target="_blank") Swift], the powerful programming language that is also easy to learn.
+                p Written in #[a(href="https://swift.org") Swift], the powerful programming language that is also easy to learn.
                 p Build amazing websites, APIs, HTTP servers and backends in Swift.
               div(class="feature")
                 img(src="@/assets/pacman.svg")
-                p Expressive, #[a(href="https://developer.apple.com/videos/play/wwdc2015/408/" target="_blank") protocol-oriented] design with a focus on type-safety.
+                p Expressive, #[a(href="https://developer.apple.com/videos/play/wwdc2015/408/") protocol-oriented] design with a focus on type-safety.
           div(class="ecosystem")
             h2 Ecosystem.
-            p Vapor is more than just a web framework. The project includes over a hundred #[a(href="https://github.com/vapor" target="_blank") official] and #[a(href="https://github.com/vapor-community" target="_blank") community] maintained server-first Swift packages. 
+            p Vapor is more than just a web framework. The project includes over a hundred #[a(href="https://github.com/vapor") official] and #[a(href="https://github.com/vapor-community") community] maintained server-first Swift packages. 
             div(class="packages")
-              a(class="package" href="https://github.com/vapor/vapor" target="_blank") Vapor
-              a(class="package" href="https://github.com/vapor/fluent" target="_blank") Fluent
-              a(class="package" href="https://github.com/vapor/jwt" target="_blank") JWT
-              a(class="package" href="https://github.com/vapor/leaf" target="_blank") Leaf
-              a(class="package" href="https://github.com/vapor/postgres-nio" target="_blank") Postgres
-              a(class="package" href="https://github.com/vapor/mysql-nio" target="_blank") MySQL
-              a(class="package" href="https://github.com/vapor/sqlite-nio" target="_blank") SQLite
-              a(class="package" href="https://github.com/vapor/fluent-mongo-driver" target="_blank") MongoDB
-              a(class="package" href="https://github.com/vapor/queues" target="_blank") Queues
-              a(class="package" href="https://github.com/vapor/apns" target="_blank") APNS
-              a(class="package" href="https://github.com/vapor/redis" target="_blank") Redis
-              a(class="package more" href="https://github.com/vapor" target="_blank") More
+              a(class="package" href="https://github.com/vapor/vapor") Vapor
+              a(class="package" href="https://github.com/vapor/fluent") Fluent
+              a(class="package" href="https://github.com/vapor/jwt") JWT
+              a(class="package" href="https://github.com/vapor/leaf") Leaf
+              a(class="package" href="https://github.com/vapor/postgres-nio") Postgres
+              a(class="package" href="https://github.com/vapor/mysql-nio") MySQL
+              a(class="package" href="https://github.com/vapor/sqlite-nio") SQLite
+              a(class="package" href="https://github.com/vapor/fluent-mongo-driver") MongoDB
+              a(class="package" href="https://github.com/vapor/queues") Queues
+              a(class="package" href="https://github.com/vapor/apns") APNS
+              a(class="package" href="https://github.com/vapor/redis") Redis
+              a(class="package more" href="https://github.com/vapor") More
           div(class="learn")
             h2 Learn.
             div(class="container")
               div(class="item")
                 p Vapor's documentation covers everything from creating your first application to building large projects.
-                a(class="button" href="https://docs.vapor.codes/4.0/" target="_blank") Read Docs &rarr;
+                a(class="button" href="https://docs.vapor.codes/4.0/") Read Docs &rarr;
               div(class="item")
                 p The definitive book on building web apps and web APIs with Vapor, written by the creators of the framework.
-                a(class="button" href="https://store.kodeco.com/products/server-side-swift-with-vapor" target="_blank") Get Book &rarr;
+                a(class="button" href="https://store.kodeco.com/products/server-side-swift-with-vapor") Get Book &rarr;
               div(class="item")
                 p Join thousands of Vapor developers in Vapor's team chat. Ask questions, share information, or just hang out.
-                a(class="button" href="http://vapor.team" target="_blank") Join Chat &rarr;
+                a(class="button" href="http://vapor.team") Join Chat &rarr;
           div(class="sponsor")
             div(class="container")
               div(class="info")
                 h2 Sponsor!
                 p 100% of contributions made through GitHub sponsors go toward supporting the framework. You also get rewards!
-                a(class="button" href="https://github.com/sponsors/vapor" target="_blank") Support Vapor &rarr;
+                a(class="button" href="https://github.com/sponsors/vapor") Support Vapor &rarr;
               div(class="graphic")
                 img(src="@/assets/github-sponsors.png")
           div(class="partners")
             h2 Partners.
             div(class="container")
-              a(class="partner" href="https://www.brokenhands.io/" target="_blank")
+              a(class="partner" href="https://www.brokenhands.io/")
                 img(src="@/assets/brokenhands.png")
                 h4 Broken Hands
                 p Providing Vapor training and consulting for clients around the world.
-              a(class="partner" href="https://omrd.com/" target="_blank")
+              a(class="partner" href="https://omrd.com/")
                 img(src="@/assets/omrd.png")
                 h4 omrd
                 p omrd provides consultation services for dental related scans.
-              a(class="partner" href="https://www.emergetools.com" target="_blank")
+              a(class="partner" href="https://www.emergetools.com")
                 img(src="@/assets/emergetoolsstandard.png")
                 h4 Emerge Tools
                 p Emerge Tools is a suite of revolutionary products designed to supercharge mobile apps and the teams that build them

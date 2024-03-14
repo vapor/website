@@ -6,9 +6,9 @@
     div(class="spacer")
     div(class="nav")
       router-link(:to="{ name: 'home' }") Home
-      a(href="https://blog.vapor.codes" target="_blank") Blog
-      a(href="https://docs.vapor.codes" target="_blank") Docs
-      a(href="https://discord.gg/vapor" target="_blank") Chat
+      a(href="https://blog.vapor.codes") Blog
+      a(href="https://docs.vapor.codes") Docs
+      a(href="https://discord.gg/vapor") Chat
     div(ref="user" class="user")
       div(class="img" @click="showUserMenu = !showUserMenu")
         p(v-if="user") {{ user.name[0] }}
