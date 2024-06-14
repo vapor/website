@@ -3,18 +3,18 @@ import Plot
 import Publish
 import VaporDesign
 
-extension Theme where Site == Homepage {
-    static var vaporHomePage: Self {
+extension Theme where Site == MainSite {
+    static var vaporMainSite: Self {
         Theme(htmlFactory: VaporHomePageThemeHTMLFactory())
     }
 }
 
 struct VaporHomePageThemeHTMLFactory: HTMLFactory {
-    typealias Site = Homepage
+    typealias Site = MainSite
 
     func makeIndexHTML(
         for index: Index,
-        context: PublishingContext<Homepage>
+        context: PublishingContext<Site>
     ) throws -> HTML {
         let isDemo = true
         let body: Node<HTML.DocumentContext> = .body {
@@ -37,8 +37,8 @@ struct VaporHomePageThemeHTMLFactory: HTMLFactory {
     }
 
     func makeSectionHTML(
-        for section: Section<Homepage>,
-        context: PublishingContext<Homepage>
+        for section: Section<Site>,
+        context: PublishingContext<Site>
     ) throws -> HTML {
         let body: Node<HTML.DocumentContext> = .body {
             let isDemo = true
@@ -64,8 +64,8 @@ struct VaporHomePageThemeHTMLFactory: HTMLFactory {
     }
 
     func makeItemHTML(
-        for item: Item<Homepage>,
-        context: PublishingContext<Homepage>
+        for item: Item<Site>,
+        context: PublishingContext<Site>
     ) throws -> HTML {
         let builder = VaporDesign<Site>(siteLanguage: context.site.language, isLocal: false)
         return builder.buildHTML(for: item, context: context, body: .body())
@@ -73,7 +73,7 @@ struct VaporHomePageThemeHTMLFactory: HTMLFactory {
 
     func makePageHTML(
         for page: Page,
-        context: PublishingContext<Homepage>
+        context: PublishingContext<Site>
     ) throws -> HTML {
         let builder = VaporDesign<Site>(siteLanguage: context.site.language, isLocal: false)
         return builder.buildHTML(for: page, context: context, body: .body())
@@ -81,14 +81,14 @@ struct VaporHomePageThemeHTMLFactory: HTMLFactory {
 
     func makeTagListHTML(
         for page: TagListPage,
-        context: PublishingContext<Homepage>
+        context: PublishingContext<Site>
     ) throws -> HTML? {
         nil
     }
 
     func makeTagDetailsHTML(
         for page: TagDetailsPage,
-        context: PublishingContext<Homepage>
+        context: PublishingContext<Site>
     ) throws -> HTML? {
         nil
     }
