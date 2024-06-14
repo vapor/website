@@ -1,0 +1,88 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Codextended",
+        "repositoryURL": "https://github.com/johnsundell/codextended.git",
+        "state": {
+          "branch": null,
+          "revision": "8d7c46dfc9c55240870cf5561d6cefa41e3d7105",
+          "version": "0.3.0"
+        }
+      },
+      {
+        "package": "CollectionConcurrencyKit",
+        "repositoryURL": "https://github.com/johnsundell/collectionConcurrencyKit.git",
+        "state": {
+          "branch": null,
+          "revision": "b4f23e24b5a1bff301efc5e70871083ca029ff95",
+          "version": "0.2.0"
+        }
+      },
+      {
+        "package": "DesignSite",
+        "repositoryURL": "https://github.com/vapor/design.git",
+        "state": {
+          "branch": "main",
+          "revision": "7ff71d83f4646011db464e3c800735edb34d35fa",
+          "version": null
+        }
+      },
+      {
+        "package": "Files",
+        "repositoryURL": "https://github.com/johnsundell/files.git",
+        "state": {
+          "branch": null,
+          "revision": "d273b5b7025d386feef79ef6bad7de762e106eaf",
+          "version": "4.2.0"
+        }
+      },
+      {
+        "package": "Ink",
+        "repositoryURL": "https://github.com/johnsundell/ink.git",
+        "state": {
+          "branch": null,
+          "revision": "bcc9f219900a62c4210e6db726035d7f03ae757b",
+          "version": "0.6.0"
+        }
+      },
+      {
+        "package": "Plot",
+        "repositoryURL": "https://github.com/johnsundell/plot.git",
+        "state": {
+          "branch": null,
+          "revision": "271926b4413fe868739d99f5eadcf2bd6cd62fb8",
+          "version": "0.14.0"
+        }
+      },
+      {
+        "package": "Publish",
+        "repositoryURL": "https://github.com/johnsundell/publish.git",
+        "state": {
+          "branch": "master",
+          "revision": "58e943047882a5a6d8135ae2711be8ba7fba57c4",
+          "version": null
+        }
+      },
+      {
+        "package": "ShellOut",
+        "repositoryURL": "https://github.com/johnsundell/shellout.git",
+        "state": {
+          "branch": null,
+          "revision": "e1577acf2b6e90086d01a6d5e2b8efdaae033568",
+          "version": "2.3.0"
+        }
+      },
+      {
+        "package": "Sweep",
+        "repositoryURL": "https://github.com/johnsundell/sweep.git",
+        "state": {
+          "branch": null,
+          "revision": "801c2878e4c6c5baf32fe132e1f3f3af6f9fd1b0",
+          "version": "0.4.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
