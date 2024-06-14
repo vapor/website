@@ -3,12 +3,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "Homepage",
+    name: "Website",
     platforms: [.macOS(.v12)],
     products: [
         .executable(
-            name: "Homepage",
-            targets: ["Homepage"]
+            name: "Website",
+            targets: ["Website"]
         ),
     ],
     dependencies: [
@@ -17,7 +17,7 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "Homepage",
+            name: "Website",
             dependencies: [
                 .product(name: "Publish", package: "Publish"),
                 .product(name: "VaporDesign", package: "design"),
