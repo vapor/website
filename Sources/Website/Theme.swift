@@ -32,8 +32,9 @@ struct VaporHomePageThemeHTMLFactory: HTMLFactory {
             )
         }
 
+        let bodyWithClass = body.class("main-site-main-page")
         let builder = VaporDesign<Site>(siteLanguage: context.site.language, isLocal: false)
-        return builder.buildHTML(for: index, context: context, body: body)
+        return builder.buildHTML(for: index, context: context, body: bodyWithClass.convertToNode())
     }
 
     func makeSectionHTML(

@@ -1,0 +1,56 @@
+name: PR
+ concurrency:
+   group: ${{ github.workflow }}-${{ github.ref }}
+   cancel-in-progress: true
+ on:
+   pull_request:
+     branches:
+       - main
+
+ jobs:
+   build:
+     name: Test, Build, and Deploy
+     runs-on: ubuntu-latest
+     steps:
+       - name: Configure AWS Credentials
+         uses: aws-actions/configure-aws-credentials@v4
+         if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/blog' && github.actor != 'dependabot[bot]' }}
+         with:
+           aws-access-key-id: ${{ secrets.BLOG_DEPLOYER_AWS_ACCESS_KEY_ID }}
+           aws-secret-access-key: ${{ secrets.BLOG_DEPLOYER_AWS_SECRET_ACCESS_KEY }}
+           aws-region: 'us-east-1'
+       - name: Checkout code
+         uses: actions/checkout@v4
+       - name: Set up Python
+         uses: actions/setup-python@v5
+         with:
+           python-version: '3.10'
+       - name: Setup CloudFormation linter
+         uses: ScottBrenner/cfn-lint-action@v2
+       - name: Run CloudFormation linter
+         run: cfn-lint -t stack.yaml
+       - name: Build site
+         run: swift run
+       - name: Create S3 Bucket
+         if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
+         env:
+           BUCKET: ${{ format('vapor-website-pulls-pr{0}', github.event.number) }}
+         run: |
+             if aws s3api head-bucket --bucket ${BUCKET} 2>/dev/null; then
+               echo "Bucket already exists"
+             else
+               aws s3 mb s3://${BUCKET}
+               aws s3api delete-public-access-block --bucket ${BUCKET}
+               aws s3api delete-bucket-ownership-controls --bucket ${BUCKET}
+               aws s3api put-bucket-website --bucket ${BUCKET}  \
+                 --website-configuration '{"IndexDocument":{"Suffix":"index.html"},"ErrorDocument":{"Key":"404.html"}}'
+             fi
+       - name: Deploy S3 Website
+         if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
+         uses: brokenhandsio/s3-website-https-pr-action@1.0.0
+         env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         with:
+           bucket-prefix: "vapor-website-pulls"
+           folder-to-copy: "./Output"
+           bucket-region: "us-east-1"

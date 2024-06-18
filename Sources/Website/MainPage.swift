@@ -30,7 +30,8 @@ struct MainPage: Component {
                 .accessibilityLabel("Vapor Logo")
                 .id("vapor-hero-logo")
             H1("Swift, but on a server").class("main-title")
-            H3("Vapor provides a safe, performant and easy to use foundation to build HTTP servers, backends and APIs in Swift").class("main-page-caption d-flex mx-auto")
+            H3("Vapor provides a safe, performant and easy to use foundation to build HTTP servers, backends and APIs in Swift")
+                .class("main-page-caption d-flex mx-auto")
 
             // Callout buttons
             Div {
@@ -54,17 +55,13 @@ struct MainPage: Component {
                 let html = """
                 import Vapor
 
-                let app = try Application(.detect())
-                defer { app.shutdown() }
+                let app = try await Application.make(.detect())
 
                 app.get("hello") { req in
-                    return "Hello, world!"
+                    "Hello, world!"
                 }
 
-                try app.run()
-
-
-
+                try await app.execute()
 
 
 
@@ -84,7 +81,7 @@ struct MainPage: Component {
         Div {
             H5("Powering companies like:").class("used-by-caption")
             Div {
-                CompanyCard(name: "Transeo", url: "https://gotranseo.com", logo: "icon-transeo")
+                CompanyCard(name: "Emerge Tools", url: "https://emergetools.com", logo: "/images/emerge-tools.png")
                 CompanyCard(name: "John Lewis", url: "https://johnlewis.com", logo: "icon-john-lewis")
                 CompanyCard(name: "Spotify", url: "https://spotify.com", logo: "icon-spotify")
                 CompanyCard(name: "Swift Package Index", url: "https://swiftpackageindex.com", logo: "icon-swift-package-index")
@@ -101,11 +98,31 @@ struct MainPage: Component {
             }.class("caption")
 
             Div {
-                let vapor = PackageCard(title: "Vapor", description: "Build efficient APIs in a language you love. Create routes, send and receive JSON and build HTTP servers.", icon: "server-04", url: "https://docs.vapor.codes/")
-                let fluent = PackageCard(title: "Fluent", description: "Create models and interact with your database in native, safe Swift code without needing to write any SQL", icon: "database-03", url: "https://docs.vapor.codes/fluent/overview/")
-                let JWT = PackageCard(title: "JWT", description: "Create, sign and verify JSON Web Tokens in Swift. Built on top of SwiftNIO", icon: "key-01", url: "https://docs.vapor.codes/security/jwt/")
-                let leaf = PackageCard(title: "Leaf", description: "A templating engine written in Swift. Generate HTML for both web apps and emails with a simple syntax anyone can use", icon: "code-browser", url: "https://docs.vapor.codes/4.0/leaf/overview/")
-                ComponentGroup(members: [vapor, fluent, JWT, leaf].map { card in
+                let vapor = PackageCard(
+                    title: "Vapor",
+                    description: "Build efficient APIs in a language you love. Create routes, send and receive JSON and build HTTP servers.",
+                    icon: "server-04",
+                    url: "https://docs.vapor.codes/"
+                )
+                let fluent = PackageCard(
+                    title: "Fluent",
+                    description: "Create models and interact with your database in native, safe Swift code without needing to write any SQL",
+                    icon: "database-03",
+                    url: "https://docs.vapor.codes/fluent/overview/"
+                )
+                let jwt = PackageCard(
+                    title: "JWT",
+                    description: "Create, sign and verify JSON Web Tokens in Swift. Built on top of SwiftNIO",
+                    icon: "key-01",
+                    url: "https://docs.vapor.codes/security/jwt/"
+                )
+                let leaf = PackageCard(
+                    title: "Leaf",
+                    description: "A templating engine written in Swift. Generate HTML for both web apps and emails with a simple syntax anyone can use",
+                    icon: "code-browser",
+                    url: "https://docs.vapor.codes/4.0/leaf/overview/"
+                )
+                ComponentGroup(members: [vapor, fluent, jwt, leaf].map { card in
                     Div { card }.class("col")
                 })
             }.class("main-site-packages-grid row row-cols-1 row-cols-lg-2 gx-5")
@@ -126,15 +143,16 @@ struct MainPage: Component {
                 Div {
                     Div {
                         let html = """
-                        func search (req: Request) async throws -> [Todo] {
-                           let searchTerm =
-                             try req.query.get(String.self, at: "term")
+                        app.get("todos", ":id") { req async throws -> Todo in
+                          let id: UUID = try req.parameters.require("id")
 
-                           let results = try await
-                           Todo.query(on: req.db)
-                             .filter(\\.$title == searchTerm).all
+                          guard
+                            let todo = try await Todo.find(id, on: req.db)
+                          else {
+                            throw Abort(.notFound)
+                          }
 
-                           return results
+                          return todo
                         }
                         """
                         let code = Node.code(.text(html)).class("language-swift")
@@ -155,15 +173,14 @@ struct MainPage: Component {
                 Div {
                     Div {
                         let html = """
-                        func search (req: Request) async throws -> [Todo] {
-                           let searchTerm =
-                             try req.query.get(String.self, at: "term")
+                        func search(req: Request) async throws -> [Todo] {
+                          let name: String = try req.query.get(at: "name")
 
-                           let results = try await
-                           Todo.query(on: req.db)
-                             .filter(\\.$number == searchTerm).all()
+                          let results = try await Todo.query(on: req.db)
+                            .filter(\\.$number == name)
+                            .all()
 
-                           return results
+                          return results
                         }
                         """
                         let code = Node.code(.text(html)).class("language-swift")
@@ -204,8 +221,10 @@ struct MainPage: Component {
                 }.class("code-example-explainer")
             }.class("col order-2 order-lg-1 mt-5 mt-lg-0")
             Div {
-                Image(url: "/images/integrations.png", description: "Vapor Integrations")
-                    .class("img-fluid").id("integrations-image")
+                Image(
+                    url: VaporDesignUtilities.buildResourceLink(for: "/images/integrations.png", isLocal: isLocal),
+                    description: "Vapor Integrations"
+                ).class("img-fluid").id("integrations-image")
             }.class("col order-1 order-lg-2")
         }.class("row row-cols-1 row-cols-lg-2 align-items-center").id("integrations")
     }
@@ -222,11 +241,24 @@ struct MainPage: Component {
                 }.class("btn btn-primary").class("d-none d-lg-block")
             }.class("showcase-header")
             Div {
-                ShowcaseCard(name: "Sambot", url: "", image: "/images/sambot-card.png", description: "Sambot helps all members of a Mobile App Dev Team to be more productive, reactive and efficient while using Bitrise CI services")
-                ShowcaseCard(name: "Underway NYC", url: "", image: "/images/underway-nyc-card.png", description: "Quickly locate yourself on the official MTA map of NYC and get real-time train arrivals at that subway stop")
-                ShowcaseCard(name: "SwiftFiddle", url: "", image: "/images/swiftfiddle-card.png", description: "SwiftFiddle is an online playground for creating, sharing and embedding Swift fiddles")
-                ShowcaseCard(name: "Transeo", url: "", image: "/images/transeo-card.png", description: "Transeo is an educational readiness platform that helps students determine what they want to do after high school")
-                ShowcaseCard(name: "Sambot", url: "", image: "/images/sambot-card.png", description: "Sambot helps all members of a Mobile App Dev Team to be more productive, reactive and efficient while using Bitrise CI services")
+                ShowcaseCard(
+                    name: "Sambot",
+                    url: "https://www.sambot.app",
+                    image: VaporDesignUtilities.buildResourceLink(for: "/images/sambot-card.png", isLocal: isLocal),
+                    description: "Sambot helps all members of a Mobile App Dev Team to be more productive, reactive and efficient while using Bitrise CI services"
+                )
+                ShowcaseCard(
+                    name: "Underway NYC",
+                    url: "https://www.underway.nyc",
+                    image: VaporDesignUtilities.buildResourceLink(for: "/images/underway-nyc-card.png", isLocal: isLocal),
+                    description: "Quickly locate yourself on the official MTA map of NYC and get real-time train arrivals at that subway stop"
+                )
+                ShowcaseCard(
+                    name: "SwiftFiddle",
+                    url: "https://swiftfiddle.com",
+                    image: VaporDesignUtilities.buildResourceLink(for: "/images/swiftfiddle-card.png", isLocal: isLocal),
+                    description: "SwiftFiddle is an online playground for creating, sharing and embedding Swift fiddles"
+                )
             }.class("showcase-cards scrolling-wrapper").id("showcase-scrolling-wrapper")
             Div {
                 Button {
@@ -243,10 +275,12 @@ struct MainPage: Component {
         Div {
             Div {
                 Image(
-                    url: VaporDesignUtilities.buildResourceLink(for: "/images/discord-chat.png", isLocal: isLocal),
+                    url: VaporDesignUtilities.buildResourceLink(
+                        for: "/images/discord-chat.png",
+                        isLocal: isLocal
+                    ),
                     description: "Vapor Discord server"
-                )
-                .class("img-fluid").id("discord-chat-image")
+                ).class("img-fluid").id("discord-chat-image")
             }.class("col")
             Div {
                 Div {
@@ -323,20 +357,20 @@ struct MainPage: Component {
                     SponsorCard(
                         name: "Broken Hands",
                         url: "https://www.brokenhands.io/",
-                        logo: VaporDesignUtilities.buildResourceLink(for: "/images/brokenhands.png", isLocal: isLocal),
+                        logo: "/static/images/brokenhands.png",
                         description: "Providing Vapor training and consulting for clients around the world."
                     )
                     SponsorCard(
                         name: "omrd",
                         url: "https://omrd.com",
-                        logo: VaporDesignUtilities.buildResourceLink(for: "/images/omrd.png", isLocal: isLocal),
+                        logo: "/static/images/omrd.png",
                         description: "omrd provides consultation services for dental elated scans."
                     )
                     SponsorCard(
-                        name: "Transeo",
-                        url: "https://gotranseo.com",
-                        logo: VaporDesignUtilities.buildResourceLink(for: "/images/transeo.png", isLocal: isLocal),
-                        description: "Transeo is an educational technology company that builds tracking tools for student planning and data analysis."
+                        name: "Emerge Tools",
+                        url: "https://www.emergetools.com",
+                        logo: "/static/images/emerge-tools.png",
+                        description: "Emerge Tools is a suite of revolutionary products designed to supercharge mobile apps and the teams that build them."
                     )
                 }.class("sponsors-list")
             }.class("row").id("sponsors")
