@@ -11,6 +11,8 @@ jobs:
   build:
     name: Test, Build, and Deploy
     runs-on: ubuntu-latest
+    env:
+      AWS_DEFAULT_REGION: us-east-1
     steps:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
