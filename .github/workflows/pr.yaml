@@ -12,6 +12,8 @@ jobs:
     name: Build and Deploy PR
     runs-on: ubuntu-latest
     permissions: { id-token: write, contents: read }
+    env:
+      AWS_DEFAULT_REGION: eu-west-2
     steps:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
