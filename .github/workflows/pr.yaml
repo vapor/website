@@ -11,12 +11,14 @@ jobs:
   build:
     name: Build and Deploy PR
     runs-on: ubuntu-latest
-    env:
-      AWS_DEFAULT_REGION: us-east-1
-      AWS_ACCESS_KEY_ID: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/blog' && github.actor != 'dependabot[bot]' }}
+        with:
+          aws-access-key-id: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
+          aws-region: eu-west-2
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Set up Python
@@ -51,4 +53,4 @@ jobs:
         with:
           bucket-prefix: "vapor-website-pulls"
           folder-to-copy: "./Output"
-          bucket-region: "us-east-1"
+          bucket-region: "eu-west-2"
