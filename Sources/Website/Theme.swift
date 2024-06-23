@@ -30,6 +30,7 @@ struct VaporHomePageThemeHTMLFactory: HTMLFactory {
                 isDemo: isDemo,
                 currentSite: .main
             )
+            Script(url: VaporDesignUtilities.buildResourceLink(for: "/static/js/updateStarsCount.js", isLocal: true))
         }
 
         let bodyWithClass = body.class("main-site-main-page")
@@ -43,20 +44,20 @@ struct VaporHomePageThemeHTMLFactory: HTMLFactory {
     ) throws -> HTML {
         let body: Node<HTML.DocumentContext> = .body {
             let isDemo = true
-            let currentSite: CurrentSite = .main
             SiteNavigation(
                 context: context,
                 selectedSelectionID: nil,
-                currentSite: currentSite,
-                currentMainSitePage: .showcase,
+                currentSite: .main,
+                currentMainSitePage: .home,
                 isDemo: isDemo
             )
             MainPage()
             SiteFooter(
                 isLocal: false,
                 isDemo: isDemo,
-                currentSite: currentSite
+                currentSite: .main
             )
+            Script(url: VaporDesignUtilities.buildResourceLink(for: "/static/js/updateStarsCount.js", isLocal: true))
         }
 
         let bodyWithClass = body.class("main-site-main-page")

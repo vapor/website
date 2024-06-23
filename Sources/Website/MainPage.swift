@@ -44,8 +44,8 @@ struct MainPage: Component {
                     Button {
                         Link(url: "https://github.com/vapor/vapor") {
                             Span().class("vapor-icon icon-github-line icon-secondary btn-icon me-2")
-                            Text("22k stars on GitHub")
-                        }.class(" d-flex align-items-center")
+                            Span("... stars on GitHub").id("main-page-callout-stars-count")
+                        }.class("d-flex align-items-center")
                     }.class("btn btn-link btn-secondary-link")
                 }.class("d-flex align-items-center ms-lg-5")
             }.class("main-page-callout-buttons d-flex align-items-center justify-content-center flex-column flex-lg-row")
