@@ -1,0 +1,97 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Create a static website on S3 served by CloudFront'
+Parameters:
+  DomainName:
+    Type: String
+    Description: The domain name for the site
+    AllowedPattern: (?!-)[a-zA-Z0-9-.]{1,63}(?<!-)
+    ConstraintDescription: must be a valid DNS zone name.
+  AcmCertificateArn:
+    Type: String
+    Description: the Amazon Resource Name (ARN) of an AWS Certificate Manager (ACM) certificate.
+    AllowedPattern: "arn:aws:acm:.*"
+  S3BucketName:
+    Type: String
+    Description: Name for the bucket
+Resources:
+  S3BucketForWebsiteContent:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref 'S3BucketName'
+      WebsiteConfiguration:
+        IndexDocument: index.html
+  WebsiteCloudfront:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Comment: Cloudfront Distribution pointing to S3 bucket
+        Origins:
+        - DomainName: !Join [ '', !Split [ 'http://', !GetAtt 'S3BucketForWebsiteContent.WebsiteURL' ] ]
+          Id: S3Origin
+          CustomOriginConfig:
+            OriginProtocolPolicy: 'http-only'
+        Enabled: true
+        HttpVersion: 'http2'
+        DefaultRootObject: index.html
+        Aliases:
+        - !Ref 'DomainName'
+        - !Sub 'www.${DomainName}'
+        DefaultCacheBehavior:
+          AllowedMethods:
+          - GET
+          - HEAD
+          - OPTIONS
+          Compress: true
+          TargetOriginId: S3Origin
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: none
+          ViewerProtocolPolicy: redirect-to-https
+          ResponseHeadersPolicyId: !Ref WebsiteCloudFrontPolicies
+        PriceClass: PriceClass_All
+        ViewerCertificate:
+          AcmCertificateArn: !Ref 'AcmCertificateArn'
+          SslSupportMethod: sni-only
+  WebsiteCloudFrontPolicies:
+    Type: AWS::CloudFront::ResponseHeadersPolicy
+    Properties:
+      ResponseHeadersPolicyConfig:
+        Name: Vapor-Main-Site-Header-Policy
+        Comment: The Vapor main website security header policy
+        CustomHeadersConfig:
+          Items:
+            - Header: Permissions-Policy
+              Value: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()
+              Override: true
+            - Header: server
+              Value: 'Vapor Website'
+              Override: true
+        SecurityHeadersConfig:
+          ContentSecurityPolicy:
+             ContentSecurityPolicy: default-src 'none'; script-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; connect-src 'self'
+             Override: false
+          ContentTypeOptions:
+            Override: false
+          FrameOptions:
+            FrameOption: DENY
+            Override: false
+          ReferrerPolicy:
+            ReferrerPolicy: strict-origin-when-cross-origin
+            Override: false
+          StrictTransportSecurity:
+            AccessControlMaxAgeSec: 63072000
+            IncludeSubdomains: true
+            Preload: false
+            Override: false
+          XSSProtection:
+            ModeBlock: true
+            Protection: true
+            Override: false
+Outputs:
+  CloudfrontURL:
+    Description: 'Cloudfront URL'
+    Value: !GetAtt WebsiteCloudfront.DomainName
+  BucketName:
+    Value: !Ref 'S3BucketForWebsiteContent'
+    Description: Name of S3 bucket to hold website content

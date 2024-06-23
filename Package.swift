@@ -1,10 +1,10 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.10
 
 import PackageDescription
 
 let package = Package(
     name: "Website",
-    platforms: [.macOS(.v12)],
+    platforms: [.macOS(.v13)],
     products: [
         .executable(
             name: "Website",
@@ -12,7 +12,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", branch: "master"),
+        .package(url: "https://github.com/johnsundell/publish.git", branch: "master"),
         .package(url: "https://github.com/vapor/design.git", branch: "main"),
     ],
     targets: [
