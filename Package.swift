@@ -13,8 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/johnsundell/publish.git", branch: "master"),
-        // .package(url: "https://github.com/vapor/design.git", branch: "main"),
-        .package(path: "../design"),
+        .package(url: "https://github.com/vapor/design.git", branch: "main"),
     ],
     targets: [
         .executableTarget(
