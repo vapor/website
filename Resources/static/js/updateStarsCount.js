@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('https://api.github.com/repos/vapor/vapor')
         .then(response => response.json())
         .then(data => {
-            const starCount = data.stargazers_count;
+            const starCount = data.stargazers_count.toLocaleString();
             document.getElementById('main-page-callout-stars-count').textContent = `${starCount} stars on GitHub`;
         })
         .catch(error => {
