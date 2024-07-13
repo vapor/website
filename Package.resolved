@@ -1,5 +1,5 @@
 {
-  "originHash" : "d34a1b57cfb5f0add1aad56e35c5d2957987cfc8e12013efaaa04ba86aa7cbfd",
+  "originHash" : "27e240479a6c1e7adc2b2d06d2fa4117b0704172a52e781d50a899c1879cb095",
   "pins" : [
     {
       "identity" : "codextended",
@@ -17,15 +17,6 @@
       "state" : {
         "revision" : "b4f23e24b5a1bff301efc5e70871083ca029ff95",
         "version" : "0.2.0"
-      }
-    },
-    {
-      "identity" : "design",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/vapor/design.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "accca179a8b287e6cc110fb78309868384b9da62"
       }
     },
     {
