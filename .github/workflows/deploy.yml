@@ -1,0 +1,54 @@
+name: Build and deploy vapor.codes
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    container: swift:5.10-jammy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build site
+        run: swift run
+      - name: Configure AWS credentials
+        id: cred
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
+          aws-region: "eu-west-2"
+      - name: Deploy to AWS Cloudformation
+        id: clouddeploy
+        uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: vapor-main-site-stack
+          template: stack.yml
+          no-fail-on-empty-changeset: "1"
+          parameter-overrides: >-
+            DomainName=vapor.codes,
+            S3BucketName=vapor-main-site,
+            AcmCertificateArn=${{ secrets.CERTIFICATE_ARN }}
+      - name: Deploy to S3
+        id: s3deploy
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete --exclude 'feed.rss'
+        env:
+          AWS_S3_BUCKET: "vapor-main-site"
+          AWS_ACCESS_KEY_ID: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
+          AWS_REGION: "eu-west-2"
+          SOURCE_DIR: "dist"
+      - name: Invalidate CloudFront
+        uses: awact/cloudfront-action@master
+        env:
+          SOURCE_PATH: "/*"
+          AWS_REGION: "eu-west-2"
+          AWS_ACCESS_KEY_ID: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
+          DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}

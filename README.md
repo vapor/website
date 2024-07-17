@@ -1,19 +1,17 @@
-# vapor-website
+# Vapor Website
 
-## Project setup
-```
-npm install
-```
+This repository contains the code for the Vapor website at [vapor.codes](https://vapor.codes). The website is built using [Publish](https://github.com/johnsundell/publish).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+To run the website locally, install the Publish CLI tool using
+```bash
+git clone https://github.com/JohnSundell/Publish.git
+cd Publish
+make
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+then, clone this repository and run the following command:
+
+```bash
+publish run
+```
+
