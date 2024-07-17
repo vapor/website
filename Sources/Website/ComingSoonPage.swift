@@ -31,7 +31,7 @@ struct ComingSoonComponent: Component {
 
                 let app = try await Application.make(.detect())
 
-                app.get("\(String(describing: title.lowercased))") { req in
+                app.get("\(title.lowercased())") { req in
                     "Coming soon..."
                 }
 

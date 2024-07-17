@@ -268,7 +268,7 @@ extension HomePage {
                         Link(url: "/showcase") {
                             Text("See full list")
                             Span().class("ms-2 vapor-icon icon-chevron-right")
-                        }
+                        }.class("text-decoration-none")
                     }.class("btn").class("d-none d-lg-block")
                 }.class("showcase-header")
                 Div {
