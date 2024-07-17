@@ -265,18 +265,30 @@ extension HomePage {
                 Div {
                     H3("Used by the teams behind these amazing apps")
                     Button {
-                        Link(url: "/showcase") {
+                        Link(url: "") {
                             Text("See full list")
                             Span().class("ms-2 vapor-icon icon-chevron-right")
                         }.linkTarget(.blank)
-                    }.class("btn btn-primary").class("d-none d-lg-block")
+                    }.class("btn").class("d-none d-lg-block")
                 }.class("showcase-header")
                 Div {
+                    ShowcaseCard(
+                        name: "SwiftFiddle",
+                        url: "https://swiftfiddle.com",
+                        image: VaporDesignUtilities.buildResourceLink(for: "/images/swiftfiddle-card.png", isLocal: isLocal),
+                        description: "SwiftFiddle is an online playground for creating, sharing and embedding Swift fiddles"
+                    )
                     ShowcaseCard(
                         name: "Sambot",
                         url: "https://www.sambot.app",
                         image: VaporDesignUtilities.buildResourceLink(for: "/images/sambot-card.png", isLocal: isLocal),
                         description: "Sambot helps all members of a Mobile App Dev Team to be more productive, reactive and efficient while using Bitrise CI services"
+                    )
+                    ShowcaseCard(
+                        name: "SwiftPackageIndex",
+                        url: "https://swiftpackageindex.com",
+                        image: "/static/images/showcase/swift-package-index.png",
+                        description: "The Swift Package Index is a searchable index of Swift packages and their compatibility with various platforms."
                     )
                     ShowcaseCard(
                         name: "Underway NYC",
@@ -285,20 +297,20 @@ extension HomePage {
                         description: "Quickly locate yourself on the official MTA map of NYC and get real-time train arrivals at that subway stop"
                     )
                     ShowcaseCard(
-                        name: "SwiftFiddle",
-                        url: "https://swiftfiddle.com",
-                        image: VaporDesignUtilities.buildResourceLink(for: "/images/swiftfiddle-card.png", isLocal: isLocal),
-                        description: "SwiftFiddle is an online playground for creating, sharing and embedding Swift fiddles"
+                        name: "Litmaps",
+                        url: "https://litmaps.com",
+                        image: "/static/images/showcase/litmaps.png",
+                        description: "Litmaps is a browser-based research platform designed for clarity, comprehensiveness, and collaboration."
                     )
-                }.class("showcase-cards scrolling-wrapper")
+                }.class("showcase-cards scrollable").id("home-page-showcase-cards-list")
                 Div {
                     Button {
                         Span().class("vapor-icon icon-arrow-left")
-                    }.class("arrow-button").onclick("scrollToLeft()")
+                    }.class("arrow-button left-scroll-button")
                     Button {
                         Span().class("vapor-icon icon-arrow-right")
-                    }.class("arrow-button").onclick("scrollToRight()")
-                }.class("btn-group")
+                    }.class("arrow-button right-scroll-button")
+                }.class("btn-group scroll-button-group").attribute(named: "data-scrollable", value: "home-page-showcase-cards-list")
             }.class("row row-cols-1 row-cols-lg-2").id("showcase")
         }
 
@@ -403,15 +415,15 @@ extension HomePage {
                             logo: "/static/images/sponsors/emerge-tools.png",
                             description: "Emerge Tools is a suite of revolutionary products designed to supercharge mobile apps and the teams that build them."
                         )
-                    }.class("sponsors-list scrolling-wrapper")
+                    }.class("sponsors-list").id("home-page-sponsors-list")
                     Div {
                         Button {
                             Span().class("vapor-icon icon-arrow-left")
-                        }.class("arrow-button").onclick("scrollToLeft()")
+                        }.class("arrow-button left-scroll-button")
                         Button {
                             Span().class("vapor-icon icon-arrow-right")
-                        }.class("arrow-button").onclick("scrollToRight()")
-                    }.class("btn-group")
+                        }.class("arrow-button right-scroll-button")
+                    }.class("btn-group scroll-button-group").attribute(named: "data-scrollable", value: "home-page-sponsors-list")
                 }.class("row").id("sponsors")
             }.class("container")
         }
