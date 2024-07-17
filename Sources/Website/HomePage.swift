@@ -151,7 +151,7 @@ extension HomePage {
                         title: "Leaf",
                         description: "A templating engine written in Swift. Generate HTML for both web apps and emails with a simple syntax anyone can use",
                         icon: "code-browser",
-                        url: "https://docs.vapor.codes/4.0/leaf/overview/"
+                        url: "https://docs.vapor.codes/leaf/overview/"
                     )
                     ComponentGroup(members: [vapor, fluent, jwt, leaf].map { card in
                         Div { card }.class("col")
@@ -225,7 +225,7 @@ extension HomePage {
                             Span(
                                 """
                                 Binary operator '==' cannot be applied to operands of type 'KeyPath<Todo,
-                                FieldProperty<Todo, Int>>* and 'String'
+                                FieldProperty<Todo, Int>>' and 'String'
                                 """
                             ).class("code-error-message")
                         }.class("code-error")
@@ -265,7 +265,7 @@ extension HomePage {
                 Div {
                     H3("Used by the teams behind these amazing apps")
                     Button {
-                        Link(url: "") {
+                        Link(url: "/showcase") {
                             Text("See full list")
                             Span().class("ms-2 vapor-icon icon-chevron-right")
                         }.linkTarget(.blank)
@@ -290,7 +290,7 @@ extension HomePage {
                         image: VaporDesignUtilities.buildResourceLink(for: "/images/swiftfiddle-card.png", isLocal: isLocal),
                         description: "SwiftFiddle is an online playground for creating, sharing and embedding Swift fiddles"
                     )
-                }.class("showcase-cards scrolling-wrapper").id("showcase-scrolling-wrapper")
+                }.class("showcase-cards scrolling-wrapper")
                 Div {
                     Button {
                         Span().class("vapor-icon icon-arrow-left")
@@ -380,7 +380,7 @@ extension HomePage {
                 Div {
                     Div {
                         H3("Supported by our incredible sponsors and backers")
-                        Link(url: "") {
+                        Link(url: "https://github.com/sponsors/vapor") {
                             Text("Become a supporter")
                         }.class("btn btn-secondary")
                     }.id("sponsors-header")
@@ -388,22 +388,30 @@ extension HomePage {
                         SponsorCard(
                             name: "Broken Hands",
                             url: "https://www.brokenhands.io/",
-                            logo: "/static/images/brokenhands.png",
+                            logo: "/static/images/sponsors/brokenhands.png",
                             description: "Providing Vapor training and consulting for clients around the world."
                         )
                         SponsorCard(
                             name: "omrd",
                             url: "https://omrd.com",
-                            logo: "/static/images/omrd.png",
+                            logo: "/static/images/sponsors/omrd.png",
                             description: "omrd provides consultation services for dental elated scans."
                         )
                         SponsorCard(
                             name: "Emerge Tools",
                             url: "https://www.emergetools.com",
-                            logo: "/static/images/emerge-tools.png",
+                            logo: "/static/images/sponsors/emerge-tools.png",
                             description: "Emerge Tools is a suite of revolutionary products designed to supercharge mobile apps and the teams that build them."
                         )
-                    }.class("sponsors-list")
+                    }.class("sponsors-list scrolling-wrapper")
+                    Div {
+                        Button {
+                            Span().class("vapor-icon icon-arrow-left")
+                        }.class("arrow-button").onclick("scrollToLeft()")
+                        Button {
+                            Span().class("vapor-icon icon-arrow-right")
+                        }.class("arrow-button").onclick("scrollToRight()")
+                    }.class("btn-group")
                 }.class("row").id("sponsors")
             }.class("container")
         }

@@ -1,5 +1,5 @@
 function scrollToRight() {
-    var element = document.getElementById("showcase-scrolling-wrapper");
+    var element = document.getElementById("scrolling-wrapper");
     element.scrollBy({
         top: 0,
         left: 320,
@@ -8,7 +8,7 @@ function scrollToRight() {
 }
 
 function scrollToLeft() {
-    var element = document.getElementById("showcase-scrolling-wrapper");
+    var element = document.getElementById("scrolling-wrapper");
     element.scrollBy({
         top: 0,
         left: -320,
