@@ -265,10 +265,10 @@ extension HomePage {
                 Div {
                     H3("Used by the teams behind these amazing apps")
                     Button {
-                        Link(url: "") {
+                        Link(url: "/showcase") {
                             Text("See full list")
                             Span().class("ms-2 vapor-icon icon-chevron-right")
-                        }.linkTarget(.blank)
+                        }
                     }.class("btn").class("d-none d-lg-block")
                 }.class("showcase-header")
                 Div {
