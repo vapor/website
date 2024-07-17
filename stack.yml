@@ -69,7 +69,7 @@ Resources:
               Override: true
         SecurityHeadersConfig:
           ContentSecurityPolicy:
-             ContentSecurityPolicy: default-src 'none'; script-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; connect-src 'self'
+             ContentSecurityPolicy: default-src 'none'; script-src 'self' https://design.vapor.codes; style-src 'self' https://design.vapor.codes; img-src 'self' https://design.vapor.codes; font-src 'self' https://design.vapor.codes; media-src 'self' https://design.vapor.codes; upgrade-insecure-requests; block-all-mixed-content; manifest-src 'self' https://design.vapor.codes; connect-src 'self' https://api.github.com/repos/vapor/vapor
              Override: false
           ContentTypeOptions:
             Override: false
