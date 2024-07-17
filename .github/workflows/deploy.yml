@@ -33,6 +33,7 @@ jobs:
             DomainName=vapor.codes,
             S3BucketName=vapor-main-site,
             AcmCertificateArn=${{ secrets.CERTIFICATE_ARN }}
+        if: steps.cred.outcome == 'success'
       - name: Deploy to S3
         id: s3deploy
         uses: jakejarvis/s3-sync-action@master
@@ -43,7 +44,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
           AWS_REGION: "eu-west-2"
-          SOURCE_DIR: "dist"
+          SOURCE_DIR: "Output"
       - name: Invalidate CloudFront
         uses: awact/cloudfront-action@master
         env:
