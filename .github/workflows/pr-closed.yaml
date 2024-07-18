@@ -18,6 +18,13 @@ jobs:
       BUCKET: ${{ format('vapor-website-pulls-pr{0}', github.event.number) }}
 
     steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
+        with:
+          aws-access-key-id: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
+          aws-region: eu-west-2
       - name: Delete Website Bucket
         run: |
           aws s3 rb s3://${BUCKET} --force
