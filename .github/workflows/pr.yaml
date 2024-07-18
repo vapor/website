@@ -34,7 +34,7 @@ jobs:
       - name: Create S3 Bucket
         if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
         env:
-          BUCKET: ${{ format('vapor-website-pulls-pr{0}', github.event.number) }}
+          BUCKET: ${{ format('vapor-website-pulls-pr-{0}', github.event.number) }}
         run: |
           if aws s3api head-bucket --bucket ${BUCKET} 2>/dev/null; then
             echo "Bucket already exists"
