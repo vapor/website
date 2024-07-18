@@ -26,5 +26,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
           aws-region: eu-west-2
       - name: Delete Website Bucket
-        run: |
-          aws s3 rb s3://${BUCKET} --force
+        uses: brokenhandsio/s3-website-https-pr-action@1.0.0
+        with:
+          bucket-prefix: "vapor-website-pulls"
+          bucket-region: "eu-west-2"
