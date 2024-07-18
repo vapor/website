@@ -17,6 +17,13 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
+        with:
+          aws-access-key-id: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
+          aws-region: eu-west-2
       - name: Delete Website Bucket
         uses: rishabhrao/s3-website-https-pr-action@v1
         with:
