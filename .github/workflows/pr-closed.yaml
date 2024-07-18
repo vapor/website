@@ -15,9 +15,9 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      BUCKET: ${{ format('vapor-website-pulls-pr{0}', github.event.number) }}
 
     steps:
       - name: Delete Website Bucket
-        uses: rishabhrao/s3-website-https-pr-action@v1
-        with:
-          bucket-prefix: "vapor-website-pulls"
+        run: |
+          aws s3 rb s3://${BUCKET} --force
