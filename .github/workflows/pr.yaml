@@ -29,6 +29,8 @@ jobs:
         uses: brokenhandsio/s3-website-https-pr-action@updates
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
         with:
           bucket-prefix: "vapor-website-pulls"
           folder-to-copy: "./Output"
