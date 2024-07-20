@@ -15,18 +15,10 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      BUCKET: ${{ format('vapor-website-pulls-pr{0}', github.event.number) }}
 
     steps:
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
-        with:
-          aws-access-key-id: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
-          aws-region: eu-west-2
       - name: Delete Website Bucket
-        uses: brokenhandsio/s3-website-https-pr-action@1.0.0
+        uses: brokenhandsio/s3-website-https-pr-action@updates
         with:
           bucket-prefix: "vapor-website-pulls"
           bucket-region: "eu-west-2"
