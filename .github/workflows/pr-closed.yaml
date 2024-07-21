@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Delete Website Bucket
-        uses: brokenhandsio/s3-website-https-pr-action@v2
+        uses: brokenhandsio/s3-website-pr-action@v2
         with:
           bucket-prefix: "vapor-website-pulls"
           bucket-region: "eu-west-2"
