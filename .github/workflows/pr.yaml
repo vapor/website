@@ -12,13 +12,6 @@ jobs:
     name: Build and Deploy PR
     runs-on: ubuntu-latest
     steps:
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
-        with:
-          aws-access-key-id: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
-          aws-region: eu-west-2
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Set up Python
@@ -31,25 +24,13 @@ jobs:
         run: cfn-lint -t stack.yml
       - name: Build site
         run: swift run
-      - name: Create S3 Bucket
-        if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
-        env:
-          BUCKET: ${{ format('vapor-website-pulls-pr-{0}', github.event.number) }}
-        run: |
-          if aws s3api head-bucket --bucket ${BUCKET} 2>/dev/null; then
-            echo "Bucket already exists"
-          else
-            aws s3 mb s3://${BUCKET}
-            aws s3api delete-public-access-block --bucket ${BUCKET}
-            aws s3api delete-bucket-ownership-controls --bucket ${BUCKET}
-            aws s3api put-bucket-website --bucket ${BUCKET}  \
-              --website-configuration '{"IndexDocument":{"Suffix":"index.html"},"ErrorDocument":{"Key":"404.html"}}'
-          fi
       - name: Deploy S3 Website
         if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
-        uses: brokenhandsio/s3-website-https-pr-action@1.0.0
+        uses: brokenhandsio/s3-website-https-pr-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
         with:
           bucket-prefix: "vapor-website-pulls"
           folder-to-copy: "./Output"
