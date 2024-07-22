@@ -72,6 +72,10 @@ struct VaporHomePageThemeHTMLFactory: HTMLFactory {
             ShowcasePage(context: context, isDemo: isDemo)
         case .team:
             TeamPage(context: context, isDemo: isDemo)
+        case .supporters:
+            SupportersPage(context: context, isDemo: isDemo)
+        case .evangelists:
+            EvangelistsPage(context: context, isDemo: isDemo)
         default:
             HomePage(context: context, isDemo: isDemo)
         }
@@ -85,6 +89,10 @@ struct VaporHomePageThemeHTMLFactory: HTMLFactory {
             .showcase
         case "/team", "/team/", "team":
             .team
+        case "/evangelists", "/evangelists/", "evangelists":
+            .evangelists
+        case "/supporters", "/supporters/", "supporters":
+            .supporters
         default:
             .home
         }
