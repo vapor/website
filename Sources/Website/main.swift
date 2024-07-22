@@ -20,8 +20,6 @@ struct MainSite: Website {
 
 try MainSite().publish(using: [
     .copyResources(),
-    // Here we remove the default .addMarkdownFiles()
-    // since we don't need to add any markdown files
-    // and can therefore remove the Content folder
+    .addMarkdownFiles(),
     .generateHTML(withTheme: .vaporMainSite),
 ])
