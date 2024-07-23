@@ -112,7 +112,6 @@ extension HomePage {
             Div {
                 H5("Powering companies like:").class("used-by-caption")
                 Div {
-                    CompanyCard(name: "Emerge Tools", url: "https://emergetools.com", logo: "/images/emerge-tools.png")
                     CompanyCard(name: "John Lewis", url: "https://johnlewis.com", logo: "icon-john-lewis")
                     CompanyCard(name: "Spotify", url: "https://spotify.com", logo: "icon-spotify")
                     CompanyCard(name: "Swift Package Index", url: "https://swiftpackageindex.com", logo: "icon-swift-package-index")
