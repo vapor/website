@@ -7,6 +7,8 @@ struct MainSite: Website {
         case home
         case showcase
         case team
+        case evangelists
+        case supporters
     }
 
     struct ItemMetadata: WebsiteItemMetadata {}
