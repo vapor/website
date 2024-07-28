@@ -46,8 +46,19 @@ struct VaporHomePageThemeHTMLFactory: HTMLFactory {
         for page: Page,
         context: PublishingContext<Site>
     ) throws -> HTML {
+        let body: Node<HTML.DocumentContext> = .body {
+            if page.title == "Error 404 - Page not found" {
+                SiteNavigation(context: context, selectedSelectionID: nil, currentSite: .main, currentMainSitePage: nil)
+                Div {
+                    page.body
+                }.class("container vapor-container")
+                SiteFooter(currentSite: .main)
+            } else {
+                page.body
+            }
+        }
         let builder = VaporDesign<Site>(siteLanguage: context.site.language, isLocal: false)
-        return builder.buildHTML(for: page, context: context, body: .body())
+        return builder.buildHTML(for: page, context: context, body: body)
     }
 
     func makeTagListHTML(

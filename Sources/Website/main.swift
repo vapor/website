@@ -7,7 +7,6 @@ struct MainSite: Website {
         case home
         case showcase
         case team
-        case notFound
         case evangelists
         case supporters
     }
