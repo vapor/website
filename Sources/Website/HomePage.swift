@@ -115,7 +115,7 @@ extension HomePage {
                 H5("Powering companies like:").class("used-by-caption")
                 Div {
                     CompanyCard(name: "John Lewis", url: "https://johnlewis.com", logo: "icon-john-lewis")
-                    CompanyCard(name: "Spotify", url: "https://spotify.com", logo: "icon-spotify")
+                    // CompanyCard(name: "Spotify", url: "https://spotify.com", logo: "icon-spotify")
                     CompanyCard(name: "Swift Package Index", url: "https://swiftpackageindex.com", logo: "icon-swift-package-index")
                     CompanyCard(name: "Allegro", url: "https://allegro.pl", logo: "icon-allegro")
                 }.class("d-flex flex-row flex-wrap align-items-center justify-content-center used-by-companies-items")
