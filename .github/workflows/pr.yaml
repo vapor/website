@@ -35,3 +35,5 @@ jobs:
           bucket-prefix: "vapor-website-pulls"
           folder-to-copy: "./Output"
           bucket-region: "eu-west-2"
+          error-document: "error/404/index.html"
+          
