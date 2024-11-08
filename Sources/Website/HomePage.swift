@@ -338,7 +338,7 @@ extension HomePage {
                                 Text("Vapor's 13k+ Discord community will be at your side to support you along the way. Ask questions, contribute and be a part of a thriving, wholesome corner of the internet.")
                             }
                             Button {
-                                Link(url: "https://docs.vapor.codes/") {
+                                Link(url: "https://vapor.team/") {
                                     Text("Join our Discord")
                                 }.linkTarget(.blank)
                             }.class("btn btn-primary w-mobile-100")
