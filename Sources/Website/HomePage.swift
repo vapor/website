@@ -280,12 +280,6 @@ extension HomePage {
                         description: "SwiftFiddle is an online playground for creating, sharing and embedding Swift fiddles"
                     )
                     ShowcaseCard(
-                        name: "Sambot",
-                        url: "https://www.sambot.app",
-                        image: VaporDesignUtilities.buildResourceLink(for: "/images/sambot-card.png", isLocal: isLocal),
-                        description: "Sambot helps all members of a Mobile App Dev Team to be more productive, reactive and efficient while using Bitrise CI services"
-                    )
-                    ShowcaseCard(
                         name: "SwiftPackageIndex",
                         url: "https://swiftpackageindex.com",
                         image: "/static/images/showcase/swift-package-index.png",
