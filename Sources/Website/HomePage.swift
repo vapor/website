@@ -144,7 +144,7 @@ extension HomePage {
                     )
                     let jwt = PackageCard(
                         title: "JWT",
-                        description: "Create, sign and verify JSON Web Tokens in Swift. Built on top of SwiftNIO",
+                        description: "Create, sign and verify JSON Web Tokens in Swift. Built on top of Swift Crypto",
                         icon: "key-01",
                         url: "https://docs.vapor.codes/security/jwt/"
                     )
