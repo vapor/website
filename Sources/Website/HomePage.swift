@@ -69,9 +69,7 @@ extension HomePage {
                 // Callout buttons
                 Div {
                     Div {
-                        Button {
-                            Link("Get Started", url: "https://docs.vapor.codes/").linkTarget(.blank).id("main-page-callout-button-link")
-                        }.class("btn btn-primary w-mobile-100")
+                         Link("Get Started", url: "https://docs.vapor.codes/").linkTarget(.blank).id("main-page-callout-button-link").class("btn btn-primary w-mobile-100")
                     }.class("w-mobile-100")
                     Div {
                         Button {
@@ -144,7 +142,7 @@ extension HomePage {
                     )
                     let jwt = PackageCard(
                         title: "JWT",
-                        description: "Create, sign and verify JSON Web Tokens in Swift. Built on top of SwiftNIO",
+                        description: "Create, sign and verify JSON Web Tokens in Swift. Built on top of Swift Crypto",
                         icon: "key-01",
                         url: "https://docs.vapor.codes/security/jwt/"
                     )
@@ -280,12 +278,6 @@ extension HomePage {
                         description: "SwiftFiddle is an online playground for creating, sharing and embedding Swift fiddles"
                     )
                     ShowcaseCard(
-                        name: "Sambot",
-                        url: "https://www.sambot.app",
-                        image: VaporDesignUtilities.buildResourceLink(for: "/images/sambot-card.png", isLocal: isLocal),
-                        description: "Sambot helps all members of a Mobile App Dev Team to be more productive, reactive and efficient while using Bitrise CI services"
-                    )
-                    ShowcaseCard(
                         name: "SwiftPackageIndex",
                         url: "https://swiftpackageindex.com",
                         image: "/static/images/showcase/swift-package-index.png",
@@ -338,7 +330,7 @@ extension HomePage {
                                 Text("Vapor's 13k+ Discord community will be at your side to support you along the way. Ask questions, contribute and be a part of a thriving, wholesome corner of the internet.")
                             }
                             Button {
-                                Link(url: "https://docs.vapor.codes/") {
+                                Link(url: "https://vapor.team/") {
                                     Text("Join our Discord")
                                 }.linkTarget(.blank)
                             }.class("btn btn-primary w-mobile-100")
