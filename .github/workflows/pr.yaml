@@ -26,7 +26,7 @@ jobs:
         run: swift run
       - name: Deploy S3 Website
         if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
-        uses: brokenhandsio/s3-website-pr-action@v2.0.2
+        uses: brokenhandsio/s3-website-pr-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           AWS_ACCESS_KEY_ID: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
@@ -35,5 +35,3 @@ jobs:
           bucket-prefix: "vapor-website-pulls"
           folder-to-copy: "./Output"
           bucket-region: "eu-west-2"
-          error-document: "404.html"
-          
