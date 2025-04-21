@@ -69,9 +69,7 @@ extension HomePage {
                 // Callout buttons
                 Div {
                     Div {
-                        Button {
-                            Link("Get Started", url: "https://docs.vapor.codes/").linkTarget(.blank).id("main-page-callout-button-link")
-                        }.class("btn btn-primary w-mobile-100")
+                         Link("Get Started", url: "https://docs.vapor.codes/").linkTarget(.blank).id("main-page-callout-button-link").class("btn btn-primary w-mobile-100")
                     }.class("w-mobile-100")
                     Div {
                         Button {
