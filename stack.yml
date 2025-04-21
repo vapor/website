@@ -21,7 +21,7 @@ Resources:
       WebsiteConfiguration:
         IndexDocument: index.html
         # Redirect
-        ErrorDocument: error/404/index.html
+        ErrorDocument: /error/404/index.html
         RoutingRules:
           - RoutingRuleCondition:
               HttpErrorCodeReturnedEquals: '404'
