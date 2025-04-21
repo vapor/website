@@ -49,6 +49,9 @@ Resources:
           - ErrorCode: 403
             ResponseCode: 404
             ResponsePagePath: '/error/404/index.html'
+          - ErrorCode: 404
+            ResponseCode: 404
+            ResponsePagePath: '/error/404/index.html'
         DefaultCacheBehavior:
           AllowedMethods:
           - GET
