@@ -25,7 +25,7 @@
       "location" : "https://github.com/vapor/design.git",
       "state" : {
         "branch" : "main",
-        "revision" : "730178dfbace08c299b3699b27c1317a941d47ed"
+        "revision" : "0326b12580e433d2f647d848cfbec448f9329b1c"
       }
     },
     {
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/johnsundell/files.git",
       "state" : {
-        "revision" : "d273b5b7025d386feef79ef6bad7de762e106eaf",
-        "version" : "4.2.0"
+        "revision" : "e85f2b4a8dfa0f242889f45236f3867d16e40480",
+        "version" : "4.3.0"
       }
     },
     {
