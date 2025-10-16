@@ -11,6 +11,7 @@ jobs:
   build:
     name: Build and Deploy PR
     runs-on: ubuntu-latest
+    permissions: { id-token: write, deployments: write, contents: read }
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
