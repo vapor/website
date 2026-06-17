@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="#(language.locale)">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:site_name" content="#(site.name)">
+    <link rel="canonical" href="#(page.canonicalURL)">
+    <meta name="twitter:url" content="#(page.canonicalURL)">
+    <meta property="og:url" content="#(page.canonicalURL)">
+    <title>#if(page.isHome):#(site.name)#else:#(page.title) | #(site.name)#endif</title>
+    <meta name="twitter:title" content="#if(page.isHome):#(site.name)#else:#(page.title)#endif">
+    <meta property="og:title" content="#if(page.isHome):#(site.name)#else:#(page.title)#endif">
+    #if(page.description):<meta name="description" content="#(page.description)">
+    <meta name="twitter:description" content="#(page.description)">
+    <meta property="og:description" content="#(page.description)">#endif
+    <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://design.vapor.codes/main.css" type="text/css">
+    <script src="https://design.vapor.codes/js/detectColorScheme.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="https://design.vapor.codes/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://design.vapor.codes/favicons/apple-touch-icon.png">
+    <link rel="icon" sizes="32x32" href="https://design.vapor.codes/favicons/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="https://design.vapor.codes/favicons/favicon-96x96.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="https://design.vapor.codes/favicons/favicon-16x16.png" type="image/png">
+    <link rel="manifest" href="https://design.vapor.codes/favicons/site.webmanifest">
+    <link rel="shortcut icon" href="https://design.vapor.codes/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="#(site.name)">
+    <meta name="msapplication-TileColor" content="#141416">
+    <meta name="msapplication-config" content="https://design.vapor.codes/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    #for(alt in languages):<link rel="alternate" hreflang="#(alt.locale)" href="#(alt.url)">
+    #endfor
+</head>
+<body id="main-page-body" class="main-site-faded-background">
+    #extend("partials/header")
+    #import("content")
+    #extend("partials/footer")
+    <script src="https://design.vapor.codes/main.js"></script>
+    <script src="/static/js/updateStarsCount.js"></script>
+    <script src="/static/js/scrollNavbar.js"></script>
+    <script src="/static/js/scrollShowcase.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+#extend("base"):
+#export("content"):
+<div class="container vapor-container"><h1 class="main-title">#(strings.notFoundTitle)</h1><h3 class="main-page-caption d-flex mx-auto">#(strings.notFoundMessage)</h3><div class="main-page-callout-buttons d-flex align-items-center justify-content-center flex-column flex-lg-row"><div class="w-mobile-100"><a href="/" class="btn btn-primary w-mobile-100">#(strings.notFoundLink)</a></div></div></div>
+#endexport
+#endextend

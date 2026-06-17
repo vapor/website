@@ -1,0 +1,14 @@
+#extend("base"):
+#export("content"):
+<div class="main-content"><h1 class="main-title">#(page.title)</h1><h3 class="main-page-caption d-flex mx-auto justify-content-center flex-column align-items-center">#localise("comingSoon.message")</h3><div class="main-page-callout-buttons d-flex align-items-center justify-content-center flex-column flex-lg-row"><div class="w-mobile-100"><button class="btn btn-primary w-mobile-100"><a href="/">#(strings.home)</a></button></div></div><div class="main-code-demo mx-auto"><pre><code class="language-swift">import Vapor
+
+let app = try await Application.make(.detect())
+
+app.get("hello") { req in
+    "Coming soon..."
+}
+
+try await app.execute()
+</code></pre></div></div>
+#endexport
+#endextend

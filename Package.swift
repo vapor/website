@@ -1,4 +1,4 @@
-// swift-tools-version:5.10
+// swift-tools-version:6.0
 
 import PackageDescription
 
@@ -7,20 +7,20 @@ let package = Package(
     platforms: [.macOS(.v13)],
     products: [
         .executable(
-            name: "Website",
-            targets: ["Website"]
+            name: "VaporWebsite",
+            targets: ["VaporWebsite"]
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/johnsundell/publish.git", branch: "master"),
-        .package(url: "https://github.com/vapor/design.git", branch: "main"),
+        // Local checkout for development. For CI/production, pin a release instead:
+        // .package(url: "https://github.com/brokenhandsio/kiln.git", from: "1.1.0"),
+        .package(path: "../../BH/kiln"),
     ],
     targets: [
         .executableTarget(
-            name: "Website",
+            name: "VaporWebsite",
             dependencies: [
-                .product(name: "Publish", package: "Publish"),
-                .product(name: "VaporDesign", package: "design"),
+                .product(name: "Kiln", package: "kiln"),
             ]
         ),
     ]
