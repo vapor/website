@@ -141,16 +141,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function decodeEntities(value) {
-    return String(value)
-      .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) =>
-        String.fromCodePoint(parseInt(hex, 16)),
-      )
-      .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(parseInt(dec, 10)))
-      .replace(/&amp;/g, "&")
-      .replace(/&lt;/g, "<")
-      .replace(/&gt;/g, ">")
-      .replace(/&quot;/g, '"')
-      .replace(/&#39;/g, "'");
+    return String(value).replace(
+      /&(#[xX][0-9a-fA-F]+|#\d+|amp|lt|gt|quot);/g,
+      (_, entity) => {
+        if (entity.charAt(0) === "#") {
+          const isHex = entity.charAt(1) === "x" || entity.charAt(1) === "X";
+          const codePoint = isHex
+            ? parseInt(entity.slice(2), 16)
+            : parseInt(entity.slice(1), 10);
+          return String.fromCodePoint(codePoint);
+        }
+        return { amp: "&", lt: "<", gt: ">", quot: '"' }[entity];
+      },
+    );
   }
 
   function escapeHtml(value) {
