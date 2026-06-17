@@ -112,7 +112,7 @@ extension TeamPage {
                 TeamMember(
                     name: "Francesco Paolo Severino",
                     handle: "@fpseverino",
-                    bio: "Computer engineering student",
+                    bio: "Open source passionate and backend tinkerer",
                     avatar: "https://github.com/fpseverino.png",
                     github: "https://github.com/fpseverino",
                     mastodon: "https://mastodon.social/@fpseverino",
