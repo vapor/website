@@ -104,7 +104,8 @@ extension TeamPage {
                 TeamMember(
                     name: "Mahdi Bahrami",
                     handle: "@mahdibm",
-                    bio: "Vapor maintainer, working across the framework and its ecosystem.",
+                    bio:
+                        "Server & DevOps engineer focused on performance, security, networking, and systems programming.",
                     avatar: "https://github.com/mahdibm.png",
                     github: "https://github.com/mahdibm",
                     mastodon: "https://mastodon.social/@MahdiBM"
