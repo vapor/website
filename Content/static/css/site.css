@@ -7,7 +7,9 @@
    the missing `icon-globe-01` font glyph with an inline SVG, so it renders on
    both desktop and mobile. */
 .language-picker .language-icon { display: inline-flex; align-items: center; }
-.language-picker .language-icon svg { width: 14px; height: auto; display: block; }
+/* Match the other navbar icons' height (22px) so the portrait translate glyph
+   lines up with them; width follows its aspect. */
+.language-picker .language-icon svg { height: 22px; width: auto; display: block; }
 
 /* Language dropdown — the deployed design CSS styles `.theme-picker .dropdown-menu`
    but not `.language-picker` yet, so the menu falls back to a plain white Bootstrap
@@ -28,20 +30,27 @@ html.dark .language-picker .dropdown-item { color: #fafafd; }
 html.dark .language-picker .dropdown-item:hover { background: rgba(255, 255, 255, 0.06); }
 html.dark .language-picker .dropdown-item.active { color: #40c4ff; }
 
-/* Rotate the chevron when the dropdown opens, matching the theme picker. */
-.language-chevron { display: inline-block; transition: transform 0.35s; }
+/* Desktop: the language picker is icon-only (name + chevron hidden), like the
+   theme picker; both show in the mobile panel. The chevron rotates when open. */
+.language-name { display: none; }
+.language-chevron { display: none; transition: transform 0.35s; }
 .language-picker-toggle[aria-expanded="true"] .language-chevron { transform: rotate(180deg); }
 
-/* Mobile (below the Bootstrap `lg` navbar breakpoint): the off-canvas menu is a
-   vertical column whose items are ordered with flexbox `order`. The shared CSS
-   gives the theme picker order 3 (with the divider above it) and GitHub order 4.
-   Place the language picker BEFORE the theme picker (matching the docs site), move
-   the settings-cluster divider onto it (now the first settings row), and give the
-   theme row a plain inter-row gap instead. */
+/* Mobile (below the Bootstrap `lg` navbar breakpoint): the off-canvas panel. The
+   deployed design CSS reshuffles the items (Documentation first, GitHub last) and
+   styles only the theme picker. Override so the items follow desktop/DOM order
+   (Home, Store, Showcase, Documentation, Team, Blog, GitHub, Language, Theme) and
+   give the language picker the theme picker's treatment, with the divider on it as
+   the first settings row. */
 @media (max-width: 991.98px) {
-    #vapor-navmenu .navbar-nav > li.language-picker { order: 3; }
-    #vapor-navmenu .navbar-nav > li.theme-picker { order: 4; }
-    #vapor-navmenu .navbar-nav > li.vapor-github-nav { order: 5; }
+    /* Desktop/DOM order: neutralise the deployed `order` overrides. */
+    #vapor-navmenu .navbar-nav > li { order: 0; }
+    #vapor-navmenu .vapor-github-nav { margin-top: 0; }
+    #vapor-navmenu .vapor-github-nav .nav-link { justify-content: flex-start; }
+
+    /* Show the picker name + chevron in the panel (icon-only on desktop). */
+    #vapor-navmenu .language-name { display: inline; }
+    #vapor-navmenu .language-chevron { display: inline-block; }
 
     #vapor-navmenu .language-picker {
         display: flex;
