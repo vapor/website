@@ -102,6 +102,46 @@ let germanStrings: [String: String] = [
     "home.sponsors.becomeSupporter": "Werde Unterstützer",
 ]
 
+// Remaining languages — translated incrementally. Any key a language omits falls
+// back to the English string above. Best-effort translations; native-speaker
+// review welcome.
+let spanishStrings: [String: String] = [
+    "home.hero.title": "Swift, pero en el servidor",
+    "home.hero.caption": "Vapor proporciona una base segura, eficiente y fácil de usar para crear servidores HTTP, backends y APIs en Swift",
+]
+let frenchStrings: [String: String] = [
+    "home.hero.title": "Swift, mais sur le serveur",
+    "home.hero.caption": "Vapor fournit une base sûre, performante et facile à utiliser pour créer des serveurs HTTP, des backends et des API en Swift",
+]
+let italianStrings: [String: String] = [
+    "home.hero.title": "Swift, ma sul server",
+    "home.hero.caption": "Vapor offre una base sicura, performante e facile da usare per creare server HTTP, backend e API in Swift",
+]
+let japaneseStrings: [String: String] = [
+    "home.hero.title": "Swift、ただしサーバー上で",
+    "home.hero.caption": "Vaporは、SwiftでHTTPサーバー、バックエンド、APIを構築するための安全で高性能、かつ使いやすい基盤を提供します",
+]
+let koreanStrings: [String: String] = [
+    "home.hero.title": "Swift, 하지만 서버에서",
+    "home.hero.caption": "Vapor는 Swift로 HTTP 서버, 백엔드 및 API를 구축할 수 있는 안전하고 성능이 뛰어나며 사용하기 쉬운 기반을 제공합니다",
+]
+let dutchStrings: [String: String] = [
+    "home.hero.title": "Swift, maar dan op een server",
+    "home.hero.caption": "Vapor biedt een veilige, performante en gebruiksvriendelijke basis om HTTP-servers, backends en API's in Swift te bouwen",
+]
+let polishStrings: [String: String] = [
+    "home.hero.title": "Swift, ale na serwerze",
+    "home.hero.caption": "Vapor zapewnia bezpieczną, wydajną i łatwą w użyciu podstawę do tworzenia serwerów HTTP, backendów i interfejsów API w Swift",
+]
+let chineseStrings: [String: String] = [
+    "home.hero.title": "Swift，但在服务器上",
+    "home.hero.caption": "Vapor 提供了一个安全、高性能且易于使用的基础，用于在 Swift 中构建 HTTP 服务器、后端和 API",
+]
+let brazilianPortugueseStrings: [String: String] = [
+    "home.hero.title": "Swift, mas no servidor",
+    "home.hero.caption": "O Vapor oferece uma base segura, eficiente e fácil de usar para criar servidores HTTP, backends e APIs em Swift",
+]
+
 // MARK: - Site
 
 let site = KilnSite(
@@ -136,20 +176,18 @@ let site = KilnSite(
                 systemTheme: "System"
             )
         ),
-        // Remaining language options (matching the docs' set, plus Brazilian
-        // Portuguese). Translations are pending: until a language supplies its
-        // own `customStrings`/`localisation`, its pages build with the English
-        // copy — the default-language fallback — so the selector and `/<locale>/`
-        // routes work now and copy can be filled in per language later.
-        .init(.spanish),
-        .init(.french),
-        .init(.italian),
-        .init(.japanese),
-        .init(.korean),
-        .init(.dutch),
-        .init(.polish),
-        .init(.chinese),
-        .init(.brazilianPortuguese),
+        // Remaining languages (the docs' set plus Brazilian Portuguese). Being
+        // translated incrementally — keys not yet provided fall back to English,
+        // so the `/<locale>/` pages build now with English copy where untranslated.
+        .init(.spanish, customStrings: spanishStrings),
+        .init(.french, customStrings: frenchStrings),
+        .init(.italian, customStrings: italianStrings),
+        .init(.japanese, customStrings: japaneseStrings),
+        .init(.korean, customStrings: koreanStrings),
+        .init(.dutch, customStrings: dutchStrings),
+        .init(.polish, customStrings: polishStrings),
+        .init(.chinese, customStrings: chineseStrings),
+        .init(.brazilianPortuguese, customStrings: brazilianPortugueseStrings),
     ]
 ) {
     Page("Home", "index.md")
