@@ -136,6 +136,20 @@ let site = KilnSite(
                 systemTheme: "System"
             )
         ),
+        // Remaining language options (matching the docs' set, plus Brazilian
+        // Portuguese). Translations are pending: until a language supplies its
+        // own `customStrings`/`localisation`, its pages build with the English
+        // copy — the default-language fallback — so the selector and `/<locale>/`
+        // routes work now and copy can be filled in per language later.
+        .init(.spanish),
+        .init(.french),
+        .init(.italian),
+        .init(.japanese),
+        .init(.korean),
+        .init(.dutch),
+        .init(.polish),
+        .init(.chinese),
+        .init(.brazilianPortuguese),
     ]
 ) {
     Page("Home", "index.md")
