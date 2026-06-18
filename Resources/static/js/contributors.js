@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const REPO = "vapor/vapor";
-  const PAGE_SIZE = 15;
+  const TARGET_PER_PAGE = 15;
   const MAX_PAGES = 5;
   const CACHE_KEY = "vapor:contributors:" + REPO;
   const CACHE_TTL = 6 * 60 * 60 * 1000; // 6 hours
@@ -73,13 +73,44 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     const shuffled = shuffle(people.slice());
     grid.innerHTML = shuffled.map(buildCard).join("");
-    if (typeof window.vaporPaginate === "function") {
+    if (typeof window.vaporPaginate !== "function") {
+      return;
+    }
+
+    const items = Array.from(grid.querySelectorAll(".contributor-card"));
+    const paginationEl = document.getElementById("contributors-pagination");
+    let lastColumns = 0;
+
+    // Re-paginate with a page size that's a whole number of rows for the
+    // current column count, so the last row of each page is always full.
+    function paginate() {
+      const columns = columnCount();
+      if (columns === lastColumns) {
+        return;
+      }
+      lastColumns = columns;
       window.vaporPaginate({
-        items: Array.from(grid.querySelectorAll(".contributor-card")),
-        paginationEl: document.getElementById("contributors-pagination"),
-        pageSize: PAGE_SIZE,
+        items: items,
+        paginationEl: paginationEl,
+        pageSize: columns * Math.max(1, Math.round(TARGET_PER_PAGE / columns)),
       });
     }
+
+    paginate();
+
+    // The column count changes at the responsive breakpoints, so recompute on resize
+    let resizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(paginate, 150);
+    });
+  }
+
+  function columnCount() {
+    const tracks = getComputedStyle(grid)
+      .gridTemplateColumns.split(" ")
+      .filter(Boolean);
+    return Math.max(1, tracks.length);
   }
 
   function buildCard(contributor) {
