@@ -128,6 +128,15 @@ let spanishStrings: [String: String] = [
     "home.sponsors.prev": "Patrocinadores anteriores",
     "home.sponsors.next": "Patrocinadores siguientes",
     "footer.joinDiscord": "Únete a nuestro Discord",
+    // Nav / footer chrome.
+    "nav.documentation": "Documentación",
+    "nav.frameworkDocs": "Documentación del framework",
+    "nav.frameworkDocs.caption": "Aprende a usar Vapor",
+    "nav.apiDocs": "Documentación de la API",
+    "nav.apiDocs.caption": "Documentación de referencia de Vapor",
+    "nav.selectTheme": "Seleccionar tema",
+    "nav.closeMenu": "Cerrar el menú",
+    "footer.supporters": "Colaboradores",
 ]
 let frenchStrings: [String: String] = [
     "home.hero.title": "Swift, mais sur le serveur",
@@ -145,6 +154,15 @@ let frenchStrings: [String: String] = [
     "home.sponsors.prev": "Sponsors précédents",
     "home.sponsors.next": "Sponsors suivants",
     "footer.joinDiscord": "Rejoignez notre Discord",
+    // Nav / footer chrome.
+    "nav.documentation": "Documentation",
+    "nav.frameworkDocs": "Documentation du framework",
+    "nav.frameworkDocs.caption": "Apprenez à utiliser Vapor",
+    "nav.apiDocs": "Documentation de l’API",
+    "nav.apiDocs.caption": "Documentation de référence de Vapor",
+    "nav.selectTheme": "Sélectionner le thème",
+    "nav.closeMenu": "Fermer le menu",
+    "footer.supporters": "Soutiens",
 ]
 let italianStrings: [String: String] = [
     "home.hero.title": "Swift, ma sul server",
@@ -162,6 +180,15 @@ let italianStrings: [String: String] = [
     "home.sponsors.prev": "Sponsor precedenti",
     "home.sponsors.next": "Sponsor successivi",
     "footer.joinDiscord": "Unisciti al nostro Discord",
+    // Nav / footer chrome.
+    "nav.documentation": "Documentazione",
+    "nav.frameworkDocs": "Documentazione del Framework",
+    "nav.frameworkDocs.caption": "Impara a usare Vapor",
+    "nav.apiDocs": "Documentazione API",
+    "nav.apiDocs.caption": "Documentazione di riferimento per Vapor",
+    "nav.selectTheme": "Seleziona il tema",
+    "nav.closeMenu": "Chiudi il menu",
+    "footer.supporters": "Sostenitori",
 ]
 let japaneseStrings: [String: String] = [
     "home.hero.title": "Swift、ただしサーバー上で",
@@ -179,6 +206,15 @@ let japaneseStrings: [String: String] = [
     "home.sponsors.prev": "前のスポンサー",
     "home.sponsors.next": "次のスポンサー",
     "footer.joinDiscord": "Discordに参加する",
+    // Nav / footer chrome.
+    "nav.documentation": "ドキュメント",
+    "nav.frameworkDocs": "フレームワークドキュメント",
+    "nav.frameworkDocs.caption": "Vaporの使い方を学ぶ",
+    "nav.apiDocs": "APIドキュメント",
+    "nav.apiDocs.caption": "Vaporのリファレンスドキュメント",
+    "nav.selectTheme": "テーマを選択",
+    "nav.closeMenu": "メニューを閉じる",
+    "footer.supporters": "サポーター",
 ]
 let koreanStrings: [String: String] = [
     "home.hero.title": "Swift, 하지만 서버에서",
@@ -196,6 +232,15 @@ let koreanStrings: [String: String] = [
     "home.sponsors.prev": "이전 후원자",
     "home.sponsors.next": "다음 후원자",
     "footer.joinDiscord": "Discord에 참여하기",
+    // Nav / footer chrome.
+    "nav.documentation": "문서",
+    "nav.frameworkDocs": "프레임워크 문서",
+    "nav.frameworkDocs.caption": "Vapor 사용법 알아보기",
+    "nav.apiDocs": "API 문서",
+    "nav.apiDocs.caption": "Vapor 레퍼런스 문서",
+    "nav.selectTheme": "테마 선택",
+    "nav.closeMenu": "메뉴 닫기",
+    "footer.supporters": "후원자",
 ]
 let dutchStrings: [String: String] = [
     "home.hero.title": "Swift, maar dan op een server",
@@ -213,6 +258,15 @@ let dutchStrings: [String: String] = [
     "home.sponsors.prev": "Vorige sponsors",
     "home.sponsors.next": "Volgende sponsors",
     "footer.joinDiscord": "Word lid van onze Discord",
+    // Nav / footer chrome.
+    "nav.documentation": "Documentatie",
+    "nav.frameworkDocs": "Framework-documentatie",
+    "nav.frameworkDocs.caption": "Leer hoe je Vapor gebruikt",
+    "nav.apiDocs": "API-documentatie",
+    "nav.apiDocs.caption": "Referentiedocumentatie voor Vapor",
+    "nav.selectTheme": "Selecteer thema",
+    "nav.closeMenu": "Menu sluiten",
+    "footer.supporters": "Ondersteuners",
 ]
 let polishStrings: [String: String] = [
     "home.hero.title": "Swift, ale na serwerze",
@@ -230,6 +284,15 @@ let polishStrings: [String: String] = [
     "home.sponsors.prev": "Poprzedni sponsorzy",
     "home.sponsors.next": "Następni sponsorzy",
     "footer.joinDiscord": "Dołącz do naszego Discorda",
+    // Nav / footer chrome.
+    "nav.documentation": "Dokumentacja",
+    "nav.frameworkDocs": "Dokumentacja frameworka",
+    "nav.frameworkDocs.caption": "Naucz się korzystać z Vapor",
+    "nav.apiDocs": "Dokumentacja API",
+    "nav.apiDocs.caption": "Dokumentacja referencyjna Vapor",
+    "nav.selectTheme": "Wybierz motyw",
+    "nav.closeMenu": "Zamknij menu",
+    "footer.supporters": "Wspierający",
 ]
 let chineseStrings: [String: String] = [
     "home.hero.title": "Swift，但在服务器上",
@@ -247,6 +310,15 @@ let chineseStrings: [String: String] = [
     "home.sponsors.prev": "上一批赞助者",
     "home.sponsors.next": "下一批赞助者",
     "footer.joinDiscord": "加入我们的 Discord",
+    // Nav / footer chrome.
+    "nav.documentation": "文档",
+    "nav.frameworkDocs": "框架文档",
+    "nav.frameworkDocs.caption": "学习如何使用 Vapor",
+    "nav.apiDocs": "API 文档",
+    "nav.apiDocs.caption": "Vapor 参考文档",
+    "nav.selectTheme": "选择主题",
+    "nav.closeMenu": "关闭菜单",
+    "footer.supporters": "赞助者",
 ]
 let brazilianPortugueseStrings: [String: String] = [
     "home.hero.title": "Swift, mas no servidor",
@@ -264,6 +336,15 @@ let brazilianPortugueseStrings: [String: String] = [
     "home.sponsors.prev": "Patrocinadores anteriores",
     "home.sponsors.next": "Próximos patrocinadores",
     "footer.joinDiscord": "Entre no nosso Discord",
+    // Nav / footer chrome.
+    "nav.documentation": "Documentação",
+    "nav.frameworkDocs": "Documentação do framework",
+    "nav.frameworkDocs.caption": "Aprenda a usar o Vapor",
+    "nav.apiDocs": "Documentação da API",
+    "nav.apiDocs.caption": "Documentação de referência do Vapor",
+    "nav.selectTheme": "Selecionar tema",
+    "nav.closeMenu": "Fechar menu",
+    "footer.supporters": "Apoiadores",
 ]
 
 // MARK: - Site
@@ -285,7 +366,9 @@ let site = KilnSite(
                 notFoundTitle: "Seite nicht gefunden",
                 notFoundMessage: "Die gesuchte Seite wurde möglicherweise verschoben, umbenannt oder existiert nicht.",
                 notFoundLink: "Zurück zur Startseite",
+                toggleNavigation: "Navigation umschalten",
                 home: "Startseite",
+                store: "Shop",
                 blog: "Blog",
                 showcase: "Showcase",
                 team: "Team",
@@ -303,15 +386,222 @@ let site = KilnSite(
         // Remaining languages (the docs' set plus Brazilian Portuguese). Being
         // translated incrementally — keys not yet provided fall back to English,
         // so the `/<locale>/` pages build now with English copy where untranslated.
-        .init(.spanish, customStrings: spanishStrings),
-        .init(.french, customStrings: frenchStrings),
-        .init(.italian, customStrings: italianStrings),
-        .init(.japanese, customStrings: japaneseStrings),
-        .init(.korean, customStrings: koreanStrings),
-        .init(.dutch, customStrings: dutchStrings),
-        .init(.polish, customStrings: polishStrings),
-        .init(.chinese, customStrings: chineseStrings),
-        .init(.brazilianPortuguese, customStrings: brazilianPortugueseStrings),
+        .init(
+            .spanish,
+            customStrings: spanishStrings,
+            localisation: .init(
+                notFoundTitle: "Página no encontrada",
+                notFoundMessage: "Es posible que la página que buscas se haya movido, cambiado de nombre o que nunca haya existido.",
+                notFoundLink: "Volver a la página de inicio",
+                toggleNavigation: "Alternar la navegación",
+                home: "Inicio",
+                store: "Tienda",
+                blog: "Blog",
+                showcase: "Proyectos",
+                team: "Equipo",
+                help: "Ayuda",
+                pressKit: "Kit de prensa",
+                community: "Comunidad",
+                resources: "Recursos",
+                language: "Idioma",
+                theme: "Tema",
+                lightTheme: "Claro",
+                darkTheme: "Oscuro",
+                systemTheme: "Sistema"
+            )
+        ),
+        .init(
+            .french,
+            customStrings: frenchStrings,
+            localisation: .init(
+                notFoundTitle: "Page introuvable",
+                notFoundMessage: "La page que vous recherchez a peut-être été déplacée, renommée ou n’a jamais existé.",
+                notFoundLink: "Retour à la page d’accueil",
+                toggleNavigation: "Afficher/masquer la navigation",
+                home: "Accueil",
+                store: "Boutique",
+                blog: "Blog",
+                showcase: "Vitrine",
+                team: "Équipe",
+                help: "Aide",
+                pressKit: "Kit de presse",
+                community: "Communauté",
+                resources: "Ressources",
+                language: "Langue",
+                theme: "Thème",
+                lightTheme: "Clair",
+                darkTheme: "Sombre",
+                systemTheme: "Système"
+            )
+        ),
+        .init(
+            .italian,
+            customStrings: italianStrings,
+            localisation: .init(
+                notFoundTitle: "Pagina non trovata",
+                notFoundMessage: "La pagina che stai cercando potrebbe essere stata spostata, rinominata o non essere mai esistita.",
+                notFoundLink: "Torna alla home page",
+                toggleNavigation: "Attiva/disattiva la navigazione",
+                home: "Home",
+                store: "Shop",
+                blog: "Blog",
+                showcase: "Vetrina",
+                team: "Team",
+                help: "Aiuto",
+                pressKit: "Kit stampa",
+                community: "Community",
+                resources: "Risorse",
+                language: "Lingua",
+                theme: "Tema",
+                lightTheme: "Chiaro",
+                darkTheme: "Scuro",
+                systemTheme: "Sistema"
+            )
+        ),
+        .init(
+            .japanese,
+            customStrings: japaneseStrings,
+            localisation: .init(
+                notFoundTitle: "ページが見つかりません",
+                notFoundMessage: "お探しのページは移動または名称変更されたか、存在しない可能性があります。",
+                notFoundLink: "ホームページに戻る",
+                toggleNavigation: "ナビゲーションの切り替え",
+                home: "ホーム",
+                store: "ストア",
+                blog: "ブログ",
+                showcase: "ショーケース",
+                team: "チーム",
+                help: "ヘルプ",
+                pressKit: "プレスキット",
+                community: "コミュニティ",
+                resources: "リソース",
+                language: "言語",
+                theme: "テーマ",
+                lightTheme: "ライト",
+                darkTheme: "ダーク",
+                systemTheme: "システム"
+            )
+        ),
+        .init(
+            .korean,
+            customStrings: koreanStrings,
+            localisation: .init(
+                notFoundTitle: "페이지를 찾을 수 없습니다",
+                notFoundMessage: "찾고 있는 페이지가 이동되었거나 이름이 변경되었거나 존재하지 않을 수 있습니다.",
+                notFoundLink: "홈페이지로 돌아가기",
+                toggleNavigation: "내비게이션 전환",
+                home: "홈",
+                store: "스토어",
+                blog: "블로그",
+                showcase: "쇼케이스",
+                team: "팀",
+                help: "도움말",
+                pressKit: "프레스 킷",
+                community: "커뮤니티",
+                resources: "리소스",
+                language: "언어",
+                theme: "테마",
+                lightTheme: "라이트",
+                darkTheme: "다크",
+                systemTheme: "시스템"
+            )
+        ),
+        .init(
+            .dutch,
+            customStrings: dutchStrings,
+            localisation: .init(
+                notFoundTitle: "Pagina niet gevonden",
+                notFoundMessage: "De pagina die je zoekt is mogelijk verplaatst, hernoemd of heeft nooit bestaan.",
+                notFoundLink: "Terug naar de startpagina",
+                toggleNavigation: "Navigatie schakelen",
+                home: "Home",
+                store: "Winkel",
+                blog: "Blog",
+                showcase: "Etalage",
+                team: "Team",
+                help: "Help",
+                pressKit: "Perskit",
+                community: "Community",
+                resources: "Bronnen",
+                language: "Taal",
+                theme: "Thema",
+                lightTheme: "Licht",
+                darkTheme: "Donker",
+                systemTheme: "Systeem"
+            )
+        ),
+        .init(
+            .polish,
+            customStrings: polishStrings,
+            localisation: .init(
+                notFoundTitle: "Nie znaleziono strony",
+                notFoundMessage: "Strona, której szukasz, mogła zostać przeniesiona, zmieniona lub nigdy nie istniała.",
+                notFoundLink: "Powrót do strony głównej",
+                toggleNavigation: "Przełącz nawigację",
+                home: "Strona główna",
+                store: "Sklep",
+                blog: "Blog",
+                showcase: "Realizacje",
+                team: "Zespół",
+                help: "Pomoc",
+                pressKit: "Materiały prasowe",
+                community: "Społeczność",
+                resources: "Zasoby",
+                language: "Język",
+                theme: "Motyw",
+                lightTheme: "Jasny",
+                darkTheme: "Ciemny",
+                systemTheme: "Systemowy"
+            )
+        ),
+        .init(
+            .chinese,
+            customStrings: chineseStrings,
+            localisation: .init(
+                notFoundTitle: "未找到页面",
+                notFoundMessage: "您要查找的页面可能已被移动、重命名或从未存在。",
+                notFoundLink: "返回首页",
+                toggleNavigation: "切换导航",
+                home: "首页",
+                store: "商店",
+                blog: "博客",
+                showcase: "案例展示",
+                team: "团队",
+                help: "帮助",
+                pressKit: "媒体资源",
+                community: "社区",
+                resources: "资源",
+                language: "语言",
+                theme: "主题",
+                lightTheme: "浅色",
+                darkTheme: "深色",
+                systemTheme: "跟随系统"
+            )
+        ),
+        .init(
+            .brazilianPortuguese,
+            customStrings: brazilianPortugueseStrings,
+            localisation: .init(
+                notFoundTitle: "Página não encontrada",
+                notFoundMessage: "A página que você procura pode ter sido movida, renomeada ou nunca ter existido.",
+                notFoundLink: "Voltar para a página inicial",
+                toggleNavigation: "Alternar navegação",
+                home: "Início",
+                store: "Loja",
+                blog: "Blog",
+                showcase: "Vitrine",
+                team: "Equipe",
+                help: "Ajuda",
+                pressKit: "Kit de imprensa",
+                community: "Comunidade",
+                resources: "Recursos",
+                language: "Idioma",
+                theme: "Tema",
+                lightTheme: "Claro",
+                darkTheme: "Escuro",
+                systemTheme: "Sistema"
+            )
+        ),
     ]
 ) {
     Page("Home", "index.md")
