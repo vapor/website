@@ -1,0 +1,77 @@
+/*
+  Website-specific overrides layered on top of design.vapor.codes/main.css.
+  Keep this minimal — most styling is inherited from the shared Vapor design CSS.
+*/
+
+/* Language picker icon (the translate glyph, matching the docs site). Replaces
+   the missing `icon-globe-01` font glyph with an inline SVG, so it renders on
+   both desktop and mobile. */
+.language-picker .language-icon { display: inline-flex; align-items: center; }
+.language-picker .language-icon svg { width: 14px; height: auto; display: block; }
+
+/* Language dropdown — the deployed design CSS styles `.theme-picker .dropdown-menu`
+   but not `.language-picker` yet, so the menu falls back to a plain white Bootstrap
+   dropdown. Mirror the theme picker's card (light + dark). Remove once
+   design.vapor.codes ships the shared `.language-picker` rules. */
+.language-picker .dropdown-menu {
+    padding: 0.4rem;
+    min-width: 11rem;
+    background: #fff;
+    border: 1px solid #f0f0f7;
+    border-radius: 16px;
+    box-shadow: 0 12px 16px -4px rgba(16, 24, 40, 0.08), 0 4px 6px -2px rgba(16, 24, 40, 0.03);
+}
+.language-picker .dropdown-item { border-radius: 12px; padding: 0.5rem 0.7rem; }
+.language-picker .dropdown-item.active { background: transparent; color: #40c4ff; }
+html.dark .language-picker .dropdown-menu { background: #1c1c1f; border-color: #373953; }
+html.dark .language-picker .dropdown-item { color: #fafafd; }
+html.dark .language-picker .dropdown-item:hover { background: rgba(255, 255, 255, 0.06); }
+html.dark .language-picker .dropdown-item.active { color: #40c4ff; }
+
+/* Rotate the chevron when the dropdown opens, matching the theme picker. */
+.language-chevron { display: inline-block; transition: transform 0.35s; }
+.language-picker-toggle[aria-expanded="true"] .language-chevron { transform: rotate(180deg); }
+
+/* Mobile (below the Bootstrap `lg` navbar breakpoint): the off-canvas menu is a
+   vertical column whose items are ordered with flexbox `order`. The shared CSS
+   gives the theme picker order 3 (with the divider above it) and GitHub order 4.
+   Slot the language picker just below the theme picker and push GitHub last, and
+   give it the same settings-row + pill treatment the theme picker already has —
+   matching the docs site's mobile language selector. */
+@media (max-width: 991.98px) {
+    #vapor-navmenu .navbar-nav > li.language-picker { order: 4; }
+    #vapor-navmenu .navbar-nav > li.vapor-github-nav { order: 5; }
+
+    #vapor-navmenu .language-picker {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        /* Same inter-row gap the docs use between stacked picker rows (the theme
+           picker above carries the divider + its own top spacing). */
+        margin-top: 1rem;
+    }
+    #vapor-navmenu .language-picker .language-picker-toggle {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 1rem;
+        border: 1px solid #f0f0f7;
+        border-radius: 999px;
+        padding: 0.45rem 0.9rem;
+    }
+    html.dark #vapor-navmenu .language-picker .language-picker-toggle { border-color: #373953; }
+
+    /* Float the dropdown below the pill (full panel width) instead of Bootstrap's
+       static inline placement, so it fits the panel like the theme dropdown. */
+    #vapor-navmenu .language-picker .dropdown-menu {
+        position: absolute !important;
+        inset: auto auto auto 0 !important;
+        top: 100% !important;
+        right: 0 !important;
+        transform: none !important;
+        width: 100%;
+        margin-top: 0.5rem;
+        z-index: 10002;
+    }
+}
