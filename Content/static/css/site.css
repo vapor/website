@@ -35,11 +35,12 @@ html.dark .language-picker .dropdown-item.active { color: #40c4ff; }
 /* Mobile (below the Bootstrap `lg` navbar breakpoint): the off-canvas menu is a
    vertical column whose items are ordered with flexbox `order`. The shared CSS
    gives the theme picker order 3 (with the divider above it) and GitHub order 4.
-   Slot the language picker just below the theme picker and push GitHub last, and
-   give it the same settings-row + pill treatment the theme picker already has —
-   matching the docs site's mobile language selector. */
+   Place the language picker BEFORE the theme picker (matching the docs site), move
+   the settings-cluster divider onto it (now the first settings row), and give the
+   theme row a plain inter-row gap instead. */
 @media (max-width: 991.98px) {
-    #vapor-navmenu .navbar-nav > li.language-picker { order: 4; }
+    #vapor-navmenu .navbar-nav > li.language-picker { order: 3; }
+    #vapor-navmenu .navbar-nav > li.theme-picker { order: 4; }
     #vapor-navmenu .navbar-nav > li.vapor-github-nav { order: 5; }
 
     #vapor-navmenu .language-picker {
@@ -47,9 +48,18 @@ html.dark .language-picker .dropdown-item.active { color: #40c4ff; }
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        /* Same inter-row gap the docs use between stacked picker rows (the theme
-           picker above carries the divider + its own top spacing). */
+        /* First settings row → carries the divider above the picker cluster. */
+        margin-top: 1.25rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid #f0f0f7;
+    }
+    html.dark #vapor-navmenu .language-picker { border-top-color: #373953; }
+    /* The deployed CSS gives the theme picker the divider as the first row; with
+       language now first, demote the theme row to a plain inter-row gap. */
+    #vapor-navmenu .theme-picker {
         margin-top: 1rem;
+        padding-top: 0;
+        border-top: 0;
     }
     #vapor-navmenu .language-picker .language-picker-toggle {
         display: flex;
