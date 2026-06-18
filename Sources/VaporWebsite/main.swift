@@ -160,9 +160,9 @@ let site = KilnSite(
 }
 
 let contentDirectory = "Content"
-// Build into ./public for now so the existing Publish ./Output stays available to
-// diff against. Switch to "Output" once parity is confirmed and the deploy is wired.
-let outputDirectory = "public"
+// Kiln's default output directory — what `kiln serve` serves and what the deploy
+// uploads to S3 (matches the docs site).
+let outputDirectory = "site"
 
 print("Building site into ./\(outputDirectory) …")
 try await Kiln.build(site, contentDirectory: contentDirectory, outputDirectory: outputDirectory)

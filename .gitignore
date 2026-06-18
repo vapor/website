@@ -3,7 +3,5 @@
 /.build
 /.swiftpm
 /*.xcodeproj
-.publish
-Output
-/public
+/site
 .vscode
