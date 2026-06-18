@@ -34,9 +34,6 @@ struct TeamPage: Component {
             Script(
                 url: VaporDesignUtilities.buildResourceLink(
                     for: "/static/js/sponsors.js", isLocal: true))
-            Script(
-                url: VaporDesignUtilities.buildResourceLink(
-                    for: "/static/js/teamCta.js", isLocal: true))
         }.id("team-page-body").class("main-site-faded-background")
     }
 }
@@ -50,10 +47,12 @@ extension TeamPage {
         let github: String?
         let mastodon: String?
         let bluesky: String?
+        let linkedin: String?
 
         init(
             name: String, handle: String, bio: String, avatar: String,
-            github: String? = nil, mastodon: String? = nil, bluesky: String? = nil
+            github: String? = nil, mastodon: String? = nil, bluesky: String? = nil,
+            linkedin: String? = nil
         ) {
             self.name = name
             self.handle = handle
@@ -62,6 +61,7 @@ extension TeamPage {
             self.github = github
             self.mastodon = mastodon
             self.bluesky = bluesky
+            self.linkedin = linkedin
         }
     }
 
@@ -124,7 +124,8 @@ extension TeamPage {
                     bio: "Security and performance enthusiast",
                     avatar: "https://github.com/ptoffy.png",
                     github: "https://github.com/ptoffy",
-                    bluesky: "https://bsky.app/profile/ptoffy.bsky.social"
+                    bluesky: "https://bsky.app/profile/ptoffy.bsky.social",
+                    linkedin: "https://linkedin.com/in/paultoffoloni"
                 ),
             ]
         }
@@ -204,7 +205,11 @@ extension TeamPage {
                 Paragraph(member.handle).class("team-handle")
                 Paragraph(member.bio).class("team-bio")
                 socialLinks(
-                    github: member.github, mastodon: member.mastodon, bluesky: member.bluesky)
+                    github: member.github,
+                    mastodon: member.mastodon,
+                    bluesky: member.bluesky,
+                    linkedin: member.linkedin
+                )
             }.class("team-card")
         }
 
@@ -295,7 +300,9 @@ extension TeamPage {
             }.class("team-cta")
         }
 
-        func socialLinks(github: String?, mastodon: String?, bluesky: String?) -> Component {
+        func socialLinks(github: String?, mastodon: String?, bluesky: String?, linkedin: String?)
+            -> Component
+        {
             var links = [Component]()
             if let github {
                 links.append(socialLink(url: github, icon: "icon-github-fill", label: "GitHub"))
@@ -306,6 +313,10 @@ extension TeamPage {
             }
             if let bluesky {
                 links.append(socialLink(url: bluesky, icon: "icon-bsky-fill", label: "Bluesky"))
+            }
+            if let linkedin {
+                links.append(
+                    socialLink(url: linkedin, icon: "icon-linkedin-fill", label: "LinkedIn"))
             }
             return Div {
                 ComponentGroup(members: links)
@@ -431,6 +442,7 @@ extension TeamPage {
             flex-direction: column;
             align-items: center;
             text-align: center;
+            min-width: 0;
         }
 
         .contributor-avatar {
@@ -446,6 +458,8 @@ extension TeamPage {
             font-weight: 600;
             font-size: 15px;
             margin: 0;
+            max-width: 100%;
+            overflow-wrap: anywhere;
             color: #141416;
         }
 
@@ -570,6 +584,17 @@ extension TeamPage {
             background-color: #b11fcc;
         }
 
+        .team-socials .icon-linkedin-fill {
+            -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8+PC9zdmc+");
+            mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8+PC9zdmc+");
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+        }
+
         .contributors-empty {
             text-align: center;
             color: #666880;
@@ -578,8 +603,6 @@ extension TeamPage {
 
         /* Call to action */
         .team-cta {
-            position: relative;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -588,52 +611,6 @@ extension TeamPage {
             text-align: center;
             color: #fafafd;
             background: linear-gradient(120deg, #701980 0%, #2a1a4a 52%, #135b80 100%);
-        }
-
-        /* Spotlight + glowing border that follow the cursor — coordinates set by
-           teamCta.js. ::before is the soft fill, ::after is the border ring
-           (a radial gradient masked to just the 1.5px edge). */
-        .team-cta::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(
-                circle 440px at var(--cta-x, 50%) var(--cta-y, 50%),
-                rgba(255, 255, 255, 0.2),
-                rgba(255, 255, 255, 0) 60%
-            );
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-
-        .team-cta::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: 24px;
-            padding: 1.5px;
-            background: radial-gradient(
-                circle 440px at var(--cta-x, 50%) var(--cta-y, 50%),
-                rgba(255, 255, 255, 0.75),
-                rgba(255, 255, 255, 0) 65%
-            );
-            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-
-        .team-cta:hover::before,
-        .team-cta:hover::after {
-            opacity: 1;
-        }
-
-        .team-cta > * {
-            position: relative;
-            z-index: 1;
         }
 
         .team-cta-title {

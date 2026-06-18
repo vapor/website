@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const REPO = "vapor/vapor";
-  const MAX = 48;
   const PAGE_SIZE = 15;
+  const MAX_PAGES = 5;
   const CACHE_KEY = "vapor:contributors:" + REPO;
   const CACHE_TTL = 6 * 60 * 60 * 1000; // 6 hours
   // Bot accounts that aren't flagged as type "Bot" by the API.
@@ -23,10 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  fetch(`https://api.github.com/repos/${REPO}/contributors?per_page=100`)
-    .then((response) =>
-      response.ok ? response.json() : Promise.reject(response.status),
-    )
+  fetchAllContributors()
     .then((data) => {
       const people = data
         .filter(
@@ -34,12 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
             c.type === "User" &&
             BLOCKED_LOGINS.indexOf(c.login.toLowerCase()) === -1,
         )
-        .slice(0, MAX)
         .map((c) => ({
           login: c.login,
           avatar_url: c.avatar_url,
           html_url: c.html_url,
-          contributions: c.contributions,
         }));
       writeCache(people);
       renderPeople(people);
@@ -48,6 +43,28 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error fetching contributors:", error);
       showFallback();
     });
+
+  // Walk the paginated contributors endpoint (100 per page) until a short page
+  async function fetchAllContributors() {
+    const all = [];
+    for (let page = 1; page <= MAX_PAGES; page++) {
+      const response = await fetch(
+        `https://api.github.com/repos/${REPO}/contributors?per_page=100&page=${page}`,
+      );
+      if (!response.ok) {
+        if (page === 1) {
+          return Promise.reject(response.status);
+        }
+        break;
+      }
+      const batch = await response.json();
+      all.push(...batch);
+      if (batch.length < 100) {
+        break;
+      }
+    }
+    return all;
+  }
 
   function renderPeople(people) {
     if (!people || people.length === 0) {
