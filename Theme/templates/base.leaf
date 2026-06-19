@@ -35,7 +35,8 @@
     <meta name="msapplication-config" content="https://design.vapor.codes/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     #for(alt in languages):<link rel="alternate" hreflang="#(alt.locale)" href="#(alt.url)">
-    #endfor
+    #if(alt.isDefault):<link rel="alternate" hreflang="x-default" href="#(alt.url)">
+    #endif#endfor
 </head>
 <body#if(page.isHome): id="main-page-body" class="main-site-faded-background"#endif>
     #extend("partials/header")
