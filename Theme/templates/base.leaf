@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta property="og:site_name" content="#(site.name)">
+    <meta property="og:type" content="website">
     <link rel="canonical" href="#(page.canonicalURL)">
     <meta name="twitter:url" content="#(page.canonicalURL)">
     <meta property="og:url" content="#(page.canonicalURL)">
@@ -13,6 +14,10 @@
     <meta name="twitter:description" content="#(page.description)">
     <meta property="og:description" content="#(page.description)">#endif
     <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@codevapor">
+    <meta name="twitter:creator" content="@codevapor">
+    #if(page.imageURL):<meta property="og:image" content="#(page.imageURL)">
+    <meta name="twitter:image" content="#(page.imageURL)">#endif
     <link rel="stylesheet" href="https://design.vapor.codes/main.css" type="text/css">
     <script src="https://design.vapor.codes/js/detectColorScheme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
