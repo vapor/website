@@ -31,7 +31,7 @@
     #for(alt in languages):<link rel="alternate" hreflang="#(alt.locale)" href="#(alt.url)">
     #endfor
 </head>
-<body id="main-page-body" class="main-site-faded-background">
+<body id="main-page-body" class="main-site-faded-background#if(page.isHome): home-page#endif">
     #extend("partials/header")
     #import("content")
     #extend("partials/footer")
