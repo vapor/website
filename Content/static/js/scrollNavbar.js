@@ -1,7 +1,8 @@
 window.onscroll = function () {
-    // The hide-until-scrolled behaviour is only for the home page hero; every
-    // other page keeps the navbar visible from the top (CSS default).
-    if (!document.body.classList.contains("home-page")) {
+    // The hide-until-scrolled behaviour is only for the home page — the only page
+    // with the fixed navbar (its <body> is the one tagged id="main-page-body").
+    // Every other page leaves the navbar in normal flow, like the blog.
+    if (document.body.id !== "main-page-body") {
         return;
     }
 
