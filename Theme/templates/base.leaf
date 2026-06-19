@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta property="og:site_name" content="#(site.name)">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="#(language.ogLocale)">
     <link rel="canonical" href="#(page.canonicalURL)">
     <meta name="twitter:url" content="#(page.canonicalURL)">
     <meta property="og:url" content="#(page.canonicalURL)">
@@ -13,7 +14,7 @@
     #if(page.description):<meta name="description" content="#(page.description)">
     <meta name="twitter:description" content="#(page.description)">
     <meta property="og:description" content="#(page.description)">#endif
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@codevapor">
     <meta name="twitter:creator" content="@codevapor">
     #if(page.imageURL):<meta property="og:image" content="#(page.imageURL)">

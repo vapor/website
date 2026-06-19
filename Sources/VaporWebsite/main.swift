@@ -672,15 +672,20 @@ let site = KilnSite(
     name: "Vapor",
     url: "https://vapor.codes",
     description: "A framework for building APIs, backend servers and websites, in Swift.",
+    // Default OpenGraph/Twitter preview image (1200×630 @2x). Site-relative, so it
+    // resolves to https://vapor.codes/static/images/vapor-og-2x.png. Pages can
+    // override per-file via `image:` front matter.
+    image: "static/images/vapor-og-2x.png",
     theme: .custom(
         directory: "Theme",
         palette: .autoLightDark(primary: .black, accent: .blue)
     ),
     languages: [
-        .init(.english, isDefault: true, customStrings: englishStrings),
+        .init(.english, isDefault: true, customStrings: englishStrings, image: "static/images/vapor-og-en-2x.png"),
         .init(
             .german,
             customStrings: germanStrings,
+            image: "static/images/vapor-og-de-2x.png",
             localisation: .init(
                 notFoundTitle: "Seite nicht gefunden",
                 notFoundMessage: "Die gesuchte Seite wurde möglicherweise verschoben, umbenannt oder existiert nicht.",
@@ -708,6 +713,7 @@ let site = KilnSite(
         .init(
             .spanish,
             customStrings: spanishStrings,
+            image: "static/images/vapor-og-es-2x.png",
             localisation: .init(
                 notFoundTitle: "Página no encontrada",
                 notFoundMessage: "Es posible que la página que buscas se haya movido, cambiado de nombre o que nunca haya existido.",
@@ -732,6 +738,7 @@ let site = KilnSite(
         .init(
             .french,
             customStrings: frenchStrings,
+            image: "static/images/vapor-og-fr-2x.png",
             localisation: .init(
                 notFoundTitle: "Page introuvable",
                 notFoundMessage: "La page que vous recherchez a peut-être été déplacée, renommée ou n’a jamais existé.",
@@ -756,6 +763,7 @@ let site = KilnSite(
         .init(
             .italian,
             customStrings: italianStrings,
+            image: "static/images/vapor-og-it-2x.png",
             localisation: .init(
                 notFoundTitle: "Pagina non trovata",
                 notFoundMessage: "La pagina che stai cercando potrebbe essere stata spostata, rinominata o non essere mai esistita.",
@@ -780,6 +788,7 @@ let site = KilnSite(
         .init(
             .japanese,
             customStrings: japaneseStrings,
+            image: "static/images/vapor-og-ja-2x.png",
             localisation: .init(
                 notFoundTitle: "ページが見つかりません",
                 notFoundMessage: "お探しのページは移動または名称変更されたか、存在しない可能性があります。",
@@ -804,6 +813,7 @@ let site = KilnSite(
         .init(
             .korean,
             customStrings: koreanStrings,
+            image: "static/images/vapor-og-ko-2x.png",
             localisation: .init(
                 notFoundTitle: "페이지를 찾을 수 없습니다",
                 notFoundMessage: "찾고 있는 페이지가 이동되었거나 이름이 변경되었거나 존재하지 않을 수 있습니다.",
@@ -828,6 +838,7 @@ let site = KilnSite(
         .init(
             .dutch,
             customStrings: dutchStrings,
+            image: "static/images/vapor-og-nl-2x.png",
             localisation: .init(
                 notFoundTitle: "Pagina niet gevonden",
                 notFoundMessage: "De pagina die je zoekt is mogelijk verplaatst, hernoemd of heeft nooit bestaan.",
@@ -852,6 +863,7 @@ let site = KilnSite(
         .init(
             .polish,
             customStrings: polishStrings,
+            image: "static/images/vapor-og-pl-2x.png",
             localisation: .init(
                 notFoundTitle: "Nie znaleziono strony",
                 notFoundMessage: "Strona, której szukasz, mogła zostać przeniesiona, zmieniona lub nigdy nie istniała.",
@@ -876,6 +888,7 @@ let site = KilnSite(
         .init(
             .chinese,
             customStrings: chineseStrings,
+            image: "static/images/vapor-og-zh-2x.png",
             localisation: .init(
                 notFoundTitle: "未找到页面",
                 notFoundMessage: "您要查找的页面可能已被移动、重命名或从未存在。",
@@ -900,6 +913,7 @@ let site = KilnSite(
         .init(
             .brazilianPortuguese,
             customStrings: brazilianPortugueseStrings,
+            image: "static/images/vapor-og-pt-BR-2x.png",
             localisation: .init(
                 notFoundTitle: "Página não encontrada",
                 notFoundMessage: "A página que você procura pode ter sido movida, renomeada ou nunca ter existido.",
