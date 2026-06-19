@@ -37,6 +37,9 @@ let englishStrings: [String: String] = [
     // Home — hero.
     "home.hero.title": "Swift, but on a server",
     "home.hero.caption": "Vapor provides a safe, performant and easy to use foundation to build HTTP servers, backends and APIs in Swift",
+    // `{count}` is filled in by updateStarsCount.js with the live GitHub star count.
+    "home.hero.stars": "{count} stars on GitHub",
+    "home.hero.starsLoading": "… stars on GitHub",
     // Home — companies.
     "home.companies.caption": "Powering companies like:",
     // Home — packages.
@@ -94,8 +97,11 @@ let germanStrings: [String: String] = [
     "cta.seeInAction": "In Aktion sehen",
     "home.hero.title": "Swift, aber auf dem Server",
     "home.hero.caption": "Vapor bietet eine sichere, performante und einfach zu bedienende Grundlage, um HTTP-Server, Backends und APIs in Swift zu erstellen",
+    "home.hero.stars": "{count} Sterne auf GitHub",
+    "home.hero.starsLoading": "… Sterne auf GitHub",
     "home.companies.caption": "Im Einsatz bei Unternehmen wie:",
     "home.packages.title": "Entwickle serverseitig mit den Werkzeugen, die du bereits kennst",
+    "home.packages.caption": "Du musst keine Sprache von Grund auf neu lernen (oder ein eigenes Team aufbauen) nur für dein Backend. Vapor baut auf Apples SwiftNIO auf, sodass du die Sprache verwenden kannst, die du bereits kennst und liebst.",
     "home.showcase.title": "Verwendet von den Teams hinter diesen großartigen Apps",
     "home.discord.title": "Tritt der größten Community von Swift-Backend-Entwicklern bei",
     "home.sponsors.title": "Unterstützt von unseren großartigen Sponsoren und Förderern",
@@ -137,6 +143,12 @@ let spanishStrings: [String: String] = [
     "nav.selectTheme": "Seleccionar tema",
     "nav.closeMenu": "Cerrar el menú",
     "footer.supporters": "Colaboradores",
+    // Home — stars / companies / packages.
+    "home.hero.stars": "{count} estrellas en GitHub",
+    "home.hero.starsLoading": "… estrellas en GitHub",
+    "home.companies.caption": "Impulsando a empresas como:",
+    "home.packages.title": "Desarrolla el lado del servidor con las herramientas que ya conoces",
+    "home.packages.caption": "No necesitas aprender un lenguaje desde cero (ni formar un equipo distinto) solo para tu backend. Vapor está construido sobre SwiftNIO de Apple, así que podrás usar el lenguaje que ya conoces y adoras.",
 ]
 let frenchStrings: [String: String] = [
     "home.hero.title": "Swift, mais sur le serveur",
@@ -163,6 +175,12 @@ let frenchStrings: [String: String] = [
     "nav.selectTheme": "Sélectionner le thème",
     "nav.closeMenu": "Fermer le menu",
     "footer.supporters": "Soutiens",
+    // Home — stars / companies / packages.
+    "home.hero.stars": "{count} étoiles sur GitHub",
+    "home.hero.starsLoading": "… étoiles sur GitHub",
+    "home.companies.caption": "Utilisé par des entreprises comme :",
+    "home.packages.title": "Développez côté serveur avec les outils que vous maîtrisez déjà",
+    "home.packages.caption": "Pas besoin d’apprendre un langage à partir de zéro (ni de constituer une autre équipe) juste pour votre backend. Vapor repose sur SwiftNIO d’Apple, vous pourrez donc utiliser le langage que vous connaissez et appréciez déjà.",
 ]
 let italianStrings: [String: String] = [
     "home.hero.title": "Swift, ma sul server",
@@ -189,6 +207,12 @@ let italianStrings: [String: String] = [
     "nav.selectTheme": "Seleziona il tema",
     "nav.closeMenu": "Chiudi il menu",
     "footer.supporters": "Sostenitori",
+    // Home — stars / companies / packages.
+    "home.hero.stars": "{count} stelle su GitHub",
+    "home.hero.starsLoading": "… stelle su GitHub",
+    "home.companies.caption": "Al servizio di aziende come:",
+    "home.packages.title": "Sviluppa lato server con gli strumenti che già conosci",
+    "home.packages.caption": "Non c’è bisogno di imparare un linguaggio da zero (o di mettere insieme un altro team) solo per il tuo backend. Vapor è costruito su SwiftNIO di Apple, così potrai usare il linguaggio che già conosci e ami.",
 ]
 let japaneseStrings: [String: String] = [
     "home.hero.title": "Swift、ただしサーバー上で",
@@ -215,6 +239,12 @@ let japaneseStrings: [String: String] = [
     "nav.selectTheme": "テーマを選択",
     "nav.closeMenu": "メニューを閉じる",
     "footer.supporters": "サポーター",
+    // Home — stars / companies / packages.
+    "home.hero.stars": "GitHubで{count}個のスター",
+    "home.hero.starsLoading": "GitHubで…個のスター",
+    "home.companies.caption": "次のような企業で利用されています:",
+    "home.packages.title": "すでに慣れ親しんだツールでサーバーサイドを構築",
+    "home.packages.caption": "バックエンドのためだけに、言語をゼロから学んだり（別のチームを編成したり）する必要はありません。VaporはAppleのSwiftNIO上に構築されているため、すでに知っていて愛用している言語をそのまま使えます。",
 ]
 let koreanStrings: [String: String] = [
     "home.hero.title": "Swift, 하지만 서버에서",
@@ -241,6 +271,12 @@ let koreanStrings: [String: String] = [
     "nav.selectTheme": "테마 선택",
     "nav.closeMenu": "메뉴 닫기",
     "footer.supporters": "후원자",
+    // Home — stars / companies / packages.
+    "home.hero.stars": "GitHub에서 {count}개의 스타",
+    "home.hero.starsLoading": "GitHub에서 …개의 스타",
+    "home.companies.caption": "다음과 같은 기업들이 사용합니다:",
+    "home.packages.title": "이미 알고 있는 도구로 서버 사이드를 구축하세요",
+    "home.packages.caption": "백엔드만을 위해 언어를 처음부터 배우거나 별도의 팀을 꾸릴 필요가 없습니다. Vapor는 Apple의 SwiftNIO를 기반으로 만들어져, 이미 알고 좋아하는 언어를 그대로 사용할 수 있습니다.",
 ]
 let dutchStrings: [String: String] = [
     "home.hero.title": "Swift, maar dan op een server",
@@ -267,6 +303,12 @@ let dutchStrings: [String: String] = [
     "nav.selectTheme": "Selecteer thema",
     "nav.closeMenu": "Menu sluiten",
     "footer.supporters": "Ondersteuners",
+    // Home — stars / companies / packages.
+    "home.hero.stars": "{count} sterren op GitHub",
+    "home.hero.starsLoading": "… sterren op GitHub",
+    "home.companies.caption": "Drijft bedrijven aan zoals:",
+    "home.packages.title": "Bouw server-side met de tools die je al kent",
+    "home.packages.caption": "Je hoeft geen taal vanaf nul te leren (of een apart team samen te stellen) alleen voor je backend. Vapor is gebouwd op Apple’s SwiftNIO, dus je kunt de taal gebruiken die je al kent en waardeert.",
 ]
 let polishStrings: [String: String] = [
     "home.hero.title": "Swift, ale na serwerze",
@@ -293,6 +335,12 @@ let polishStrings: [String: String] = [
     "nav.selectTheme": "Wybierz motyw",
     "nav.closeMenu": "Zamknij menu",
     "footer.supporters": "Wspierający",
+    // Home — stars / companies / packages.
+    "home.hero.stars": "{count} gwiazdek na GitHub",
+    "home.hero.starsLoading": "… gwiazdek na GitHub",
+    "home.companies.caption": "Napędza firmy takie jak:",
+    "home.packages.title": "Twórz po stronie serwera za pomocą narzędzi, które już znasz",
+    "home.packages.caption": "Nie musisz uczyć się języka od zera (ani budować osobnego zespołu) tylko dla swojego backendu. Vapor jest zbudowany na bazie SwiftNIO firmy Apple, więc możesz używać języka, który już znasz i lubisz.",
 ]
 let chineseStrings: [String: String] = [
     "home.hero.title": "Swift，但在服务器上",
@@ -319,6 +367,12 @@ let chineseStrings: [String: String] = [
     "nav.selectTheme": "选择主题",
     "nav.closeMenu": "关闭菜单",
     "footer.supporters": "赞助者",
+    // Home — stars / companies / packages.
+    "home.hero.stars": "{count} 个 GitHub star",
+    "home.hero.starsLoading": "… 个 GitHub star",
+    "home.companies.caption": "为以下公司提供支持：",
+    "home.packages.title": "使用你已熟悉的工具构建服务器端",
+    "home.packages.caption": "无需仅仅为了后端而从头学习一门语言（或组建另一支团队）。Vapor 基于 Apple 的 SwiftNIO 构建，因此你可以继续使用你已经熟悉和喜爱的语言。",
 ]
 let brazilianPortugueseStrings: [String: String] = [
     "home.hero.title": "Swift, mas no servidor",
@@ -345,6 +399,12 @@ let brazilianPortugueseStrings: [String: String] = [
     "nav.selectTheme": "Selecionar tema",
     "nav.closeMenu": "Fechar menu",
     "footer.supporters": "Apoiadores",
+    // Home — stars / companies / packages.
+    "home.hero.stars": "{count} estrelas no GitHub",
+    "home.hero.starsLoading": "… estrelas no GitHub",
+    "home.companies.caption": "Impulsionando empresas como:",
+    "home.packages.title": "Crie o lado do servidor com as ferramentas que você já conhece",
+    "home.packages.caption": "Não é preciso aprender uma linguagem do zero (nem montar uma equipe separada) só para o seu backend. O Vapor é construído sobre o SwiftNIO da Apple, então você poderá usar a linguagem que você já conhece e ama.",
 ]
 
 // MARK: - Site
