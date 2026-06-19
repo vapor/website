@@ -30,6 +30,13 @@ let englishStrings: [String: String] = [
     "footer.joinDiscord": "Join our Discord",
     "footer.supporters": "Supporters",
     "comingSoon.message": "This page is still under construction, stay tuned for updates!",
+    // Stub ("coming soon") page titles — drive the localised H1 + <title> via each
+    // page's `titleKey` front-matter field. (Some of these pages will get real
+    // implementations later; these keep the placeholders localised in the meantime.)
+    "pages.showcase.title": "Showcase",
+    "pages.team.title": "Team",
+    "pages.supporters.title": "Supporters",
+    "pages.evangelists.title": "Evangelists",
     // Calls to action (shared across sections).
     "cta.getStarted": "Get Started",
     "cta.learnMore": "Learn More",
@@ -98,6 +105,10 @@ let germanStrings: [String: String] = [
     "footer.joinDiscord": "Tritt unserem Discord bei",
     "footer.supporters": "Unterstützer",
     "comingSoon.message": "Diese Seite befindet sich noch im Aufbau – bleib dran für Updates!",
+    "pages.showcase.title": "Showcase",
+    "pages.team.title": "Team",
+    "pages.supporters.title": "Unterstützer",
+    "pages.evangelists.title": "Evangelisten",
     "cta.getStarted": "Loslegen",
     "cta.learnMore": "Mehr erfahren",
     "cta.seeInAction": "In Aktion sehen",
@@ -192,6 +203,11 @@ let spanishStrings: [String: String] = [
     "home.apiDocs.item2": "Amplia documentación y referencia de la API",
     "home.apiDocs.item3": "Todo lo que necesitas para crear backends y APIs",
     "home.apiDocs.item4": "Compatibilidad total con el modelo de concurrencia de Swift",
+    "comingSoon.message": "Esta página aún está en construcción. ¡Vuelve pronto para ver novedades!",
+    "pages.showcase.title": "Proyectos",
+    "pages.team.title": "Equipo",
+    "pages.supporters.title": "Colaboradores",
+    "pages.evangelists.title": "Evangelistas",
 ]
 let frenchStrings: [String: String] = [
     "home.hero.title": "Swift, mais sur le serveur",
@@ -244,6 +260,11 @@ let frenchStrings: [String: String] = [
     "home.apiDocs.item2": "Une documentation complète et une référence d’API",
     "home.apiDocs.item3": "Tout ce dont vous avez besoin pour créer des backends et des API",
     "home.apiDocs.item4": "Une prise en charge complète du modèle de concurrence de Swift",
+    "comingSoon.message": "Cette page est encore en construction, restez à l’écoute pour les mises à jour !",
+    "pages.showcase.title": "Vitrine",
+    "pages.team.title": "Équipe",
+    "pages.supporters.title": "Soutiens",
+    "pages.evangelists.title": "Évangélistes",
 ]
 let italianStrings: [String: String] = [
     "home.hero.title": "Swift, ma sul server",
@@ -296,6 +317,11 @@ let italianStrings: [String: String] = [
     "home.apiDocs.item2": "Documentazione completa e riferimento delle API",
     "home.apiDocs.item3": "Tutto ciò di cui hai bisogno per creare backend e API",
     "home.apiDocs.item4": "Supporto completo per il modello di concorrenza di Swift",
+    "comingSoon.message": "Questa pagina è ancora in costruzione, resta sintonizzato per gli aggiornamenti!",
+    "pages.showcase.title": "Vetrina",
+    "pages.team.title": "Team",
+    "pages.supporters.title": "Sostenitori",
+    "pages.evangelists.title": "Evangelisti",
 ]
 let japaneseStrings: [String: String] = [
     "home.hero.title": "Swift、ただしサーバー上で",
@@ -348,6 +374,11 @@ let japaneseStrings: [String: String] = [
     "home.apiDocs.item2": "充実したドキュメントとAPIリファレンス",
     "home.apiDocs.item3": "バックエンドとAPIの構築に必要なすべて",
     "home.apiDocs.item4": "SwiftのConcurrencyモデルを完全サポート",
+    "comingSoon.message": "このページはまだ準備中です。最新情報をお待ちください！",
+    "pages.showcase.title": "ショーケース",
+    "pages.team.title": "チーム",
+    "pages.supporters.title": "サポーター",
+    "pages.evangelists.title": "エヴァンジェリスト",
 ]
 let koreanStrings: [String: String] = [
     "home.hero.title": "Swift, 하지만 서버에서",
@@ -400,6 +431,11 @@ let koreanStrings: [String: String] = [
     "home.apiDocs.item2": "방대한 문서와 API 레퍼런스",
     "home.apiDocs.item3": "백엔드와 API 구축에 필요한 모든 것",
     "home.apiDocs.item4": "Swift의 동시성 모델 완벽 지원",
+    "comingSoon.message": "이 페이지는 아직 준비 중입니다. 업데이트를 기대해 주세요!",
+    "pages.showcase.title": "쇼케이스",
+    "pages.team.title": "팀",
+    "pages.supporters.title": "후원자",
+    "pages.evangelists.title": "에반젤리스트",
 ]
 let dutchStrings: [String: String] = [
     "home.hero.title": "Swift, maar dan op een server",
@@ -452,6 +488,11 @@ let dutchStrings: [String: String] = [
     "home.apiDocs.item2": "Uitgebreide documentatie en API-referentie",
     "home.apiDocs.item3": "Alles wat je nodig hebt om backends en API's te bouwen",
     "home.apiDocs.item4": "Volledige ondersteuning voor het concurrency-model van Swift",
+    "comingSoon.message": "Deze pagina is nog in aanbouw, houd updates in de gaten!",
+    "pages.showcase.title": "Etalage",
+    "pages.team.title": "Team",
+    "pages.supporters.title": "Ondersteuners",
+    "pages.evangelists.title": "Evangelisten",
 ]
 let polishStrings: [String: String] = [
     "home.hero.title": "Swift, ale na serwerze",
@@ -504,6 +545,11 @@ let polishStrings: [String: String] = [
     "home.apiDocs.item2": "Obszerna dokumentacja i dokumentacja API",
     "home.apiDocs.item3": "Wszystko, czego potrzebujesz do tworzenia backendów i API",
     "home.apiDocs.item4": "Pełne wsparcie dla modelu współbieżności Swift",
+    "comingSoon.message": "Ta strona jest jeszcze w budowie, śledź aktualizacje!",
+    "pages.showcase.title": "Realizacje",
+    "pages.team.title": "Zespół",
+    "pages.supporters.title": "Wspierający",
+    "pages.evangelists.title": "Ewangeliści",
 ]
 let chineseStrings: [String: String] = [
     "home.hero.title": "Swift，但在服务器上",
@@ -556,6 +602,11 @@ let chineseStrings: [String: String] = [
     "home.apiDocs.item2": "丰富的文档和 API 参考",
     "home.apiDocs.item3": "构建后端和 API 所需的一切",
     "home.apiDocs.item4": "全面支持 Swift 的并发模型",
+    "comingSoon.message": "此页面仍在建设中，敬请期待更新！",
+    "pages.showcase.title": "案例展示",
+    "pages.team.title": "团队",
+    "pages.supporters.title": "赞助者",
+    "pages.evangelists.title": "布道师",
 ]
 let brazilianPortugueseStrings: [String: String] = [
     "home.hero.title": "Swift, mas no servidor",
@@ -608,6 +659,11 @@ let brazilianPortugueseStrings: [String: String] = [
     "home.apiDocs.item2": "Documentação abrangente e referência da API",
     "home.apiDocs.item3": "Tudo o que você precisa para criar backends e APIs",
     "home.apiDocs.item4": "Suporte completo ao modelo de concorrência do Swift",
+    "comingSoon.message": "Esta página ainda está em construção. Fique de olho nas novidades!",
+    "pages.showcase.title": "Vitrine",
+    "pages.team.title": "Equipe",
+    "pages.supporters.title": "Apoiadores",
+    "pages.evangelists.title": "Evangelistas",
 ]
 
 // MARK: - Site

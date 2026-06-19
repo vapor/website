@@ -6,9 +6,9 @@
     <link rel="canonical" href="#(page.canonicalURL)">
     <meta name="twitter:url" content="#(page.canonicalURL)">
     <meta property="og:url" content="#(page.canonicalURL)">
-    <title>#if(page.isHome):#(site.name)#else:#(page.title) | #(site.name)#endif</title>
-    <meta name="twitter:title" content="#if(page.isHome):#(site.name)#else:#(page.title)#endif">
-    <meta property="og:title" content="#if(page.isHome):#(site.name)#else:#(page.title)#endif">
+    <title>#if(page.isHome):#(site.name)#else:#if(page.frontMatter.titleKey):#localise(page.frontMatter.titleKey)#else:#(page.title)#endif | #(site.name)#endif</title>
+    <meta name="twitter:title" content="#if(page.isHome):#(site.name)#else:#if(page.frontMatter.titleKey):#localise(page.frontMatter.titleKey)#else:#(page.title)#endif#endif">
+    <meta property="og:title" content="#if(page.isHome):#(site.name)#else:#if(page.frontMatter.titleKey):#localise(page.frontMatter.titleKey)#else:#(page.title)#endif#endif">
     #if(page.description):<meta name="description" content="#(page.description)">
     <meta name="twitter:description" content="#(page.description)">
     <meta property="og:description" content="#(page.description)">#endif
