@@ -280,3 +280,12 @@
     background: rgba(55, 57, 83, 0.3);
     border-color: rgba(255, 255, 255, 0.08);
 }
+
+/* These card images are light-background PNGs; swap to the dark variants in
+   dark mode (the design ships them, but only swaps on the home page carousel). */
+.dark .showcase-page #swiftfiddle-card .card-img-top {
+    content: url("https://design.vapor.codes/images/swiftfiddle-card-dark.png");
+}
+.dark .showcase-page #underway-nyc-card .card-img-top {
+    content: url("https://design.vapor.codes/images/underway-nyc-card-dark.png");
+}
