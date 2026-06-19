@@ -45,6 +45,12 @@ let englishStrings: [String: String] = [
     // Home — packages.
     "home.packages.title": "Build server side with the tooling you already understand",
     "home.packages.caption": "No need to learn a language from scratch (or assemble a different team) just for your backend. Vapor is built on Apple’s SwiftNIO so you’ll get to use the language you already know and love.",
+    // Package feature cards (the card titles — Vapor/Fluent/JWT/Leaf — are product
+    // names and stay untranslated; only the descriptions are localised).
+    "home.packages.vapor.description": "Build efficient APIs in a language you love. Create routes, send and receive JSON and build HTTP servers.",
+    "home.packages.fluent.description": "Create models and interact with your database in native, safe Swift code without needing to write any SQL",
+    "home.packages.jwt.description": "Create, sign and verify JSON Web Tokens in Swift. Built on top of Swift Crypto",
+    "home.packages.leaf.description": "A templating engine written in Swift. Generate HTML for both web apps and emails with a simple syntax anyone can use",
     // Home — features.
     "home.features.performance.title": "High-performant APIs and servers",
     "home.features.performance.description": "Built with a non-blocking, event-driven architecture, Vapor allows you to build high-performant, scalable APIs and HTTP servers. Using Swift's Concurrency model, you can write clear, maintainable code that's efficient and easy to read.",
@@ -102,6 +108,10 @@ let germanStrings: [String: String] = [
     "home.companies.caption": "Im Einsatz bei Unternehmen wie:",
     "home.packages.title": "Entwickle serverseitig mit den Werkzeugen, die du bereits kennst",
     "home.packages.caption": "Du musst keine Sprache von Grund auf neu lernen (oder ein eigenes Team aufbauen) nur für dein Backend. Vapor baut auf Apples SwiftNIO auf, sodass du die Sprache verwenden kannst, die du bereits kennst und liebst.",
+    "home.packages.vapor.description": "Erstelle effiziente APIs in einer Sprache, die du liebst. Definiere Routen, sende und empfange JSON und baue HTTP-Server.",
+    "home.packages.fluent.description": "Erstelle Models und interagiere mit deiner Datenbank in nativem, sicherem Swift-Code, ohne SQL schreiben zu müssen.",
+    "home.packages.jwt.description": "Erstelle, signiere und verifiziere JSON Web Tokens in Swift. Basiert auf Swift Crypto.",
+    "home.packages.leaf.description": "Eine in Swift geschriebene Template-Engine. Generiere HTML für Web-Apps und E-Mails mit einer einfachen Syntax, die jeder nutzen kann.",
     "home.showcase.title": "Verwendet von den Teams hinter diesen großartigen Apps",
     "home.discord.title": "Tritt der größten Community von Swift-Backend-Entwicklern bei",
     "home.sponsors.title": "Unterstützt von unseren großartigen Sponsoren und Förderern",
@@ -149,6 +159,10 @@ let spanishStrings: [String: String] = [
     "home.companies.caption": "Impulsando a empresas como:",
     "home.packages.title": "Desarrolla el lado del servidor con las herramientas que ya conoces",
     "home.packages.caption": "No necesitas aprender un lenguaje desde cero (ni formar un equipo distinto) solo para tu backend. Vapor está construido sobre SwiftNIO de Apple, así que podrás usar el lenguaje que ya conoces y adoras.",
+    "home.packages.vapor.description": "Crea APIs eficientes en un lenguaje que te encanta. Define rutas, envía y recibe JSON y construye servidores HTTP.",
+    "home.packages.fluent.description": "Crea modelos e interactúa con tu base de datos en código Swift nativo y seguro, sin necesidad de escribir SQL.",
+    "home.packages.jwt.description": "Crea, firma y verifica JSON Web Tokens en Swift. Construido sobre Swift Crypto.",
+    "home.packages.leaf.description": "Un motor de plantillas escrito en Swift. Genera HTML para aplicaciones web y correos electrónicos con una sintaxis sencilla que cualquiera puede usar.",
 ]
 let frenchStrings: [String: String] = [
     "home.hero.title": "Swift, mais sur le serveur",
@@ -181,6 +195,10 @@ let frenchStrings: [String: String] = [
     "home.companies.caption": "Utilisé par des entreprises comme :",
     "home.packages.title": "Développez côté serveur avec les outils que vous maîtrisez déjà",
     "home.packages.caption": "Pas besoin d’apprendre un langage à partir de zéro (ni de constituer une autre équipe) juste pour votre backend. Vapor repose sur SwiftNIO d’Apple, vous pourrez donc utiliser le langage que vous connaissez et appréciez déjà.",
+    "home.packages.vapor.description": "Créez des API efficaces dans un langage que vous aimez. Définissez des routes, envoyez et recevez du JSON et créez des serveurs HTTP.",
+    "home.packages.fluent.description": "Créez des modèles et interagissez avec votre base de données en code Swift natif et sûr, sans avoir à écrire de SQL.",
+    "home.packages.jwt.description": "Créez, signez et vérifiez des JSON Web Tokens en Swift. Basé sur Swift Crypto.",
+    "home.packages.leaf.description": "Un moteur de templates écrit en Swift. Générez du HTML pour vos applications web et vos e-mails avec une syntaxe simple, à la portée de tous.",
 ]
 let italianStrings: [String: String] = [
     "home.hero.title": "Swift, ma sul server",
@@ -213,6 +231,10 @@ let italianStrings: [String: String] = [
     "home.companies.caption": "Al servizio di aziende come:",
     "home.packages.title": "Sviluppa lato server con gli strumenti che già conosci",
     "home.packages.caption": "Non c’è bisogno di imparare un linguaggio da zero (o di mettere insieme un altro team) solo per il tuo backend. Vapor è costruito su SwiftNIO di Apple, così potrai usare il linguaggio che già conosci e ami.",
+    "home.packages.vapor.description": "Crea API efficienti in un linguaggio che ami. Definisci rotte, invia e ricevi JSON e costruisci server HTTP.",
+    "home.packages.fluent.description": "Crea modelli e interagisci con il tuo database in codice Swift nativo e sicuro, senza dover scrivere alcun SQL.",
+    "home.packages.jwt.description": "Crea, firma e verifica i JSON Web Token in Swift. Costruito su Swift Crypto.",
+    "home.packages.leaf.description": "Un motore di template scritto in Swift. Genera HTML per app web ed email con una sintassi semplice che chiunque può usare.",
 ]
 let japaneseStrings: [String: String] = [
     "home.hero.title": "Swift、ただしサーバー上で",
@@ -245,6 +267,10 @@ let japaneseStrings: [String: String] = [
     "home.companies.caption": "次のような企業で利用されています:",
     "home.packages.title": "すでに慣れ親しんだツールでサーバーサイドを構築",
     "home.packages.caption": "バックエンドのためだけに、言語をゼロから学んだり（別のチームを編成したり）する必要はありません。VaporはAppleのSwiftNIO上に構築されているため、すでに知っていて愛用している言語をそのまま使えます。",
+    "home.packages.vapor.description": "好きな言語で効率的なAPIを構築。ルートを作成し、JSONを送受信し、HTTPサーバーを構築できます。",
+    "home.packages.fluent.description": "ネイティブで安全なSwiftコードでモデルを作成し、SQLを書くことなくデータベースを操作できます。",
+    "home.packages.jwt.description": "SwiftでJSON Web Tokenを作成、署名、検証。Swift Cryptoを基盤としています。",
+    "home.packages.leaf.description": "Swiftで書かれたテンプレートエンジン。誰でも使えるシンプルな構文で、WebアプリとメールのHTMLを生成できます。",
 ]
 let koreanStrings: [String: String] = [
     "home.hero.title": "Swift, 하지만 서버에서",
@@ -277,6 +303,10 @@ let koreanStrings: [String: String] = [
     "home.companies.caption": "다음과 같은 기업들이 사용합니다:",
     "home.packages.title": "이미 알고 있는 도구로 서버 사이드를 구축하세요",
     "home.packages.caption": "백엔드만을 위해 언어를 처음부터 배우거나 별도의 팀을 꾸릴 필요가 없습니다. Vapor는 Apple의 SwiftNIO를 기반으로 만들어져, 이미 알고 좋아하는 언어를 그대로 사용할 수 있습니다.",
+    "home.packages.vapor.description": "좋아하는 언어로 효율적인 API를 구축하세요. 라우트를 만들고 JSON을 주고받으며 HTTP 서버를 구축할 수 있습니다.",
+    "home.packages.fluent.description": "네이티브하고 안전한 Swift 코드로 모델을 만들고, SQL을 작성할 필요 없이 데이터베이스와 상호작용하세요.",
+    "home.packages.jwt.description": "Swift에서 JSON Web Token을 생성, 서명, 검증하세요. Swift Crypto를 기반으로 합니다.",
+    "home.packages.leaf.description": "Swift로 작성된 템플릿 엔진. 누구나 사용할 수 있는 간단한 문법으로 웹 앱과 이메일용 HTML을 생성하세요.",
 ]
 let dutchStrings: [String: String] = [
     "home.hero.title": "Swift, maar dan op een server",
@@ -309,6 +339,10 @@ let dutchStrings: [String: String] = [
     "home.companies.caption": "Drijft bedrijven aan zoals:",
     "home.packages.title": "Bouw server-side met de tools die je al kent",
     "home.packages.caption": "Je hoeft geen taal vanaf nul te leren (of een apart team samen te stellen) alleen voor je backend. Vapor is gebouwd op Apple’s SwiftNIO, dus je kunt de taal gebruiken die je al kent en waardeert.",
+    "home.packages.vapor.description": "Bouw efficiënte API's in een taal die je geweldig vindt. Maak routes, verstuur en ontvang JSON en bouw HTTP-servers.",
+    "home.packages.fluent.description": "Maak modellen en werk met je database in native, veilige Swift-code zonder ook maar één regel SQL te schrijven.",
+    "home.packages.jwt.description": "Maak, onderteken en verifieer JSON Web Tokens in Swift. Gebouwd op Swift Crypto.",
+    "home.packages.leaf.description": "Een template-engine geschreven in Swift. Genereer HTML voor zowel webapps als e-mails met een eenvoudige syntaxis die iedereen kan gebruiken.",
 ]
 let polishStrings: [String: String] = [
     "home.hero.title": "Swift, ale na serwerze",
@@ -341,6 +375,10 @@ let polishStrings: [String: String] = [
     "home.companies.caption": "Napędza firmy takie jak:",
     "home.packages.title": "Twórz po stronie serwera za pomocą narzędzi, które już znasz",
     "home.packages.caption": "Nie musisz uczyć się języka od zera (ani budować osobnego zespołu) tylko dla swojego backendu. Vapor jest zbudowany na bazie SwiftNIO firmy Apple, więc możesz używać języka, który już znasz i lubisz.",
+    "home.packages.vapor.description": "Twórz wydajne API w języku, który kochasz. Definiuj trasy, wysyłaj i odbieraj JSON oraz buduj serwery HTTP.",
+    "home.packages.fluent.description": "Twórz modele i korzystaj z bazy danych w natywnym, bezpiecznym kodzie Swift, bez konieczności pisania SQL.",
+    "home.packages.jwt.description": "Twórz, podpisuj i weryfikuj tokeny JSON Web Token w Swift. Zbudowane na Swift Crypto.",
+    "home.packages.leaf.description": "Silnik szablonów napisany w Swift. Generuj HTML dla aplikacji webowych i e-maili dzięki prostej składni, z której skorzysta każdy.",
 ]
 let chineseStrings: [String: String] = [
     "home.hero.title": "Swift，但在服务器上",
@@ -373,6 +411,10 @@ let chineseStrings: [String: String] = [
     "home.companies.caption": "为以下公司提供支持：",
     "home.packages.title": "使用你已熟悉的工具构建服务器端",
     "home.packages.caption": "无需仅仅为了后端而从头学习一门语言（或组建另一支团队）。Vapor 基于 Apple 的 SwiftNIO 构建，因此你可以继续使用你已经熟悉和喜爱的语言。",
+    "home.packages.vapor.description": "用你喜爱的语言构建高效的 API。创建路由、收发 JSON 并构建 HTTP 服务器。",
+    "home.packages.fluent.description": "使用原生、安全的 Swift 代码创建模型并操作数据库，无需编写任何 SQL。",
+    "home.packages.jwt.description": "在 Swift 中创建、签名和验证 JSON Web Token。基于 Swift Crypto 构建。",
+    "home.packages.leaf.description": "用 Swift 编写的模板引擎。使用任何人都能上手的简单语法，为 Web 应用和电子邮件生成 HTML。",
 ]
 let brazilianPortugueseStrings: [String: String] = [
     "home.hero.title": "Swift, mas no servidor",
@@ -405,6 +447,10 @@ let brazilianPortugueseStrings: [String: String] = [
     "home.companies.caption": "Impulsionando empresas como:",
     "home.packages.title": "Crie o lado do servidor com as ferramentas que você já conhece",
     "home.packages.caption": "Não é preciso aprender uma linguagem do zero (nem montar uma equipe separada) só para o seu backend. O Vapor é construído sobre o SwiftNIO da Apple, então você poderá usar a linguagem que você já conhece e ama.",
+    "home.packages.vapor.description": "Crie APIs eficientes em uma linguagem que você ama. Defina rotas, envie e receba JSON e construa servidores HTTP.",
+    "home.packages.fluent.description": "Crie modelos e interaja com seu banco de dados em código Swift nativo e seguro, sem precisar escrever nenhum SQL.",
+    "home.packages.jwt.description": "Crie, assine e verifique JSON Web Tokens em Swift. Construído sobre o Swift Crypto.",
+    "home.packages.leaf.description": "Um motor de templates escrito em Swift. Gere HTML para aplicações web e e-mails com uma sintaxe simples que qualquer pessoa pode usar.",
 ]
 
 // MARK: - Site
