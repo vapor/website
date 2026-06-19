@@ -13,6 +13,10 @@ struct ShowcasePage: Component {
 
     var body: any Component {
         Node.body {
+            Node<HTML.BodyContext>.raw(
+                "<link rel=\"stylesheet\" href=\""
+                    + VaporDesignUtilities.buildResourceLink(
+                        for: "/static/css/showcase.css", isLocal: true) + "\">")
             SiteNavigation(
                 context: context,
                 selectedSelectionID: nil,
