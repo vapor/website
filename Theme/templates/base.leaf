@@ -25,14 +25,10 @@
     <meta name="color-scheme" content="light dark">
     <link rel="icon" href="https://design.vapor.codes/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" sizes="180x180" href="https://design.vapor.codes/favicons/apple-touch-icon.png">
-    <link rel="icon" sizes="32x32" href="https://design.vapor.codes/favicons/favicon-32x32.png" type="image/png">
     <link rel="icon" sizes="96x96" href="https://design.vapor.codes/favicons/favicon-96x96.png" type="image/png">
-    <link rel="icon" sizes="16x16" href="https://design.vapor.codes/favicons/favicon-16x16.png" type="image/png">
     <link rel="manifest" href="https://design.vapor.codes/favicons/site.webmanifest">
     <link rel="shortcut icon" href="https://design.vapor.codes/favicons/favicon.ico">
     <meta name="apple-mobile-web-app-title" content="#(site.name)">
-    <meta name="msapplication-TileColor" content="#141416">
-    <meta name="msapplication-config" content="https://design.vapor.codes/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     #for(alt in languages):<link rel="alternate" hreflang="#(alt.locale)" href="#(alt.absoluteURL)">
     #if(alt.isDefault):<link rel="alternate" hreflang="x-default" href="#(alt.absoluteURL)">
