@@ -29,7 +29,8 @@
     <link rel="manifest" href="https://design.vapor.codes/favicons/site.webmanifest">
     <link rel="shortcut icon" href="https://design.vapor.codes/favicons/favicon.ico">
     <meta name="apple-mobile-web-app-title" content="#(site.name)">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141416" media="(prefers-color-scheme: dark)">
     #for(alt in languages):<link rel="alternate" hreflang="#(alt.locale)" href="#(alt.absoluteURL)">
     #if(alt.isDefault):<link rel="alternate" hreflang="x-default" href="#(alt.absoluteURL)">
     #endif#endfor

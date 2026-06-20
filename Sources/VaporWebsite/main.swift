@@ -684,7 +684,7 @@ let site = KilnSite(
     organization: .init(
         name: "Vapor",
         url: "https://www.vapor.codes",
-        logo: "https://design.vapor.codes/favicons/android-chrome-512x512.png",
+        logo: "https://design.vapor.codes/favicons/apple-touch-icon.png",
         sameAs: [
             "https://twitter.com/codevapor",
             "https://hachyderm.io/@codevapor",
