@@ -5,6 +5,8 @@
     <meta property="og:site_name" content="#(site.name)">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="#(language.ogLocale)">
+    #for(alt in languages):#if(!alt.isCurrent):<meta property="og:locale:alternate" content="#(alt.ogLocale)">
+    #endif#endfor
     <link rel="canonical" href="#(page.canonicalURL)">
     <meta name="twitter:url" content="#(page.canonicalURL)">
     <meta property="og:url" content="#(page.canonicalURL)">
