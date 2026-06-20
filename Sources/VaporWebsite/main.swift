@@ -670,12 +670,28 @@ let brazilianPortugueseStrings: [String: String] = [
 
 let site = KilnSite(
     name: "Vapor",
-    url: "https://vapor.codes",
+    // Canonical host is the www subdomain — apex `vapor.codes` 301-redirects to
+    // `www`, so every absolute URL Kiln emits (canonical, og:url, hreflang,
+    // sitemap, llms.txt) must use www to avoid pointing at a redirect.
+    url: "https://www.vapor.codes",
     description: "A framework for building APIs, backend servers and websites, in Swift.",
     // Default OpenGraph/Twitter preview image (1200×630 @2x). Site-relative, so it
     // resolves to https://vapor.codes/static/images/vapor-og-2x.png. Pages can
     // override per-file via `image:` front matter.
     image: "static/images/opengraph/vapor-og-en-2x.png",
+    // JSON-LD publisher entity (Organization + WebSite structured data). The same
+    // entity is referenced by the docs site so they share one knowledge-graph node.
+    organization: .init(
+        name: "Vapor",
+        url: "https://www.vapor.codes",
+        logo: "https://design.vapor.codes/favicons/android-chrome-512x512.png",
+        sameAs: [
+            "https://twitter.com/codevapor",
+            "https://hachyderm.io/@codevapor",
+            "https://bsky.app/profile/vapor.codes",
+            "https://github.com/vapor",
+        ]
+    ),
     theme: .custom(
         directory: "Theme",
         palette: .autoLightDark(primary: .black, accent: .blue)

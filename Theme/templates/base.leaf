@@ -34,9 +34,10 @@
     <meta name="msapplication-TileColor" content="#141416">
     <meta name="msapplication-config" content="https://design.vapor.codes/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    #for(alt in languages):<link rel="alternate" hreflang="#(alt.locale)" href="#(alt.url)">
-    #if(alt.isDefault):<link rel="alternate" hreflang="x-default" href="#(alt.url)">
+    #for(alt in languages):<link rel="alternate" hreflang="#(alt.locale)" href="#(alt.absoluteURL)">
+    #if(alt.isDefault):<link rel="alternate" hreflang="x-default" href="#(alt.absoluteURL)">
     #endif#endfor
+    #if(page.structuredData):<script type="application/ld+json">#unsafeHTML(page.structuredData)</script>#endif
 </head>
 <body#if(page.isHome): id="main-page-body" class="main-site-faded-background"#endif>
     #extend("partials/header")
