@@ -12,9 +12,9 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // Local checkout for development. For CI/production, pin a release instead:
-        // .package(url: "https://github.com/brokenhandsio/kiln.git", from: "1.1.0"),
-        .package(path: "../../BH/kiln"),
+        .package(url: "https://github.com/brokenhandsio/kiln.git", from: "1.2.0"),
+        // For local Kiln development, swap the line above for:
+        // .package(path: "../../BH/kiln"),
     ],
     targets: [
         .executableTarget(
