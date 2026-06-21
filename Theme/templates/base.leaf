@@ -42,8 +42,9 @@
     #if(page.structuredData):<script type="application/ld+json">#unsafeHTML(page.structuredData)</script>#endif
 </head>
 <body#if(page.isHome): id="main-page-body" class="main-site-faded-background"#endif>
+    <a class="kiln-skip-link" href="#main-content">#(strings.skipToContent)</a>
     #extend("partials/header")
-    #import("content")
+    <main id="main-content" tabindex="-1">#import("content")</main>
     #extend("partials/footer")
     <script src="https://design.vapor.codes/main.js"></script>
     <script src="/static/js/updateStarsCount.js"></script>
