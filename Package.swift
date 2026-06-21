@@ -1,5 +1,4 @@
 // swift-tools-version:5.10
-
 import PackageDescription
 
 let package = Package(
@@ -9,7 +8,7 @@ let package = Package(
         .executable(
             name: "Website",
             targets: ["Website"]
-        ),
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/johnsundell/publish.git", branch: "master"),
@@ -22,6 +21,6 @@ let package = Package(
                 .product(name: "Publish", package: "Publish"),
                 .product(name: "VaporDesign", package: "design"),
             ]
-        ),
+        )
     ]
 )
