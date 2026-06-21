@@ -22,25 +22,24 @@ kiln serve
 ## Translating
 
 The site is template-driven, so — unlike a prose docs site — there are no per-file
-translations. Every piece of visible copy is a `#localise("key")` lookup, and the
-translations live in per-language string dictionaries in
-`Sources/VaporWebsite/main.swift`. To add a language:
+translations. Every piece of visible copy is a `#localise("key")` lookup, and each
+language lives in its own file under `Sources/VaporWebsite/Translations/`, holding a
+string dictionary plus a `Language` value. English is the default, so any key a
+translation omits falls back to English. To add a language:
 
-1. **Add a string dictionary.** Copy `englishStrings` to a new `<language>Strings`
-   and translate the values (keep the keys). English is the default, so any key
-   you leave out falls back to English — partial translations are fine.
+1. **Add a translation file** at `Sources/VaporWebsite/Translations/<Language>.swift`.
+   Copy the keys from `English.swift`, translate the values, and define the
+   `Language`:
 
    ```swift
+   import Kiln
+
    let dutchStrings: [String: String] = [
        "home.hero.title": "Swift, maar dan op een server",
-       // … translate the rest; copy the keys from englishStrings
+       // … translate the rest; copy the keys from English.swift
    ]
-   ```
 
-2. **Register the language** in the `languages:` array of the `KilnSite`:
-
-   ```swift
-   .init(
+   let dutchLanguage = Language(
        .dutch,                       // a built-in LanguageCode, or .custom(code: "xx", name: "…")
        customStrings: dutchStrings,
        image: "static/images/opengraph/vapor-og-nl-2x.png", // per-language social card
@@ -51,6 +50,16 @@ translations live in per-language string dictionaries in
            // …
        )
    )
+   ```
+
+2. **Register it** in the `languages:` array in `Sources/VaporWebsite/main.swift`:
+
+   ```swift
+   languages: [
+       englishLanguage,
+       // …
+       dutchLanguage,
+   ]
    ```
 
 3. **Add the social card.** Drop a `1200×630` PNG (ideally 2×, i.e. `2400×1260`)
