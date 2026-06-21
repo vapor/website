@@ -1,7 +1,7 @@
 ---
 title: Showcase
 titleKey: pages.showcase.title
-template: coming-soon
+template: showcase
 sidebar: false
 toc: false
 ---

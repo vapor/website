@@ -1,0 +1,103 @@
+#extend("base"):
+#export("content"):
+<link rel="stylesheet" href="/static/css/showcase.css">
+<div class="container showcase-page">
+    <div class="showcase-page-header">
+        <h1 class="main-title">#localise("showcase.title")</h1>
+        <p class="main-page-caption d-flex mx-auto">#localise("showcase.caption")</p>
+    </div>
+
+    <div class="showcase-controls">
+        <div class="showcase-search">
+            <span class="vapor-icon showcase-search-icon" aria-hidden="true"></span>
+            <input type="text" id="showcase-search" class="showcase-search-input" placeholder="#localise("showcase.search")" aria-label="#localise("showcase.searchLabel")" autocomplete="off">
+        </div>
+        <div class="showcase-sort">
+            <select id="showcase-sort" class="showcase-sort-select" aria-label="#localise("showcase.sortLabel")">
+                <option value="newest">#localise("showcase.sort.newest")</option>
+                <option value="oldest">#localise("showcase.sort.oldest")</option>
+                <option value="name-asc">#localise("showcase.sort.nameAsc")</option>
+                <option value="name-desc">#localise("showcase.sort.nameDesc")</option>
+            </select>
+            <span class="vapor-icon icon-chevron-down showcase-sort-icon" aria-hidden="true"></span>
+        </div>
+    </div>
+
+    <div id="showcase-grid" class="showcase-grid">
+        <div class="showcase-grid-item" data-index="0" data-name="SwiftFiddle" data-description="SwiftFiddle is an online playground for creating, sharing and embedding Swift fiddles.">
+            <div class="card" id="swiftfiddle-card">
+                <img src="https://design.vapor.codes/images/swiftfiddle-card.png" alt="SwiftFiddle" class="card-img-top"/>
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title">SwiftFiddle</h2>
+                    <p class="card-text">SwiftFiddle is an online playground for creating, sharing and embedding Swift fiddles.</p>
+                    <a href="https://swiftfiddle.com" target="_blank" class="btn mt-auto">#localise("cta.seeInAction")<span class="vapor-icon icon-arrow-narrow-up-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="showcase-grid-item" data-index="1" data-name="Underway NYC" data-description="Quickly locate yourself on the official MTA map of NYC and get real-time train arrivals at that subway stop.">
+            <div class="card" id="underway-nyc-card">
+                <img src="https://design.vapor.codes/images/underway-nyc-card.png" alt="Underway NYC" class="card-img-top"/>
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title">Underway NYC</h2>
+                    <p class="card-text">Quickly locate yourself on the official MTA map of NYC and get real-time train arrivals at that subway stop.</p>
+                    <a href="https://www.underway.nyc" target="_blank" class="btn mt-auto">#localise("cta.seeInAction")<span class="vapor-icon icon-arrow-narrow-up-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="showcase-grid-item" data-index="2" data-name="Swift Package Index" data-description="The Swift Package Index is a searchable index of Swift packages and their compatibility with various platforms.">
+            <div class="card" id="swiftpackageindex-card">
+                <img src="/static/images/showcase/swift-package-index.png" alt="Swift Package Index" class="card-img-top"/>
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title">Swift Package Index</h2>
+                    <p class="card-text">The Swift Package Index is a searchable index of Swift packages and their compatibility with various platforms.</p>
+                    <a href="https://swiftpackageindex.com" target="_blank" class="btn mt-auto">#localise("cta.seeInAction")<span class="vapor-icon icon-arrow-narrow-up-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="showcase-grid-item" data-index="3" data-name="Litmaps" data-description="Litmaps is a browser-based research platform designed for clarity, comprehensiveness, and collaboration.">
+            <div class="card" id="litmaps-card">
+                <img src="/static/images/showcase/litmaps.png" alt="Litmaps" class="card-img-top"/>
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title">Litmaps</h2>
+                    <p class="card-text">Litmaps is a browser-based research platform designed for clarity, comprehensiveness, and collaboration.</p>
+                    <a href="https://litmaps.com" target="_blank" class="btn mt-auto">#localise("cta.seeInAction")<span class="vapor-icon icon-arrow-narrow-up-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="showcase-grid-item" data-index="4" data-name="PassiveLogic" data-description="PassiveLogic builds the platform for autonomous building controls, powered by digital twins.">
+            <div class="card" id="passivelogic-card">
+                <img src="/static/images/showcase/passive-logic.png" alt="PassiveLogic" class="card-img-top"/>
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title">PassiveLogic</h2>
+                    <p class="card-text">PassiveLogic builds the platform for autonomous building controls, powered by digital twins.</p>
+                    <a href="https://passivelogic.com" target="_blank" class="btn mt-auto">#localise("cta.seeInAction")<span class="vapor-icon icon-arrow-narrow-up-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="showcase-grid-item" data-index="5" data-name="TelemetryDeck" data-description="TelemetryDeck provides privacy-first, anonymised analytics for apps, backed by a Swift server.">
+            <div class="card" id="telemetrydeck-card">
+                <img src="/static/images/showcase/telemetry-deck-light.png" alt="TelemetryDeck" class="card-img-top"/>
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title">TelemetryDeck</h2>
+                    <p class="card-text">TelemetryDeck provides privacy-first, anonymised analytics for apps, backed by a Swift server.</p>
+                    <a href="https://telemetrydeck.com" target="_blank" class="btn mt-auto">#localise("cta.seeInAction")<span class="vapor-icon icon-arrow-narrow-up-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p id="showcase-empty" class="showcase-empty d-none">#localise("showcase.empty")</p>
+
+    <nav aria-label="#localise("showcase.paginationLabel")">
+        <ul id="showcase-pagination" class="pagination justify-content-center showcase-pagination d-none"></ul>
+    </nav>
+
+    <div class="showcase-cta">
+        <h2 class="showcase-cta-title">#localise("showcase.cta.title")</h2>
+        <p class="showcase-cta-caption">#localise("showcase.cta.caption")</p>
+        <a href="https://github.com/vapor/website/issues/new" target="_blank" class="btn btn-primary">#localise("showcase.cta.button")</a>
+    </div>
+</div>
+<script src="/static/js/showcase.js" defer></script>
+#endexport
+#endextend
