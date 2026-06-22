@@ -177,8 +177,8 @@ extension TeamPage {
                     buildCoreTeam()
                     buildMaintainers()
                     buildContributors()
-                    buildSponsors()
                     buildCallToAction()
+                    buildSponsors()
                 }.class("container").class("team-page")
             }
         }
