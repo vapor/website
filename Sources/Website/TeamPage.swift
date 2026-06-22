@@ -128,6 +128,14 @@ extension TeamPage {
                     bluesky: "https://bsky.app/profile/ptoffy.bsky.social",
                     linkedin: "https://linkedin.com/in/paultoffoloni"
                 ),
+                TeamMember(
+                    name: "Kyle Browning",
+                    handle: "kylebrowning",
+                    bio:
+                        "iOS engineer and engineering leader who's been shipping since 2008. Maintains APNSwift and builds tools that make iOS and server-side Swift work better together.",
+                    avatar: "https://github.com/kylebrowning.png",
+                    github: "https://github.com/kylebrowning"
+                ),
             ]
         }
 
