@@ -12,7 +12,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/brokenhandsio/kiln.git", from: "1.2.0"),
+        .package(url: "https://github.com/brokenhandsio/kiln.git", from: "1.3.0"),
         // For local Kiln development, swap the line above for:
         // .package(path: "../../BH/kiln"),
     ],
