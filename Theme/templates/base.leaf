@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="#(language.locale)">
+<head>
+    <meta charset="UTF-8">
+    <!-- Warm the connection to the design system origin (render-blocking CSS + fonts). -->
+    <link rel="preconnect" href="https://design.vapor.codes">
+    <link rel="preconnect" href="https://design.vapor.codes" crossorigin>
+    <meta property="og:site_name" content="#(site.name)">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="#(language.ogLocale)">
+    #for(alt in languages):#if(!alt.isCurrent):<meta property="og:locale:alternate" content="#(alt.ogLocale)">
+    #endif#endfor
+    <link rel="canonical" href="#(page.canonicalURL)">
+    <meta name="twitter:url" content="#(page.canonicalURL)">
+    <meta property="og:url" content="#(page.canonicalURL)">
+    <title>#if(page.isHome):#(site.name)#else:#if(page.frontMatter.titleKey):#localise(page.frontMatter.titleKey)#else:#(page.title)#endif | #(site.name)#endif</title>
+    <meta name="twitter:title" content="#if(page.isHome):#(site.name)#else:#if(page.frontMatter.titleKey):#localise(page.frontMatter.titleKey)#else:#(page.title)#endif#endif">
+    <meta property="og:title" content="#if(page.isHome):#(site.name)#else:#if(page.frontMatter.titleKey):#localise(page.frontMatter.titleKey)#else:#(page.title)#endif#endif">
+    #if(page.description):<meta name="description" content="#(page.description)">
+    <meta name="twitter:description" content="#(page.description)">
+    <meta property="og:description" content="#(page.description)">#endif
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@codevapor">
+    <meta name="twitter:creator" content="@codevapor">
+    #if(page.imageURL):<meta property="og:image" content="#(page.imageURL)">
+    <meta name="twitter:image" content="#(page.imageURL)">#endif
+    <link rel="stylesheet" href="https://design.vapor.codes/main.css" type="text/css">
+    <script src="https://design.vapor.codes/js/detectColorScheme.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="https://design.vapor.codes/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://design.vapor.codes/favicons/apple-touch-icon.png">
+    <link rel="icon" sizes="96x96" href="https://design.vapor.codes/favicons/favicon-96x96.png" type="image/png">
+    <link rel="manifest" href="https://design.vapor.codes/favicons/site.webmanifest">
+    <link rel="shortcut icon" href="https://design.vapor.codes/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="#(site.name)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141416" media="(prefers-color-scheme: dark)">
+    #for(alt in languages):<link rel="alternate" hreflang="#(alt.locale)" href="#(alt.absoluteURL)">
+    #if(alt.isDefault):<link rel="alternate" hreflang="x-default" href="#(alt.absoluteURL)">
+    #endif#endfor
+    #if(page.structuredData):<script type="application/ld+json">#unsafeHTML(page.structuredData)</script>#endif
+</head>
+<body#if(page.isHome): id="main-page-body" class="main-site-faded-background"#endif>
+    <a class="kiln-skip-link" href="#main-content">#(strings.skipToContent)</a>
+    #extend("partials/header")
+    <main id="main-content" tabindex="-1">#import("content")</main>
+    #extend("partials/footer")
+    <script src="https://design.vapor.codes/main.js"></script>
+    <script src="/static/js/updateStarsCount.js"></script>
+    <script src="/static/js/scrollNavbar.js"></script>
+    <script src="/static/js/scrollShowcase.js"></script>
+</body>
+</html>

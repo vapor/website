@@ -3,6 +3,6 @@
 /.build
 /.swiftpm
 /*.xcodeproj
-.publish
-Output
+/site
 .vscode
+.claude/

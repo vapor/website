@@ -24,7 +24,7 @@ jobs:
       - name: Run CloudFormation linter
         run: cfn-lint -t stack.yml
       - name: Build site
-        run: swift run
+        run: docker run --rm -v "$PWD":/website -w /website swift:6.2 swift run VaporWebsite
       - name: Deploy S3 Website
         if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
         uses: brokenhandsio/s3-website-pr-action@v2
@@ -34,5 +34,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
         with:
           bucket-prefix: "vapor-website-pulls"
-          folder-to-copy: "./Output"
+          folder-to-copy: "./site"
           bucket-region: "eu-west-2"

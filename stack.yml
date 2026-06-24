@@ -20,15 +20,11 @@ Resources:
       BucketName: !Ref 'S3BucketName'
       WebsiteConfiguration:
         IndexDocument: index.html
-        # Redirect
-        ErrorDocument: /error/404/index.html
-        RoutingRules:
-          - RoutingRuleCondition:
-              HttpErrorCodeReturnedEquals: '404'
-              KeyPrefixEquals: /
-            RedirectRule:
-              HostName: !Ref 'DomainName'
-              ReplaceKeyPrefixWith: error/404/
+        # Kiln emits the 404 page at the site root as `404.html`. CloudFront's
+        # CustomErrorResponses (below) are what actually serve it to viewers; this
+        # is the S3-website-level fallback. (Replaces the old Publish
+        # `error/404/index.html` document + redirect rule, which no longer exist.)
+        ErrorDocument: 404.html
   WebsiteCloudfront:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -48,10 +44,10 @@ Resources:
         CustomErrorResponses:
           - ErrorCode: 403
             ResponseCode: 404
-            ResponsePagePath: '/error/404/index.html'
+            ResponsePagePath: '/404.html'
           - ErrorCode: 404
             ResponseCode: 404
-            ResponsePagePath: '/error/404/index.html'
+            ResponsePagePath: '/404.html'
         DefaultCacheBehavior:
           AllowedMethods:
           - GET

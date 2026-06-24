@@ -9,12 +9,11 @@ jobs:
   build:
     name: Build and deploy
     runs-on: ubuntu-latest
-    container: swift:5.10-jammy
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build site
-        run: swift run
+        run: docker run --rm -v "$PWD":/website -w /website swift:6.2 swift run VaporWebsite
       - name: Configure AWS credentials
         id: cred
         uses: aws-actions/configure-aws-credentials@v4
@@ -44,7 +43,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
           AWS_REGION: "eu-west-2"
-          SOURCE_DIR: "Output"
+          SOURCE_DIR: "site"
       - name: Invalidate CloudFront
         uses: awact/cloudfront-action@master
         env:
