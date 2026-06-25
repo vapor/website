@@ -7,7 +7,9 @@
 // raw.githubusercontent.com (the GitHub Sponsors list there is generated with a
 // PAT in vapor/vapor's own workflow, so we don't need one). Results are cached
 // in localStorage. Falls back gracefully if both sources fail.
-document.addEventListener("DOMContentLoaded", function () {
+"use strict";
+
+document.addEventListener("DOMContentLoaded", async function () {
   const grid = document.getElementById("backers-grid");
   if (!grid) {
     return;
@@ -27,79 +29,78 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  Promise.allSettled([fetchGitHubBackers(), fetchOpenCollectiveBackers()]).then(
-    (results) => {
-      const github = results[0].status === "fulfilled" ? results[0].value : [];
-      const openCollective =
-        results[1].status === "fulfilled" ? results[1].value : [];
-      // README order: GitHub Sponsors first, then OpenCollective.
-      const backers = github.concat(openCollective);
-      if (backers.length === 0) {
-        showFallback();
-        return;
-      }
-      writeCache(backers);
-      render(backers);
-    },
-  );
+  // README order: GitHub Sponsors first, then OpenCollective. Each source fails
+  // independently (returns []), so one being down doesn't block the other.
+  const [github, openCollective] = await Promise.all([
+    fetchGitHubBackers(),
+    fetchOpenCollectiveBackers(),
+  ]);
+  const backers = github.concat(openCollective);
+  if (backers.length === 0) {
+    showFallback();
+    return;
+  }
+  writeCache(backers);
+  render(backers);
 
   // GitHub Sponsors - parse the generated block from the README.
-  function fetchGitHubBackers() {
-    return fetch(README_URL)
-      .then((response) =>
-        response.ok ? response.text() : Promise.reject(response.status),
-      )
-      .then((readme) => {
-        const block = readme.match(
-          /<!-- backers -->([\s\S]*?)<!-- backers -->/,
-        );
-        if (!block) {
-          return [];
-        }
-        const people = [];
-        const linkRe =
-          /<a href="(https:\/\/github\.com\/[^"]+)">\s*<img[^>]*alt="User avatar:\s*([^"]*)"/g;
-        let match;
-        while ((match = linkRe.exec(block[1])) !== null) {
-          const url = match[1];
-          const login = url.split("/").pop();
-          const name = decodeEntities(match[2]).trim() || login;
-          people.push({
-            name: name,
-            avatar: "https://github.com/" + login + ".png",
-            url: url,
-          });
-        }
-        return people;
-      });
+  async function fetchGitHubBackers() {
+    try {
+      const response = await fetch(README_URL);
+      if (!response.ok) {
+        return [];
+      }
+      const readme = await response.text();
+      const block = readme.match(/<!-- backers -->([\s\S]*?)<!-- backers -->/);
+      if (!block) {
+        return [];
+      }
+      const people = [];
+      const linkRe =
+        /<a href="(https:\/\/github\.com\/[^"]+)">\s*<img[^>]*alt="User avatar:\s*([^"]*)"/g;
+      let match;
+      while ((match = linkRe.exec(block[1])) !== null) {
+        const url = match[1];
+        const login = url.split("/").pop();
+        const name = decodeEntities(match[2]).trim() || login;
+        people.push({
+          name: name,
+          avatar: "https://github.com/" + login + ".png",
+          url: url,
+        });
+      }
+      return people;
+    } catch (error) {
+      return [];
+    }
   }
 
   // OpenCollective backers — paying members, deduped by profile.
-  function fetchOpenCollectiveBackers() {
-    return fetch(OPENCOLLECTIVE_URL)
-      .then((response) =>
-        response.ok ? response.json() : Promise.reject(response.status),
-      )
-      .then((data) => {
-        const byProfile = new Map();
-        data.forEach((member) => {
-          if (
-            member.role !== "BACKER" ||
-            (member.totalAmountDonated || 0) <= 0
-          ) {
-            return;
-          }
-          const key = member.profile || member.name;
-          if (!byProfile.has(key)) {
-            byProfile.set(key, {
-              name: member.name,
-              avatar: member.image || null,
-              url: member.profile || null,
-            });
-          }
-        });
-        return Array.from(byProfile.values());
+  async function fetchOpenCollectiveBackers() {
+    try {
+      const response = await fetch(OPENCOLLECTIVE_URL);
+      if (!response.ok) {
+        return [];
+      }
+      const data = await response.json();
+      const byProfile = new Map();
+      data.forEach((member) => {
+        if (member.role !== "BACKER" || (member.totalAmountDonated || 0) <= 0) {
+          return;
+        }
+        const key = member.profile || member.name;
+        if (!byProfile.has(key)) {
+          byProfile.set(key, {
+            name: member.name,
+            avatar: member.image || null,
+            url: member.profile || null,
+          });
+        }
       });
+      return Array.from(byProfile.values());
+    } catch (error) {
+      return [];
+    }
   }
 
   function render(backers) {

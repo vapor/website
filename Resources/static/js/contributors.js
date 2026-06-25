@@ -3,7 +3,9 @@
 // unauthenticated rate limit) on every visit. Falls back gracefully if the
 // request fails and there's no cache. Pagination is handled by vaporPaginate
 // (see pagination.js).
-document.addEventListener("DOMContentLoaded", function () {
+"use strict";
+
+document.addEventListener("DOMContentLoaded", async function () {
   const grid = document.getElementById("contributors-grid");
   if (!grid) {
     return;
@@ -23,26 +25,25 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  fetchAllContributors()
-    .then((data) => {
-      const people = data
-        .filter(
-          (c) =>
-            c.type === "User" &&
-            BLOCKED_LOGINS.indexOf(c.login.toLowerCase()) === -1,
-        )
-        .map((c) => ({
-          login: c.login,
-          avatar_url: c.avatar_url,
-          html_url: c.html_url,
-        }));
-      writeCache(people);
-      renderPeople(people);
-    })
-    .catch((error) => {
-      console.error("Error fetching contributors:", error);
-      showFallback();
-    });
+  try {
+    const data = await fetchAllContributors();
+    const people = data
+      .filter(
+        (c) =>
+          c.type === "User" &&
+          BLOCKED_LOGINS.indexOf(c.login.toLowerCase()) === -1,
+      )
+      .map((c) => ({
+        login: c.login,
+        avatar_url: c.avatar_url,
+        html_url: c.html_url,
+      }));
+    writeCache(people);
+    renderPeople(people);
+  } catch (error) {
+    console.error("Error fetching contributors:", error);
+    showFallback();
+  }
 
   // Walk the paginated contributors endpoint (100 per page) until a short page
   async function fetchAllContributors() {
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       if (!response.ok) {
         if (page === 1) {
-          return Promise.reject(response.status);
+          throw response.status;
         }
         break;
       }
