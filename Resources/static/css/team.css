@@ -1,84 +1,4 @@
-#team-page-body {
-    overflow-x: hidden;
-}
-
-.team-page {
-    padding-bottom: 96px;
-}
-
-.team-page-header {
-    text-align: center;
-    padding-top: 64px;
-    margin-bottom: 64px;
-}
-
-.team-page-header .main-page-caption {
-    max-width: 620px;
-    justify-content: center;
-}
-
-/* Core team */
-.team-core,
-.team-maintainers {
-    margin-bottom: 96px;
-}
-
-.team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 48px 32px;
-}
-
-.team-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 300px;
-    max-width: 100%;
-}
-
-.team-avatar {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 3px solid #f0f0f7;
-}
-
-.team-name {
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 2px;
-    color: #141416;
-}
-
-.team-handle {
-    color: #df3efb;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 12px;
-}
-
-.team-bio {
-    color: #666880;
-    font-size: 15px;
-    line-height: 150%;
-    margin-bottom: 16px;
-}
-
 /* Section headings */
-/* The shared design system caps h2 at max-width: 560px with no auto
-   margins, which left-aligns the box; center it here. */
-.team-section-title {
-    text-align: center;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    margin: 0 auto 48px;
-}
-
 .team-subsection-title {
     text-align: center;
     font-weight: 500;
@@ -125,10 +45,13 @@
     color: #141416;
 }
 
+.team-page {
+    padding-bottom: 0;
+}
+
 .team-sponsors {
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    margin-bottom: 96px;
     padding-top: 72px;
     padding-bottom: 72px;
     background-color: #fafafd;
@@ -163,7 +86,9 @@
     background: #ffffff;
     border: 1px solid #eaecf0;
     border-radius: 16px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
 }
 
 .sponsor-logo-link:hover {
@@ -227,25 +152,6 @@ a.team-sponsor:hover {
     pointer-events: none;
 }
 
-/* Social links */
-.team-socials {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
-}
-
-.team-socials .vapor-icon {
-    width: 18px;
-    height: 18px;
-    background-color: #df3efb;
-    transition: background-color 0.15s ease;
-}
-
-.team-socials a:hover .vapor-icon {
-    background-color: #b11fcc;
-}
-
 .team-socials .icon-linkedin-fill {
     -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8+PC9zdmc+");
     mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8+PC9zdmc+");
@@ -269,6 +175,7 @@ a.team-sponsor:hover {
     flex-direction: column;
     align-items: center;
     padding: 80px 32px;
+    margin-bottom: 96px;
     border-radius: 24px;
     text-align: center;
     color: #fafafd;
@@ -289,17 +196,14 @@ a.team-sponsor:hover {
 }
 
 /* Dark theme */
-.dark .team-page .team-name,
 .dark .team-page .contributor-name {
-    color: #f0f0f7;
+    color: #fafafd;
 }
 
-.dark .team-page .team-bio,
 .dark .team-page .sponsor-name {
     color: #9fa1bf;
 }
 
-.dark .team-page .team-avatar,
 .dark .team-page .contributor-avatar,
 .dark .team-page .sponsor-avatar {
     border-color: rgba(255, 255, 255, 0.08);
