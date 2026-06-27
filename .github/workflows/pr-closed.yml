@@ -22,6 +22,8 @@ jobs:
           aws-region: ${{ vars.OIDC_ROLE_REGION }}
       - name: Delete Website Bucket
         uses: brokenhandsio/s3-website-pr-action@9461e5d13f1c56290b8a006546dd5e845ef2c671 # v3.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           bucket-prefix: "vapor-website-pulls"
           bucket-region: "eu-west-2"
