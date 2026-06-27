@@ -81,13 +81,6 @@ extension TeamPage {
         var coreTeam: [TeamMember] {
             [
                 TeamMember(
-                    name: "Gwynne Raskind",
-                    handle: "@gwynne",
-                    bio: "Official Goddess of Swift on Server.",
-                    avatar: "https://github.com/gwynne.png",
-                    github: "https://github.com/gwynne"
-                ),
-                TeamMember(
                     name: "Tim Condon",
                     handle: "@0xTim",
                     bio: "Vapor Core Team and collector of Swift Workgroups",
@@ -95,6 +88,14 @@ extension TeamPage {
                     github: "https://github.com/0xTim",
                     mastodon: "https://hachyderm.io/@0xTim",
                     bluesky: "https://bsky.app/profile/0xtim.bsky.social"
+                ),
+                TeamMember(
+                    name: "Gwynne Raskind",
+                    handle: "@gwynne",
+                    bio: "Reality hacker, insufferable know-it-all, SSWG member, and ½ of Vapor's core team",
+                    avatar: "https://github.com/gwynne.png",
+                    github: "https://github.com/gwynne",
+                    mastodon: "https://mastodon.social/@gwynnethatiscalledgwynne"
                 ),
             ]
         }
