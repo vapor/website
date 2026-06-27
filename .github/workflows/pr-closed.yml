@@ -1,0 +1,27 @@
+name: PR - Closed
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+permissions:
+  contents: read
+  id-token: write
+  deployments: write
+
+jobs:
+  delete-s3:
+    name: Delete S3 Website
+    runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@254c19bd240aabef8777f48595e9d2d7b972184b # v6.2.1
+        with:
+          role-to-assume: ${{ vars.OIDC_ROLE_ARN }}
+          aws-region: ${{ vars.OIDC_ROLE_REGION }}
+      - name: Delete Website Bucket
+        uses: brokenhandsio/s3-website-pr-action@9461e5d13f1c56290b8a006546dd5e845ef2c671 # v3.0.1
+        with:
+          bucket-prefix: "vapor-website-pulls"
+          bucket-region: "eu-west-2"
