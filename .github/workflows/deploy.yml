@@ -12,6 +12,10 @@ jobs:
     name: Build and deploy
     runs-on: ubuntu-latest
     steps:
+      - name: Install latesst Swift
+        uses: vapor/swiftly-action@bedb227456c5f495afbef80baebee17a8a02cef4 # v0.2.1
+        with:
+          toolchain: latest
       - name: Checkout
         uses: actions/checkout@v7
       - name: Build site
