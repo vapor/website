@@ -3,12 +3,21 @@
 import Kiln
 
 let englishStrings: [String: String] = [
+    // Shared design-partial config. These are the same across all languages, so
+    // they live only in English (the default) and every locale falls back to them.
+    "siteId": "main",                 // footer/header link-target branching
+    "nav.brandText": "Vapor",         // header logo text + aria-label
+    "head.defaultOgType": "website",  // og:type for non-home, non-post pages
+    "head.homeSuffix": "",            // appended to site.name on the home page
+    "head.titleSeparator": " | ",     // between page title and site.name
     // Navigation / footer chrome not covered by the built-in `strings.*` set.
     "nav.closeMenu": "Close menu",
     "nav.documentation": "Documentation",
     "nav.frameworkDocs": "Framework Docs",
+    "footer.frameworkDocs": "Framework Docs",
     "nav.frameworkDocs.caption": "Learn how to use Vapor",
     "nav.apiDocs": "API Docs",
+    "footer.apiDocs": "API Docs",
     "nav.apiDocs.caption": "Reference documentation for Vapor",
     "nav.selectTheme": "Select theme",
     "footer.joinDiscord": "Join our Discord",
@@ -28,6 +37,7 @@ let englishStrings: [String: String] = [
     // Home — hero.
     "home.hero.title": "Swift, but on a server",
     "home.hero.caption": "Vapor provides a safe, performant and easy to use foundation to build HTTP servers, backends and APIs in Swift",
+    "footer.tagline": "Vapor provides a safe, performant and easy to use foundation to build HTTP servers, backends and APIs in Swift",
     // `{count}` is filled in by updateStarsCount.js with the live GitHub star count.
     "home.hero.stars": "{count} stars on GitHub",
     "home.hero.starsLoading": "… stars on GitHub",

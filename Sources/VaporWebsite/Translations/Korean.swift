@@ -5,6 +5,7 @@ import Kiln
 let koreanStrings: [String: String] = [
     "home.hero.title": "Swift, 하지만 서버에서",
     "home.hero.caption": "Vapor는 Swift로 HTTP 서버, 백엔드 및 API를 구축할 수 있는 안전하고 성능이 뛰어나며 사용하기 쉬운 기반을 제공합니다",
+    "footer.tagline": "Vapor는 Swift로 HTTP 서버, 백엔드 및 API를 구축할 수 있는 안전하고 성능이 뛰어나며 사용하기 쉬운 기반을 제공합니다",
     // Buttons / controls.
     "cta.getStarted": "시작하기",
     "cta.learnMore": "자세히 보기",
@@ -35,8 +36,10 @@ let koreanStrings: [String: String] = [
     // Nav / footer chrome.
     "nav.documentation": "문서",
     "nav.frameworkDocs": "프레임워크 문서",
+    "footer.frameworkDocs": "프레임워크 문서",
     "nav.frameworkDocs.caption": "Vapor 사용법 알아보기",
     "nav.apiDocs": "API 문서",
+    "footer.apiDocs": "API 문서",
     "nav.apiDocs.caption": "Vapor 레퍼런스 문서",
     "nav.selectTheme": "테마 선택",
     "nav.closeMenu": "메뉴 닫기",

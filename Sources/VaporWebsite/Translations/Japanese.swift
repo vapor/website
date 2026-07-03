@@ -5,6 +5,7 @@ import Kiln
 let japaneseStrings: [String: String] = [
     "home.hero.title": "Swift、ただしサーバー上で",
     "home.hero.caption": "Vaporは、SwiftでHTTPサーバー、バックエンド、APIを構築するための安全で高性能、かつ使いやすい基盤を提供します",
+    "footer.tagline": "Vaporは、SwiftでHTTPサーバー、バックエンド、APIを構築するための安全で高性能、かつ使いやすい基盤を提供します",
     // Buttons / controls.
     "cta.getStarted": "始める",
     "cta.learnMore": "詳しく見る",
@@ -35,8 +36,10 @@ let japaneseStrings: [String: String] = [
     // Nav / footer chrome.
     "nav.documentation": "ドキュメント",
     "nav.frameworkDocs": "フレームワークドキュメント",
+    "footer.frameworkDocs": "フレームワークドキュメント",
     "nav.frameworkDocs.caption": "Vaporの使い方を学ぶ",
     "nav.apiDocs": "APIドキュメント",
+    "footer.apiDocs": "APIドキュメント",
     "nav.apiDocs.caption": "Vaporのリファレンスドキュメント",
     "nav.selectTheme": "テーマを選択",
     "nav.closeMenu": "メニューを閉じる",

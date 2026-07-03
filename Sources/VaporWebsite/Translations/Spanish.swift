@@ -5,6 +5,7 @@ import Kiln
 let spanishStrings: [String: String] = [
     "home.hero.title": "Swift, pero en el servidor",
     "home.hero.caption": "Vapor proporciona una base segura, eficiente y fácil de usar para crear servidores HTTP, backends y APIs en Swift",
+    "footer.tagline": "Vapor proporciona una base segura, eficiente y fácil de usar para crear servidores HTTP, backends y APIs en Swift",
     // Buttons / controls.
     "cta.getStarted": "Comenzar",
     "cta.learnMore": "Más información",
@@ -35,8 +36,10 @@ let spanishStrings: [String: String] = [
     // Nav / footer chrome.
     "nav.documentation": "Documentación",
     "nav.frameworkDocs": "Documentación del framework",
+    "footer.frameworkDocs": "Documentación del framework",
     "nav.frameworkDocs.caption": "Aprende a usar Vapor",
     "nav.apiDocs": "Documentación de la API",
+    "footer.apiDocs": "Documentación de la API",
     "nav.apiDocs.caption": "Documentación de referencia de Vapor",
     "nav.selectTheme": "Seleccionar tema",
     "nav.closeMenu": "Cerrar el menú",

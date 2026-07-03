@@ -5,6 +5,7 @@ import Kiln
 let dutchStrings: [String: String] = [
     "home.hero.title": "Swift, maar dan op een server",
     "home.hero.caption": "Vapor biedt een veilige, performante en gebruiksvriendelijke basis om HTTP-servers, backends en API's in Swift te bouwen",
+    "footer.tagline": "Vapor biedt een veilige, performante en gebruiksvriendelijke basis om HTTP-servers, backends en API's in Swift te bouwen",
     // Buttons / controls.
     "cta.getStarted": "Aan de slag",
     "cta.learnMore": "Meer informatie",
@@ -35,8 +36,10 @@ let dutchStrings: [String: String] = [
     // Nav / footer chrome.
     "nav.documentation": "Documentatie",
     "nav.frameworkDocs": "Framework-documentatie",
+    "footer.frameworkDocs": "Framework-documentatie",
     "nav.frameworkDocs.caption": "Leer hoe je Vapor gebruikt",
     "nav.apiDocs": "API-documentatie",
+    "footer.apiDocs": "API-documentatie",
     "nav.apiDocs.caption": "Referentiedocumentatie voor Vapor",
     "nav.selectTheme": "Selecteer thema",
     "nav.closeMenu": "Menu sluiten",

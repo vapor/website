@@ -1,4 +1,5 @@
 import Kiln
+import VaporDesignTheme
 
 // The Vapor marketing site (vapor.codes), built with Kiln.
 //
@@ -24,6 +25,8 @@ let site = KilnSite(
     // resolves to https://vapor.codes/static/images/vapor-og-2x.png. Pages can
     // override per-file via `image:` front matter.
     image: "static/images/opengraph/vapor-og-en-2x.png",
+    // Emitted by the shared head as twitter:site / twitter:creator.
+    twitterSite: "@codevapor",
     // JSON-LD publisher entity (Organization + WebSite structured data). The same
     // entity is referenced by the docs site so they share one knowledge-graph node.
     organization: .init(
@@ -37,8 +40,13 @@ let site = KilnSite(
             "https://github.com/vapor",
         ]
     ),
+    // Rendered by the shared footer (#(site.copyright)).
+    copyright: "© QuTheory, LLC 2026",
     theme: .custom(
         directory: "Theme",
+        // Shared header/footer/head come from the design package as a theme layer;
+        // anything in this site's own Theme/ still overrides them.
+        sharedLayers: [VaporDesignTheme.directory],
         palette: .autoLightDark(primary: .black, accent: .blue)
     ),
     languages: [

@@ -5,6 +5,7 @@ import Kiln
 let chineseStrings: [String: String] = [
     "home.hero.title": "Swift，但在服务器上",
     "home.hero.caption": "Vapor 提供了一个安全、高性能且易于使用的基础，用于在 Swift 中构建 HTTP 服务器、后端和 API",
+    "footer.tagline": "Vapor 提供了一个安全、高性能且易于使用的基础，用于在 Swift 中构建 HTTP 服务器、后端和 API",
     // Buttons / controls.
     "cta.getStarted": "开始使用",
     "cta.learnMore": "了解更多",
@@ -35,8 +36,10 @@ let chineseStrings: [String: String] = [
     // Nav / footer chrome.
     "nav.documentation": "文档",
     "nav.frameworkDocs": "框架文档",
+    "footer.frameworkDocs": "框架文档",
     "nav.frameworkDocs.caption": "学习如何使用 Vapor",
     "nav.apiDocs": "API 文档",
+    "footer.apiDocs": "API 文档",
     "nav.apiDocs.caption": "Vapor 参考文档",
     "nav.selectTheme": "选择主题",
     "nav.closeMenu": "关闭菜单",

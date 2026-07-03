@@ -5,6 +5,7 @@ import Kiln
 let polishStrings: [String: String] = [
     "home.hero.title": "Swift, ale na serwerze",
     "home.hero.caption": "Vapor zapewnia bezpieczną, wydajną i łatwą w użyciu podstawę do tworzenia serwerów HTTP, backendów i interfejsów API w Swift",
+    "footer.tagline": "Vapor zapewnia bezpieczną, wydajną i łatwą w użyciu podstawę do tworzenia serwerów HTTP, backendów i interfejsów API w Swift",
     // Buttons / controls.
     "cta.getStarted": "Rozpocznij",
     "cta.learnMore": "Dowiedz się więcej",
@@ -35,8 +36,10 @@ let polishStrings: [String: String] = [
     // Nav / footer chrome.
     "nav.documentation": "Dokumentacja",
     "nav.frameworkDocs": "Dokumentacja frameworka",
+    "footer.frameworkDocs": "Dokumentacja frameworka",
     "nav.frameworkDocs.caption": "Naucz się korzystać z Vapor",
     "nav.apiDocs": "Dokumentacja API",
+    "footer.apiDocs": "Dokumentacja API",
     "nav.apiDocs.caption": "Dokumentacja referencyjna Vapor",
     "nav.selectTheme": "Wybierz motyw",
     "nav.closeMenu": "Zamknij menu",
