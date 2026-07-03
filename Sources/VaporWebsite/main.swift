@@ -61,7 +61,11 @@ let site = KilnSite(
         polishLanguage,
         chineseLanguage,
         brazilianPortugueseLanguage,
-    ]
+    ],
+    // This site localises via customStrings/templates, not per-locale content
+    // files — so Kiln's "fallback" pages are in fact fully translated. Keep them
+    // indexable instead of noindex.
+    indexFallbackPages: true
 ) {
     Page("Home", "index.md")
     Page("Showcase", "showcase.md")
