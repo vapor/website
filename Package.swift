@@ -12,13 +12,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // Local path dep while the shared-layer/head features are unreleased; swap
-        // back to the tagged release once Kiln + the design package are published.
-        // .package(url: "https://github.com/brokenhandsio/kiln.git", from: "1.3.0"),
-        .package(path: "../../BrokenHands/kiln"),
-        // Shared Vapor design templates (header/footer/head), consumed as a Kiln
-        // theme layer.
-        .package(path: "../design"),
+        .package(url: "https://github.com/brokenhandsio/kiln.git", from: "1.4.1"),
+        .package(url: "https://github.com/vapor/design.git", branch: "main"),
     ],
     targets: [
         .executableTarget(
