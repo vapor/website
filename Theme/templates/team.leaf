@@ -1,0 +1,124 @@
+#extend("base"):
+#export("content"):
+<link rel="stylesheet" href="/static/css/team.css">
+<div class="container team-page">
+    <div class="team-page-header">
+        <h1 class="main-title">#localise("team.header.title")</h1>
+        <h3 class="main-page-caption d-flex mx-auto">#localise("team.header.caption")</h3>
+    </div>
+
+    <div class="team-core">
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://github.com/0xTim.png" alt="Tim Condon" class="team-avatar">
+                <p class="team-name">Tim Condon</p>
+                <p class="team-handle">@0xTim</p>
+                <p class="team-bio">Vapor Core Team and collector of Swift Workgroups</p>
+                <div class="team-socials">
+                    <a href="https://github.com/0xTim" target="_blank"><span class="vapor-icon icon-github-fill" aria-label="GitHub"><span class="visually-hidden">GitHub</span></span></a>
+                    <a href="https://hachyderm.io/@0xTim" target="_blank"><span class="vapor-icon icon-mastodon-fill" aria-label="Mastodon"><span class="visually-hidden">Mastodon</span></span></a>
+                    <a href="https://bsky.app/profile/0xtim.bsky.social" target="_blank"><span class="vapor-icon icon-bsky-fill" aria-label="Bluesky"><span class="visually-hidden">Bluesky</span></span></a>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://github.com/gwynne.png" alt="Gwynne Raskind" class="team-avatar">
+                <p class="team-name">Gwynne Raskind</p>
+                <p class="team-handle">@gwynne</p>
+                <p class="team-bio">Reality hacker, insufferable know-it-all, SSWG member, and ½ of Vapor's core team</p>
+                <div class="team-socials">
+                    <a href="https://github.com/gwynne" target="_blank"><span class="vapor-icon icon-github-fill" aria-label="GitHub"><span class="visually-hidden">GitHub</span></span></a>
+                    <a href="https://mastodon.social/@gwynnethatiscalledgwynne" target="_blank"><span class="vapor-icon icon-mastodon-fill" aria-label="Mastodon"><span class="visually-hidden">Mastodon</span></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="team-maintainers">
+        <h2 class="team-section-title">#localise("team.maintainers")</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://github.com/mahdibm.png" alt="Mahdi Bahrami" class="team-avatar">
+                <p class="team-name">Mahdi Bahrami</p>
+                <p class="team-handle">@mahdibm</p>
+                <p class="team-bio">Server & DevOps engineer focused on performance, security, networking, and systems programming.</p>
+                <div class="team-socials">
+                    <a href="https://github.com/mahdibm" target="_blank"><span class="vapor-icon icon-github-fill" aria-label="GitHub"><span class="visually-hidden">GitHub</span></span></a>
+                    <a href="https://mastodon.social/@MahdiBM" target="_blank"><span class="vapor-icon icon-mastodon-fill" aria-label="Mastodon"><span class="visually-hidden">Mastodon</span></span></a>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://github.com/fpseverino.png" alt="Francesco Paolo Severino" class="team-avatar">
+                <p class="team-name">Francesco Paolo Severino</p>
+                <p class="team-handle">@fpseverino</p>
+                <p class="team-bio">Open source passionate and backend tinkerer</p>
+                <div class="team-socials">
+                    <a href="https://github.com/fpseverino" target="_blank"><span class="vapor-icon icon-github-fill" aria-label="GitHub"><span class="visually-hidden">GitHub</span></span></a>
+                    <a href="https://mastodon.social/@fpseverino" target="_blank"><span class="vapor-icon icon-mastodon-fill" aria-label="Mastodon"><span class="visually-hidden">Mastodon</span></span></a>
+                    <a href="https://bsky.app/profile/fpseverino.bsky.social" target="_blank"><span class="vapor-icon icon-bsky-fill" aria-label="Bluesky"><span class="visually-hidden">Bluesky</span></span></a>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://github.com/ptoffy.png" alt="Paul Toffoloni" class="team-avatar">
+                <p class="team-name">Paul Toffoloni</p>
+                <p class="team-handle">@ptoffy</p>
+                <p class="team-bio">Security and performance enthusiast</p>
+                <div class="team-socials">
+                    <a href="https://github.com/ptoffy" target="_blank"><span class="vapor-icon icon-github-fill" aria-label="GitHub"><span class="visually-hidden">GitHub</span></span></a>
+                    <a href="https://bsky.app/profile/ptoffy.bsky.social" target="_blank"><span class="vapor-icon icon-bsky-fill" aria-label="Bluesky"><span class="visually-hidden">Bluesky</span></span></a>
+                    <a href="https://linkedin.com/in/paultoffoloni" target="_blank"><span class="vapor-icon icon-linkedin-fill" aria-label="LinkedIn"><span class="visually-hidden">LinkedIn</span></span></a>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://github.com/kylebrowning.png" alt="Kyle Browning" class="team-avatar">
+                <p class="team-name">Kyle Browning</p>
+                <p class="team-handle">@kylebrowning</p>
+                <p class="team-bio">iOS engineer and engineering leader who's been shipping since 2008. Maintains APNSwift and builds tools that make iOS and server-side Swift work better together.</p>
+                <div class="team-socials">
+                    <a href="https://github.com/kylebrowning" target="_blank"><span class="vapor-icon icon-github-fill" aria-label="GitHub"><span class="visually-hidden">GitHub</span></span></a>
+                    <a href="https://www.linkedin.com/in/kyle-browning-eng-manager" target="_blank"><span class="vapor-icon icon-linkedin-fill" aria-label="LinkedIn"><span class="visually-hidden">LinkedIn</span></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="team-contributors">
+        <h2 class="team-section-title">#localise("team.contributors")</h2>
+        <div id="contributors-grid" class="contributors-grid"></div>
+        <p id="contributors-empty" class="contributors-empty d-none">#localise("team.contributors.fallback") <a href="https://github.com/vapor/vapor/graphs/contributors" target="_blank">GitHub</a>.</p>
+        <nav aria-label="Contributors pagination"><ul id="contributors-pagination" class="pagination justify-content-center team-pagination d-none"></ul></nav>
+    </div>
+
+    <div class="team-cta">
+        <h2 class="team-cta-title">#localise("team.cta.title")</h2>
+        <p class="team-cta-caption">#localise("team.cta.caption")</p>
+        <button class="btn btn-primary"><a href="https://github.com/sponsors/vapor" target="_blank">#localise("team.cta.button")</a></button>
+    </div>
+
+    <div class="team-sponsors">
+        <div class="container">
+            <h2 class="team-section-title"><span id="sponsors-count" data-sponsors="5"></span> #localise("team.sponsors.heading")</h2>
+            <div class="sponsors-group">
+                <h3 class="team-subsection-title">#localise("team.sponsors")</h3>
+                <div class="sponsors-logos">
+                    <a href="https://www.brokenhands.io" target="_blank" class="sponsor-logo-link"><img src="/static/images/sponsors/brokenhands.png" alt="Broken Hands" class="sponsor-logo"></a>
+                    <a href="https://www.emergetools.com" target="_blank" class="sponsor-logo-link"><img src="/static/images/sponsors/emerge-tools.png" alt="Emerge Tools" class="sponsor-logo"></a>
+                    <a href="https://github.com/MrLotU" target="_blank" class="sponsor-logo-link"><img src="https://user-images.githubusercontent.com/1342803/79599312-426a8580-80b3-11ea-89b3-8b2722485e37.png" alt="Jari" class="sponsor-logo"></a>
+                    <a href="https://github.com/DonutDane" target="_blank" class="sponsor-logo-link"><img src="https://user-images.githubusercontent.com/9938337/265657642-6b6b1705-9611-4547-8e2f-a3773fda87c6.png" alt="Donut Dane" class="sponsor-logo"></a>
+                    <a href="https://macstadium.com" target="_blank" class="sponsor-logo-link"><img src="https://uploads-ssl.webflow.com/5ac3c046c82724970fc60918/5c019d917bba312af7553b49_MacStadium-developerlogo.png" alt="MacStadium" class="sponsor-logo"></a>
+                </div>
+            </div>
+            <div class="sponsors-group">
+                <h3 class="team-subsection-title">#localise("team.backers")</h3>
+                <div id="backers-grid" class="sponsors-grid"></div>
+                <p id="backers-empty" class="contributors-empty d-none">#localise("team.backers.fallback") <a href="https://github.com/sponsors/vapor" target="_blank">GitHub</a> #localise("team.and") <a href="https://opencollective.com/vapor" target="_blank">OpenCollective</a>.</p>
+                <nav aria-label="Backers pagination"><ul id="backers-pagination" class="pagination justify-content-center team-pagination d-none"></ul></nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/pagination.js"></script>
+<script src="/static/js/contributors.js"></script>
+<script src="/static/js/sponsors.js"></script>
+#endexport
+#endextend

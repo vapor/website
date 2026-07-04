@@ -98,6 +98,25 @@ let englishStrings: [String: String] = [
     "showcase.cta.title": "Using Vapor in your app? We'd love to feature you!",
     "showcase.cta.caption": "Help demonstrate all the different ways Vapor can be used.",
     "showcase.cta.button": "Get in touch",
+    // Team page. The team-member names, handles, bios and social links are not
+    // localised (they live in team.leaf); only the surrounding chrome is.
+    "team.header.title": "Meet the team that builds and maintains Vapor",
+    "team.header.caption": "Vapor is built and maintained by a small core team with the help of an amazing community of contributors and sponsors.",
+    "team.maintainers": "Maintainers",
+    "team.contributors": "Contributors",
+    // The contributors/backers grids are populated client-side; the fallback text
+    // shows only if the GitHub/OpenCollective fetch fails. The link labels
+    // (GitHub, OpenCollective) live inline in the template.
+    "team.contributors.fallback": "Couldn't load contributors right now — see them all on",
+    "team.cta.title": "Want to help us grow? Become a supporter",
+    "team.cta.caption": "Vapor is 100% open source and supporter backed. A great way of getting involved is by sponsoring or supporting us monthly.",
+    "team.cta.button": "Support Vapor",
+    // Prefixed by the live sponsor+backer count (rendered by sponsors.js).
+    "team.sponsors.heading": "Sponsors are funding Vapor's work",
+    "team.sponsors": "Sponsors",
+    "team.backers": "Backers",
+    "team.backers.fallback": "Couldn't load backers right now — see them all on",
+    "team.and": "and",
 ]
 
 let englishLanguage = Language(.english, isDefault: true, customStrings: englishStrings, image: "static/images/opengraph/vapor-og-en-2x.png")
