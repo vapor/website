@@ -75,6 +75,20 @@ let koreanStrings: [String: String] = [
     "pages.team.title": "팀",
     "pages.supporters.title": "후원자",
     "pages.evangelists.title": "에반젤리스트",
+    // Team page.
+    "team.header.title": "Vapor를 개발하고 유지하는 팀을 소개합니다",
+    "team.header.caption": "Vapor는 소규모 핵심 팀이 개발하고 유지하며, 훌륭한 기여자와 후원자 커뮤니티의 도움을 받고 있습니다.",
+    "team.maintainers": "메인테이너",
+    "team.contributors": "기여자",
+    "team.contributors.fallback": "지금은 기여자를 불러올 수 없습니다. 전체 목록은 다음에서 확인하세요:",
+    "team.cta.title": "저희의 성장을 도와주시겠어요? 후원자가 되어 주세요",
+    "team.cta.caption": "Vapor는 100% 오픈 소스이며 후원자들의 지원으로 운영됩니다. 매월 스폰서 또는 후원으로 참여하시는 것이 좋은 방법입니다.",
+    "team.cta.button": "Vapor 후원하기",
+    "team.sponsors.heading": "명의 스폰서가 Vapor의 작업을 지원하고 있습니다",
+    "team.sponsors": "스폰서",
+    "team.backers": "후원자",
+    "team.backers.fallback": "지금은 후원자를 불러올 수 없습니다. 전체 목록은 다음에서 확인하세요:",
+    "team.and": "및",
 ]
 
 let koreanLanguage = Language(

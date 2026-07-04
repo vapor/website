@@ -75,6 +75,20 @@ let polishStrings: [String: String] = [
     "pages.team.title": "Zespół",
     "pages.supporters.title": "Wspierający",
     "pages.evangelists.title": "Ewangeliści",
+    // Team page.
+    "team.header.title": "Poznaj zespół, który tworzy i utrzymuje Vapora",
+    "team.header.caption": "Vapor jest tworzony i utrzymywany przez mały główny zespół, przy wsparciu wspaniałej społeczności współtwórców i sponsorów.",
+    "team.maintainers": "Opiekunowie",
+    "team.contributors": "Współtwórcy",
+    "team.contributors.fallback": "Nie udało się teraz załadować współtwórców — zobacz ich wszystkich na",
+    "team.cta.title": "Chcesz pomóc nam się rozwijać? Zostań wspierającym",
+    "team.cta.caption": "Vapor jest w 100% open source i utrzymuje się dzięki wspierającym. Świetnym sposobem na zaangażowanie się jest comiesięczne sponsorowanie lub wspieranie nas.",
+    "team.cta.button": "Wesprzyj Vapora",
+    "team.sponsors.heading": "sponsorów finansuje pracę nad Vaporem",
+    "team.sponsors": "Sponsorzy",
+    "team.backers": "Darczyńcy",
+    "team.backers.fallback": "Nie udało się teraz załadować darczyńców — zobacz ich wszystkich na",
+    "team.and": "i",
 ]
 
 let polishLanguage = Language(

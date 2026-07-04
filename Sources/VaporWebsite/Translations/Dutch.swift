@@ -75,6 +75,20 @@ let dutchStrings: [String: String] = [
     "pages.team.title": "Team",
     "pages.supporters.title": "Ondersteuners",
     "pages.evangelists.title": "Evangelisten",
+    // Team page.
+    "team.header.title": "Maak kennis met het team dat Vapor bouwt en onderhoudt",
+    "team.header.caption": "Vapor wordt gebouwd en onderhouden door een klein kernteam, met de hulp van een geweldige community van bijdragers en sponsors.",
+    "team.maintainers": "Maintainers",
+    "team.contributors": "Bijdragers",
+    "team.contributors.fallback": "Kan de bijdragers momenteel niet laden — bekijk ze allemaal op",
+    "team.cta.title": "Wil je ons helpen groeien? Word een ondersteuner",
+    "team.cta.caption": "Vapor is 100% open source en wordt gedragen door ondersteuners. Een geweldige manier om betrokken te raken is door ons maandelijks te sponsoren of te ondersteunen.",
+    "team.cta.button": "Vapor ondersteunen",
+    "team.sponsors.heading": "sponsors financieren het werk van Vapor",
+    "team.sponsors": "Sponsors",
+    "team.backers": "Donateurs",
+    "team.backers.fallback": "Kan de donateurs momenteel niet laden — bekijk ze allemaal op",
+    "team.and": "en",
 ]
 
 let dutchLanguage = Language(

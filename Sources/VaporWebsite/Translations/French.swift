@@ -75,6 +75,20 @@ let frenchStrings: [String: String] = [
     "pages.team.title": "Équipe",
     "pages.supporters.title": "Soutiens",
     "pages.evangelists.title": "Évangélistes",
+    // Team page.
+    "team.header.title": "Rencontrez l'équipe qui développe et maintient Vapor",
+    "team.header.caption": "Vapor est développé et maintenu par une petite équipe centrale, avec l'aide d'une formidable communauté de contributeurs et de sponsors.",
+    "team.maintainers": "Mainteneurs",
+    "team.contributors": "Contributeurs",
+    "team.contributors.fallback": "Impossible de charger les contributeurs pour le moment — retrouvez-les tous sur",
+    "team.cta.title": "Envie de nous aider à grandir ? Devenez un soutien",
+    "team.cta.caption": "Vapor est 100 % open source et financé par ses soutiens. Un excellent moyen de vous impliquer est de nous parrainer ou de nous soutenir chaque mois.",
+    "team.cta.button": "Soutenir Vapor",
+    "team.sponsors.heading": "sponsors financent le travail de Vapor",
+    "team.sponsors": "Sponsors",
+    "team.backers": "Soutiens",
+    "team.backers.fallback": "Impossible de charger les soutiens pour le moment — retrouvez-les tous sur",
+    "team.and": "et",
 ]
 
 let frenchLanguage = Language(

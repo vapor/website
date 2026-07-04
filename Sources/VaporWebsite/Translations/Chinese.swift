@@ -75,6 +75,20 @@ let chineseStrings: [String: String] = [
     "pages.team.title": "团队",
     "pages.supporters.title": "赞助者",
     "pages.evangelists.title": "布道师",
+    // Team page.
+    "team.header.title": "认识开发和维护 Vapor 的团队",
+    "team.header.caption": "Vapor 由一个小型核心团队开发和维护，并得到了由贡献者和赞助者组成的出色社区的支持。",
+    "team.maintainers": "维护者",
+    "team.contributors": "贡献者",
+    "team.contributors.fallback": "暂时无法加载贡献者，你可以在以下位置查看全部：",
+    "team.cta.title": "想帮助我们成长吗？成为支持者",
+    "team.cta.caption": "Vapor 是 100% 开源的，并依靠支持者的资助。每月赞助或支持我们，是参与其中的绝佳方式。",
+    "team.cta.button": "支持 Vapor",
+    "team.sponsors.heading": "位赞助者正在资助 Vapor 的工作",
+    "team.sponsors": "赞助者",
+    "team.backers": "支持者",
+    "team.backers.fallback": "暂时无法加载支持者，你可以在以下位置查看全部：",
+    "team.and": "和",
 ]
 
 let chineseLanguage = Language(

@@ -75,6 +75,20 @@ let italianStrings: [String: String] = [
     "pages.team.title": "Team",
     "pages.supporters.title": "Sostenitori",
     "pages.evangelists.title": "Evangelisti",
+    // Team page.
+    "team.header.title": "Scopri il team che sviluppa e mantiene Vapor",
+    "team.header.caption": "Vapor è sviluppato e mantenuto da un piccolo team centrale, con l'aiuto di una fantastica community di contributori e sponsor.",
+    "team.maintainers": "Maintainer",
+    "team.contributors": "Contributori",
+    "team.contributors.fallback": "Impossibile caricare i contributori al momento: puoi vederli tutti su",
+    "team.cta.title": "Vuoi aiutarci a crescere? Diventa un sostenitore",
+    "team.cta.caption": "Vapor è 100% open source e sostenuto dai suoi sostenitori. Un ottimo modo per partecipare è sponsorizzarci o sostenerci ogni mese.",
+    "team.cta.button": "Sostieni Vapor",
+    "team.sponsors.heading": "sponsor stanno finanziando il lavoro di Vapor",
+    "team.sponsors": "Sponsor",
+    "team.backers": "Sostenitori",
+    "team.backers.fallback": "Impossibile caricare i sostenitori al momento: puoi vederli tutti su",
+    "team.and": "e",
 ]
 
 let italianLanguage = Language(

@@ -75,6 +75,20 @@ let spanishStrings: [String: String] = [
     "pages.team.title": "Equipo",
     "pages.supporters.title": "Colaboradores",
     "pages.evangelists.title": "Evangelistas",
+    // Team page.
+    "team.header.title": "Conoce al equipo que crea y mantiene Vapor",
+    "team.header.caption": "Vapor es creado y mantenido por un pequeño equipo central, con la ayuda de una increíble comunidad de colaboradores y patrocinadores.",
+    "team.maintainers": "Mantenedores",
+    "team.contributors": "Colaboradores",
+    "team.contributors.fallback": "No se pudieron cargar los colaboradores en este momento: puedes verlos todos en",
+    "team.cta.title": "¿Quieres ayudarnos a crecer? Conviértete en patrocinador",
+    "team.cta.caption": "Vapor es 100 % de código abierto y se sostiene gracias a sus patrocinadores. Una excelente forma de participar es patrocinándonos o apoyándonos mensualmente.",
+    "team.cta.button": "Apoyar a Vapor",
+    "team.sponsors.heading": "patrocinadores están financiando el trabajo de Vapor",
+    "team.sponsors": "Patrocinadores",
+    "team.backers": "Mecenas",
+    "team.backers.fallback": "No se pudieron cargar los mecenas en este momento: puedes verlos todos en",
+    "team.and": "y",
 ]
 
 let spanishLanguage = Language(

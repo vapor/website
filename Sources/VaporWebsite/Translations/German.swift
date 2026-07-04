@@ -72,6 +72,20 @@ let germanStrings: [String: String] = [
     "showcase.cta.title": "Nutzt du Vapor in deiner App? Wir würden dich gerne vorstellen!",
     "showcase.cta.caption": "Hilf zu zeigen, auf wie viele verschiedene Arten Vapor eingesetzt werden kann.",
     "showcase.cta.button": "Kontakt aufnehmen",
+    // Team page.
+    "team.header.title": "Lerne das Team kennen, das Vapor entwickelt und pflegt",
+    "team.header.caption": "Vapor wird von einem kleinen Kernteam entwickelt und gepflegt – mit der Hilfe einer großartigen Community aus Mitwirkenden und Sponsoren.",
+    "team.maintainers": "Maintainer",
+    "team.contributors": "Mitwirkende",
+    "team.contributors.fallback": "Mitwirkende konnten gerade nicht geladen werden – alle findest du auf",
+    "team.cta.title": "Möchtest du uns beim Wachsen helfen? Werde Unterstützer",
+    "team.cta.caption": "Vapor ist zu 100 % Open Source und wird von Unterstützern getragen. Eine großartige Möglichkeit, dich einzubringen, ist ein monatliches Sponsoring oder eine Unterstützung.",
+    "team.cta.button": "Vapor unterstützen",
+    "team.sponsors.heading": "Sponsoren finanzieren Vapors Arbeit",
+    "team.sponsors": "Sponsoren",
+    "team.backers": "Förderer",
+    "team.backers.fallback": "Förderer konnten gerade nicht geladen werden – alle findest du auf",
+    "team.and": "und",
 ]
 
 let germanLanguage = Language(

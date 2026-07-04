@@ -75,6 +75,20 @@ let brazilianPortugueseStrings: [String: String] = [
     "pages.team.title": "Equipe",
     "pages.supporters.title": "Apoiadores",
     "pages.evangelists.title": "Evangelistas",
+    // Team page.
+    "team.header.title": "Conheça a equipe que cria e mantém o Vapor",
+    "team.header.caption": "O Vapor é criado e mantido por uma pequena equipe central, com a ajuda de uma incrível comunidade de contribuidores e patrocinadores.",
+    "team.maintainers": "Mantenedores",
+    "team.contributors": "Contribuidores",
+    "team.contributors.fallback": "Não foi possível carregar os contribuidores agora — veja todos eles no",
+    "team.cta.title": "Quer nos ajudar a crescer? Torne-se um apoiador",
+    "team.cta.caption": "O Vapor é 100% código aberto e mantido por apoiadores. Uma ótima forma de participar é nos patrocinando ou apoiando mensalmente.",
+    "team.cta.button": "Apoiar o Vapor",
+    "team.sponsors.heading": "patrocinadores estão financiando o trabalho do Vapor",
+    "team.sponsors": "Patrocinadores",
+    "team.backers": "Apoiadores",
+    "team.backers.fallback": "Não foi possível carregar os apoiadores agora — veja todos eles no",
+    "team.and": "e",
 ]
 
 let brazilianPortugueseLanguage = Language(

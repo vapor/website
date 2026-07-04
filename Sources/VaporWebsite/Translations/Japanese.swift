@@ -75,6 +75,20 @@ let japaneseStrings: [String: String] = [
     "pages.team.title": "チーム",
     "pages.supporters.title": "サポーター",
     "pages.evangelists.title": "エヴァンジェリスト",
+    // Team page.
+    "team.header.title": "Vapor を開発・保守するチームをご紹介します",
+    "team.header.caption": "Vapor は小さなコアチームによって開発・保守されており、素晴らしいコントリビューターとスポンサーのコミュニティに支えられています。",
+    "team.maintainers": "メンテナー",
+    "team.contributors": "コントリビューター",
+    "team.contributors.fallback": "現在コントリビューターを読み込めませんでした。すべてはこちらでご覧いただけます：",
+    "team.cta.title": "私たちの成長を手伝いませんか？サポーターになろう",
+    "team.cta.caption": "Vapor は 100% オープンソースで、サポーターによって支えられています。毎月スポンサーまたはサポートしていただくことが、参加する素晴らしい方法です。",
+    "team.cta.button": "Vapor を支援する",
+    "team.sponsors.heading": "人のスポンサーが Vapor の活動を支援しています",
+    "team.sponsors": "スポンサー",
+    "team.backers": "支援者",
+    "team.backers.fallback": "現在支援者を読み込めませんでした。すべてはこちらでご覧いただけます：",
+    "team.and": "と",
 ]
 
 let japaneseLanguage = Language(
