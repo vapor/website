@@ -61,6 +61,7 @@ let site = KilnSite(
         polishLanguage,
         chineseLanguage,
         brazilianPortugueseLanguage,
+        arabicLanguage,
     ],
     // This site localises via customStrings/templates, not per-locale content
     // files — so Kiln's "fallback" pages are in fact fully translated. Keep them

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="#(language.locale)">
+<html lang="#(language.locale)" dir="#(language.direction)">
 <head>
     #extend("partials/head")
 </head>

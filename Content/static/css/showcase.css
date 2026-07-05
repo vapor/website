@@ -5,8 +5,7 @@
     #vapor-navbar {
         position: fixed;
         top: 0;
-        left: 0;
-        right: 0;
+        inset-inline: 0;
     }
     #showcase-page-body {
         padding-top: 80px;
@@ -55,7 +54,7 @@
 }
 .showcase-page .showcase-search-icon {
     position: absolute;
-    left: 16px;
+    inset-inline-start: 16px;
     top: 50%;
     transform: translateY(-50%);
     width: 18px;
@@ -113,7 +112,7 @@
 }
 .showcase-page .showcase-sort-icon {
     position: absolute;
-    right: 16px;
+    inset-inline-end: 16px;
     top: 50%;
     transform: translateY(-50%);
     width: 16px;
@@ -156,8 +155,8 @@
     box-shadow: 0 12px 32px rgba(20, 20, 22, 0.08);
 }
 .showcase-page .showcase-grid .card .card-img-top {
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
+    border-start-start-radius: 24px;
+    border-start-end-radius: 24px;
     aspect-ratio: 16/10;
     object-fit: cover;
     object-position: top;
@@ -200,7 +199,7 @@
     background-color: #df3efb;
     width: 14px;
     height: 15px;
-    margin-left: 2px;
+    margin-inline-start: 2px;
 }
 .showcase-page .showcase-empty {
     text-align: center;
