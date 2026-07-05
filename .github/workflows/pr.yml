@@ -6,32 +6,42 @@ on:
   pull_request:
     branches:
       - main
+permissions:
+  contents: read
+  id-token: write
+  deployments: write
 
 jobs:
   build:
     name: Build and Deploy PR
     runs-on: ubuntu-latest
-    permissions: { id-token: write, deployments: write, contents: read }
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Install latesst Swift
+        uses: vapor/swiftly-action@bedb227456c5f495afbef80baebee17a8a02cef4 # v0.2.1
         with:
-          python-version: "3.10"
+          toolchain: latest
+      - name: Checkout code
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
       - name: Setup CloudFormation linter
-        uses: ScottBrenner/cfn-lint-action@v2
+        uses: ScottBrenner/cfn-lint-action@ed184e91f5085a2932501da8314e899e5e0ef5be # v2.7.1
       - name: Run CloudFormation linter
         run: cfn-lint -t stack.yml
       - name: Build site
-        run: docker run --rm -v "$PWD":/website -w /website swift:6.2 swift run VaporWebsite
+        run: swift run VaporWebsite
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@254c19bd240aabef8777f48595e9d2d7b972184b # v6.2.1
+        with:
+          role-to-assume: ${{ vars.OIDC_ROLE_ARN }}
+          aws-region: ${{ vars.OIDC_ROLE_REGION }}
       - name: Deploy S3 Website
         if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
-        uses: brokenhandsio/s3-website-pr-action@v2
+        uses: brokenhandsio/s3-website-pr-action@9461e5d13f1c56290b8a006546dd5e845ef2c671 # v3.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.SITE_DEPLOYER_ACCESS_KEY_SECRET }}
         with:
           bucket-prefix: "vapor-website-pulls"
           folder-to-copy: "./site"
