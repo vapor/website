@@ -3,6 +3,7 @@
 /.build
 /.swiftpm
 /*.xcodeproj
+/Packages
 /site
 .vscode
 .claude/
