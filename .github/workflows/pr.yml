@@ -31,7 +31,7 @@ jobs:
       - name: Run CloudFormation linter
         run: cfn-lint -t stack.yml
       - name: Build site
-        run: swift run
+        run: swift run VaporWebsite
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@254c19bd240aabef8777f48595e9d2d7b972184b # v6.2.1
         with:
@@ -44,5 +44,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           bucket-prefix: "vapor-website-pulls"
-          folder-to-copy: "./Output"
+          folder-to-copy: "./site"
           bucket-region: "eu-west-2"

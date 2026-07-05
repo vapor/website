@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="#(language.locale)">
+<head>
+    #extend("partials/head")
+</head>
+<body#if(page.isHome): id="main-page-body" class="main-site-faded-background"#else:#if(page.frontMatter.bodyClass): class="#(page.frontMatter.bodyClass)"#endif#endif>
+    <a class="kiln-skip-link" href="#main-content">#(strings.skipToContent)</a>
+    #extend("partials/header")
+    <main id="main-content" tabindex="-1">#import("content")</main>
+    #extend("partials/footer")
+    <script src="https://design.vapor.codes/main.js"></script>
+    <script src="/static/js/updateStarsCount.js"></script>
+    <script src="/static/js/scrollNavbar.js"></script>
+    <script src="/static/js/scrollShowcase.js"></script>
+</body>
+</html>

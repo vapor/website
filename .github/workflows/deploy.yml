@@ -1,4 +1,5 @@
 name: Build and deploy vapor.codes
+
 on:
   push:
     branches:
@@ -12,14 +13,14 @@ jobs:
     name: Build and deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Install latesst Swift
+      - name: Install latest Swift
         uses: vapor/swiftly-action@bedb227456c5f495afbef80baebee17a8a02cef4 # v0.2.1
         with:
           toolchain: latest
       - name: Checkout
         uses: actions/checkout@v7
       - name: Build site
-        run: swift run
+        run: swift run VaporWebsite
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@254c19bd240aabef8777f48595e9d2d7b972184b # v6.2.1
         with:
@@ -36,7 +37,7 @@ jobs:
             AcmCertificateArn=${{ secrets.CERTIFICATE_ARN }}
       - name: Deploy Site to S3
         run: |
-          aws s3 sync ./Output 's3://vapor-main-site/' --no-progress --acl public-read --follow-symlinks --delete
+          aws s3 sync ./site 's3://vapor-main-site/' --no-progress --acl public-read --follow-symlinks --delete
       - name: Invalidate CloudFront
         run: |
           aws cloudfront create-invalidation --distribution-id '${{ secrets.DISTRIBUTION_ID }}' --paths '/*'
