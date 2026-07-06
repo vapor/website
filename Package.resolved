@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/brokenhandsio/kiln.git",
       "state" : {
-        "revision" : "a20693b0a1246e1febaa3ef5f9bdac990f0261f5",
-        "version" : "1.5.0"
+        "revision" : "a4c3a3d8f62660d0cabab3627b1776c27316cc66",
+        "version" : "1.5.1"
       }
     },
     {
