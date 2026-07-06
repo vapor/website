@@ -1,5 +1,5 @@
 {
-  "originHash" : "d30b4b20c6c4fd1c22feb0f5994c6e9f88592e75ce1a2e309c38e4142a715bcd",
+  "originHash" : "06b872ddefe7defbed2bd87b4ffb9cc6de2fa0f45909940c99449429a12253a5",
   "pins" : [
     {
       "identity" : "design",
@@ -8,6 +8,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "564255854f4ec4b2149263bc7898812fda48e2dc"
+      }
+    },
+    {
+      "identity" : "kiln",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/brokenhandsio/kiln.git",
+      "state" : {
+        "revision" : "a20693b0a1246e1febaa3ef5f9bdac990f0261f5",
+        "version" : "1.5.0"
       }
     },
     {
