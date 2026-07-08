@@ -81,5 +81,5 @@ let contentDirectory = "Content"
 let outputDirectory = "site"
 
 print("Building site into ./\(outputDirectory) …")
-try await Kiln.build(site, contentDirectory: contentDirectory, outputDirectory: outputDirectory)
+try await Kiln.build(site, contentDirectory: contentDirectory, outputDirectory: outputDirectory, leafTags: VaporDesignTheme.leafTags)
 print("Done.")
