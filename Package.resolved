@@ -1,13 +1,13 @@
 {
-  "originHash" : "06b872ddefe7defbed2bd87b4ffb9cc6de2fa0f45909940c99449429a12253a5",
+  "originHash" : "1d12fc5d69b7defe34f167b16bcb45e357fe48cf372dc0aa3c5a18be8eca647b",
   "pins" : [
     {
       "identity" : "design",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/design.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "06be1cdb85d858cac0de2678247cdaad3b9cf8f1"
+        "revision" : "8dd8697afd6cf1464ac30a52287a92144bed0d67",
+        "version" : "1.0.0-rc.1"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/brokenhandsio/kiln.git",
       "state" : {
-        "revision" : "a20693b0a1246e1febaa3ef5f9bdac990f0261f5",
-        "version" : "1.5.0"
+        "revision" : "17a1246508b29af4a1287df3ea8cc8fee921f301",
+        "version" : "1.8.2"
       }
     },
     {
@@ -96,8 +96,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-system.git",
       "state" : {
-        "revision" : "7502b711c92a17741fa625d722b0ccbd595d8ed1",
-        "version" : "1.7.2"
+        "revision" : "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+        "version" : "1.7.4"
       }
     },
     {
