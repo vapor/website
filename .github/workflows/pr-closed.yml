@@ -13,7 +13,7 @@ jobs:
   delete-s3:
     name: Delete S3 Website
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.actor != 'dependabot[bot]' }}
+    if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.event.pull_request.user.login != 'dependabot[bot]' }}
     steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@254c19bd240aabef8777f48595e9d2d7b972184b # v6.2.1
