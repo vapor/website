@@ -6,6 +6,10 @@ let englishStrings: [String: String] = [
     // Shared design-partial config. These are the same across all languages, so
     // they live only in English (the default) and every locale falls back to them.
     "siteId": "main",                 // footer/header link-target branching
+    // Announcement banner (shared partials/announce.leaf). announceMessage shows
+    // the banner; clear it to hide. No pill / link for this notice.
+    "announceId": "vapor-week-2026",
+    "announceMessage": "Vapor Week is coming 14th September!",
     "nav.brandText": "Vapor",         // header logo text + aria-label
     "head.defaultOgType": "website",  // og:type for non-home, non-post pages
     "head.homeSuffix": "",            // appended to site.name on the home page

@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/design.git",
       "state" : {
-        "revision" : "ef3c8ba17715dea419fedf262f0cf4dbaf7b7347",
-        "version" : "1.1.0"
+        "revision" : "92f962837aedb3ad4c9061190a3c14b46f893d82",
+        "version" : "1.1.1"
       }
     },
     {
