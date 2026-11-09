@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   const CACHE_TTL = 6 * 60 * 60 * 1000; // 6 hours
   // Bot accounts that aren't flagged as type "Bot" by the API.
   const BLOCKED_LOGINS = ["vaporbot"];
+  // Localised in the template; {login} is replaced with the contributor's handle.
+  const PROFILE_LABEL = grid.dataset.profileLabel || "{login} on GitHub";
 
   const cached = readCache();
   if (cached) {
@@ -117,14 +119,24 @@ document.addEventListener("DOMContentLoaded", async function () {
   function buildCard(contributor) {
     const url = contributor.html_url;
     const login = contributor.login;
+    // Escaped because the translated label is interpolated into HTML.
+    const label = escapeAttribute(PROFILE_LABEL.replace("{login}", login));
 
     return `
             <div class="contributor-card">
-                <a href="${url}" target="_blank" rel="noopener" aria-label="${login} on GitHub">
+                <a href="${url}" target="_blank" rel="noopener" aria-label="${label}">
                     <img src="${contributor.avatar_url}" alt="${login}" class="contributor-avatar" loading="lazy">
                 </a>
                 <p class="contributor-name">${login}</p>
             </div>`;
+  }
+
+  function escapeAttribute(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
   }
 
   function shuffle(array) {
