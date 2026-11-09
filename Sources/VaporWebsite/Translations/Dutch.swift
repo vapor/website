@@ -89,6 +89,12 @@ let dutchStrings: [String: String] = [
     "team.backers": "Donateurs",
     "team.backers.fallback": "Kan de donateurs momenteel niet laden — bekijk ze allemaal op",
     "team.and": "en",
+    "pagination.previous": "Vorige",
+    "pagination.next": "Volgende",
+    "pagination.pageOf": "Pagina {current} van {total}",
+    "team.contributors.paginationLabel": "Bijdragerspaginering",
+    "team.backers.paginationLabel": "Donateurspaginering",
+    "team.contributors.profileLabel": "{login} op GitHub",
 ]
 
 let dutchLanguage = Language(

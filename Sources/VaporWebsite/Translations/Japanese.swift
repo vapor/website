@@ -89,6 +89,12 @@ let japaneseStrings: [String: String] = [
     "team.backers": "支援者",
     "team.backers.fallback": "現在支援者を読み込めませんでした。すべてはこちらでご覧いただけます：",
     "team.and": "と",
+    "pagination.previous": "前へ",
+    "pagination.next": "次へ",
+    "pagination.pageOf": "{current} / {total} ページ",
+    "team.contributors.paginationLabel": "コントリビューターのページ送り",
+    "team.backers.paginationLabel": "支援者のページ送り",
+    "team.contributors.profileLabel": "GitHub の {login}",
 ]
 
 let japaneseLanguage = Language(

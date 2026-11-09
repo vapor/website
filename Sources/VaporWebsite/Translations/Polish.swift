@@ -89,6 +89,12 @@ let polishStrings: [String: String] = [
     "team.backers": "Darczyńcy",
     "team.backers.fallback": "Nie udało się teraz załadować darczyńców — zobacz ich wszystkich na",
     "team.and": "i",
+    "pagination.previous": "Poprzednia",
+    "pagination.next": "Następna",
+    "pagination.pageOf": "Strona {current} z {total}",
+    "team.contributors.paginationLabel": "Paginacja współtwórców",
+    "team.backers.paginationLabel": "Paginacja darczyńców",
+    "team.contributors.profileLabel": "{login} na GitHubie",
 ]
 
 let polishLanguage = Language(

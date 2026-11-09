@@ -124,6 +124,14 @@ let englishStrings: [String: String] = [
     "team.backers": "Backers",
     "team.backers.fallback": "Couldn't load backers right now — see them all on",
     "team.and": "and",
+    // Client-side pagination (team + showcase) and contributor links. Read by the
+    // scripts from data attributes; {current}/{total} and {login} are placeholders.
+    "pagination.previous": "Previous",
+    "pagination.next": "Next",
+    "pagination.pageOf": "Page {current} of {total}",
+    "team.contributors.paginationLabel": "Contributors pagination",
+    "team.backers.paginationLabel": "Backers pagination",
+    "team.contributors.profileLabel": "{login} on GitHub",
 ]
 
 let englishLanguage = Language(.english, isDefault: true, customStrings: englishStrings, image: "static/images/opengraph/vapor-og-en-2x.png")

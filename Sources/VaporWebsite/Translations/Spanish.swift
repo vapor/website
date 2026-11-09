@@ -89,6 +89,12 @@ let spanishStrings: [String: String] = [
     "team.backers": "Mecenas",
     "team.backers.fallback": "No se pudieron cargar los mecenas en este momento: puedes verlos todos en",
     "team.and": "y",
+    "pagination.previous": "Anterior",
+    "pagination.next": "Siguiente",
+    "pagination.pageOf": "Página {current} de {total}",
+    "team.contributors.paginationLabel": "Paginación de colaboradores",
+    "team.backers.paginationLabel": "Paginación de mecenas",
+    "team.contributors.profileLabel": "{login} en GitHub",
 ]
 
 let spanishLanguage = Language(

@@ -89,6 +89,12 @@ let koreanStrings: [String: String] = [
     "team.backers": "후원자",
     "team.backers.fallback": "지금은 후원자를 불러올 수 없습니다. 전체 목록은 다음에서 확인하세요:",
     "team.and": "및",
+    "pagination.previous": "이전",
+    "pagination.next": "다음",
+    "pagination.pageOf": "{total}페이지 중 {current}페이지",
+    "team.contributors.paginationLabel": "기여자 페이지 매김",
+    "team.backers.paginationLabel": "후원자 페이지 매김",
+    "team.contributors.profileLabel": "GitHub의 {login}",
 ]
 
 let koreanLanguage = Language(

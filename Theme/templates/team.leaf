@@ -84,9 +84,9 @@
 
     <div class="team-contributors">
         <h2 class="team-section-title">#localise("team.contributors")</h2>
-        <div id="contributors-grid" class="contributors-grid"></div>
+        <div id="contributors-grid" class="contributors-grid" data-profile-label="#localise("team.contributors.profileLabel")"></div>
         <p id="contributors-empty" class="contributors-empty d-none">#localise("team.contributors.fallback") <a href="https://github.com/vapor/vapor/graphs/contributors" target="_blank">GitHub</a>.</p>
-        <nav aria-label="Contributors pagination"><ul id="contributors-pagination" class="pagination justify-content-center team-pagination d-none"></ul></nav>
+        <nav aria-label="#localise("team.contributors.paginationLabel")"><ul id="contributors-pagination" class="pagination justify-content-center team-pagination d-none" data-previous="#localise("pagination.previous")" data-next="#localise("pagination.next")" data-page-of="#localise("pagination.pageOf")"></ul></nav>
     </div>
 
     <div class="team-cta">
@@ -112,7 +112,7 @@
                 <h3 class="team-subsection-title">#localise("team.backers")</h3>
                 <div id="backers-grid" class="sponsors-grid"></div>
                 <p id="backers-empty" class="contributors-empty d-none">#localise("team.backers.fallback") <a href="https://github.com/sponsors/vapor" target="_blank">GitHub</a> #localise("team.and") <a href="https://opencollective.com/vapor" target="_blank">OpenCollective</a>.</p>
-                <nav aria-label="Backers pagination"><ul id="backers-pagination" class="pagination justify-content-center team-pagination d-none"></ul></nav>
+                <nav aria-label="#localise("team.backers.paginationLabel")"><ul id="backers-pagination" class="pagination justify-content-center team-pagination d-none" data-previous="#localise("pagination.previous")" data-next="#localise("pagination.next")" data-page-of="#localise("pagination.pageOf")"></ul></nav>
             </div>
         </div>
     </div>
