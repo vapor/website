@@ -84,6 +84,16 @@
                 </div>
             </div>
         </div>
+        <div class="showcase-grid-item" data-index="6" data-name="WishKit" data-description="WishKit lets iOS apps and SaaS products collect feature requests from their users and prioritize them by votes.">
+            <div class="card" id="wishkit-card">
+                <img src="/static/images/showcase/wishkit.png" alt="WishKit" class="card-img-top"/>
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title">WishKit</h2>
+                    <p class="card-text">WishKit lets iOS apps and SaaS products collect feature requests from their users and prioritize them by votes.</p>
+                    <a href="https://www.wishkit.io" target="_blank" class="btn mt-auto">#localise("cta.seeInAction")<span class="vapor-icon icon-arrow-narrow-up-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <p id="showcase-empty" class="showcase-empty d-none">#localise("showcase.empty")</p>
