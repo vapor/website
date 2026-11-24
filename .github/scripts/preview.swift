@@ -119,7 +119,7 @@ func preview() throws {
     }
     let sha = try requireEnvironment("PR_SHA")
     let index = try? URL(fileURLWithPath: "site/index.html").resourceValues(forKeys: [.isRegularFileKey])
-    guard sha.wholeMatch(of: #/[0-9a-f]{40}/#) != nil, index?.isRegularFile else {
+    guard sha.wholeMatch(of: #/[0-9a-f]{40}/#) != nil, index?.isRegularFile == true else {
         throw PreviewError(description: "A resolved commit and built site/index.html are required.")
     }
     let serverURL = try requireEnvironment("GITHUB_SERVER_URL")

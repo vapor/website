@@ -22,7 +22,7 @@ on:
           - delete
 
 concurrency:
-  group: PR-refs/pull/${{ inputs.pr }}/merge
+  group: ${{ github.workflow }}-${{ inputs.pr }}
   cancel-in-progress: true
 
 permissions:
