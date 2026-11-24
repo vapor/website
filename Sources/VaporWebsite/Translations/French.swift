@@ -89,6 +89,12 @@ let frenchStrings: [String: String] = [
     "team.backers": "Soutiens",
     "team.backers.fallback": "Impossible de charger les soutiens pour le moment — retrouvez-les tous sur",
     "team.and": "et",
+    "pagination.previous": "Précédent",
+    "pagination.next": "Suivant",
+    "pagination.pageOf": "Page {current} sur {total}",
+    "team.contributors.paginationLabel": "Pagination des contributeurs",
+    "team.backers.paginationLabel": "Pagination des soutiens",
+    "team.contributors.profileLabel": "{login} sur GitHub",
 ]
 
 let frenchLanguage = Language(

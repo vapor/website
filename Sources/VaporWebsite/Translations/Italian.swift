@@ -89,6 +89,12 @@ let italianStrings: [String: String] = [
     "team.backers": "Sostenitori",
     "team.backers.fallback": "Impossibile caricare i sostenitori al momento: puoi vederli tutti su",
     "team.and": "e",
+    "pagination.previous": "Precedente",
+    "pagination.next": "Successiva",
+    "pagination.pageOf": "Pagina {current} di {total}",
+    "team.contributors.paginationLabel": "Paginazione dei contributori",
+    "team.backers.paginationLabel": "Paginazione dei sostenitori",
+    "team.contributors.profileLabel": "{login} su GitHub",
 ]
 
 let italianLanguage = Language(

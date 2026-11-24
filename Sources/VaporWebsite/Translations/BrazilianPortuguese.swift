@@ -89,6 +89,12 @@ let brazilianPortugueseStrings: [String: String] = [
     "team.backers": "Apoiadores",
     "team.backers.fallback": "Não foi possível carregar os apoiadores agora — veja todos eles no",
     "team.and": "e",
+    "pagination.previous": "Anterior",
+    "pagination.next": "Próxima",
+    "pagination.pageOf": "Página {current} de {total}",
+    "team.contributors.paginationLabel": "Paginação de contribuidores",
+    "team.backers.paginationLabel": "Paginação de apoiadores",
+    "team.contributors.profileLabel": "{login} no GitHub",
 ]
 
 let brazilianPortugueseLanguage = Language(

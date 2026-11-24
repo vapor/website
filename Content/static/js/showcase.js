@@ -16,6 +16,10 @@
 
   const items = Array.from(grid.querySelectorAll(".showcase-grid-item"));
   let currentPage = 1;
+  // Localised in the template (data attributes on the pagination list).
+  const labels = (pagination && pagination.dataset) || {};
+  const previousLabel = labels.previous || "Previous";
+  const nextLabel = labels.next || "Next";
 
   function matchesQuery(item, query) {
     if (!query) {
@@ -96,7 +100,7 @@
     pagination.appendChild(
       buildPageButton(prevIcon, currentPage - 1, {
         disabled: currentPage === 1,
-        ariaLabel: "Previous",
+        ariaLabel: previousLabel,
       }),
     );
 
@@ -111,7 +115,7 @@
     pagination.appendChild(
       buildPageButton(nextIcon, currentPage + 1, {
         disabled: currentPage === totalPages,
-        ariaLabel: "Next",
+        ariaLabel: nextLabel,
       }),
     );
   }

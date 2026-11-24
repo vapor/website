@@ -86,6 +86,12 @@ let germanStrings: [String: String] = [
     "team.backers": "Förderer",
     "team.backers.fallback": "Förderer konnten gerade nicht geladen werden – alle findest du auf",
     "team.and": "und",
+    "pagination.previous": "Zurück",
+    "pagination.next": "Weiter",
+    "pagination.pageOf": "Seite {current} von {total}",
+    "team.contributors.paginationLabel": "Seitennavigation der Mitwirkenden",
+    "team.backers.paginationLabel": "Seitennavigation der Förderer",
+    "team.contributors.profileLabel": "{login} auf GitHub",
 ]
 
 let germanLanguage = Language(

@@ -89,6 +89,12 @@ let chineseStrings: [String: String] = [
     "team.backers": "支持者",
     "team.backers.fallback": "暂时无法加载支持者，你可以在以下位置查看全部：",
     "team.and": "和",
+    "pagination.previous": "上一页",
+    "pagination.next": "下一页",
+    "pagination.pageOf": "第 {current} 页，共 {total} 页",
+    "team.contributors.paginationLabel": "贡献者分页",
+    "team.backers.paginationLabel": "支持者分页",
+    "team.contributors.profileLabel": "{login} 的 GitHub 主页",
 ]
 
 let chineseLanguage = Language(

@@ -89,6 +89,12 @@ let arabicStrings: [String: String] = [
     "team.backers": "الداعمون",
     "team.backers.fallback": "تعذّر تحميل الداعمين الآن — يمكنك أن تجدهم جميعًا على",
     "team.and": "و",
+    "pagination.previous": "السابق",
+    "pagination.next": "التالي",
+    "pagination.pageOf": "الصفحة {current} من {total}",
+    "team.contributors.paginationLabel": "تنقّل صفحات المساهمين",
+    "team.backers.paginationLabel": "تنقّل صفحات الداعمين",
+    "team.contributors.profileLabel": "{login} على GitHub",
 ]
 
 let arabicLanguage = Language(

@@ -2,6 +2,10 @@
 // it shows one page at a time and renders the design system's pagination markup
 // (boxed Previous/Next buttons, active page, mobile "Page X of Y") into the
 // provided control, reusing the same `.pagination` styling used across the site.
+//
+// The control's labels are localised in the template and passed as data
+// attributes on the pagination element: data-previous, data-next and
+// data-page-of (with {current} and {total} placeholders). English is the fallback.
 (function () {
   "use strict";
 
@@ -20,6 +24,10 @@
     const items = options.items || [];
     const paginationEl = options.paginationEl;
     const pageSize = options.pageSize;
+    const labels = (paginationEl && paginationEl.dataset) || {};
+    const previousLabel = labels.previous || "Previous";
+    const nextLabel = labels.next || "Next";
+    const pageOfLabel = labels.pageOf || "Page {current} of {total}";
 
     const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
     let currentPage = 1;
@@ -42,17 +50,22 @@
         "page-link page-link-next-previous d-flex page-link-" + kind,
       );
       link.href = "#";
-      link.setAttribute("aria-label", isPrevious ? "Previous" : "Next");
+      const text = isPrevious ? previousLabel : nextLabel;
+      link.setAttribute("aria-label", text);
 
-      const icon =
-        '<span class="vapor-icon icon-chevron-' +
-        (isPrevious ? "left" : "right") +
-        '" aria-hidden="true"></span>';
-      const label =
-        '<div class="d-none d-lg-block">' +
-        (isPrevious ? "Previous" : "Next") +
-        "</div>";
-      link.innerHTML = isPrevious ? icon + label : label + icon;
+      const icon = element(
+        "span",
+        "vapor-icon icon-chevron-" + (isPrevious ? "left" : "right"),
+      );
+      icon.setAttribute("aria-hidden", "true");
+      // textContent, not innerHTML: the label is translated copy.
+      const label = element("div", "d-none d-lg-block");
+      label.textContent = text;
+      if (isPrevious) {
+        link.append(icon, label);
+      } else {
+        link.append(label, icon);
+      }
 
       if (!disabled) {
         link.addEventListener("click", function (event) {
@@ -148,13 +161,11 @@
           page === "ellipsis" ? ellipsisItem() : numberItem(page),
         );
       });
-      paginationEl.appendChild(
-        element(
-          "li",
-          "page-item pagination-ellipsis d-lg-none",
-          "Page " + currentPage + " of " + totalPages,
-        ),
-      );
+      const pageOf = element("li", "page-item pagination-ellipsis d-lg-none");
+      pageOf.textContent = pageOfLabel
+        .replace("{current}", currentPage)
+        .replace("{total}", totalPages);
+      paginationEl.appendChild(pageOf);
       paginationEl.appendChild(
         navItem("next", currentPage + 1, currentPage === totalPages),
       );
