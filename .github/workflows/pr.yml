@@ -30,9 +30,12 @@ jobs:
         uses: ScottBrenner/cfn-lint-action@ed184e91f5085a2932501da8314e899e5e0ef5be # v2.7.1
       - name: Run CloudFormation linter
         run: cfn-lint -t stack.yml
+      - name: Typecheck preview deployment script
+        run: swiftc -typecheck .github/scripts/preview.swift
       - name: Build site
         run: swift run VaporWebsite
       - name: Configure AWS credentials
+        if: ${{ github.event.pull_request.head.repo.full_name == 'vapor/website' && github.event.pull_request.user.login != 'dependabot[bot]' }}
         uses: aws-actions/configure-aws-credentials@254c19bd240aabef8777f48595e9d2d7b972184b # v6.2.1
         with:
           role-to-assume: ${{ vars.OIDC_ROLE_ARN }}

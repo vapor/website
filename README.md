@@ -80,6 +80,12 @@ heavy markup lives in the `Theme/` Leaf templates — they're already wired for
 ## Deployment
 
 Pushing to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
-which builds the site (`docker run … swift:6.2 swift run VaporWebsite`), syncs `./site` to S3,
-and invalidates CloudFront. Pull requests get a preview deploy via
-[`.github/workflows/pr.yaml`](.github/workflows/pr.yaml).
+which builds the site with `swift run VaporWebsite`, syncs `./site` to S3,
+and invalidates CloudFront. Pull requests from branches in this repository get a preview
+via [`.github/workflows/pr.yml`](.github/workflows/pr.yml). Fork and Dependabot PRs
+are built and checked without attempting an AWS deployment. Maintainers can deploy an open PR, 
+including one from a fork, by commenting:
+
+```
+@penny-for-vapor deploy
+```
